@@ -25,7 +25,7 @@
 
     <p class="text-gray-700 my-4">
         <span class="font-semibold text-lg">Stock disponible:</span>
-        @if ($quantity)
+        @if ($size_id)
             {{$quantity}}
         @else
             {{$product->stock}}
