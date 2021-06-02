@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.css" integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         {{-- FlexSlid --}}
-        <link rel="stylesheet" href="{{ asset('vendor/FlexSlid/flexslid.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/FlexSlider/flexslider.css') }}">
 
         @livewireStyles
 
@@ -35,7 +35,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         {{-- FlexSlid --}}
-        <script src="{{ asset('vendor/FlexSlid/jquery.flexslider-min.js') }}"></script>
+        <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
