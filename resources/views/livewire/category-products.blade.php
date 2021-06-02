@@ -5,6 +5,7 @@
         @foreach ($products as $product)
           <li class="bg-white rounded-lg shadow {{ $loop->last ? '' : 'sm:mr-4' }}">
             <article>
+              {{-- <h1>{{$product->images->first()}}</h1>  --}}
               <figure>
                 <img class="h-48 w-full object-cover object-center" src="{{ Storage::url($product->images->first()->url) }}" alt="">
               </figure>
