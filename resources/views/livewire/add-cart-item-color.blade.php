@@ -9,11 +9,16 @@
         @endforeach
     </select>
 
-    <p class="text-gray-700 mt-4">
-        <span class="font-semibold text-lg">Stock disponible: {{$quantity}}</span>
+    <p class="text-gray-700 my-4">
+        <span class="font-semibold text-lg">Stock disponible:</span>
+        @if ($quantity)
+            {{$quantity}}
+        @else
+            {{$product->stock}}
+        @endif
     </p>
 
-    <div class="flex mt-4">
+    <div class="flex">
         <div class="mr-4">
             <x-jet-secondary-button 
                 disabled 
