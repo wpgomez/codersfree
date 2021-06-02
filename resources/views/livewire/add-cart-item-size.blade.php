@@ -18,7 +18,7 @@
             <option value="" selected disabled>Seleccione un color</option>
 
             @foreach ($colors as $color)
-            <option value="{{$color->id}}">{{$color->name}}</option>
+            <option class="capitalize" value="{{$color->id}}">{{ __($color->name) }}</option>
             @endforeach
         </select>
     </div>
