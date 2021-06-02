@@ -5,7 +5,7 @@
         <option value="" selected disabled>Seleccionar un color</option>
         
         @foreach ($colors as $color)
-            <option value="{{$color->id}}">{{$color->name}}</option>
+            <option class="capitalize" value="{{$color->id}}">{{ __($color->name) }}</option>
         @endforeach
     </select>
 
@@ -39,7 +39,10 @@
             <x-button 
                 x-bind:disabled="!$wire.quantity" 
                 color="orange" 
-                class="w-full">
+                class="w-full"
+                wire:click="addItem" 
+                wire:loading.attr="disabled" 
+                wire:target="addItem">
                 Agregar al carrito de compras
             </x-button>
         </div>
