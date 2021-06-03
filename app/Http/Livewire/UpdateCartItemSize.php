@@ -25,7 +25,7 @@ class UpdateCartItemSize extends Component
 
         Cart::update($this->rowId, $this->qty);
 
-        $this->emitTo('dropdown-cart', 'render');
+        $this->emit('render');
     }
 
     public function increment()
@@ -34,7 +34,7 @@ class UpdateCartItemSize extends Component
 
         Cart::update($this->rowId, $this->qty);
 
-        $this->emitTo('dropdown-cart', 'render');
+        $this->emit('render');
     }
 
     public function render()
