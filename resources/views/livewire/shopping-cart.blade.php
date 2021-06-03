@@ -78,4 +78,23 @@
             </div>
         @endif
     </section>
+
+    @if (Cart::count())
+        <div class="bg-white rounded-lg shadow-lg px-6 py-4 mt-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="text-gray-700">
+                        <span class="font-bold text-lg">Total:</span>
+                        USD {{Cart::subTotal()}}
+                    </p>
+                </div>
+
+                <div>
+                    <x-button-enlace href="/">
+                        Continuar
+                    </x-button-enlace>
+                </div>
+            </div>
+        </div>
+    @endif
 </div>
