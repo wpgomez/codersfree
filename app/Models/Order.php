@@ -14,4 +14,27 @@ class Order extends Model
     const ENVIADO = 3;
     const ENTREGADO = 4;
     const ANULADO = 5;
+
+    protected $guarded = ['id', 'created_at', 'updated_at', 'status'];
+
+    //Relacion uno a muchos inversa
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
