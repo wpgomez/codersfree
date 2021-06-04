@@ -16,3 +16,5 @@ $success = curl_exec($ch) && curl_getinfo($ch, CURLINFO_HTTP_CODE) === 200;//lí
 - php artisan migrate:refresh --seed
 
 - php artisan storage:link
+
+- composer require mercadopago/dx-php --ignore-platform-reqs
