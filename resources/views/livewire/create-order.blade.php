@@ -16,11 +16,11 @@
             </div>
         </div>
 
-        <div>
+        <div x-data="{ envio_type: @entangle('envio_type') }">
             <p class="mt-6 mb-3 text-lg text-gray-700 font-semibold">Envíos</p>
 
             <label class="bg-white rounded-lg shadow px-6 py-4 flex items-center mb-4">
-                <input type="radio" name="envio" class="text-gray-600">
+                <input x-model="envio_type" type="radio" value="1" name="envio_type" class="text-gray-600">
                 <span class="ml-2 text-gray-700">
                     Recojo en tienda (Calle Falsa 123)
                 </span>
@@ -31,13 +31,13 @@
 
             <div class="bg-white rounded-lg shadow">
                 <label class="px-6 py-4 flex items-center">
-                    <input type="radio" name="envio" class="text-gray-600">
+                    <input x-model="envio_type" type="radio" value="2" name="envio_type" class="text-gray-600">
                     <span class="ml-2 text-gray-700">
                         Envío a domicilio
                     </span>
                 </label>
 
-                <div class="px-6 pb-6 grid grid-cols-2 gap-6">
+                <div class="px-6 pb-6 grid grid-cols-2 gap-6 hidden" :class="{ 'hidden': envio_type != 2 }">
                     {{-- Departamentos --}}
                     <div>
                         <x-jet-label value="Departamento" />
