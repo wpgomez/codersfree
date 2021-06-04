@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -26,6 +27,10 @@ class MergeTheCartLogout
      */
     public function handle(Logout $event)
     {
-        //
+        //eliminar registro
+        Cart::erase(auth()->user()->id);
+
+        //nuevo registro
+        Cart::store(auth()->user()->id);
     }
 }
