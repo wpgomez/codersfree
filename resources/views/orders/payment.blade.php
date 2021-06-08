@@ -10,11 +10,16 @@
         $preference = new MercadoPago\Preference();
 
         // Crea un ítem en la preferencia
-        $item = new MercadoPago\Item();
-        $item->title = 'Mi producto';
-        $item->quantity = 1;
-        $item->unit_price = 75.56;
-        $preference->items = array($item);
+        foreach ($items as $product) {
+            $item = new MercadoPago\Item();
+            $item->title = $product->name;
+            $item->quantity = $product->qty;
+            $item->unit_price = $product->price;
+
+            $products[] = $item;
+        }
+        
+        $preference->items = $products;
         $preference->save();
     @endphp
 
@@ -34,7 +39,9 @@
                     @else
                         <p class="text-sm">Los productos serán enviados a:</p>
                         <p class="text-sm">{{$order->address}}</p>
-                        <p>{{$order->department->name}} - {{$order->city->name}} - {{$order->district->name}}</p>
+                        @isset($order->department->name)
+                            <p>{{$order->department->name}} - {{$order->city->name}} - {{$order->district->name}}</p>
+                        @endif
                     @endif
                 </div>
 
