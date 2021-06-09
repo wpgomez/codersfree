@@ -20,7 +20,7 @@
         }
 
         $preference->back_urls = array(
-            "success" => "https://www.tu-sitio/success",
+            "success" => route('orders.pay', $order),
             "failure" => "http://www.tu-sitio/failure",
             "pending" => "http://www.tu-sitio/pending"
         );
