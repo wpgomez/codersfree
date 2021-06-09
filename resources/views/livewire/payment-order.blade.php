@@ -1,41 +1,4 @@
-<x-app-layout>
-
-    {{-- @php
-        // SDK de Mercado Pago
-        require base_path('vendor/autoload.php');
-        // Agrega credenciales
-        MercadoPago\SDK::setAccessToken(config('services.mercadopago.token'));
-
-        // Crea un objeto de preferencia
-        $preference = new MercadoPago\Preference();
-
-        $shipments = new MercadoPago\Shipments();
-
-        $shipments->cost = $order->shipping_cost;
-        $shipments->mode = 'not-specified';
-
-        $preference->shipments = $shipments;
-
-        // Crea un ítem en la preferencia
-        foreach ($items as $product) {
-            $item = new MercadoPago\Item();
-            $item->title = $product->name;
-            $item->quantity = $product->qty;
-            $item->unit_price = $product->price;
-
-            $products[] = $item;
-        }
-
-        $preference->back_urls = array(
-            "success" => route('orders.pay', $order),
-            "failure" => "http://www.tu-sitio/failure",
-            "pending" => "http://www.tu-sitio/pending"
-        );
-        $preference->auto_return = "approved";
-        
-        $preference->items = $products;
-        $preference->save();
-    @endphp --}}
+<div>
 
     <div class="grid grid-cols-5 gap-6 container py-8">
         <div class="col-span-3">
@@ -150,24 +113,10 @@
         </div>
     </div>
 
-    {{-- <script src="https://sdk.mercadopago.com/js/v2"></script>
-
-    <script>
-        const mp = new MercadoPago("{{config('services.mercadopago.key')}}", {
-            locale: 'es-AR'
-        });
     
-        mp.checkout({
-            preference: {
-                id: '{{ $preference->id }}'
-            },
-            render: {
-                container: '.cho-container', 
-                label: 'Pagar', 
-            }
-        });
-    </script> --}}
+</div>
 
+@push('script')
     <script src="https://www.paypal.com/sdk/js?client-id={{ config('services.paypal.client_id') }}">
     </script>
 
@@ -184,9 +133,11 @@
             },
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
+
+                    Livewire.emit('payOrder');
+                    /* alert('Transaction completed by ' + details.payer.name.given_name); */
                 });
             }
         }).render('#paypal-button-container'); // Display payment options on your web page
     </script>
-</x-app-layout>
+@endpush
