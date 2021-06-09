@@ -18,6 +18,13 @@
 
             $products[] = $item;
         }
+
+        $preference->back_urls = array(
+            "success" => "https://www.tu-sitio/success",
+            "failure" => "http://www.tu-sitio/failure",
+            "pending" => "http://www.tu-sitio/pending"
+        );
+        $preference->auto_return = "approved";
         
         $preference->items = $products;
         $preference->save();
@@ -33,7 +40,7 @@
                 <div>
                     <p class="text-lg font-semibold uppercase">Envío</p>
 
-                    @if ($order->enio_type == 1)
+                    @if ($order->envio_type == 1)
                         <p class="text-sm">Los productos deben ser recogidos en tienda.</p>
                         <p class="text-sm">Calle falsa 123</p>
                     @else
