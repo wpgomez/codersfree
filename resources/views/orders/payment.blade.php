@@ -124,8 +124,8 @@
         </div>
 
         <div class="col-span-2">
-            <div class="bg-white rounded-lg shadow-lg p-6 ">
-                <div class="flex justify-between items-center">
+            <div class="bg-white rounded-lg shadow-lg px-6 pt-6">
+                <div class="flex justify-between items-center mb-4">
                     <img class="h-8" src="{{ asset('img/cartao1.jpg') }}" alt="">
                     <div class="text-gray-700">
                         <p class="text-sm font-semibold">
@@ -144,6 +144,8 @@
                     </div>
                 </div>
 
+                <div id="paypal-button-container">
+                </div>
             </div>
         </div>
     </div>
@@ -165,4 +167,26 @@
             }
         });
     </script> --}}
+
+    <script src="https://www.paypal.com/sdk/js?client-id={{ config('services.paypal.client_id') }}">
+    </script>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '0.01'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+            }
+        }).render('#paypal-button-container'); // Display payment options on your web page
+    </script>
 </x-app-layout>
