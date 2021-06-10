@@ -11,9 +11,21 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::where('user_id', auth()->user()->id)->get();
+        $orders = Order::query()->where('user_id', auth()->user()->id);
 
-        return view('orders.index', compact('orders'));
+        if (request('status')) {
+            $orders = $orders->where('status', request('status'));
+        }
+
+        $orders = $orders->get();
+
+        $pendiente = Order::where('status', Order::PENDIENTE)->where('user_id', auth()->user()->id)->count();
+        $recibido = Order::where('status', Order::RECIBIDO)->where('user_id', auth()->user()->id)->count();
+        $enviado = Order::where('status', Order::ENVIADO)->where('user_id', auth()->user()->id)->count();
+        $entregado = Order::where('status', Order::ENTREGADO)->where('user_id', auth()->user()->id)->count();
+        $anulado = Order::where('status', Order::ANULADO)->where('user_id', auth()->user()->id)->count();
+
+        return view('orders.index', compact('orders', 'pendiente', 'recibido', 'enviado', 'entregado', 'anulado'));
     }
 
     public function show(Order $order)
