@@ -60,8 +60,8 @@ class CreateProduct extends Component
                 $rules['quantity'] = 'required';
             }
         }
-        
-        $this->validate();
+
+        $this->validate($rules);
 
 
     }
