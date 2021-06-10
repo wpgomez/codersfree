@@ -63,4 +63,15 @@
             } );"
             x-ref="miEditor"></textarea>
     </div>
+
+    <div class="mb-4">
+        <x-jet-label value="Marca" />
+        <select class="w-full form-control" wire:model="brand_id">
+            <option value="" selected disabled>Selecione una marca</option>
+
+            @foreach ($brands as $brand)
+                <option value="{{$brand->id}}">{{$brand->name}}</option>
+            @endforeach
+        </select>
+    </div>
 </div>
