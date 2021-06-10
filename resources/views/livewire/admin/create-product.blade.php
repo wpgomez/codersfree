@@ -64,14 +64,36 @@
             x-ref="miEditor"></textarea>
     </div>
 
-    <div class="mb-4">
-        <x-jet-label value="Marca" />
-        <select class="w-full form-control" wire:model="brand_id">
-            <option value="" selected disabled>Selecione una marca</option>
+    <div class="grid grid-cols-2 gap-6 mb-4">
+        {{-- Marca --}}
+        <div class="mb-4">
+            <x-jet-label value="Marca" />
+            <select class="w-full form-control" wire:model="brand_id">
+                <option value="" selected disabled>Selecione una marca</option>
 
-            @foreach ($brands as $brand)
-                <option value="{{$brand->id}}">{{$brand->name}}</option>
-            @endforeach
-        </select>
+                @foreach ($brands as $brand)
+                    <option value="{{$brand->id}}">{{$brand->name}}</option>
+                @endforeach
+            </select>
+        </div>
+
+        {{-- Precio --}}
+        <div>
+            <x-jet-label value="Precio" />
+            <x-jet-input type="number" 
+                wire:model="price"
+                class="w-full" step=".01" />
+        </div>
     </div>
+
+    @if ($subcategory_id)
+        @if (!$this->subcategory->color && !$this->subcategory->size)
+            <div>
+                <x-jet-label value="Cantidad" />
+                <x-jet-input type="number" 
+                    wire:model="quantity"
+                    class="w-full"/>
+            </div>
+        @endif
+    @endif
 </div>

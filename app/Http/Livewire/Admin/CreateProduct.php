@@ -13,7 +13,7 @@ class CreateProduct extends Component
 {
     public $categories, $subcategories = [], $brands = [];
     public $category_id = "", $subcategory_id = "", $brand_id = "";
-    public $name, $slug, $description;
+    public $name, $slug, $description, $price, $quantity;
 
     public function updatedCategoryId($value)
     {
@@ -29,6 +29,11 @@ class CreateProduct extends Component
     public function updatedName($value)
     {
         $this->slug = Str::slug($value);
+    }
+
+    public function getSubcategoryProperty()
+    {
+        return Subcategory::find($this->subcategory_id);
     }
 
     public function mount()
