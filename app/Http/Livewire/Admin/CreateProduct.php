@@ -15,6 +15,16 @@ class CreateProduct extends Component
     public $category_id = "", $subcategory_id = "", $brand_id = "";
     public $name, $slug, $description, $price, $quantity;
 
+    protected $rules = [
+        'category_id' => 'required',
+        'subcategory_id' => 'required',
+        'name' => 'required',
+        'slug' => 'required|unique:products',
+        'description' => 'required',
+        'brand_id' => 'required',
+        'price' => 'required',
+    ];
+
     public function updatedCategoryId($value)
     {
         $this->subcategories = Subcategory::where('category_id', $value)->get();
@@ -39,6 +49,21 @@ class CreateProduct extends Component
     public function mount()
     {
         $this->categories = Category::all();
+    }
+
+    public function save()
+    {
+        $rules = $this->rules;
+
+        if ($this->subcategory_id) {
+            if (!$this->subcategory->color && !$this->subcategory->size) {
+                $rules['quantity'] = 'required';
+            }
+        }
+        
+        $this->validate();
+
+
     }
 
     public function render()

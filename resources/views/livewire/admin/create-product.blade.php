@@ -12,6 +12,8 @@
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
             </select>
+
+            <x-jet-input-error for="category_id" />
         </div>
 
         {{-- Subcategorias --}}
@@ -24,6 +26,8 @@
                     <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>
                 @endforeach
             </select>
+
+            <x-jet-input-error for="subcategory_id" />
         </div>
     </div>
 
@@ -34,6 +38,7 @@
             wire:model="name"
             class="w-full" 
             placeholder="Ingrese el nombre del producto" />
+        <x-jet-input-error for="name" />
     </div>
 
     {{-- Slug --}}
@@ -44,24 +49,28 @@
             wire:model="slug"
             class="w-full bg-gray-200" 
             placeholder="Ingrese el slug del producto" />
+        <x-jet-input-error for="slug" />
     </div>
     
     {{-- Descripcion --}}
-    <div class="mb-4" wire:ignore>
-        <x-jet-label value="Descripción" />
-        <textarea class="w-full form-control" rows="4"
-            wire:model="description"
-            x-data
-            x-init="ClassicEditor.create($refs.miEditor)
-            .then(function(editor){
-                editor.model.document.on('change:data', () => {
-                    @this.set('description', editor.getData())
+    <div class="mb-4">
+        <div wire:ignore>
+            <x-jet-label value="Descripción" />
+            <textarea class="w-full form-control" rows="4"
+                wire:model="description"
+                x-data
+                x-init="ClassicEditor.create($refs.miEditor)
+                .then(function(editor){
+                    editor.model.document.on('change:data', () => {
+                        @this.set('description', editor.getData())
+                    })
                 })
-            })
-            .catch( error => {
-                console.error( error );
-            } );"
-            x-ref="miEditor"></textarea>
+                .catch( error => {
+                    console.error( error );
+                } );"
+                x-ref="miEditor"></textarea>
+        </div>
+        <x-jet-input-error for="description" />
     </div>
 
     <div class="grid grid-cols-2 gap-6 mb-4">
@@ -75,6 +84,7 @@
                     <option value="{{$brand->id}}">{{$brand->name}}</option>
                 @endforeach
             </select>
+            <x-jet-input-error for="brand_id" />
         </div>
 
         {{-- Precio --}}
@@ -83,6 +93,7 @@
             <x-jet-input type="number" 
                 wire:model="price"
                 class="w-full" step=".01" />
+            <x-jet-input-error for="price" />
         </div>
     </div>
 
@@ -93,7 +104,18 @@
                 <x-jet-input type="number" 
                     wire:model="quantity"
                     class="w-full"/>
+                <x-jet-input-error for="quantity" />
             </div>
         @endif
     @endif
+
+    <div class="flex mt-4">
+        <x-jet-button 
+            wire:loading.attr="disabled"
+            wire:target="save"
+            wire:click="save"
+            class="ml-auto" >
+            Crear producto
+        </x-jet-button>
+    </div>
 </div>
