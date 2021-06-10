@@ -76,7 +76,7 @@
                                         <i class="fas fa-check-circle text-pink-500 opacity-50"></i>
                                         @break
                                     @case(5)
-                                        <i class="fas fa-time-circle text-green-500 opacity-50"></i>
+                                        <i class="fas fa-times-circle text-green-500 opacity-50"></i>
                                         @break
                                     @default
                                         

@@ -36,25 +36,3 @@ Route::middleware(['auth'])->group(function(){
     
     Route::post('webhooks', WebhooksController::class);
 });
-
-Route::get('prueba', function () {
-
-    $hora = now()->subMinute(1);
-
-    $orders = Order::where('status', Order::PENDIENTE)->whereTime('created_at', '<=', $hora)->get();
-
-    foreach ($orders as $order) {
-
-        $items = json_decode($order->content);
-
-        foreach ($items as $item) {
-            increase($item);
-        }
-
-        $order->status = Order::ANULADO;
-
-        $order->save();
-    }
-
-    return 'Se formateo con éxito';
-});
