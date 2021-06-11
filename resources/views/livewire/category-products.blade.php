@@ -24,8 +24,8 @@
         @endforeach
       </ul>
     
-      <button aria-label="Previous" class="glider-prev">«</button>
-      <button aria-label="Next" class="glider-next">»</button>
+      <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-circle-left w-2 h-2"></i></button>
+      <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-circle-right"></i></button>
       <div role="tablist" class="dots"></div>
     </div>
   @else

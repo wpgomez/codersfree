@@ -13,15 +13,15 @@
 
     <!-- This example requires Tailwind CSS v2.0+ -->
     <div class="container py-12">
-        
+
         <x-table-responsive>
-            
-            <div class="px-6 py-4 ">
+
+            <div class="px-6 py-4">
                 <x-jet-input type="text"
                     wire:model="search"
                     class="w-full"
                     placeholder="Ingrese el nombre del producto que quiere buscar" />
-
+    
             </div>
 
             @if ($products->count())

@@ -2,13 +2,13 @@
 
     <div class="container py-12">
 
-        <div class="grid grid-cols-5 gap-6 text-white">
-            <a href="{{route('orders.index') . "?status=1"}}" class="bg-red-500 bg-opacity-80 rounded-lg px-12 pt-8 pb-4">
-                <p class="text-center text-2xl">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-white">
+            <a href="{{route('orders.index') . "?status=1"}}" class="bg-red-500 bg-opacity-80 rounded-lg px-12 pt-8 pb-4 text-center">
+                <p class="text-2xl">
                     {{$pendiente}}
                 </p>
-                <p class="uppercase text-center">Pendiente</p>
-                <p class="text-center text-2xl mt-2">
+                <p class="uppercase">Pendiente</p>
+                <p class="text-2xl mt-2">
                     <i class="fas fa-business-time"></i>
                 </p>
             </a>
@@ -54,7 +54,7 @@
             </a>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg px-12 py-8 mt-12 text-gray-700">
+        <div class="bg-white shadow-lg rounded-lg px-4 md:px-12 py-8 mt-12 text-gray-700">
             <h1 class="text-2xl mb-4">Pedidos recientes</h1>
 
             <ul>

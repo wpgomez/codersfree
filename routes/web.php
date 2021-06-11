@@ -10,7 +10,6 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Livewire\CreateOrder;
 use App\Http\Livewire\PaymentOrder;
 use App\Http\Livewire\ShoppingCart;
-use App\Models\Order;
 
 Route::get('/', WelcomeController::class);
 
@@ -21,6 +20,10 @@ Route::get('categories/{category}', [CategoryController::class, 'show'])->name('
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 
 Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
+
+Route::get('catalogs', function () {
+    return view('catalogs.index');
+})->name('catalogs.index');
 
 Route::middleware(['auth'])->group(function(){
 
