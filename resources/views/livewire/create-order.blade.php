@@ -1,5 +1,5 @@
-<div class="container py-8 grid grid-cols-5 gap-6">
-    <div class="col-span-3">
+<div class="container py-8 grid grid-cols-1 md:grid-cols-5 gap-6">
+    <div class="md:col-span-3">
         <div class="bg-white rounded-lg shadow p-6">
             <div class="mb-4">
                 <x-jet-label value="Nombre de contácto" />
@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <div class="col-span-2">
+    <div class="md:col-span-2">
         <div class="bg-white rounded-lg shadow p-6">
             <ul>
                 @forelse (Cart::content() as $item)

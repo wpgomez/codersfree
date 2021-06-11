@@ -1,16 +1,18 @@
 <x-app-layout>
     <div class="container py-8">
-        <div class="grid grid-cols-2 gap-6">
-            <div>
-                <div class="flexslider">
-                    <ul class="slides">
-                        @foreach ($product->images as $image)
-                            <li data-thumb="{{ Storage::url($image->url) }}">
-                                <img src="{{ Storage::url($image->url) }}" />
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="mb-2 mt-10">
+                @if (count($product->images)>0)
+                    <div class="flexslider">
+                        <ul class="slides">
+                            @foreach ($product->images as $image)
+                                <li data-thumb="{{ Storage::url($image->url) }}">
+                                    <img src="{{ Storage::url($image->url) }}" />
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
 
             <div>

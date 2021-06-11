@@ -22,7 +22,11 @@ class AddCartItemSize extends Component
     public function mount()
     {
         $this->sizes = $this->product->sizes;
-        $this->options['image'] = Storage::url($this->product->images->first()->url);
+        if (count($this->product->images)>0) {
+            $this->options['image'] = Storage::url($this->product->images->first()->url);
+        } else {
+            $this->options['image'] = '';
+        }
     }
 
     public function updatedSizeId($value)

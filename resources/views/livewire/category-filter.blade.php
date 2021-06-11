@@ -48,7 +48,9 @@
                         <li class="bg-white rounded-lg shadow">
                             <article>
                                 <figure>
-                                    <img class="h-48 w-full object-cover object-center" src="{{ Storage::url($product->images->first()->url) }}" alt="">
+                                    @if (count($product->images)>0)
+                                        <img class="h-48 w-full object-cover object-center" src="{{ Storage::url($product->images->first()->url) }}" alt="">
+                                    @endif
                                 </figure>
 
                                 <div class="py-4 px-6">
