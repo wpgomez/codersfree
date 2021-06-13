@@ -1,4 +1,10 @@
-<x-app-layout>
+<x-admin-layout>
+    <div id="app">
+        <h1>INICIO</h1>
+        <vue-example></vue-example>
+    </div>
+    
+    
     <div class="container py-8">
 
         <div id="magazine">
@@ -39,4 +45,4 @@
             });
         </script>
     @endpush
-</x-app-layout>    
+</x-admin-layout>    
