@@ -10,9 +10,6 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
         {{-- Fontawesome --}}
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 
@@ -22,10 +19,10 @@
         {{-- FlexSlid --}}
         <link rel="stylesheet" href="{{ asset('vendor/FlexSlider/flexslider.css') }}">
 
-        @livewireStyles
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        @livewireStyles
 
         {{-- Glider --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.js" integrity="sha512-tHimK/KZS+o34ZpPNOvb/bTHZb6ocWFXCtdGqAlWYUcz+BGHbNbHMKvEHUyFxgJhQcEO87yg5YqaJvyQgAEEtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -39,6 +36,9 @@
         {{-- turn.js --}}
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="{{ asset('vendor/turnjs4/turn.min.js') }}"></script>
+
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
