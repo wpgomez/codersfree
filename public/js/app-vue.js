@@ -3792,10 +3792,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3803,21 +3803,845 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-socialmedia-share */ "./node_modules/vue-socialmedia-share/dist/vue-socialmedia-share.common.js");
+/* harmony import */ var vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _proxies_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./proxies/_config */ "./resources/js/proxies/_config.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'App',
+  components: {
+    Facebook: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Facebook,
+    Twitter: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Twitter,
+    Linkedin: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Linkedin,
+    Pinterest: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Pinterest,
+    Reddit: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Reddit,
+    Telegram: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Telegram,
+    WhatsApp: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.WhatsApp,
+    Email: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Email,
+    Google: vue_socialmedia_share__WEBPACK_IMPORTED_MODULE_0__.Google
+  },
   data: function data() {
     return {
-      comments: {}
+      drawer: false,
+      value: 'pages',
+      catalogos: [],
+      isDialogCatalogos: false,
+      isDialogPaginas: false,
+      isDialogShare: false,
+      isDialogDescargar: false,
+      isDialogBuscar: false,
+      textBuscar: '',
+      paginasBuscar: [],
+      isLoadingCatalogo: false,
+      isLoadingBuscar: false
     };
   },
   mounted: function mounted() {
-    console.log('Hola');
-  }
+    var self = this;
+    self.setLoadAsyncData();
+  },
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)(['catalogoId', 'catalogoTitulo', 'catalogoPdf', 'paginas', 'paginasEnDos', 'nroPagina'])), {}, {
+    getUrl: function getUrl() {
+      var self = this;
+      var url = _proxies_config__WEBPACK_IMPORTED_MODULE_1__.default.url;
+
+      if (self.catalogoId) {
+        url = url + "#/catalogo/".concat(self.catalogoId);
+
+        if (self.nroPagina) {
+          url = url + "/".concat(self.nroPagina);
+        }
+      }
+
+      return url;
+    },
+    getUrlPdf: function getUrlPdf() {
+      var self = this;
+      return self.catalogoPdf;
+    }
+  }),
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapMutations)(['catalogoUpdate', 'catalogoClear'])), {}, {
+    setLoadAsyncData: function setLoadAsyncData() {
+      var self = this;
+      self.isLoadingCatalogo = true;
+      self.catalogos = [];
+      self.$proxies.catalogoProxy.getAll().then(function (x) {
+        // setTimeout(() => { self.grilla.isLoading = false }, 1000)
+        self.isLoadingCatalogo = false;
+
+        if (x.data && x.data.items) {
+          self.catalogos = x.data.items;
+        } else {
+          console.log(x.data.mensaje);
+        }
+      })["catch"](function (x) {
+        self.isLoadingCatalogo = false;
+        console.log(x.data.mensaje);
+      });
+    },
+    setLoadAsyncDataBuscar: function setLoadAsyncDataBuscar(ref) {
+      var self = this;
+      self.isLoadingBuscar = true;
+      self.paginasBuscar = [];
+      self.$proxies.paginaProxy.getAllPorRef(ref).then(function (x) {
+        // setTimeout(() => { self.grilla.isLoading = false }, 1000)
+        self.isLoadingBuscar = false;
+
+        if (x.data && x.data.items) {
+          self.paginasBuscar = x.data.items;
+        } else {
+          console.log(x.data.mensaje);
+        }
+      })["catch"](function (x) {
+        self.isLoadingBuscar = false;
+        console.log(x.data.mensaje);
+      });
+    },
+    setLoadAsyncDataBuscarCatalogo: function setLoadAsyncDataBuscarCatalogo(catalogoId, ref) {
+      var self = this;
+      self.isLoadingBuscar = true;
+      self.paginasBuscar = [];
+      self.$proxies.paginaProxy.getAllPorCatalogoRef(catalogoId, ref).then(function (x) {
+        // setTimeout(() => { self.grilla.isLoading = false }, 1000)
+        self.isLoadingBuscar = false;
+
+        if (x.data && x.data.items) {
+          self.paginasBuscar = x.data.items;
+        } else {
+          console.log(x.data.mensaje);
+        }
+      })["catch"](function (x) {
+        self.isLoadingBuscar = false;
+        console.log(x.data.mensaje);
+      });
+    },
+    setClickNavigationDrawer: function setClickNavigationDrawer() {
+      var self = this;
+      self.drawer = !self.drawer;
+    },
+    setVerCatalogo: function setVerCatalogo(id) {
+      var self = this;
+      self.$router.push("/catalogo/".concat(id));
+    },
+    setClickCatalogos: function setClickCatalogos() {
+      var self = this;
+      self.isDialogPaginas = false;
+      self.isDialogShare = false;
+      self.isDialogDescargar = false;
+      self.isDialogBuscar = false;
+    },
+    setClickPaginas: function setClickPaginas() {
+      var self = this;
+      self.isDialogCatalogos = false;
+      self.isDialogShare = false;
+      self.isDialogDescargar = false;
+      self.isDialogBuscar = false;
+    },
+    setClickShare: function setClickShare() {
+      var self = this;
+      self.isDialogCatalogos = false;
+      self.isDialogPaginas = false;
+      self.isDialogDescargar = false;
+      self.isDialogBuscar = false;
+    },
+    setClickBuscar: function setClickBuscar() {
+      var self = this;
+      self.isDialogCatalogos = false;
+      self.isDialogShare = false;
+      self.isDialogDescargar = false;
+      self.isDialogPaginas = false;
+      self.textBuscar = '';
+      self.paginasBuscar = [];
+    },
+    setDescagarCatalogo: function setDescagarCatalogo() {
+      var self = this;
+      self.isDialogCatalogos = false;
+      self.isDialogPaginas = false;
+      self.isDialogShare = false;
+      self.isDialogBuscar = false;
+      self.isDialogDescargar = true;
+    },
+    setClickBuscarPaginas: function setClickBuscarPaginas() {
+      var self = this;
+
+      if (self.textBuscar) {
+        if (self.catalogoId) {
+          self.setLoadAsyncDataBuscarCatalogo(self.catalogoId, self.textBuscar);
+        } else {
+          self.setLoadAsyncDataBuscar(self.textBuscar);
+        }
+      }
+    },
+    getExisteCatalogoId: function getExisteCatalogoId(id) {
+      var self = this;
+      var value = false;
+
+      if (id == self.catalogoId) {
+        value = true;
+      }
+
+      return value;
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* import Flipbook from '../components/Flipbook2' */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'Catalogo',
+
+  /* components: { Flipbook }, */
+  data: function data() {
+    return {
+      isLoading: false,
+      paginas: [],
+      pages: [],
+      zooms: [1],
+      startPage: 1,
+      displayedPages: 1,
+      hasMouse: true,
+      nroRefs: {
+        start: 1,
+        end: 1
+      }
+    };
+  },
+  mounted: function mounted() {
+    var self = this;
+    window.addEventListener("keydown", function (ev) {
+      var flipbook = self.$refs.flipbook;
+
+      if (!flipbook) {
+        return;
+      }
+
+      if (ev.keyCode === 37 && flipbook.canFlipLeft) {
+        return flipbook.flipLeft();
+      }
+
+      if (ev.keyCode === 39 && flipbook.canFlipRight) {
+        return flipbook.flipRight();
+      }
+    });
+    self.setLoadAsyncData();
+  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(['catalogoId', 'catalogoTitulo', 'nroPagina'])),
+  watch: {
+    '$route': 'setLoadAsyncData'
+  },
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapMutations)(['catalogoUpdate', 'paginasAddArray', 'paginasClear'])), {}, {
+    setLoadAsyncData: function setLoadAsyncData() {
+      var self = this;
+      var catalogoId = parseInt(self.$route.params.id);
+      var nroPagina = parseInt(self.$route.params.pagina);
+      var flipbook = self.$refs.flipbook;
+
+      if (flipbook && flipbook.displayedPages) {
+        self.displayedPages = flipbook.displayedPages;
+      }
+
+      if (!(catalogoId == self.catalogoId)) {
+        if (!nroPagina) {
+          self.startPage = 1;
+        } else {
+          if (!(nroPagina == self.nroPagina)) {
+            if (self.displayedPages > 1) {
+              if (nroPagina % 2 == 0) {
+                self.startPage = nroPagina;
+              } else {
+                self.startPage = nroPagina - 1;
+              }
+            } else {
+              self.startPage = nroPagina;
+            }
+          }
+        }
+
+        self.isLoading = true;
+        self.paginas = [];
+        self.nroRefs.start = 1;
+        self.nroRefs.end = 1;
+        self.$proxies.paginaProxy.getAll(catalogoId).then(function (x) {
+          // setTimeout(() => { self.grilla.isLoading = false }, 1000)
+          self.isLoading = false;
+
+          if (x.data && x.data.catalogoId) {
+            self.catalogoUpdate({
+              id: x.data.catalogoId,
+              titulo: x.data.catalogoTitulo,
+              pdf: x.data.catalogoPdf
+            });
+          }
+
+          if (x.data && x.data.items) {
+            self.paginas = x.data.items;
+            self.paginasClear();
+            self.paginasAddArray(self.paginas);
+            self.setLoadPages();
+          } else {
+            console.log(x.data.mensaje);
+          }
+        })["catch"](function (x) {
+          self.isLoading = false;
+          console.log(x.data.mensaje);
+        });
+      } else {
+        if (!nroPagina) {
+          self.startPage = 1;
+        } else {
+          if (!(nroPagina == self.nroPagina)) {
+            if (self.displayedPages > 1) {
+              if (nroPagina % 2 == 0) {
+                self.startPage = nroPagina;
+              } else {
+                self.startPage = nroPagina - 1;
+              }
+            } else {
+              self.startPage = nroPagina;
+            }
+          }
+        }
+      }
+    },
+    setLoadPages: function setLoadPages() {
+      var self = this;
+      self.pages = [];
+
+      if (self.paginas.length > 0) {
+        self.pages.push(null);
+        self.paginas.forEach(function (element) {
+          self.pages.push(element.imagen);
+        });
+      }
+    },
+    onFlipLeftStart: function onFlipLeftStart(page) {
+      var self = this;
+      self.nroRefs.start = page.page;
+    },
+    onFlipLeftEnd: function onFlipLeftEnd(page) {
+      var self = this;
+      self.nroRefs.end = page.page;
+      self.displayedPages = page.displayedPages;
+    },
+    onFlipRightStart: function onFlipRightStart(page) {
+      var self = this;
+      self.nroRefs.start = page.page;
+    },
+    onFlipRightEnd: function onFlipRightEnd(page) {
+      var self = this;
+      self.nroRefs.end = page.page;
+      self.displayedPages = page.displayedPages;
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'Home',
+  data: function data() {
+    return {
+      isLoading: false,
+      cards: []
+    };
+  },
+  mounted: function mounted() {
+    var self = this;
+    self.setLoadAsyncData();
+    self.catalogoClear();
+    self.paginasClear();
+  },
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapMutations)(['catalogoClear', 'paginasClear'])), {}, {
+    setLoadAsyncData: function setLoadAsyncData() {
+      var self = this;
+      self.isLoading = true;
+      self.$proxies.catalogoProxy.getAll().then(function (x) {
+        // setTimeout(() => { self.grilla.isLoading = false }, 1000)
+        self.isLoading = false;
+
+        if (x.data && x.data.items) {
+          self.cards = x.data.items;
+        } else {
+          console.log(x.data.mensaje);
+        }
+      })["catch"](function (x) {
+        self.isLoading = false;
+        console.log(x.data.mensaje);
+      });
+    },
+    setVerCatalogo: function setVerCatalogo(id) {
+      var self = this;
+      self.$router.push("/catalogo/".concat(id));
+    }
+  })
 });
 
 /***/ }),
@@ -3850,6 +4674,555 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/plugins/vuetify.js":
+/*!*****************************************!*\
+  !*** ./resources/js/plugins/vuetify.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuetify_lib_framework__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuetify/lib/framework */ "./node_modules/vuetify/lib/framework.js");
+
+
+vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuetify_lib_framework__WEBPACK_IMPORTED_MODULE_1__.default);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuetify_lib_framework__WEBPACK_IMPORTED_MODULE_1__.default({}));
+
+/***/ }),
+
+/***/ "./resources/js/proxies/CatalogoProxy.js":
+/*!***********************************************!*\
+  !*** ./resources/js/proxies/CatalogoProxy.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CatalogoProxy)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var CatalogoProxy = /*#__PURE__*/function () {
+  function CatalogoProxy(axios, url) {
+    _classCallCheck(this, CatalogoProxy);
+
+    this.axios = axios;
+    this.url = url;
+  }
+
+  _createClass(CatalogoProxy, [{
+    key: "getAll",
+    value: function getAll() {
+      return this.axios.get(this.url + 'catalogos.php');
+    }
+  }, {
+    key: "get",
+    value: function get(id) {
+      return this.axios.get(this.url + "catalogos.php?id=".concat(id));
+    }
+  }]);
+
+  return CatalogoProxy;
+}();
+
+
+
+/***/ }),
+
+/***/ "./resources/js/proxies/PaginaProxy.js":
+/*!*********************************************!*\
+  !*** ./resources/js/proxies/PaginaProxy.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PaginaProxy)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var PaginaProxy = /*#__PURE__*/function () {
+  function PaginaProxy(axios, url) {
+    _classCallCheck(this, PaginaProxy);
+
+    this.axios = axios;
+    this.url = url;
+  }
+
+  _createClass(PaginaProxy, [{
+    key: "getAll",
+    value: function getAll(catalogoId) {
+      return this.axios.get(this.url + "paginas.php?catalogo_id=".concat(catalogoId));
+    }
+  }, {
+    key: "getAllPorRef",
+    value: function getAllPorRef(ref) {
+      return this.axios.get(this.url + "paginas.php?ref=".concat(ref));
+    }
+  }, {
+    key: "getAllPorCatalogoRef",
+    value: function getAllPorCatalogoRef(catalogoId, ref) {
+      return this.axios.get(this.url + "paginas.php?catalogo_id=".concat(catalogoId, "&ref=").concat(ref));
+    }
+  }, {
+    key: "get",
+    value: function get(id) {
+      return this.axios.get(this.url + "paginas.php?id=".concat(id));
+    }
+  }]);
+
+  return PaginaProxy;
+}();
+
+
+
+/***/ }),
+
+/***/ "./resources/js/proxies/_config.js":
+/*!*****************************************!*\
+  !*** ./resources/js/proxies/_config.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _CatalogoProxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CatalogoProxy */ "./resources/js/proxies/CatalogoProxy.js");
+/* harmony import */ var _PaginaProxy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaginaProxy */ "./resources/js/proxies/PaginaProxy.js");
+
+
+ // Axios default behavior
+
+(axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.headers.common.Accept) = 'application/json'; // let url = 'http://localhost/php-catalogo/'
+
+var url = 'https://api.catalogo.dlirio.pe/';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  url: 'https://catalogo.dlirio.pe/',
+  catalogoProxy: new _CatalogoProxy__WEBPACK_IMPORTED_MODULE_1__.default((axios__WEBPACK_IMPORTED_MODULE_0___default()), url),
+  paginaProxy: new _PaginaProxy__WEBPACK_IMPORTED_MODULE_2__.default((axios__WEBPACK_IMPORTED_MODULE_0___default()), url)
+});
+
+/***/ }),
+
+/***/ "./resources/js/router/index.js":
+/*!**************************************!*\
+  !*** ./resources/js/router/index.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _views_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../views/Home.vue */ "./resources/js/views/Home.vue");
+/* harmony import */ var _views_Catalogo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../views/Catalogo.vue */ "./resources/js/views/Catalogo.vue");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_3__.default);
+var routes = [{
+  path: '/',
+  name: 'Home',
+  component: _views_Home_vue__WEBPACK_IMPORTED_MODULE_0__.default
+}, {
+  path: '/catalogo/:id',
+  name: 'Catalogo',
+  component: _views_Catalogo_vue__WEBPACK_IMPORTED_MODULE_1__.default
+}, {
+  path: '/catalogo/:id/:pagina',
+  name: 'CatalogoPagina',
+  component: _views_Catalogo_vue__WEBPACK_IMPORTED_MODULE_1__.default
+}];
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
+  base: process.env.BASE_URL,
+  routes: routes,
+  scrollBehavior: function scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return {
+        x: 0,
+        y: 0
+      };
+    }
+  }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
+
+/***/ }),
+
+/***/ "./resources/js/store/actions.js":
+/*!***************************************!*\
+  !*** ./resources/js/store/actions.js ***!
+  \***************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./resources/js/store/getters.js":
+/*!***************************************!*\
+  !*** ./resources/js/store/getters.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var getters = {
+  catalogoId: function catalogoId(state) {
+    if (!state.catalogo.id) {
+      return 0;
+    }
+
+    return state.catalogo.id;
+  },
+  catalogoTitulo: function catalogoTitulo(state) {
+    if (!state.catalogo.titulo) {
+      return 'DLirio';
+    }
+
+    return 'DLirio - ' + state.catalogo.titulo;
+  },
+  catalogoPdf: function catalogoPdf(state) {
+    if (!state.catalogo.pdf) {
+      return '';
+    }
+
+    return state.catalogo.pdf;
+  },
+  nroPagina: function nroPagina(state) {
+    if (!state.nroPagina) {
+      return 0;
+    }
+
+    return state.nroPagina;
+  },
+  paginas: function paginas(state) {
+    if (!state.paginas) {
+      return [];
+    }
+
+    return state.paginas;
+  },
+  paginasEnDos: function paginasEnDos(state) {
+    var paginas = [];
+
+    if (!state.paginas) {
+      return paginas;
+    }
+
+    var nro_paginas = 0;
+
+    if (state.paginas.length % 2 == 0) {
+      nro_paginas = state.paginas.length / 2 + 1;
+    } else {
+      nro_paginas = (state.paginas.length + 1) / 2;
+    }
+
+    for (var i = 0; i < nro_paginas; i++) {
+      paginas.push({
+        id: i + 1,
+        catalogo_id: 0,
+        nro_pagina_1: 0,
+        imagen_1: '',
+        nro_pagina_2: 0,
+        imagen_2: ''
+      });
+    }
+
+    state.paginas.forEach(function (element) {
+      var pos = 0;
+
+      if (element.nro_pagina % 2 == 0) {
+        pos = element.nro_pagina / 2;
+        paginas[pos].catalogo_id = element.catalogo_id;
+        paginas[pos].nro_pagina_1 = element.nro_pagina;
+        paginas[pos].imagen_1 = element.imagen_small;
+      } else {
+        pos = (element.nro_pagina - 1) / 2;
+        paginas[pos].catalogo_id = element.catalogo_id;
+        paginas[pos].nro_pagina_2 = element.nro_pagina;
+        paginas[pos].imagen_2 = element.imagen_small;
+      }
+    });
+    return paginas;
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getters);
+
+/***/ }),
+
+/***/ "./resources/js/store/index.js":
+/*!*************************************!*\
+  !*** ./resources/js/store/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _state__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./state */ "./resources/js/store/state.js");
+/* harmony import */ var _getters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getters */ "./resources/js/store/getters.js");
+/* harmony import */ var _mutations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations */ "./resources/js/store/mutations.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./resources/js/store/actions.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_actions__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_4__.default.use(vuex__WEBPACK_IMPORTED_MODULE_5__.default);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_5__.default.Store({
+  state: _state__WEBPACK_IMPORTED_MODULE_0__.default,
+  getters: _getters__WEBPACK_IMPORTED_MODULE_1__.default,
+  mutations: _mutations__WEBPACK_IMPORTED_MODULE_2__.default,
+  actions: (_actions__WEBPACK_IMPORTED_MODULE_3___default())
+}));
+
+/***/ }),
+
+/***/ "./resources/js/store/mutations.js":
+/*!*****************************************!*\
+  !*** ./resources/js/store/mutations.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var mutations = {
+  catalogoUpdate: function catalogoUpdate(state, payload) {
+    state.catalogo.id = payload.id;
+    state.catalogo.titulo = payload.titulo;
+    state.catalogo.pdf = payload.pdf;
+  },
+  catalogoClear: function catalogoClear(state) {
+    state.catalogo.id = 0;
+    state.catalogo.titulo = '';
+    state.catalogo.pdf = '';
+  },
+  paginasClear: function paginasClear(state) {
+    state.paginas = [];
+  },
+  paginasAddItem: function paginasAddItem(state, payload) {
+    state.paginas.push(payload);
+  },
+  paginasAddArray: function paginasAddArray(state, payload) {
+    payload.forEach(function (element) {
+      state.paginas.push(element);
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mutations);
+
+/***/ }),
+
+/***/ "./resources/js/store/state.js":
+/*!*************************************!*\
+  !*** ./resources/js/store/state.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var state = {
+  catalogo: {
+    id: 0,
+    titulo: '',
+    pdf: ''
+  },
+  paginas: [],
+  nroPagina: 0
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (state);
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[3]!./node_modules/vuetify/src/styles/main.sass":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[3]!./node_modules/vuetify/src/styles/main.sass ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n@-webkit-keyframes v-shake {\n  59% {\n    margin-left: 0;\n  }\n  60%, 80% {\n    margin-left: 2px;\n  }\n  70%, 90% {\n    margin-left: -2px;\n  }\n}\n@keyframes v-shake {\n  59% {\n    margin-left: 0;\n  }\n  60%, 80% {\n    margin-left: 2px;\n  }\n  70%, 90% {\n    margin-left: -2px;\n  }\n}\n.v-application .black {\n  background-color: #000000 !important;\n  border-color: #000000 !important;\n}\n\n.v-application .black--text {\n  color: #000000 !important;\n  caret-color: #000000 !important;\n}\n\n.v-application .white {\n  background-color: #FFFFFF !important;\n  border-color: #FFFFFF !important;\n}\n\n.v-application .white--text {\n  color: #FFFFFF !important;\n  caret-color: #FFFFFF !important;\n}\n\n.v-application .transparent {\n  background-color: transparent !important;\n  border-color: transparent !important;\n}\n\n.v-application .transparent--text {\n  color: transparent !important;\n  caret-color: transparent !important;\n}\n\n.v-application .red {\n  background-color: #F44336 !important;\n  border-color: #F44336 !important;\n}\n\n.v-application .red--text {\n  color: #F44336 !important;\n  caret-color: #F44336 !important;\n}\n\n.v-application .red.lighten-5 {\n  background-color: #FFEBEE !important;\n  border-color: #FFEBEE !important;\n}\n\n.v-application .red--text.text--lighten-5 {\n  color: #FFEBEE !important;\n  caret-color: #FFEBEE !important;\n}\n\n.v-application .red.lighten-4 {\n  background-color: #FFCDD2 !important;\n  border-color: #FFCDD2 !important;\n}\n\n.v-application .red--text.text--lighten-4 {\n  color: #FFCDD2 !important;\n  caret-color: #FFCDD2 !important;\n}\n\n.v-application .red.lighten-3 {\n  background-color: #EF9A9A !important;\n  border-color: #EF9A9A !important;\n}\n\n.v-application .red--text.text--lighten-3 {\n  color: #EF9A9A !important;\n  caret-color: #EF9A9A !important;\n}\n\n.v-application .red.lighten-2 {\n  background-color: #E57373 !important;\n  border-color: #E57373 !important;\n}\n\n.v-application .red--text.text--lighten-2 {\n  color: #E57373 !important;\n  caret-color: #E57373 !important;\n}\n\n.v-application .red.lighten-1 {\n  background-color: #EF5350 !important;\n  border-color: #EF5350 !important;\n}\n\n.v-application .red--text.text--lighten-1 {\n  color: #EF5350 !important;\n  caret-color: #EF5350 !important;\n}\n\n.v-application .red.darken-1 {\n  background-color: #E53935 !important;\n  border-color: #E53935 !important;\n}\n\n.v-application .red--text.text--darken-1 {\n  color: #E53935 !important;\n  caret-color: #E53935 !important;\n}\n\n.v-application .red.darken-2 {\n  background-color: #D32F2F !important;\n  border-color: #D32F2F !important;\n}\n\n.v-application .red--text.text--darken-2 {\n  color: #D32F2F !important;\n  caret-color: #D32F2F !important;\n}\n\n.v-application .red.darken-3 {\n  background-color: #C62828 !important;\n  border-color: #C62828 !important;\n}\n\n.v-application .red--text.text--darken-3 {\n  color: #C62828 !important;\n  caret-color: #C62828 !important;\n}\n\n.v-application .red.darken-4 {\n  background-color: #B71C1C !important;\n  border-color: #B71C1C !important;\n}\n\n.v-application .red--text.text--darken-4 {\n  color: #B71C1C !important;\n  caret-color: #B71C1C !important;\n}\n\n.v-application .red.accent-1 {\n  background-color: #FF8A80 !important;\n  border-color: #FF8A80 !important;\n}\n\n.v-application .red--text.text--accent-1 {\n  color: #FF8A80 !important;\n  caret-color: #FF8A80 !important;\n}\n\n.v-application .red.accent-2 {\n  background-color: #FF5252 !important;\n  border-color: #FF5252 !important;\n}\n\n.v-application .red--text.text--accent-2 {\n  color: #FF5252 !important;\n  caret-color: #FF5252 !important;\n}\n\n.v-application .red.accent-3 {\n  background-color: #FF1744 !important;\n  border-color: #FF1744 !important;\n}\n\n.v-application .red--text.text--accent-3 {\n  color: #FF1744 !important;\n  caret-color: #FF1744 !important;\n}\n\n.v-application .red.accent-4 {\n  background-color: #D50000 !important;\n  border-color: #D50000 !important;\n}\n\n.v-application .red--text.text--accent-4 {\n  color: #D50000 !important;\n  caret-color: #D50000 !important;\n}\n\n.v-application .pink {\n  background-color: #e91e63 !important;\n  border-color: #e91e63 !important;\n}\n\n.v-application .pink--text {\n  color: #e91e63 !important;\n  caret-color: #e91e63 !important;\n}\n\n.v-application .pink.lighten-5 {\n  background-color: #fce4ec !important;\n  border-color: #fce4ec !important;\n}\n\n.v-application .pink--text.text--lighten-5 {\n  color: #fce4ec !important;\n  caret-color: #fce4ec !important;\n}\n\n.v-application .pink.lighten-4 {\n  background-color: #f8bbd0 !important;\n  border-color: #f8bbd0 !important;\n}\n\n.v-application .pink--text.text--lighten-4 {\n  color: #f8bbd0 !important;\n  caret-color: #f8bbd0 !important;\n}\n\n.v-application .pink.lighten-3 {\n  background-color: #f48fb1 !important;\n  border-color: #f48fb1 !important;\n}\n\n.v-application .pink--text.text--lighten-3 {\n  color: #f48fb1 !important;\n  caret-color: #f48fb1 !important;\n}\n\n.v-application .pink.lighten-2 {\n  background-color: #f06292 !important;\n  border-color: #f06292 !important;\n}\n\n.v-application .pink--text.text--lighten-2 {\n  color: #f06292 !important;\n  caret-color: #f06292 !important;\n}\n\n.v-application .pink.lighten-1 {\n  background-color: #ec407a !important;\n  border-color: #ec407a !important;\n}\n\n.v-application .pink--text.text--lighten-1 {\n  color: #ec407a !important;\n  caret-color: #ec407a !important;\n}\n\n.v-application .pink.darken-1 {\n  background-color: #d81b60 !important;\n  border-color: #d81b60 !important;\n}\n\n.v-application .pink--text.text--darken-1 {\n  color: #d81b60 !important;\n  caret-color: #d81b60 !important;\n}\n\n.v-application .pink.darken-2 {\n  background-color: #c2185b !important;\n  border-color: #c2185b !important;\n}\n\n.v-application .pink--text.text--darken-2 {\n  color: #c2185b !important;\n  caret-color: #c2185b !important;\n}\n\n.v-application .pink.darken-3 {\n  background-color: #ad1457 !important;\n  border-color: #ad1457 !important;\n}\n\n.v-application .pink--text.text--darken-3 {\n  color: #ad1457 !important;\n  caret-color: #ad1457 !important;\n}\n\n.v-application .pink.darken-4 {\n  background-color: #880e4f !important;\n  border-color: #880e4f !important;\n}\n\n.v-application .pink--text.text--darken-4 {\n  color: #880e4f !important;\n  caret-color: #880e4f !important;\n}\n\n.v-application .pink.accent-1 {\n  background-color: #ff80ab !important;\n  border-color: #ff80ab !important;\n}\n\n.v-application .pink--text.text--accent-1 {\n  color: #ff80ab !important;\n  caret-color: #ff80ab !important;\n}\n\n.v-application .pink.accent-2 {\n  background-color: #ff4081 !important;\n  border-color: #ff4081 !important;\n}\n\n.v-application .pink--text.text--accent-2 {\n  color: #ff4081 !important;\n  caret-color: #ff4081 !important;\n}\n\n.v-application .pink.accent-3 {\n  background-color: #f50057 !important;\n  border-color: #f50057 !important;\n}\n\n.v-application .pink--text.text--accent-3 {\n  color: #f50057 !important;\n  caret-color: #f50057 !important;\n}\n\n.v-application .pink.accent-4 {\n  background-color: #c51162 !important;\n  border-color: #c51162 !important;\n}\n\n.v-application .pink--text.text--accent-4 {\n  color: #c51162 !important;\n  caret-color: #c51162 !important;\n}\n\n.v-application .purple {\n  background-color: #9c27b0 !important;\n  border-color: #9c27b0 !important;\n}\n\n.v-application .purple--text {\n  color: #9c27b0 !important;\n  caret-color: #9c27b0 !important;\n}\n\n.v-application .purple.lighten-5 {\n  background-color: #f3e5f5 !important;\n  border-color: #f3e5f5 !important;\n}\n\n.v-application .purple--text.text--lighten-5 {\n  color: #f3e5f5 !important;\n  caret-color: #f3e5f5 !important;\n}\n\n.v-application .purple.lighten-4 {\n  background-color: #e1bee7 !important;\n  border-color: #e1bee7 !important;\n}\n\n.v-application .purple--text.text--lighten-4 {\n  color: #e1bee7 !important;\n  caret-color: #e1bee7 !important;\n}\n\n.v-application .purple.lighten-3 {\n  background-color: #ce93d8 !important;\n  border-color: #ce93d8 !important;\n}\n\n.v-application .purple--text.text--lighten-3 {\n  color: #ce93d8 !important;\n  caret-color: #ce93d8 !important;\n}\n\n.v-application .purple.lighten-2 {\n  background-color: #ba68c8 !important;\n  border-color: #ba68c8 !important;\n}\n\n.v-application .purple--text.text--lighten-2 {\n  color: #ba68c8 !important;\n  caret-color: #ba68c8 !important;\n}\n\n.v-application .purple.lighten-1 {\n  background-color: #ab47bc !important;\n  border-color: #ab47bc !important;\n}\n\n.v-application .purple--text.text--lighten-1 {\n  color: #ab47bc !important;\n  caret-color: #ab47bc !important;\n}\n\n.v-application .purple.darken-1 {\n  background-color: #8e24aa !important;\n  border-color: #8e24aa !important;\n}\n\n.v-application .purple--text.text--darken-1 {\n  color: #8e24aa !important;\n  caret-color: #8e24aa !important;\n}\n\n.v-application .purple.darken-2 {\n  background-color: #7b1fa2 !important;\n  border-color: #7b1fa2 !important;\n}\n\n.v-application .purple--text.text--darken-2 {\n  color: #7b1fa2 !important;\n  caret-color: #7b1fa2 !important;\n}\n\n.v-application .purple.darken-3 {\n  background-color: #6a1b9a !important;\n  border-color: #6a1b9a !important;\n}\n\n.v-application .purple--text.text--darken-3 {\n  color: #6a1b9a !important;\n  caret-color: #6a1b9a !important;\n}\n\n.v-application .purple.darken-4 {\n  background-color: #4a148c !important;\n  border-color: #4a148c !important;\n}\n\n.v-application .purple--text.text--darken-4 {\n  color: #4a148c !important;\n  caret-color: #4a148c !important;\n}\n\n.v-application .purple.accent-1 {\n  background-color: #ea80fc !important;\n  border-color: #ea80fc !important;\n}\n\n.v-application .purple--text.text--accent-1 {\n  color: #ea80fc !important;\n  caret-color: #ea80fc !important;\n}\n\n.v-application .purple.accent-2 {\n  background-color: #e040fb !important;\n  border-color: #e040fb !important;\n}\n\n.v-application .purple--text.text--accent-2 {\n  color: #e040fb !important;\n  caret-color: #e040fb !important;\n}\n\n.v-application .purple.accent-3 {\n  background-color: #d500f9 !important;\n  border-color: #d500f9 !important;\n}\n\n.v-application .purple--text.text--accent-3 {\n  color: #d500f9 !important;\n  caret-color: #d500f9 !important;\n}\n\n.v-application .purple.accent-4 {\n  background-color: #aa00ff !important;\n  border-color: #aa00ff !important;\n}\n\n.v-application .purple--text.text--accent-4 {\n  color: #aa00ff !important;\n  caret-color: #aa00ff !important;\n}\n\n.v-application .deep-purple {\n  background-color: #673ab7 !important;\n  border-color: #673ab7 !important;\n}\n\n.v-application .deep-purple--text {\n  color: #673ab7 !important;\n  caret-color: #673ab7 !important;\n}\n\n.v-application .deep-purple.lighten-5 {\n  background-color: #ede7f6 !important;\n  border-color: #ede7f6 !important;\n}\n\n.v-application .deep-purple--text.text--lighten-5 {\n  color: #ede7f6 !important;\n  caret-color: #ede7f6 !important;\n}\n\n.v-application .deep-purple.lighten-4 {\n  background-color: #d1c4e9 !important;\n  border-color: #d1c4e9 !important;\n}\n\n.v-application .deep-purple--text.text--lighten-4 {\n  color: #d1c4e9 !important;\n  caret-color: #d1c4e9 !important;\n}\n\n.v-application .deep-purple.lighten-3 {\n  background-color: #b39ddb !important;\n  border-color: #b39ddb !important;\n}\n\n.v-application .deep-purple--text.text--lighten-3 {\n  color: #b39ddb !important;\n  caret-color: #b39ddb !important;\n}\n\n.v-application .deep-purple.lighten-2 {\n  background-color: #9575cd !important;\n  border-color: #9575cd !important;\n}\n\n.v-application .deep-purple--text.text--lighten-2 {\n  color: #9575cd !important;\n  caret-color: #9575cd !important;\n}\n\n.v-application .deep-purple.lighten-1 {\n  background-color: #7e57c2 !important;\n  border-color: #7e57c2 !important;\n}\n\n.v-application .deep-purple--text.text--lighten-1 {\n  color: #7e57c2 !important;\n  caret-color: #7e57c2 !important;\n}\n\n.v-application .deep-purple.darken-1 {\n  background-color: #5e35b1 !important;\n  border-color: #5e35b1 !important;\n}\n\n.v-application .deep-purple--text.text--darken-1 {\n  color: #5e35b1 !important;\n  caret-color: #5e35b1 !important;\n}\n\n.v-application .deep-purple.darken-2 {\n  background-color: #512da8 !important;\n  border-color: #512da8 !important;\n}\n\n.v-application .deep-purple--text.text--darken-2 {\n  color: #512da8 !important;\n  caret-color: #512da8 !important;\n}\n\n.v-application .deep-purple.darken-3 {\n  background-color: #4527a0 !important;\n  border-color: #4527a0 !important;\n}\n\n.v-application .deep-purple--text.text--darken-3 {\n  color: #4527a0 !important;\n  caret-color: #4527a0 !important;\n}\n\n.v-application .deep-purple.darken-4 {\n  background-color: #311b92 !important;\n  border-color: #311b92 !important;\n}\n\n.v-application .deep-purple--text.text--darken-4 {\n  color: #311b92 !important;\n  caret-color: #311b92 !important;\n}\n\n.v-application .deep-purple.accent-1 {\n  background-color: #b388ff !important;\n  border-color: #b388ff !important;\n}\n\n.v-application .deep-purple--text.text--accent-1 {\n  color: #b388ff !important;\n  caret-color: #b388ff !important;\n}\n\n.v-application .deep-purple.accent-2 {\n  background-color: #7c4dff !important;\n  border-color: #7c4dff !important;\n}\n\n.v-application .deep-purple--text.text--accent-2 {\n  color: #7c4dff !important;\n  caret-color: #7c4dff !important;\n}\n\n.v-application .deep-purple.accent-3 {\n  background-color: #651fff !important;\n  border-color: #651fff !important;\n}\n\n.v-application .deep-purple--text.text--accent-3 {\n  color: #651fff !important;\n  caret-color: #651fff !important;\n}\n\n.v-application .deep-purple.accent-4 {\n  background-color: #6200ea !important;\n  border-color: #6200ea !important;\n}\n\n.v-application .deep-purple--text.text--accent-4 {\n  color: #6200ea !important;\n  caret-color: #6200ea !important;\n}\n\n.v-application .indigo {\n  background-color: #3f51b5 !important;\n  border-color: #3f51b5 !important;\n}\n\n.v-application .indigo--text {\n  color: #3f51b5 !important;\n  caret-color: #3f51b5 !important;\n}\n\n.v-application .indigo.lighten-5 {\n  background-color: #e8eaf6 !important;\n  border-color: #e8eaf6 !important;\n}\n\n.v-application .indigo--text.text--lighten-5 {\n  color: #e8eaf6 !important;\n  caret-color: #e8eaf6 !important;\n}\n\n.v-application .indigo.lighten-4 {\n  background-color: #c5cae9 !important;\n  border-color: #c5cae9 !important;\n}\n\n.v-application .indigo--text.text--lighten-4 {\n  color: #c5cae9 !important;\n  caret-color: #c5cae9 !important;\n}\n\n.v-application .indigo.lighten-3 {\n  background-color: #9fa8da !important;\n  border-color: #9fa8da !important;\n}\n\n.v-application .indigo--text.text--lighten-3 {\n  color: #9fa8da !important;\n  caret-color: #9fa8da !important;\n}\n\n.v-application .indigo.lighten-2 {\n  background-color: #7986cb !important;\n  border-color: #7986cb !important;\n}\n\n.v-application .indigo--text.text--lighten-2 {\n  color: #7986cb !important;\n  caret-color: #7986cb !important;\n}\n\n.v-application .indigo.lighten-1 {\n  background-color: #5c6bc0 !important;\n  border-color: #5c6bc0 !important;\n}\n\n.v-application .indigo--text.text--lighten-1 {\n  color: #5c6bc0 !important;\n  caret-color: #5c6bc0 !important;\n}\n\n.v-application .indigo.darken-1 {\n  background-color: #3949ab !important;\n  border-color: #3949ab !important;\n}\n\n.v-application .indigo--text.text--darken-1 {\n  color: #3949ab !important;\n  caret-color: #3949ab !important;\n}\n\n.v-application .indigo.darken-2 {\n  background-color: #303f9f !important;\n  border-color: #303f9f !important;\n}\n\n.v-application .indigo--text.text--darken-2 {\n  color: #303f9f !important;\n  caret-color: #303f9f !important;\n}\n\n.v-application .indigo.darken-3 {\n  background-color: #283593 !important;\n  border-color: #283593 !important;\n}\n\n.v-application .indigo--text.text--darken-3 {\n  color: #283593 !important;\n  caret-color: #283593 !important;\n}\n\n.v-application .indigo.darken-4 {\n  background-color: #1a237e !important;\n  border-color: #1a237e !important;\n}\n\n.v-application .indigo--text.text--darken-4 {\n  color: #1a237e !important;\n  caret-color: #1a237e !important;\n}\n\n.v-application .indigo.accent-1 {\n  background-color: #8c9eff !important;\n  border-color: #8c9eff !important;\n}\n\n.v-application .indigo--text.text--accent-1 {\n  color: #8c9eff !important;\n  caret-color: #8c9eff !important;\n}\n\n.v-application .indigo.accent-2 {\n  background-color: #536dfe !important;\n  border-color: #536dfe !important;\n}\n\n.v-application .indigo--text.text--accent-2 {\n  color: #536dfe !important;\n  caret-color: #536dfe !important;\n}\n\n.v-application .indigo.accent-3 {\n  background-color: #3d5afe !important;\n  border-color: #3d5afe !important;\n}\n\n.v-application .indigo--text.text--accent-3 {\n  color: #3d5afe !important;\n  caret-color: #3d5afe !important;\n}\n\n.v-application .indigo.accent-4 {\n  background-color: #304ffe !important;\n  border-color: #304ffe !important;\n}\n\n.v-application .indigo--text.text--accent-4 {\n  color: #304ffe !important;\n  caret-color: #304ffe !important;\n}\n\n.v-application .blue {\n  background-color: #2196F3 !important;\n  border-color: #2196F3 !important;\n}\n\n.v-application .blue--text {\n  color: #2196F3 !important;\n  caret-color: #2196F3 !important;\n}\n\n.v-application .blue.lighten-5 {\n  background-color: #E3F2FD !important;\n  border-color: #E3F2FD !important;\n}\n\n.v-application .blue--text.text--lighten-5 {\n  color: #E3F2FD !important;\n  caret-color: #E3F2FD !important;\n}\n\n.v-application .blue.lighten-4 {\n  background-color: #BBDEFB !important;\n  border-color: #BBDEFB !important;\n}\n\n.v-application .blue--text.text--lighten-4 {\n  color: #BBDEFB !important;\n  caret-color: #BBDEFB !important;\n}\n\n.v-application .blue.lighten-3 {\n  background-color: #90CAF9 !important;\n  border-color: #90CAF9 !important;\n}\n\n.v-application .blue--text.text--lighten-3 {\n  color: #90CAF9 !important;\n  caret-color: #90CAF9 !important;\n}\n\n.v-application .blue.lighten-2 {\n  background-color: #64B5F6 !important;\n  border-color: #64B5F6 !important;\n}\n\n.v-application .blue--text.text--lighten-2 {\n  color: #64B5F6 !important;\n  caret-color: #64B5F6 !important;\n}\n\n.v-application .blue.lighten-1 {\n  background-color: #42A5F5 !important;\n  border-color: #42A5F5 !important;\n}\n\n.v-application .blue--text.text--lighten-1 {\n  color: #42A5F5 !important;\n  caret-color: #42A5F5 !important;\n}\n\n.v-application .blue.darken-1 {\n  background-color: #1E88E5 !important;\n  border-color: #1E88E5 !important;\n}\n\n.v-application .blue--text.text--darken-1 {\n  color: #1E88E5 !important;\n  caret-color: #1E88E5 !important;\n}\n\n.v-application .blue.darken-2 {\n  background-color: #1976D2 !important;\n  border-color: #1976D2 !important;\n}\n\n.v-application .blue--text.text--darken-2 {\n  color: #1976D2 !important;\n  caret-color: #1976D2 !important;\n}\n\n.v-application .blue.darken-3 {\n  background-color: #1565C0 !important;\n  border-color: #1565C0 !important;\n}\n\n.v-application .blue--text.text--darken-3 {\n  color: #1565C0 !important;\n  caret-color: #1565C0 !important;\n}\n\n.v-application .blue.darken-4 {\n  background-color: #0D47A1 !important;\n  border-color: #0D47A1 !important;\n}\n\n.v-application .blue--text.text--darken-4 {\n  color: #0D47A1 !important;\n  caret-color: #0D47A1 !important;\n}\n\n.v-application .blue.accent-1 {\n  background-color: #82B1FF !important;\n  border-color: #82B1FF !important;\n}\n\n.v-application .blue--text.text--accent-1 {\n  color: #82B1FF !important;\n  caret-color: #82B1FF !important;\n}\n\n.v-application .blue.accent-2 {\n  background-color: #448AFF !important;\n  border-color: #448AFF !important;\n}\n\n.v-application .blue--text.text--accent-2 {\n  color: #448AFF !important;\n  caret-color: #448AFF !important;\n}\n\n.v-application .blue.accent-3 {\n  background-color: #2979FF !important;\n  border-color: #2979FF !important;\n}\n\n.v-application .blue--text.text--accent-3 {\n  color: #2979FF !important;\n  caret-color: #2979FF !important;\n}\n\n.v-application .blue.accent-4 {\n  background-color: #2962FF !important;\n  border-color: #2962FF !important;\n}\n\n.v-application .blue--text.text--accent-4 {\n  color: #2962FF !important;\n  caret-color: #2962FF !important;\n}\n\n.v-application .light-blue {\n  background-color: #03a9f4 !important;\n  border-color: #03a9f4 !important;\n}\n\n.v-application .light-blue--text {\n  color: #03a9f4 !important;\n  caret-color: #03a9f4 !important;\n}\n\n.v-application .light-blue.lighten-5 {\n  background-color: #e1f5fe !important;\n  border-color: #e1f5fe !important;\n}\n\n.v-application .light-blue--text.text--lighten-5 {\n  color: #e1f5fe !important;\n  caret-color: #e1f5fe !important;\n}\n\n.v-application .light-blue.lighten-4 {\n  background-color: #b3e5fc !important;\n  border-color: #b3e5fc !important;\n}\n\n.v-application .light-blue--text.text--lighten-4 {\n  color: #b3e5fc !important;\n  caret-color: #b3e5fc !important;\n}\n\n.v-application .light-blue.lighten-3 {\n  background-color: #81d4fa !important;\n  border-color: #81d4fa !important;\n}\n\n.v-application .light-blue--text.text--lighten-3 {\n  color: #81d4fa !important;\n  caret-color: #81d4fa !important;\n}\n\n.v-application .light-blue.lighten-2 {\n  background-color: #4fc3f7 !important;\n  border-color: #4fc3f7 !important;\n}\n\n.v-application .light-blue--text.text--lighten-2 {\n  color: #4fc3f7 !important;\n  caret-color: #4fc3f7 !important;\n}\n\n.v-application .light-blue.lighten-1 {\n  background-color: #29b6f6 !important;\n  border-color: #29b6f6 !important;\n}\n\n.v-application .light-blue--text.text--lighten-1 {\n  color: #29b6f6 !important;\n  caret-color: #29b6f6 !important;\n}\n\n.v-application .light-blue.darken-1 {\n  background-color: #039be5 !important;\n  border-color: #039be5 !important;\n}\n\n.v-application .light-blue--text.text--darken-1 {\n  color: #039be5 !important;\n  caret-color: #039be5 !important;\n}\n\n.v-application .light-blue.darken-2 {\n  background-color: #0288d1 !important;\n  border-color: #0288d1 !important;\n}\n\n.v-application .light-blue--text.text--darken-2 {\n  color: #0288d1 !important;\n  caret-color: #0288d1 !important;\n}\n\n.v-application .light-blue.darken-3 {\n  background-color: #0277bd !important;\n  border-color: #0277bd !important;\n}\n\n.v-application .light-blue--text.text--darken-3 {\n  color: #0277bd !important;\n  caret-color: #0277bd !important;\n}\n\n.v-application .light-blue.darken-4 {\n  background-color: #01579b !important;\n  border-color: #01579b !important;\n}\n\n.v-application .light-blue--text.text--darken-4 {\n  color: #01579b !important;\n  caret-color: #01579b !important;\n}\n\n.v-application .light-blue.accent-1 {\n  background-color: #80d8ff !important;\n  border-color: #80d8ff !important;\n}\n\n.v-application .light-blue--text.text--accent-1 {\n  color: #80d8ff !important;\n  caret-color: #80d8ff !important;\n}\n\n.v-application .light-blue.accent-2 {\n  background-color: #40c4ff !important;\n  border-color: #40c4ff !important;\n}\n\n.v-application .light-blue--text.text--accent-2 {\n  color: #40c4ff !important;\n  caret-color: #40c4ff !important;\n}\n\n.v-application .light-blue.accent-3 {\n  background-color: #00b0ff !important;\n  border-color: #00b0ff !important;\n}\n\n.v-application .light-blue--text.text--accent-3 {\n  color: #00b0ff !important;\n  caret-color: #00b0ff !important;\n}\n\n.v-application .light-blue.accent-4 {\n  background-color: #0091ea !important;\n  border-color: #0091ea !important;\n}\n\n.v-application .light-blue--text.text--accent-4 {\n  color: #0091ea !important;\n  caret-color: #0091ea !important;\n}\n\n.v-application .cyan {\n  background-color: #00bcd4 !important;\n  border-color: #00bcd4 !important;\n}\n\n.v-application .cyan--text {\n  color: #00bcd4 !important;\n  caret-color: #00bcd4 !important;\n}\n\n.v-application .cyan.lighten-5 {\n  background-color: #e0f7fa !important;\n  border-color: #e0f7fa !important;\n}\n\n.v-application .cyan--text.text--lighten-5 {\n  color: #e0f7fa !important;\n  caret-color: #e0f7fa !important;\n}\n\n.v-application .cyan.lighten-4 {\n  background-color: #b2ebf2 !important;\n  border-color: #b2ebf2 !important;\n}\n\n.v-application .cyan--text.text--lighten-4 {\n  color: #b2ebf2 !important;\n  caret-color: #b2ebf2 !important;\n}\n\n.v-application .cyan.lighten-3 {\n  background-color: #80deea !important;\n  border-color: #80deea !important;\n}\n\n.v-application .cyan--text.text--lighten-3 {\n  color: #80deea !important;\n  caret-color: #80deea !important;\n}\n\n.v-application .cyan.lighten-2 {\n  background-color: #4dd0e1 !important;\n  border-color: #4dd0e1 !important;\n}\n\n.v-application .cyan--text.text--lighten-2 {\n  color: #4dd0e1 !important;\n  caret-color: #4dd0e1 !important;\n}\n\n.v-application .cyan.lighten-1 {\n  background-color: #26c6da !important;\n  border-color: #26c6da !important;\n}\n\n.v-application .cyan--text.text--lighten-1 {\n  color: #26c6da !important;\n  caret-color: #26c6da !important;\n}\n\n.v-application .cyan.darken-1 {\n  background-color: #00acc1 !important;\n  border-color: #00acc1 !important;\n}\n\n.v-application .cyan--text.text--darken-1 {\n  color: #00acc1 !important;\n  caret-color: #00acc1 !important;\n}\n\n.v-application .cyan.darken-2 {\n  background-color: #0097a7 !important;\n  border-color: #0097a7 !important;\n}\n\n.v-application .cyan--text.text--darken-2 {\n  color: #0097a7 !important;\n  caret-color: #0097a7 !important;\n}\n\n.v-application .cyan.darken-3 {\n  background-color: #00838f !important;\n  border-color: #00838f !important;\n}\n\n.v-application .cyan--text.text--darken-3 {\n  color: #00838f !important;\n  caret-color: #00838f !important;\n}\n\n.v-application .cyan.darken-4 {\n  background-color: #006064 !important;\n  border-color: #006064 !important;\n}\n\n.v-application .cyan--text.text--darken-4 {\n  color: #006064 !important;\n  caret-color: #006064 !important;\n}\n\n.v-application .cyan.accent-1 {\n  background-color: #84ffff !important;\n  border-color: #84ffff !important;\n}\n\n.v-application .cyan--text.text--accent-1 {\n  color: #84ffff !important;\n  caret-color: #84ffff !important;\n}\n\n.v-application .cyan.accent-2 {\n  background-color: #18ffff !important;\n  border-color: #18ffff !important;\n}\n\n.v-application .cyan--text.text--accent-2 {\n  color: #18ffff !important;\n  caret-color: #18ffff !important;\n}\n\n.v-application .cyan.accent-3 {\n  background-color: #00e5ff !important;\n  border-color: #00e5ff !important;\n}\n\n.v-application .cyan--text.text--accent-3 {\n  color: #00e5ff !important;\n  caret-color: #00e5ff !important;\n}\n\n.v-application .cyan.accent-4 {\n  background-color: #00b8d4 !important;\n  border-color: #00b8d4 !important;\n}\n\n.v-application .cyan--text.text--accent-4 {\n  color: #00b8d4 !important;\n  caret-color: #00b8d4 !important;\n}\n\n.v-application .teal {\n  background-color: #009688 !important;\n  border-color: #009688 !important;\n}\n\n.v-application .teal--text {\n  color: #009688 !important;\n  caret-color: #009688 !important;\n}\n\n.v-application .teal.lighten-5 {\n  background-color: #e0f2f1 !important;\n  border-color: #e0f2f1 !important;\n}\n\n.v-application .teal--text.text--lighten-5 {\n  color: #e0f2f1 !important;\n  caret-color: #e0f2f1 !important;\n}\n\n.v-application .teal.lighten-4 {\n  background-color: #b2dfdb !important;\n  border-color: #b2dfdb !important;\n}\n\n.v-application .teal--text.text--lighten-4 {\n  color: #b2dfdb !important;\n  caret-color: #b2dfdb !important;\n}\n\n.v-application .teal.lighten-3 {\n  background-color: #80cbc4 !important;\n  border-color: #80cbc4 !important;\n}\n\n.v-application .teal--text.text--lighten-3 {\n  color: #80cbc4 !important;\n  caret-color: #80cbc4 !important;\n}\n\n.v-application .teal.lighten-2 {\n  background-color: #4db6ac !important;\n  border-color: #4db6ac !important;\n}\n\n.v-application .teal--text.text--lighten-2 {\n  color: #4db6ac !important;\n  caret-color: #4db6ac !important;\n}\n\n.v-application .teal.lighten-1 {\n  background-color: #26a69a !important;\n  border-color: #26a69a !important;\n}\n\n.v-application .teal--text.text--lighten-1 {\n  color: #26a69a !important;\n  caret-color: #26a69a !important;\n}\n\n.v-application .teal.darken-1 {\n  background-color: #00897b !important;\n  border-color: #00897b !important;\n}\n\n.v-application .teal--text.text--darken-1 {\n  color: #00897b !important;\n  caret-color: #00897b !important;\n}\n\n.v-application .teal.darken-2 {\n  background-color: #00796b !important;\n  border-color: #00796b !important;\n}\n\n.v-application .teal--text.text--darken-2 {\n  color: #00796b !important;\n  caret-color: #00796b !important;\n}\n\n.v-application .teal.darken-3 {\n  background-color: #00695c !important;\n  border-color: #00695c !important;\n}\n\n.v-application .teal--text.text--darken-3 {\n  color: #00695c !important;\n  caret-color: #00695c !important;\n}\n\n.v-application .teal.darken-4 {\n  background-color: #004d40 !important;\n  border-color: #004d40 !important;\n}\n\n.v-application .teal--text.text--darken-4 {\n  color: #004d40 !important;\n  caret-color: #004d40 !important;\n}\n\n.v-application .teal.accent-1 {\n  background-color: #a7ffeb !important;\n  border-color: #a7ffeb !important;\n}\n\n.v-application .teal--text.text--accent-1 {\n  color: #a7ffeb !important;\n  caret-color: #a7ffeb !important;\n}\n\n.v-application .teal.accent-2 {\n  background-color: #64ffda !important;\n  border-color: #64ffda !important;\n}\n\n.v-application .teal--text.text--accent-2 {\n  color: #64ffda !important;\n  caret-color: #64ffda !important;\n}\n\n.v-application .teal.accent-3 {\n  background-color: #1de9b6 !important;\n  border-color: #1de9b6 !important;\n}\n\n.v-application .teal--text.text--accent-3 {\n  color: #1de9b6 !important;\n  caret-color: #1de9b6 !important;\n}\n\n.v-application .teal.accent-4 {\n  background-color: #00bfa5 !important;\n  border-color: #00bfa5 !important;\n}\n\n.v-application .teal--text.text--accent-4 {\n  color: #00bfa5 !important;\n  caret-color: #00bfa5 !important;\n}\n\n.v-application .green {\n  background-color: #4CAF50 !important;\n  border-color: #4CAF50 !important;\n}\n\n.v-application .green--text {\n  color: #4CAF50 !important;\n  caret-color: #4CAF50 !important;\n}\n\n.v-application .green.lighten-5 {\n  background-color: #E8F5E9 !important;\n  border-color: #E8F5E9 !important;\n}\n\n.v-application .green--text.text--lighten-5 {\n  color: #E8F5E9 !important;\n  caret-color: #E8F5E9 !important;\n}\n\n.v-application .green.lighten-4 {\n  background-color: #C8E6C9 !important;\n  border-color: #C8E6C9 !important;\n}\n\n.v-application .green--text.text--lighten-4 {\n  color: #C8E6C9 !important;\n  caret-color: #C8E6C9 !important;\n}\n\n.v-application .green.lighten-3 {\n  background-color: #A5D6A7 !important;\n  border-color: #A5D6A7 !important;\n}\n\n.v-application .green--text.text--lighten-3 {\n  color: #A5D6A7 !important;\n  caret-color: #A5D6A7 !important;\n}\n\n.v-application .green.lighten-2 {\n  background-color: #81C784 !important;\n  border-color: #81C784 !important;\n}\n\n.v-application .green--text.text--lighten-2 {\n  color: #81C784 !important;\n  caret-color: #81C784 !important;\n}\n\n.v-application .green.lighten-1 {\n  background-color: #66BB6A !important;\n  border-color: #66BB6A !important;\n}\n\n.v-application .green--text.text--lighten-1 {\n  color: #66BB6A !important;\n  caret-color: #66BB6A !important;\n}\n\n.v-application .green.darken-1 {\n  background-color: #43A047 !important;\n  border-color: #43A047 !important;\n}\n\n.v-application .green--text.text--darken-1 {\n  color: #43A047 !important;\n  caret-color: #43A047 !important;\n}\n\n.v-application .green.darken-2 {\n  background-color: #388E3C !important;\n  border-color: #388E3C !important;\n}\n\n.v-application .green--text.text--darken-2 {\n  color: #388E3C !important;\n  caret-color: #388E3C !important;\n}\n\n.v-application .green.darken-3 {\n  background-color: #2E7D32 !important;\n  border-color: #2E7D32 !important;\n}\n\n.v-application .green--text.text--darken-3 {\n  color: #2E7D32 !important;\n  caret-color: #2E7D32 !important;\n}\n\n.v-application .green.darken-4 {\n  background-color: #1B5E20 !important;\n  border-color: #1B5E20 !important;\n}\n\n.v-application .green--text.text--darken-4 {\n  color: #1B5E20 !important;\n  caret-color: #1B5E20 !important;\n}\n\n.v-application .green.accent-1 {\n  background-color: #B9F6CA !important;\n  border-color: #B9F6CA !important;\n}\n\n.v-application .green--text.text--accent-1 {\n  color: #B9F6CA !important;\n  caret-color: #B9F6CA !important;\n}\n\n.v-application .green.accent-2 {\n  background-color: #69F0AE !important;\n  border-color: #69F0AE !important;\n}\n\n.v-application .green--text.text--accent-2 {\n  color: #69F0AE !important;\n  caret-color: #69F0AE !important;\n}\n\n.v-application .green.accent-3 {\n  background-color: #00E676 !important;\n  border-color: #00E676 !important;\n}\n\n.v-application .green--text.text--accent-3 {\n  color: #00E676 !important;\n  caret-color: #00E676 !important;\n}\n\n.v-application .green.accent-4 {\n  background-color: #00C853 !important;\n  border-color: #00C853 !important;\n}\n\n.v-application .green--text.text--accent-4 {\n  color: #00C853 !important;\n  caret-color: #00C853 !important;\n}\n\n.v-application .light-green {\n  background-color: #8bc34a !important;\n  border-color: #8bc34a !important;\n}\n\n.v-application .light-green--text {\n  color: #8bc34a !important;\n  caret-color: #8bc34a !important;\n}\n\n.v-application .light-green.lighten-5 {\n  background-color: #f1f8e9 !important;\n  border-color: #f1f8e9 !important;\n}\n\n.v-application .light-green--text.text--lighten-5 {\n  color: #f1f8e9 !important;\n  caret-color: #f1f8e9 !important;\n}\n\n.v-application .light-green.lighten-4 {\n  background-color: #dcedc8 !important;\n  border-color: #dcedc8 !important;\n}\n\n.v-application .light-green--text.text--lighten-4 {\n  color: #dcedc8 !important;\n  caret-color: #dcedc8 !important;\n}\n\n.v-application .light-green.lighten-3 {\n  background-color: #c5e1a5 !important;\n  border-color: #c5e1a5 !important;\n}\n\n.v-application .light-green--text.text--lighten-3 {\n  color: #c5e1a5 !important;\n  caret-color: #c5e1a5 !important;\n}\n\n.v-application .light-green.lighten-2 {\n  background-color: #aed581 !important;\n  border-color: #aed581 !important;\n}\n\n.v-application .light-green--text.text--lighten-2 {\n  color: #aed581 !important;\n  caret-color: #aed581 !important;\n}\n\n.v-application .light-green.lighten-1 {\n  background-color: #9ccc65 !important;\n  border-color: #9ccc65 !important;\n}\n\n.v-application .light-green--text.text--lighten-1 {\n  color: #9ccc65 !important;\n  caret-color: #9ccc65 !important;\n}\n\n.v-application .light-green.darken-1 {\n  background-color: #7cb342 !important;\n  border-color: #7cb342 !important;\n}\n\n.v-application .light-green--text.text--darken-1 {\n  color: #7cb342 !important;\n  caret-color: #7cb342 !important;\n}\n\n.v-application .light-green.darken-2 {\n  background-color: #689f38 !important;\n  border-color: #689f38 !important;\n}\n\n.v-application .light-green--text.text--darken-2 {\n  color: #689f38 !important;\n  caret-color: #689f38 !important;\n}\n\n.v-application .light-green.darken-3 {\n  background-color: #558b2f !important;\n  border-color: #558b2f !important;\n}\n\n.v-application .light-green--text.text--darken-3 {\n  color: #558b2f !important;\n  caret-color: #558b2f !important;\n}\n\n.v-application .light-green.darken-4 {\n  background-color: #33691e !important;\n  border-color: #33691e !important;\n}\n\n.v-application .light-green--text.text--darken-4 {\n  color: #33691e !important;\n  caret-color: #33691e !important;\n}\n\n.v-application .light-green.accent-1 {\n  background-color: #ccff90 !important;\n  border-color: #ccff90 !important;\n}\n\n.v-application .light-green--text.text--accent-1 {\n  color: #ccff90 !important;\n  caret-color: #ccff90 !important;\n}\n\n.v-application .light-green.accent-2 {\n  background-color: #b2ff59 !important;\n  border-color: #b2ff59 !important;\n}\n\n.v-application .light-green--text.text--accent-2 {\n  color: #b2ff59 !important;\n  caret-color: #b2ff59 !important;\n}\n\n.v-application .light-green.accent-3 {\n  background-color: #76ff03 !important;\n  border-color: #76ff03 !important;\n}\n\n.v-application .light-green--text.text--accent-3 {\n  color: #76ff03 !important;\n  caret-color: #76ff03 !important;\n}\n\n.v-application .light-green.accent-4 {\n  background-color: #64dd17 !important;\n  border-color: #64dd17 !important;\n}\n\n.v-application .light-green--text.text--accent-4 {\n  color: #64dd17 !important;\n  caret-color: #64dd17 !important;\n}\n\n.v-application .lime {\n  background-color: #cddc39 !important;\n  border-color: #cddc39 !important;\n}\n\n.v-application .lime--text {\n  color: #cddc39 !important;\n  caret-color: #cddc39 !important;\n}\n\n.v-application .lime.lighten-5 {\n  background-color: #f9fbe7 !important;\n  border-color: #f9fbe7 !important;\n}\n\n.v-application .lime--text.text--lighten-5 {\n  color: #f9fbe7 !important;\n  caret-color: #f9fbe7 !important;\n}\n\n.v-application .lime.lighten-4 {\n  background-color: #f0f4c3 !important;\n  border-color: #f0f4c3 !important;\n}\n\n.v-application .lime--text.text--lighten-4 {\n  color: #f0f4c3 !important;\n  caret-color: #f0f4c3 !important;\n}\n\n.v-application .lime.lighten-3 {\n  background-color: #e6ee9c !important;\n  border-color: #e6ee9c !important;\n}\n\n.v-application .lime--text.text--lighten-3 {\n  color: #e6ee9c !important;\n  caret-color: #e6ee9c !important;\n}\n\n.v-application .lime.lighten-2 {\n  background-color: #dce775 !important;\n  border-color: #dce775 !important;\n}\n\n.v-application .lime--text.text--lighten-2 {\n  color: #dce775 !important;\n  caret-color: #dce775 !important;\n}\n\n.v-application .lime.lighten-1 {\n  background-color: #d4e157 !important;\n  border-color: #d4e157 !important;\n}\n\n.v-application .lime--text.text--lighten-1 {\n  color: #d4e157 !important;\n  caret-color: #d4e157 !important;\n}\n\n.v-application .lime.darken-1 {\n  background-color: #c0ca33 !important;\n  border-color: #c0ca33 !important;\n}\n\n.v-application .lime--text.text--darken-1 {\n  color: #c0ca33 !important;\n  caret-color: #c0ca33 !important;\n}\n\n.v-application .lime.darken-2 {\n  background-color: #afb42b !important;\n  border-color: #afb42b !important;\n}\n\n.v-application .lime--text.text--darken-2 {\n  color: #afb42b !important;\n  caret-color: #afb42b !important;\n}\n\n.v-application .lime.darken-3 {\n  background-color: #9e9d24 !important;\n  border-color: #9e9d24 !important;\n}\n\n.v-application .lime--text.text--darken-3 {\n  color: #9e9d24 !important;\n  caret-color: #9e9d24 !important;\n}\n\n.v-application .lime.darken-4 {\n  background-color: #827717 !important;\n  border-color: #827717 !important;\n}\n\n.v-application .lime--text.text--darken-4 {\n  color: #827717 !important;\n  caret-color: #827717 !important;\n}\n\n.v-application .lime.accent-1 {\n  background-color: #f4ff81 !important;\n  border-color: #f4ff81 !important;\n}\n\n.v-application .lime--text.text--accent-1 {\n  color: #f4ff81 !important;\n  caret-color: #f4ff81 !important;\n}\n\n.v-application .lime.accent-2 {\n  background-color: #eeff41 !important;\n  border-color: #eeff41 !important;\n}\n\n.v-application .lime--text.text--accent-2 {\n  color: #eeff41 !important;\n  caret-color: #eeff41 !important;\n}\n\n.v-application .lime.accent-3 {\n  background-color: #c6ff00 !important;\n  border-color: #c6ff00 !important;\n}\n\n.v-application .lime--text.text--accent-3 {\n  color: #c6ff00 !important;\n  caret-color: #c6ff00 !important;\n}\n\n.v-application .lime.accent-4 {\n  background-color: #aeea00 !important;\n  border-color: #aeea00 !important;\n}\n\n.v-application .lime--text.text--accent-4 {\n  color: #aeea00 !important;\n  caret-color: #aeea00 !important;\n}\n\n.v-application .yellow {\n  background-color: #ffeb3b !important;\n  border-color: #ffeb3b !important;\n}\n\n.v-application .yellow--text {\n  color: #ffeb3b !important;\n  caret-color: #ffeb3b !important;\n}\n\n.v-application .yellow.lighten-5 {\n  background-color: #fffde7 !important;\n  border-color: #fffde7 !important;\n}\n\n.v-application .yellow--text.text--lighten-5 {\n  color: #fffde7 !important;\n  caret-color: #fffde7 !important;\n}\n\n.v-application .yellow.lighten-4 {\n  background-color: #fff9c4 !important;\n  border-color: #fff9c4 !important;\n}\n\n.v-application .yellow--text.text--lighten-4 {\n  color: #fff9c4 !important;\n  caret-color: #fff9c4 !important;\n}\n\n.v-application .yellow.lighten-3 {\n  background-color: #fff59d !important;\n  border-color: #fff59d !important;\n}\n\n.v-application .yellow--text.text--lighten-3 {\n  color: #fff59d !important;\n  caret-color: #fff59d !important;\n}\n\n.v-application .yellow.lighten-2 {\n  background-color: #fff176 !important;\n  border-color: #fff176 !important;\n}\n\n.v-application .yellow--text.text--lighten-2 {\n  color: #fff176 !important;\n  caret-color: #fff176 !important;\n}\n\n.v-application .yellow.lighten-1 {\n  background-color: #ffee58 !important;\n  border-color: #ffee58 !important;\n}\n\n.v-application .yellow--text.text--lighten-1 {\n  color: #ffee58 !important;\n  caret-color: #ffee58 !important;\n}\n\n.v-application .yellow.darken-1 {\n  background-color: #fdd835 !important;\n  border-color: #fdd835 !important;\n}\n\n.v-application .yellow--text.text--darken-1 {\n  color: #fdd835 !important;\n  caret-color: #fdd835 !important;\n}\n\n.v-application .yellow.darken-2 {\n  background-color: #fbc02d !important;\n  border-color: #fbc02d !important;\n}\n\n.v-application .yellow--text.text--darken-2 {\n  color: #fbc02d !important;\n  caret-color: #fbc02d !important;\n}\n\n.v-application .yellow.darken-3 {\n  background-color: #f9a825 !important;\n  border-color: #f9a825 !important;\n}\n\n.v-application .yellow--text.text--darken-3 {\n  color: #f9a825 !important;\n  caret-color: #f9a825 !important;\n}\n\n.v-application .yellow.darken-4 {\n  background-color: #f57f17 !important;\n  border-color: #f57f17 !important;\n}\n\n.v-application .yellow--text.text--darken-4 {\n  color: #f57f17 !important;\n  caret-color: #f57f17 !important;\n}\n\n.v-application .yellow.accent-1 {\n  background-color: #ffff8d !important;\n  border-color: #ffff8d !important;\n}\n\n.v-application .yellow--text.text--accent-1 {\n  color: #ffff8d !important;\n  caret-color: #ffff8d !important;\n}\n\n.v-application .yellow.accent-2 {\n  background-color: #ffff00 !important;\n  border-color: #ffff00 !important;\n}\n\n.v-application .yellow--text.text--accent-2 {\n  color: #ffff00 !important;\n  caret-color: #ffff00 !important;\n}\n\n.v-application .yellow.accent-3 {\n  background-color: #ffea00 !important;\n  border-color: #ffea00 !important;\n}\n\n.v-application .yellow--text.text--accent-3 {\n  color: #ffea00 !important;\n  caret-color: #ffea00 !important;\n}\n\n.v-application .yellow.accent-4 {\n  background-color: #ffd600 !important;\n  border-color: #ffd600 !important;\n}\n\n.v-application .yellow--text.text--accent-4 {\n  color: #ffd600 !important;\n  caret-color: #ffd600 !important;\n}\n\n.v-application .amber {\n  background-color: #ffc107 !important;\n  border-color: #ffc107 !important;\n}\n\n.v-application .amber--text {\n  color: #ffc107 !important;\n  caret-color: #ffc107 !important;\n}\n\n.v-application .amber.lighten-5 {\n  background-color: #fff8e1 !important;\n  border-color: #fff8e1 !important;\n}\n\n.v-application .amber--text.text--lighten-5 {\n  color: #fff8e1 !important;\n  caret-color: #fff8e1 !important;\n}\n\n.v-application .amber.lighten-4 {\n  background-color: #ffecb3 !important;\n  border-color: #ffecb3 !important;\n}\n\n.v-application .amber--text.text--lighten-4 {\n  color: #ffecb3 !important;\n  caret-color: #ffecb3 !important;\n}\n\n.v-application .amber.lighten-3 {\n  background-color: #ffe082 !important;\n  border-color: #ffe082 !important;\n}\n\n.v-application .amber--text.text--lighten-3 {\n  color: #ffe082 !important;\n  caret-color: #ffe082 !important;\n}\n\n.v-application .amber.lighten-2 {\n  background-color: #ffd54f !important;\n  border-color: #ffd54f !important;\n}\n\n.v-application .amber--text.text--lighten-2 {\n  color: #ffd54f !important;\n  caret-color: #ffd54f !important;\n}\n\n.v-application .amber.lighten-1 {\n  background-color: #ffca28 !important;\n  border-color: #ffca28 !important;\n}\n\n.v-application .amber--text.text--lighten-1 {\n  color: #ffca28 !important;\n  caret-color: #ffca28 !important;\n}\n\n.v-application .amber.darken-1 {\n  background-color: #ffb300 !important;\n  border-color: #ffb300 !important;\n}\n\n.v-application .amber--text.text--darken-1 {\n  color: #ffb300 !important;\n  caret-color: #ffb300 !important;\n}\n\n.v-application .amber.darken-2 {\n  background-color: #ffa000 !important;\n  border-color: #ffa000 !important;\n}\n\n.v-application .amber--text.text--darken-2 {\n  color: #ffa000 !important;\n  caret-color: #ffa000 !important;\n}\n\n.v-application .amber.darken-3 {\n  background-color: #ff8f00 !important;\n  border-color: #ff8f00 !important;\n}\n\n.v-application .amber--text.text--darken-3 {\n  color: #ff8f00 !important;\n  caret-color: #ff8f00 !important;\n}\n\n.v-application .amber.darken-4 {\n  background-color: #ff6f00 !important;\n  border-color: #ff6f00 !important;\n}\n\n.v-application .amber--text.text--darken-4 {\n  color: #ff6f00 !important;\n  caret-color: #ff6f00 !important;\n}\n\n.v-application .amber.accent-1 {\n  background-color: #ffe57f !important;\n  border-color: #ffe57f !important;\n}\n\n.v-application .amber--text.text--accent-1 {\n  color: #ffe57f !important;\n  caret-color: #ffe57f !important;\n}\n\n.v-application .amber.accent-2 {\n  background-color: #ffd740 !important;\n  border-color: #ffd740 !important;\n}\n\n.v-application .amber--text.text--accent-2 {\n  color: #ffd740 !important;\n  caret-color: #ffd740 !important;\n}\n\n.v-application .amber.accent-3 {\n  background-color: #ffc400 !important;\n  border-color: #ffc400 !important;\n}\n\n.v-application .amber--text.text--accent-3 {\n  color: #ffc400 !important;\n  caret-color: #ffc400 !important;\n}\n\n.v-application .amber.accent-4 {\n  background-color: #ffab00 !important;\n  border-color: #ffab00 !important;\n}\n\n.v-application .amber--text.text--accent-4 {\n  color: #ffab00 !important;\n  caret-color: #ffab00 !important;\n}\n\n.v-application .orange {\n  background-color: #ff9800 !important;\n  border-color: #ff9800 !important;\n}\n\n.v-application .orange--text {\n  color: #ff9800 !important;\n  caret-color: #ff9800 !important;\n}\n\n.v-application .orange.lighten-5 {\n  background-color: #fff3e0 !important;\n  border-color: #fff3e0 !important;\n}\n\n.v-application .orange--text.text--lighten-5 {\n  color: #fff3e0 !important;\n  caret-color: #fff3e0 !important;\n}\n\n.v-application .orange.lighten-4 {\n  background-color: #ffe0b2 !important;\n  border-color: #ffe0b2 !important;\n}\n\n.v-application .orange--text.text--lighten-4 {\n  color: #ffe0b2 !important;\n  caret-color: #ffe0b2 !important;\n}\n\n.v-application .orange.lighten-3 {\n  background-color: #ffcc80 !important;\n  border-color: #ffcc80 !important;\n}\n\n.v-application .orange--text.text--lighten-3 {\n  color: #ffcc80 !important;\n  caret-color: #ffcc80 !important;\n}\n\n.v-application .orange.lighten-2 {\n  background-color: #ffb74d !important;\n  border-color: #ffb74d !important;\n}\n\n.v-application .orange--text.text--lighten-2 {\n  color: #ffb74d !important;\n  caret-color: #ffb74d !important;\n}\n\n.v-application .orange.lighten-1 {\n  background-color: #ffa726 !important;\n  border-color: #ffa726 !important;\n}\n\n.v-application .orange--text.text--lighten-1 {\n  color: #ffa726 !important;\n  caret-color: #ffa726 !important;\n}\n\n.v-application .orange.darken-1 {\n  background-color: #fb8c00 !important;\n  border-color: #fb8c00 !important;\n}\n\n.v-application .orange--text.text--darken-1 {\n  color: #fb8c00 !important;\n  caret-color: #fb8c00 !important;\n}\n\n.v-application .orange.darken-2 {\n  background-color: #f57c00 !important;\n  border-color: #f57c00 !important;\n}\n\n.v-application .orange--text.text--darken-2 {\n  color: #f57c00 !important;\n  caret-color: #f57c00 !important;\n}\n\n.v-application .orange.darken-3 {\n  background-color: #ef6c00 !important;\n  border-color: #ef6c00 !important;\n}\n\n.v-application .orange--text.text--darken-3 {\n  color: #ef6c00 !important;\n  caret-color: #ef6c00 !important;\n}\n\n.v-application .orange.darken-4 {\n  background-color: #e65100 !important;\n  border-color: #e65100 !important;\n}\n\n.v-application .orange--text.text--darken-4 {\n  color: #e65100 !important;\n  caret-color: #e65100 !important;\n}\n\n.v-application .orange.accent-1 {\n  background-color: #ffd180 !important;\n  border-color: #ffd180 !important;\n}\n\n.v-application .orange--text.text--accent-1 {\n  color: #ffd180 !important;\n  caret-color: #ffd180 !important;\n}\n\n.v-application .orange.accent-2 {\n  background-color: #ffab40 !important;\n  border-color: #ffab40 !important;\n}\n\n.v-application .orange--text.text--accent-2 {\n  color: #ffab40 !important;\n  caret-color: #ffab40 !important;\n}\n\n.v-application .orange.accent-3 {\n  background-color: #ff9100 !important;\n  border-color: #ff9100 !important;\n}\n\n.v-application .orange--text.text--accent-3 {\n  color: #ff9100 !important;\n  caret-color: #ff9100 !important;\n}\n\n.v-application .orange.accent-4 {\n  background-color: #ff6d00 !important;\n  border-color: #ff6d00 !important;\n}\n\n.v-application .orange--text.text--accent-4 {\n  color: #ff6d00 !important;\n  caret-color: #ff6d00 !important;\n}\n\n.v-application .deep-orange {\n  background-color: #ff5722 !important;\n  border-color: #ff5722 !important;\n}\n\n.v-application .deep-orange--text {\n  color: #ff5722 !important;\n  caret-color: #ff5722 !important;\n}\n\n.v-application .deep-orange.lighten-5 {\n  background-color: #fbe9e7 !important;\n  border-color: #fbe9e7 !important;\n}\n\n.v-application .deep-orange--text.text--lighten-5 {\n  color: #fbe9e7 !important;\n  caret-color: #fbe9e7 !important;\n}\n\n.v-application .deep-orange.lighten-4 {\n  background-color: #ffccbc !important;\n  border-color: #ffccbc !important;\n}\n\n.v-application .deep-orange--text.text--lighten-4 {\n  color: #ffccbc !important;\n  caret-color: #ffccbc !important;\n}\n\n.v-application .deep-orange.lighten-3 {\n  background-color: #ffab91 !important;\n  border-color: #ffab91 !important;\n}\n\n.v-application .deep-orange--text.text--lighten-3 {\n  color: #ffab91 !important;\n  caret-color: #ffab91 !important;\n}\n\n.v-application .deep-orange.lighten-2 {\n  background-color: #ff8a65 !important;\n  border-color: #ff8a65 !important;\n}\n\n.v-application .deep-orange--text.text--lighten-2 {\n  color: #ff8a65 !important;\n  caret-color: #ff8a65 !important;\n}\n\n.v-application .deep-orange.lighten-1 {\n  background-color: #ff7043 !important;\n  border-color: #ff7043 !important;\n}\n\n.v-application .deep-orange--text.text--lighten-1 {\n  color: #ff7043 !important;\n  caret-color: #ff7043 !important;\n}\n\n.v-application .deep-orange.darken-1 {\n  background-color: #f4511e !important;\n  border-color: #f4511e !important;\n}\n\n.v-application .deep-orange--text.text--darken-1 {\n  color: #f4511e !important;\n  caret-color: #f4511e !important;\n}\n\n.v-application .deep-orange.darken-2 {\n  background-color: #e64a19 !important;\n  border-color: #e64a19 !important;\n}\n\n.v-application .deep-orange--text.text--darken-2 {\n  color: #e64a19 !important;\n  caret-color: #e64a19 !important;\n}\n\n.v-application .deep-orange.darken-3 {\n  background-color: #d84315 !important;\n  border-color: #d84315 !important;\n}\n\n.v-application .deep-orange--text.text--darken-3 {\n  color: #d84315 !important;\n  caret-color: #d84315 !important;\n}\n\n.v-application .deep-orange.darken-4 {\n  background-color: #bf360c !important;\n  border-color: #bf360c !important;\n}\n\n.v-application .deep-orange--text.text--darken-4 {\n  color: #bf360c !important;\n  caret-color: #bf360c !important;\n}\n\n.v-application .deep-orange.accent-1 {\n  background-color: #ff9e80 !important;\n  border-color: #ff9e80 !important;\n}\n\n.v-application .deep-orange--text.text--accent-1 {\n  color: #ff9e80 !important;\n  caret-color: #ff9e80 !important;\n}\n\n.v-application .deep-orange.accent-2 {\n  background-color: #ff6e40 !important;\n  border-color: #ff6e40 !important;\n}\n\n.v-application .deep-orange--text.text--accent-2 {\n  color: #ff6e40 !important;\n  caret-color: #ff6e40 !important;\n}\n\n.v-application .deep-orange.accent-3 {\n  background-color: #ff3d00 !important;\n  border-color: #ff3d00 !important;\n}\n\n.v-application .deep-orange--text.text--accent-3 {\n  color: #ff3d00 !important;\n  caret-color: #ff3d00 !important;\n}\n\n.v-application .deep-orange.accent-4 {\n  background-color: #dd2c00 !important;\n  border-color: #dd2c00 !important;\n}\n\n.v-application .deep-orange--text.text--accent-4 {\n  color: #dd2c00 !important;\n  caret-color: #dd2c00 !important;\n}\n\n.v-application .brown {\n  background-color: #795548 !important;\n  border-color: #795548 !important;\n}\n\n.v-application .brown--text {\n  color: #795548 !important;\n  caret-color: #795548 !important;\n}\n\n.v-application .brown.lighten-5 {\n  background-color: #efebe9 !important;\n  border-color: #efebe9 !important;\n}\n\n.v-application .brown--text.text--lighten-5 {\n  color: #efebe9 !important;\n  caret-color: #efebe9 !important;\n}\n\n.v-application .brown.lighten-4 {\n  background-color: #d7ccc8 !important;\n  border-color: #d7ccc8 !important;\n}\n\n.v-application .brown--text.text--lighten-4 {\n  color: #d7ccc8 !important;\n  caret-color: #d7ccc8 !important;\n}\n\n.v-application .brown.lighten-3 {\n  background-color: #bcaaa4 !important;\n  border-color: #bcaaa4 !important;\n}\n\n.v-application .brown--text.text--lighten-3 {\n  color: #bcaaa4 !important;\n  caret-color: #bcaaa4 !important;\n}\n\n.v-application .brown.lighten-2 {\n  background-color: #a1887f !important;\n  border-color: #a1887f !important;\n}\n\n.v-application .brown--text.text--lighten-2 {\n  color: #a1887f !important;\n  caret-color: #a1887f !important;\n}\n\n.v-application .brown.lighten-1 {\n  background-color: #8d6e63 !important;\n  border-color: #8d6e63 !important;\n}\n\n.v-application .brown--text.text--lighten-1 {\n  color: #8d6e63 !important;\n  caret-color: #8d6e63 !important;\n}\n\n.v-application .brown.darken-1 {\n  background-color: #6d4c41 !important;\n  border-color: #6d4c41 !important;\n}\n\n.v-application .brown--text.text--darken-1 {\n  color: #6d4c41 !important;\n  caret-color: #6d4c41 !important;\n}\n\n.v-application .brown.darken-2 {\n  background-color: #5d4037 !important;\n  border-color: #5d4037 !important;\n}\n\n.v-application .brown--text.text--darken-2 {\n  color: #5d4037 !important;\n  caret-color: #5d4037 !important;\n}\n\n.v-application .brown.darken-3 {\n  background-color: #4e342e !important;\n  border-color: #4e342e !important;\n}\n\n.v-application .brown--text.text--darken-3 {\n  color: #4e342e !important;\n  caret-color: #4e342e !important;\n}\n\n.v-application .brown.darken-4 {\n  background-color: #3e2723 !important;\n  border-color: #3e2723 !important;\n}\n\n.v-application .brown--text.text--darken-4 {\n  color: #3e2723 !important;\n  caret-color: #3e2723 !important;\n}\n\n.v-application .blue-grey {\n  background-color: #607d8b !important;\n  border-color: #607d8b !important;\n}\n\n.v-application .blue-grey--text {\n  color: #607d8b !important;\n  caret-color: #607d8b !important;\n}\n\n.v-application .blue-grey.lighten-5 {\n  background-color: #eceff1 !important;\n  border-color: #eceff1 !important;\n}\n\n.v-application .blue-grey--text.text--lighten-5 {\n  color: #eceff1 !important;\n  caret-color: #eceff1 !important;\n}\n\n.v-application .blue-grey.lighten-4 {\n  background-color: #cfd8dc !important;\n  border-color: #cfd8dc !important;\n}\n\n.v-application .blue-grey--text.text--lighten-4 {\n  color: #cfd8dc !important;\n  caret-color: #cfd8dc !important;\n}\n\n.v-application .blue-grey.lighten-3 {\n  background-color: #b0bec5 !important;\n  border-color: #b0bec5 !important;\n}\n\n.v-application .blue-grey--text.text--lighten-3 {\n  color: #b0bec5 !important;\n  caret-color: #b0bec5 !important;\n}\n\n.v-application .blue-grey.lighten-2 {\n  background-color: #90a4ae !important;\n  border-color: #90a4ae !important;\n}\n\n.v-application .blue-grey--text.text--lighten-2 {\n  color: #90a4ae !important;\n  caret-color: #90a4ae !important;\n}\n\n.v-application .blue-grey.lighten-1 {\n  background-color: #78909c !important;\n  border-color: #78909c !important;\n}\n\n.v-application .blue-grey--text.text--lighten-1 {\n  color: #78909c !important;\n  caret-color: #78909c !important;\n}\n\n.v-application .blue-grey.darken-1 {\n  background-color: #546e7a !important;\n  border-color: #546e7a !important;\n}\n\n.v-application .blue-grey--text.text--darken-1 {\n  color: #546e7a !important;\n  caret-color: #546e7a !important;\n}\n\n.v-application .blue-grey.darken-2 {\n  background-color: #455a64 !important;\n  border-color: #455a64 !important;\n}\n\n.v-application .blue-grey--text.text--darken-2 {\n  color: #455a64 !important;\n  caret-color: #455a64 !important;\n}\n\n.v-application .blue-grey.darken-3 {\n  background-color: #37474f !important;\n  border-color: #37474f !important;\n}\n\n.v-application .blue-grey--text.text--darken-3 {\n  color: #37474f !important;\n  caret-color: #37474f !important;\n}\n\n.v-application .blue-grey.darken-4 {\n  background-color: #263238 !important;\n  border-color: #263238 !important;\n}\n\n.v-application .blue-grey--text.text--darken-4 {\n  color: #263238 !important;\n  caret-color: #263238 !important;\n}\n\n.v-application .grey {\n  background-color: #9e9e9e !important;\n  border-color: #9e9e9e !important;\n}\n\n.v-application .grey--text {\n  color: #9e9e9e !important;\n  caret-color: #9e9e9e !important;\n}\n\n.v-application .grey.lighten-5 {\n  background-color: #fafafa !important;\n  border-color: #fafafa !important;\n}\n\n.v-application .grey--text.text--lighten-5 {\n  color: #fafafa !important;\n  caret-color: #fafafa !important;\n}\n\n.v-application .grey.lighten-4 {\n  background-color: #f5f5f5 !important;\n  border-color: #f5f5f5 !important;\n}\n\n.v-application .grey--text.text--lighten-4 {\n  color: #f5f5f5 !important;\n  caret-color: #f5f5f5 !important;\n}\n\n.v-application .grey.lighten-3 {\n  background-color: #eeeeee !important;\n  border-color: #eeeeee !important;\n}\n\n.v-application .grey--text.text--lighten-3 {\n  color: #eeeeee !important;\n  caret-color: #eeeeee !important;\n}\n\n.v-application .grey.lighten-2 {\n  background-color: #e0e0e0 !important;\n  border-color: #e0e0e0 !important;\n}\n\n.v-application .grey--text.text--lighten-2 {\n  color: #e0e0e0 !important;\n  caret-color: #e0e0e0 !important;\n}\n\n.v-application .grey.lighten-1 {\n  background-color: #bdbdbd !important;\n  border-color: #bdbdbd !important;\n}\n\n.v-application .grey--text.text--lighten-1 {\n  color: #bdbdbd !important;\n  caret-color: #bdbdbd !important;\n}\n\n.v-application .grey.darken-1 {\n  background-color: #757575 !important;\n  border-color: #757575 !important;\n}\n\n.v-application .grey--text.text--darken-1 {\n  color: #757575 !important;\n  caret-color: #757575 !important;\n}\n\n.v-application .grey.darken-2 {\n  background-color: #616161 !important;\n  border-color: #616161 !important;\n}\n\n.v-application .grey--text.text--darken-2 {\n  color: #616161 !important;\n  caret-color: #616161 !important;\n}\n\n.v-application .grey.darken-3 {\n  background-color: #424242 !important;\n  border-color: #424242 !important;\n}\n\n.v-application .grey--text.text--darken-3 {\n  color: #424242 !important;\n  caret-color: #424242 !important;\n}\n\n.v-application .grey.darken-4 {\n  background-color: #212121 !important;\n  border-color: #212121 !important;\n}\n\n.v-application .grey--text.text--darken-4 {\n  color: #212121 !important;\n  caret-color: #212121 !important;\n}\n\n.v-application .shades.black {\n  background-color: #000000 !important;\n  border-color: #000000 !important;\n}\n\n.v-application .shades--text.text--black {\n  color: #000000 !important;\n  caret-color: #000000 !important;\n}\n\n.v-application .shades.white {\n  background-color: #FFFFFF !important;\n  border-color: #FFFFFF !important;\n}\n\n.v-application .shades--text.text--white {\n  color: #FFFFFF !important;\n  caret-color: #FFFFFF !important;\n}\n\n.v-application .shades.transparent {\n  background-color: transparent !important;\n  border-color: transparent !important;\n}\n\n.v-application .shades--text.text--transparent {\n  color: transparent !important;\n  caret-color: transparent !important;\n}\n\n/*!\n * ress.css • v2.0.4\n * MIT License\n * github.com/filipelinhares/ress\n */\n/* # =================================================================\n   # Global selectors\n   # ================================================================= */\nhtml {\n  box-sizing: border-box;\n  overflow-y: scroll;\n  /* All browsers without overlaying scrollbars */\n  -webkit-text-size-adjust: 100%;\n  /* Prevent adjustments of font size after orientation changes in iOS */\n  word-break: normal;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n     tab-size: 4;\n}\n\n*,\n::before,\n::after {\n  background-repeat: no-repeat;\n  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */\n  box-sizing: inherit;\n}\n\n::before,\n::after {\n  text-decoration: inherit;\n  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */\n  vertical-align: inherit;\n}\n\n* {\n  padding: 0;\n  /* Reset `padding` and `margin` of all elements */\n  margin: 0;\n}\n\n/* # =================================================================\n   # General elements\n   # ================================================================= */\nhr {\n  overflow: visible;\n  /* Show the overflow in Edge and IE */\n  height: 0;\n  /* Add the correct box sizing in Firefox */\n}\n\ndetails,\nmain {\n  display: block;\n  /* Render the `main` element consistently in IE. */\n}\n\nsummary {\n  display: list-item;\n  /* Add the correct display in all browsers */\n}\n\nsmall {\n  font-size: 80%;\n  /* Set font-size to 80% in `small` elements */\n}\n\n[hidden] {\n  display: none;\n  /* Add the correct display in IE */\n}\n\nabbr[title] {\n  border-bottom: none;\n  /* Remove the bottom border in Chrome 57 */\n  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */\n  text-decoration: underline;\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\na {\n  background-color: transparent;\n  /* Remove the gray background on active links in IE 10 */\n}\n\na:active,\na:hover {\n  outline-width: 0;\n  /* Remove the outline when hovering in all browsers */\n}\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  /* Specify the font family of code elements */\n}\n\npre {\n  font-size: 1em;\n  /* Correct the odd `em` font sizing in all browsers */\n}\n\nb,\nstrong {\n  font-weight: bolder;\n  /* Add the correct font weight in Chrome, Edge, and Safari */\n}\n\n/* https://gist.github.com/unruthless/413930 */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* # =================================================================\n   # Forms\n   # ================================================================= */\ninput {\n  border-radius: 0;\n}\n\n/* Replace pointer cursor in disabled elements */\n[disabled] {\n  cursor: default;\n}\n\n[type=number]::-webkit-inner-spin-button,\n[type=number]::-webkit-outer-spin-button {\n  height: auto;\n  /* Correct the cursor style of increment and decrement buttons in Chrome */\n}\n\n[type=search] {\n  -webkit-appearance: textfield;\n  /* Correct the odd appearance in Chrome and Safari */\n  outline-offset: -2px;\n  /* Correct the outline style in Safari */\n}\n\n[type=search]::-webkit-search-cancel-button,\n[type=search]::-webkit-search-decoration {\n  -webkit-appearance: none;\n  /* Remove the inner padding in Chrome and Safari on macOS */\n}\n\ntextarea {\n  overflow: auto;\n  /* Internet Explorer 11+ */\n  resize: vertical;\n  /* Specify textarea resizability */\n}\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  /* Specify font inheritance of form elements */\n}\n\noptgroup {\n  font-weight: bold;\n  /* Restore the font weight unset by the previous rule */\n}\n\nbutton {\n  overflow: visible;\n  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */\n}\n\nbutton,\nselect {\n  text-transform: none;\n  /* Firefox 40+, Internet Explorer 11- */\n}\n\n/* Apply cursor pointer to button elements */\nbutton,\n[type=button],\n[type=reset],\n[type=submit],\n[role=button] {\n  cursor: pointer;\n  color: inherit;\n}\n\n/* Remove inner padding and border in Firefox 4+ */\nbutton::-moz-focus-inner,\n[type=button]::-moz-focus-inner,\n[type=reset]::-moz-focus-inner,\n[type=submit]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/* Replace focus style removed in the border reset above */\nbutton:-moz-focusring,\n[type=button]::-moz-focus-inner,\n[type=reset]::-moz-focus-inner,\n[type=submit]::-moz-focus-inner {\n  outline: 1px dotted ButtonText;\n}\n\nbutton,\nhtml [type=button],\n[type=reset],\n[type=submit] {\n  -webkit-appearance: button;\n  /* Correct the inability to style clickable types in iOS */\n}\n\n/* Remove the default button styling in all browsers */\nbutton,\ninput,\nselect,\ntextarea {\n  background-color: transparent;\n  border-style: none;\n}\n\n/* Style select like a standard input */\nselect {\n  -moz-appearance: none;\n  /* Firefox 36+ */\n  -webkit-appearance: none;\n  /* Chrome 41+ */\n}\n\nselect::-ms-expand {\n  display: none;\n  /* Internet Explorer 11+ */\n}\n\nselect::-ms-value {\n  color: currentColor;\n  /* Internet Explorer 11+ */\n}\n\nlegend {\n  border: 0;\n  /* Correct `color` not being inherited in IE 8/9/10/11 */\n  color: inherit;\n  /* Correct the color inheritance from `fieldset` elements in IE */\n  display: table;\n  /* Correct the text wrapping in Edge and IE */\n  max-width: 100%;\n  /* Correct the text wrapping in Edge and IE */\n  white-space: normal;\n  /* Correct the text wrapping in Edge and IE */\n  max-width: 100%;\n  /* Correct the text wrapping in Edge 18- and IE */\n}\n\n::-webkit-file-upload-button {\n  /* Correct the inability to style clickable types in iOS and Safari */\n  -webkit-appearance: button;\n  color: inherit;\n  font: inherit;\n  /* Change font properties to `inherit` in Chrome and Safari */\n}\n\n/* # =================================================================\n   # Specify media element style\n   # ================================================================= */\nimg {\n  border-style: none;\n  /* Remove border when inside `a` element in IE 8/9/10 */\n}\n\n/* Add the correct vertical alignment in Chrome, Firefox, and Opera */\nprogress {\n  vertical-align: baseline;\n}\n\n/* # =================================================================\n   # Accessibility\n   # ================================================================= */\n/* Hide content from screens but not screenreaders */\n@media screen {\n  [hidden~=screen] {\n    display: inherit;\n  }\n\n  [hidden~=screen]:not(:active):not(:focus):not(:target) {\n    position: absolute !important;\n    clip: rect(0 0 0 0) !important;\n  }\n}\n/* Specify the progress cursor of updating elements */\n[aria-busy=true] {\n  cursor: progress;\n}\n\n/* Specify the pointer cursor of trigger elements */\n[aria-controls] {\n  cursor: pointer;\n}\n\n/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */\n[aria-disabled=true] {\n  cursor: default;\n}\n\n.v-application .elevation-24 {\n  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-23 {\n  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-22 {\n  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-21 {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-20 {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-19 {\n  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-18 {\n  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-17 {\n  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-16 {\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-15 {\n  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-14 {\n  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-13 {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-12 {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-11 {\n  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-10 {\n  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-9 {\n  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-8 {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-7 {\n  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-6 {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-5 {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-4 {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-3 {\n  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-2 {\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-1 {\n  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .elevation-0 {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-application .carousel-transition-enter {\n  transform: translate(100%, 0);\n}\n.v-application .carousel-transition-leave, .v-application .carousel-transition-leave-to {\n  position: absolute;\n  top: 0;\n  transform: translate(-100%, 0);\n}\n\n.carousel-reverse-transition-enter {\n  transform: translate(-100%, 0);\n}\n.carousel-reverse-transition-leave, .carousel-reverse-transition-leave-to {\n  position: absolute;\n  top: 0;\n  transform: translate(100%, 0);\n}\n\n.dialog-transition-enter, .dialog-transition-leave-to {\n  transform: scale(0.5);\n  opacity: 0;\n}\n.dialog-transition-enter-to, .dialog-transition-leave {\n  opacity: 1;\n}\n\n.dialog-bottom-transition-enter, .dialog-bottom-transition-leave-to {\n  transform: translateY(100%);\n}\n\n.dialog-top-transition-enter, .dialog-top-transition-leave-to {\n  transform: translateY(-100%);\n}\n\n.picker-transition-enter-active, .picker-transition-leave-active,\n.picker-reverse-transition-enter-active,\n.picker-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0, 0, 0.2, 1);\n}\n.picker-transition-enter, .picker-transition-leave-to,\n.picker-reverse-transition-enter,\n.picker-reverse-transition-leave-to {\n  opacity: 0;\n}\n.picker-transition-leave, .picker-transition-leave-active, .picker-transition-leave-to,\n.picker-reverse-transition-leave,\n.picker-reverse-transition-leave-active,\n.picker-reverse-transition-leave-to {\n  position: absolute !important;\n}\n\n.picker-transition-enter {\n  transform: translate(0, 100%);\n}\n.picker-transition-leave-to {\n  transform: translate(0, -100%);\n}\n\n.picker-reverse-transition-enter {\n  transform: translate(0, -100%);\n}\n.picker-reverse-transition-leave-to {\n  transform: translate(0, 100%);\n}\n\n.picker-title-transition-enter-to, .picker-title-transition-leave {\n  transform: translate(0, 0);\n}\n.picker-title-transition-enter {\n  transform: translate(-100%, 0);\n}\n.picker-title-transition-leave-to {\n  opacity: 0;\n  transform: translate(100%, 0);\n}\n.picker-title-transition-leave, .picker-title-transition-leave-to, .picker-title-transition-leave-active {\n  position: absolute !important;\n}\n\n.tab-transition-enter {\n  transform: translate(100%, 0);\n}\n.tab-transition-leave, .tab-transition-leave-active {\n  position: absolute;\n  top: 0;\n}\n.tab-transition-leave-to {\n  position: absolute;\n  transform: translate(-100%, 0);\n}\n\n.tab-reverse-transition-enter {\n  transform: translate(-100%, 0);\n}\n.tab-reverse-transition-leave, .tab-reverse-transition-leave-to {\n  top: 0;\n  position: absolute;\n  transform: translate(100%, 0);\n}\n\n.expand-transition-enter-active, .expand-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.expand-transition-move {\n  transition: transform 0.6s;\n}\n\n.expand-x-transition-enter-active, .expand-x-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.expand-x-transition-move {\n  transition: transform 0.6s;\n}\n\n.scale-transition-enter-active, .scale-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scale-transition-move {\n  transition: transform 0.6s;\n}\n.scale-transition-enter, .scale-transition-leave, .scale-transition-leave-to {\n  opacity: 0;\n  transform: scale(0);\n}\n\n.scale-rotate-transition-enter-active, .scale-rotate-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scale-rotate-transition-move {\n  transition: transform 0.6s;\n}\n.scale-rotate-transition-enter, .scale-rotate-transition-leave, .scale-rotate-transition-leave-to {\n  opacity: 0;\n  transform: scale(0) rotate(-45deg);\n}\n\n.scale-rotate-reverse-transition-enter-active, .scale-rotate-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scale-rotate-reverse-transition-move {\n  transition: transform 0.6s;\n}\n.scale-rotate-reverse-transition-enter, .scale-rotate-reverse-transition-leave, .scale-rotate-reverse-transition-leave-to {\n  opacity: 0;\n  transform: scale(0) rotate(45deg);\n}\n\n.message-transition-enter-active, .message-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.message-transition-move {\n  transition: transform 0.6s;\n}\n.message-transition-enter, .message-transition-leave-to {\n  opacity: 0;\n  transform: translateY(-15px);\n}\n.message-transition-leave, .message-transition-leave-active {\n  position: absolute;\n}\n\n.slide-y-transition-enter-active, .slide-y-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.slide-y-transition-move {\n  transition: transform 0.6s;\n}\n.slide-y-transition-enter, .slide-y-transition-leave-to {\n  opacity: 0;\n  transform: translateY(-15px);\n}\n\n.slide-y-reverse-transition-enter-active, .slide-y-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.slide-y-reverse-transition-move {\n  transition: transform 0.6s;\n}\n.slide-y-reverse-transition-enter, .slide-y-reverse-transition-leave-to {\n  opacity: 0;\n  transform: translateY(15px);\n}\n\n.scroll-y-transition-enter-active, .scroll-y-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scroll-y-transition-move {\n  transition: transform 0.6s;\n}\n.scroll-y-transition-enter, .scroll-y-transition-leave-to {\n  opacity: 0;\n}\n.scroll-y-transition-enter {\n  transform: translateY(-15px);\n}\n.scroll-y-transition-leave-to {\n  transform: translateY(15px);\n}\n\n.scroll-y-reverse-transition-enter-active, .scroll-y-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scroll-y-reverse-transition-move {\n  transition: transform 0.6s;\n}\n.scroll-y-reverse-transition-enter, .scroll-y-reverse-transition-leave-to {\n  opacity: 0;\n}\n.scroll-y-reverse-transition-enter {\n  transform: translateY(15px);\n}\n.scroll-y-reverse-transition-leave-to {\n  transform: translateY(-15px);\n}\n\n.scroll-x-transition-enter-active, .scroll-x-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scroll-x-transition-move {\n  transition: transform 0.6s;\n}\n.scroll-x-transition-enter, .scroll-x-transition-leave-to {\n  opacity: 0;\n}\n.scroll-x-transition-enter {\n  transform: translateX(-15px);\n}\n.scroll-x-transition-leave-to {\n  transform: translateX(15px);\n}\n\n.scroll-x-reverse-transition-enter-active, .scroll-x-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.scroll-x-reverse-transition-move {\n  transition: transform 0.6s;\n}\n.scroll-x-reverse-transition-enter, .scroll-x-reverse-transition-leave-to {\n  opacity: 0;\n}\n.scroll-x-reverse-transition-enter {\n  transform: translateX(15px);\n}\n.scroll-x-reverse-transition-leave-to {\n  transform: translateX(-15px);\n}\n\n.slide-x-transition-enter-active, .slide-x-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.slide-x-transition-move {\n  transition: transform 0.6s;\n}\n.slide-x-transition-enter, .slide-x-transition-leave-to {\n  opacity: 0;\n  transform: translateX(-15px);\n}\n\n.slide-x-reverse-transition-enter-active, .slide-x-reverse-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.slide-x-reverse-transition-move {\n  transition: transform 0.6s;\n}\n.slide-x-reverse-transition-enter, .slide-x-reverse-transition-leave-to {\n  opacity: 0;\n  transform: translateX(15px);\n}\n\n.fade-transition-enter-active, .fade-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.fade-transition-move {\n  transition: transform 0.6s;\n}\n.fade-transition-enter, .fade-transition-leave-to {\n  opacity: 0 !important;\n}\n\n.fab-transition-enter-active, .fab-transition-leave-active {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n.fab-transition-move {\n  transition: transform 0.6s;\n}\n.fab-transition-enter, .fab-transition-leave-to {\n  transform: scale(0) rotate(-45deg);\n}\n\n.v-application .blockquote {\n  padding: 16px 0 16px 24px;\n  font-size: 18px;\n  font-weight: 300;\n}\n\n.v-application code, .v-application kbd {\n  border-radius: 3px;\n  font-size: 85%;\n  font-weight: normal;\n}\n.v-application code {\n  padding: 0.2em 0.4em;\n}\n.v-application kbd {\n  padding: 0.2em 0.4rem;\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\n}\n\n.theme--light.v-application code {\n  background-color: rgba(0, 0, 0, 0.05);\n  color: currentColor;\n}\n.theme--light.v-application kbd {\n  background: #212529;\n  color: #FFFFFF;\n}\n\n.theme--dark.v-application code {\n  background-color: rgba(255, 255, 255, 0.1);\n  color: currentColor;\n}\n.theme--dark.v-application kbd {\n  background: #212529;\n  color: #FFFFFF;\n}\n\nhtml {\n  font-size: 16px;\n  overflow-x: hidden;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\nhtml.overflow-y-hidden {\n  overflow-y: hidden !important;\n}\n\n.v-application {\n  font-family: \"Roboto\", sans-serif;\n  line-height: 1.5;\n}\n.v-application ::-ms-clear,\n.v-application ::-ms-reveal {\n  display: none;\n}\n\n@supports (-webkit-touch-callout: none) {\n  body {\n    cursor: pointer;\n  }\n}\n.v-application .theme--light.heading {\n  color: rgba(0, 0, 0, 0.87);\n}\n\n.v-application .theme--dark.heading {\n  color: #FFFFFF;\n}\n\n.v-application ul, .v-application ol {\n  padding-left: 24px;\n}\n\n.v-application .display-4 {\n  font-size: 6rem !important;\n  font-weight: 300;\n  line-height: 6rem;\n  letter-spacing: -0.015625em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .display-3 {\n  font-size: 3.75rem !important;\n  font-weight: 300;\n  line-height: 3.75rem;\n  letter-spacing: -0.0083333333em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .display-2 {\n  font-size: 3rem !important;\n  font-weight: 400;\n  line-height: 3.125rem;\n  letter-spacing: normal !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .display-1 {\n  font-size: 2.125rem !important;\n  font-weight: 400;\n  line-height: 2.5rem;\n  letter-spacing: 0.0073529412em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .headline {\n  font-size: 1.5rem !important;\n  font-weight: 400;\n  line-height: 2rem;\n  letter-spacing: normal !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .title {\n  font-size: 1.25rem !important;\n  font-weight: 500;\n  line-height: 2rem;\n  letter-spacing: 0.0125em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .subtitle-2 {\n  font-size: 0.875rem !important;\n  font-weight: 500;\n  letter-spacing: 0.0071428571em !important;\n  line-height: 1.375rem;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .subtitle-1 {\n  font-size: 1rem !important;\n  font-weight: normal;\n  letter-spacing: 0.009375em !important;\n  line-height: 1.75rem;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .body-2 {\n  font-size: 0.875rem !important;\n  font-weight: 400;\n  letter-spacing: 0.0178571429em !important;\n  line-height: 1.25rem;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .body-1 {\n  font-size: 1rem !important;\n  font-weight: 400;\n  letter-spacing: 0.03125em !important;\n  line-height: 1.5rem;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .caption {\n  font-size: 0.75rem !important;\n  font-weight: 400;\n  letter-spacing: 0.0333333333em !important;\n  line-height: 1.25rem;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application .overline {\n  font-size: 0.75rem !important;\n  font-weight: 500;\n  letter-spacing: 0.1666666667em !important;\n  line-height: 2rem;\n  text-transform: uppercase;\n  font-family: \"Roboto\", sans-serif !important;\n}\n.v-application p {\n  margin-bottom: 16px;\n}\n\n@media only print {\n  .v-application .hidden-print-only {\n    display: none !important;\n  }\n}\n@media only screen {\n  .v-application .hidden-screen-only {\n    display: none !important;\n  }\n}\n@media only screen and (max-width: 599px) {\n  .v-application .hidden-xs-only {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 600px) and (max-width: 959px) {\n  .v-application .hidden-sm-only {\n    display: none !important;\n  }\n}\n@media only screen and (max-width: 959px) {\n  .v-application .hidden-sm-and-down {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 600px) {\n  .v-application .hidden-sm-and-up {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1263px) {\n  .v-application .hidden-md-only {\n    display: none !important;\n  }\n}\n@media only screen and (max-width: 1263px) {\n  .v-application .hidden-md-and-down {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 960px) {\n  .v-application .hidden-md-and-up {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 1264px) and (max-width: 1903px) {\n  .v-application .hidden-lg-only {\n    display: none !important;\n  }\n}\n@media only screen and (max-width: 1903px) {\n  .v-application .hidden-lg-and-down {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 1264px) {\n  .v-application .hidden-lg-and-up {\n    display: none !important;\n  }\n}\n@media only screen and (min-width: 1904px) {\n  .v-application .hidden-xl-only {\n    display: none !important;\n  }\n}\n\n.d-sr-only,\n.d-sr-only-focusable:not(:focus) {\n  border: 0 !important;\n  clip: rect(0, 0, 0, 0) !important;\n  height: 1px !important;\n  margin: -1px !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: absolute !important;\n  white-space: nowrap !important;\n  width: 1px !important;\n}\n\n.v-application .font-weight-thin {\n  font-weight: 100 !important;\n}\n.v-application .font-weight-light {\n  font-weight: 300 !important;\n}\n.v-application .font-weight-regular {\n  font-weight: 400 !important;\n}\n.v-application .font-weight-medium {\n  font-weight: 500 !important;\n}\n.v-application .font-weight-bold {\n  font-weight: 700 !important;\n}\n.v-application .font-weight-black {\n  font-weight: 900 !important;\n}\n.v-application .font-italic {\n  font-style: italic !important;\n}\n\n.v-application .transition-fast-out-slow-in {\n  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;\n}\n.v-application .transition-linear-out-slow-in {\n  transition: 0.3s cubic-bezier(0, 0, 0.2, 1) !important;\n}\n.v-application .transition-fast-out-linear-in {\n  transition: 0.3s cubic-bezier(0.4, 0, 1, 1) !important;\n}\n.v-application .transition-ease-in-out {\n  transition: 0.3s cubic-bezier(0.4, 0, 0.6, 1) !important;\n}\n.v-application .transition-fast-in-fast-out {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;\n}\n.v-application .transition-swing {\n  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;\n}\n\n.v-application .overflow-auto {\n  overflow: auto !important;\n}\n\n.v-application .overflow-hidden {\n  overflow: hidden !important;\n}\n\n.v-application .overflow-visible {\n  overflow: visible !important;\n}\n\n.v-application .overflow-x-auto {\n  overflow-x: auto !important;\n}\n\n.v-application .overflow-x-hidden {\n  overflow-x: hidden !important;\n}\n\n.v-application .overflow-y-auto {\n  overflow-y: auto !important;\n}\n\n.v-application .overflow-y-hidden {\n  overflow-y: hidden !important;\n}\n\n.v-application .d-none {\n  display: none !important;\n}\n\n.v-application .d-inline {\n  display: inline !important;\n}\n\n.v-application .d-inline-block {\n  display: inline-block !important;\n}\n\n.v-application .d-block {\n  display: block !important;\n}\n\n.v-application .d-table {\n  display: table !important;\n}\n\n.v-application .d-table-row {\n  display: table-row !important;\n}\n\n.v-application .d-table-cell {\n  display: table-cell !important;\n}\n\n.v-application .d-flex {\n  display: flex !important;\n}\n\n.v-application .d-inline-flex {\n  display: inline-flex !important;\n}\n\n.v-application .float-none {\n  float: none !important;\n}\n\n.v-application .float-left {\n  float: left !important;\n}\n\n.v-application .float-right {\n  float: right !important;\n}\n\n.v-application--is-rtl .float-end {\n  float: left !important;\n}\n\n.v-application--is-rtl .float-start {\n  float: right !important;\n}\n\n.v-application--is-ltr .float-end {\n  float: right !important;\n}\n\n.v-application--is-ltr .float-start {\n  float: left !important;\n}\n\n.v-application .flex-fill {\n  flex: 1 1 auto !important;\n}\n\n.v-application .flex-row {\n  flex-direction: row !important;\n}\n\n.v-application .flex-column {\n  flex-direction: column !important;\n}\n\n.v-application .flex-row-reverse {\n  flex-direction: row-reverse !important;\n}\n\n.v-application .flex-column-reverse {\n  flex-direction: column-reverse !important;\n}\n\n.v-application .flex-grow-0 {\n  flex-grow: 0 !important;\n}\n\n.v-application .flex-grow-1 {\n  flex-grow: 1 !important;\n}\n\n.v-application .flex-shrink-0 {\n  flex-shrink: 0 !important;\n}\n\n.v-application .flex-shrink-1 {\n  flex-shrink: 1 !important;\n}\n\n.v-application .flex-wrap {\n  flex-wrap: wrap !important;\n}\n\n.v-application .flex-nowrap {\n  flex-wrap: nowrap !important;\n}\n\n.v-application .flex-wrap-reverse {\n  flex-wrap: wrap-reverse !important;\n}\n\n.v-application .justify-start {\n  justify-content: flex-start !important;\n}\n\n.v-application .justify-end {\n  justify-content: flex-end !important;\n}\n\n.v-application .justify-center {\n  justify-content: center !important;\n}\n\n.v-application .justify-space-between {\n  justify-content: space-between !important;\n}\n\n.v-application .justify-space-around {\n  justify-content: space-around !important;\n}\n\n.v-application .align-start {\n  align-items: flex-start !important;\n}\n\n.v-application .align-end {\n  align-items: flex-end !important;\n}\n\n.v-application .align-center {\n  align-items: center !important;\n}\n\n.v-application .align-baseline {\n  align-items: baseline !important;\n}\n\n.v-application .align-stretch {\n  align-items: stretch !important;\n}\n\n.v-application .align-content-start {\n  align-content: flex-start !important;\n}\n\n.v-application .align-content-end {\n  align-content: flex-end !important;\n}\n\n.v-application .align-content-center {\n  align-content: center !important;\n}\n\n.v-application .align-content-space-between {\n  align-content: space-between !important;\n}\n\n.v-application .align-content-space-around {\n  align-content: space-around !important;\n}\n\n.v-application .align-content-stretch {\n  align-content: stretch !important;\n}\n\n.v-application .align-self-auto {\n  align-self: auto !important;\n}\n\n.v-application .align-self-start {\n  align-self: flex-start !important;\n}\n\n.v-application .align-self-end {\n  align-self: flex-end !important;\n}\n\n.v-application .align-self-center {\n  align-self: center !important;\n}\n\n.v-application .align-self-baseline {\n  align-self: baseline !important;\n}\n\n.v-application .align-self-stretch {\n  align-self: stretch !important;\n}\n\n.v-application .order-first {\n  order: -1 !important;\n}\n\n.v-application .order-0 {\n  order: 0 !important;\n}\n\n.v-application .order-1 {\n  order: 1 !important;\n}\n\n.v-application .order-2 {\n  order: 2 !important;\n}\n\n.v-application .order-3 {\n  order: 3 !important;\n}\n\n.v-application .order-4 {\n  order: 4 !important;\n}\n\n.v-application .order-5 {\n  order: 5 !important;\n}\n\n.v-application .order-6 {\n  order: 6 !important;\n}\n\n.v-application .order-7 {\n  order: 7 !important;\n}\n\n.v-application .order-8 {\n  order: 8 !important;\n}\n\n.v-application .order-9 {\n  order: 9 !important;\n}\n\n.v-application .order-10 {\n  order: 10 !important;\n}\n\n.v-application .order-11 {\n  order: 11 !important;\n}\n\n.v-application .order-12 {\n  order: 12 !important;\n}\n\n.v-application .order-last {\n  order: 13 !important;\n}\n\n.v-application .ma-0 {\n  margin: 0px !important;\n}\n\n.v-application .ma-1 {\n  margin: 4px !important;\n}\n\n.v-application .ma-2 {\n  margin: 8px !important;\n}\n\n.v-application .ma-3 {\n  margin: 12px !important;\n}\n\n.v-application .ma-4 {\n  margin: 16px !important;\n}\n\n.v-application .ma-5 {\n  margin: 20px !important;\n}\n\n.v-application .ma-6 {\n  margin: 24px !important;\n}\n\n.v-application .ma-7 {\n  margin: 28px !important;\n}\n\n.v-application .ma-8 {\n  margin: 32px !important;\n}\n\n.v-application .ma-9 {\n  margin: 36px !important;\n}\n\n.v-application .ma-10 {\n  margin: 40px !important;\n}\n\n.v-application .ma-11 {\n  margin: 44px !important;\n}\n\n.v-application .ma-12 {\n  margin: 48px !important;\n}\n\n.v-application .ma-13 {\n  margin: 52px !important;\n}\n\n.v-application .ma-14 {\n  margin: 56px !important;\n}\n\n.v-application .ma-15 {\n  margin: 60px !important;\n}\n\n.v-application .ma-16 {\n  margin: 64px !important;\n}\n\n.v-application .ma-auto {\n  margin: auto !important;\n}\n\n.v-application .mx-0 {\n  margin-right: 0px !important;\n  margin-left: 0px !important;\n}\n\n.v-application .mx-1 {\n  margin-right: 4px !important;\n  margin-left: 4px !important;\n}\n\n.v-application .mx-2 {\n  margin-right: 8px !important;\n  margin-left: 8px !important;\n}\n\n.v-application .mx-3 {\n  margin-right: 12px !important;\n  margin-left: 12px !important;\n}\n\n.v-application .mx-4 {\n  margin-right: 16px !important;\n  margin-left: 16px !important;\n}\n\n.v-application .mx-5 {\n  margin-right: 20px !important;\n  margin-left: 20px !important;\n}\n\n.v-application .mx-6 {\n  margin-right: 24px !important;\n  margin-left: 24px !important;\n}\n\n.v-application .mx-7 {\n  margin-right: 28px !important;\n  margin-left: 28px !important;\n}\n\n.v-application .mx-8 {\n  margin-right: 32px !important;\n  margin-left: 32px !important;\n}\n\n.v-application .mx-9 {\n  margin-right: 36px !important;\n  margin-left: 36px !important;\n}\n\n.v-application .mx-10 {\n  margin-right: 40px !important;\n  margin-left: 40px !important;\n}\n\n.v-application .mx-11 {\n  margin-right: 44px !important;\n  margin-left: 44px !important;\n}\n\n.v-application .mx-12 {\n  margin-right: 48px !important;\n  margin-left: 48px !important;\n}\n\n.v-application .mx-13 {\n  margin-right: 52px !important;\n  margin-left: 52px !important;\n}\n\n.v-application .mx-14 {\n  margin-right: 56px !important;\n  margin-left: 56px !important;\n}\n\n.v-application .mx-15 {\n  margin-right: 60px !important;\n  margin-left: 60px !important;\n}\n\n.v-application .mx-16 {\n  margin-right: 64px !important;\n  margin-left: 64px !important;\n}\n\n.v-application .mx-auto {\n  margin-right: auto !important;\n  margin-left: auto !important;\n}\n\n.v-application .my-0 {\n  margin-top: 0px !important;\n  margin-bottom: 0px !important;\n}\n\n.v-application .my-1 {\n  margin-top: 4px !important;\n  margin-bottom: 4px !important;\n}\n\n.v-application .my-2 {\n  margin-top: 8px !important;\n  margin-bottom: 8px !important;\n}\n\n.v-application .my-3 {\n  margin-top: 12px !important;\n  margin-bottom: 12px !important;\n}\n\n.v-application .my-4 {\n  margin-top: 16px !important;\n  margin-bottom: 16px !important;\n}\n\n.v-application .my-5 {\n  margin-top: 20px !important;\n  margin-bottom: 20px !important;\n}\n\n.v-application .my-6 {\n  margin-top: 24px !important;\n  margin-bottom: 24px !important;\n}\n\n.v-application .my-7 {\n  margin-top: 28px !important;\n  margin-bottom: 28px !important;\n}\n\n.v-application .my-8 {\n  margin-top: 32px !important;\n  margin-bottom: 32px !important;\n}\n\n.v-application .my-9 {\n  margin-top: 36px !important;\n  margin-bottom: 36px !important;\n}\n\n.v-application .my-10 {\n  margin-top: 40px !important;\n  margin-bottom: 40px !important;\n}\n\n.v-application .my-11 {\n  margin-top: 44px !important;\n  margin-bottom: 44px !important;\n}\n\n.v-application .my-12 {\n  margin-top: 48px !important;\n  margin-bottom: 48px !important;\n}\n\n.v-application .my-13 {\n  margin-top: 52px !important;\n  margin-bottom: 52px !important;\n}\n\n.v-application .my-14 {\n  margin-top: 56px !important;\n  margin-bottom: 56px !important;\n}\n\n.v-application .my-15 {\n  margin-top: 60px !important;\n  margin-bottom: 60px !important;\n}\n\n.v-application .my-16 {\n  margin-top: 64px !important;\n  margin-bottom: 64px !important;\n}\n\n.v-application .my-auto {\n  margin-top: auto !important;\n  margin-bottom: auto !important;\n}\n\n.v-application .mt-0 {\n  margin-top: 0px !important;\n}\n\n.v-application .mt-1 {\n  margin-top: 4px !important;\n}\n\n.v-application .mt-2 {\n  margin-top: 8px !important;\n}\n\n.v-application .mt-3 {\n  margin-top: 12px !important;\n}\n\n.v-application .mt-4 {\n  margin-top: 16px !important;\n}\n\n.v-application .mt-5 {\n  margin-top: 20px !important;\n}\n\n.v-application .mt-6 {\n  margin-top: 24px !important;\n}\n\n.v-application .mt-7 {\n  margin-top: 28px !important;\n}\n\n.v-application .mt-8 {\n  margin-top: 32px !important;\n}\n\n.v-application .mt-9 {\n  margin-top: 36px !important;\n}\n\n.v-application .mt-10 {\n  margin-top: 40px !important;\n}\n\n.v-application .mt-11 {\n  margin-top: 44px !important;\n}\n\n.v-application .mt-12 {\n  margin-top: 48px !important;\n}\n\n.v-application .mt-13 {\n  margin-top: 52px !important;\n}\n\n.v-application .mt-14 {\n  margin-top: 56px !important;\n}\n\n.v-application .mt-15 {\n  margin-top: 60px !important;\n}\n\n.v-application .mt-16 {\n  margin-top: 64px !important;\n}\n\n.v-application .mt-auto {\n  margin-top: auto !important;\n}\n\n.v-application .mr-0 {\n  margin-right: 0px !important;\n}\n\n.v-application .mr-1 {\n  margin-right: 4px !important;\n}\n\n.v-application .mr-2 {\n  margin-right: 8px !important;\n}\n\n.v-application .mr-3 {\n  margin-right: 12px !important;\n}\n\n.v-application .mr-4 {\n  margin-right: 16px !important;\n}\n\n.v-application .mr-5 {\n  margin-right: 20px !important;\n}\n\n.v-application .mr-6 {\n  margin-right: 24px !important;\n}\n\n.v-application .mr-7 {\n  margin-right: 28px !important;\n}\n\n.v-application .mr-8 {\n  margin-right: 32px !important;\n}\n\n.v-application .mr-9 {\n  margin-right: 36px !important;\n}\n\n.v-application .mr-10 {\n  margin-right: 40px !important;\n}\n\n.v-application .mr-11 {\n  margin-right: 44px !important;\n}\n\n.v-application .mr-12 {\n  margin-right: 48px !important;\n}\n\n.v-application .mr-13 {\n  margin-right: 52px !important;\n}\n\n.v-application .mr-14 {\n  margin-right: 56px !important;\n}\n\n.v-application .mr-15 {\n  margin-right: 60px !important;\n}\n\n.v-application .mr-16 {\n  margin-right: 64px !important;\n}\n\n.v-application .mr-auto {\n  margin-right: auto !important;\n}\n\n.v-application .mb-0 {\n  margin-bottom: 0px !important;\n}\n\n.v-application .mb-1 {\n  margin-bottom: 4px !important;\n}\n\n.v-application .mb-2 {\n  margin-bottom: 8px !important;\n}\n\n.v-application .mb-3 {\n  margin-bottom: 12px !important;\n}\n\n.v-application .mb-4 {\n  margin-bottom: 16px !important;\n}\n\n.v-application .mb-5 {\n  margin-bottom: 20px !important;\n}\n\n.v-application .mb-6 {\n  margin-bottom: 24px !important;\n}\n\n.v-application .mb-7 {\n  margin-bottom: 28px !important;\n}\n\n.v-application .mb-8 {\n  margin-bottom: 32px !important;\n}\n\n.v-application .mb-9 {\n  margin-bottom: 36px !important;\n}\n\n.v-application .mb-10 {\n  margin-bottom: 40px !important;\n}\n\n.v-application .mb-11 {\n  margin-bottom: 44px !important;\n}\n\n.v-application .mb-12 {\n  margin-bottom: 48px !important;\n}\n\n.v-application .mb-13 {\n  margin-bottom: 52px !important;\n}\n\n.v-application .mb-14 {\n  margin-bottom: 56px !important;\n}\n\n.v-application .mb-15 {\n  margin-bottom: 60px !important;\n}\n\n.v-application .mb-16 {\n  margin-bottom: 64px !important;\n}\n\n.v-application .mb-auto {\n  margin-bottom: auto !important;\n}\n\n.v-application .ml-0 {\n  margin-left: 0px !important;\n}\n\n.v-application .ml-1 {\n  margin-left: 4px !important;\n}\n\n.v-application .ml-2 {\n  margin-left: 8px !important;\n}\n\n.v-application .ml-3 {\n  margin-left: 12px !important;\n}\n\n.v-application .ml-4 {\n  margin-left: 16px !important;\n}\n\n.v-application .ml-5 {\n  margin-left: 20px !important;\n}\n\n.v-application .ml-6 {\n  margin-left: 24px !important;\n}\n\n.v-application .ml-7 {\n  margin-left: 28px !important;\n}\n\n.v-application .ml-8 {\n  margin-left: 32px !important;\n}\n\n.v-application .ml-9 {\n  margin-left: 36px !important;\n}\n\n.v-application .ml-10 {\n  margin-left: 40px !important;\n}\n\n.v-application .ml-11 {\n  margin-left: 44px !important;\n}\n\n.v-application .ml-12 {\n  margin-left: 48px !important;\n}\n\n.v-application .ml-13 {\n  margin-left: 52px !important;\n}\n\n.v-application .ml-14 {\n  margin-left: 56px !important;\n}\n\n.v-application .ml-15 {\n  margin-left: 60px !important;\n}\n\n.v-application .ml-16 {\n  margin-left: 64px !important;\n}\n\n.v-application .ml-auto {\n  margin-left: auto !important;\n}\n\n.v-application--is-ltr .ms-0 {\n  margin-left: 0px !important;\n}\n\n.v-application--is-rtl .ms-0 {\n  margin-right: 0px !important;\n}\n\n.v-application--is-ltr .ms-1 {\n  margin-left: 4px !important;\n}\n\n.v-application--is-rtl .ms-1 {\n  margin-right: 4px !important;\n}\n\n.v-application--is-ltr .ms-2 {\n  margin-left: 8px !important;\n}\n\n.v-application--is-rtl .ms-2 {\n  margin-right: 8px !important;\n}\n\n.v-application--is-ltr .ms-3 {\n  margin-left: 12px !important;\n}\n\n.v-application--is-rtl .ms-3 {\n  margin-right: 12px !important;\n}\n\n.v-application--is-ltr .ms-4 {\n  margin-left: 16px !important;\n}\n\n.v-application--is-rtl .ms-4 {\n  margin-right: 16px !important;\n}\n\n.v-application--is-ltr .ms-5 {\n  margin-left: 20px !important;\n}\n\n.v-application--is-rtl .ms-5 {\n  margin-right: 20px !important;\n}\n\n.v-application--is-ltr .ms-6 {\n  margin-left: 24px !important;\n}\n\n.v-application--is-rtl .ms-6 {\n  margin-right: 24px !important;\n}\n\n.v-application--is-ltr .ms-7 {\n  margin-left: 28px !important;\n}\n\n.v-application--is-rtl .ms-7 {\n  margin-right: 28px !important;\n}\n\n.v-application--is-ltr .ms-8 {\n  margin-left: 32px !important;\n}\n\n.v-application--is-rtl .ms-8 {\n  margin-right: 32px !important;\n}\n\n.v-application--is-ltr .ms-9 {\n  margin-left: 36px !important;\n}\n\n.v-application--is-rtl .ms-9 {\n  margin-right: 36px !important;\n}\n\n.v-application--is-ltr .ms-10 {\n  margin-left: 40px !important;\n}\n\n.v-application--is-rtl .ms-10 {\n  margin-right: 40px !important;\n}\n\n.v-application--is-ltr .ms-11 {\n  margin-left: 44px !important;\n}\n\n.v-application--is-rtl .ms-11 {\n  margin-right: 44px !important;\n}\n\n.v-application--is-ltr .ms-12 {\n  margin-left: 48px !important;\n}\n\n.v-application--is-rtl .ms-12 {\n  margin-right: 48px !important;\n}\n\n.v-application--is-ltr .ms-13 {\n  margin-left: 52px !important;\n}\n\n.v-application--is-rtl .ms-13 {\n  margin-right: 52px !important;\n}\n\n.v-application--is-ltr .ms-14 {\n  margin-left: 56px !important;\n}\n\n.v-application--is-rtl .ms-14 {\n  margin-right: 56px !important;\n}\n\n.v-application--is-ltr .ms-15 {\n  margin-left: 60px !important;\n}\n\n.v-application--is-rtl .ms-15 {\n  margin-right: 60px !important;\n}\n\n.v-application--is-ltr .ms-16 {\n  margin-left: 64px !important;\n}\n\n.v-application--is-rtl .ms-16 {\n  margin-right: 64px !important;\n}\n\n.v-application--is-ltr .ms-auto {\n  margin-left: auto !important;\n}\n\n.v-application--is-rtl .ms-auto {\n  margin-right: auto !important;\n}\n\n.v-application--is-ltr .me-0 {\n  margin-right: 0px !important;\n}\n\n.v-application--is-rtl .me-0 {\n  margin-left: 0px !important;\n}\n\n.v-application--is-ltr .me-1 {\n  margin-right: 4px !important;\n}\n\n.v-application--is-rtl .me-1 {\n  margin-left: 4px !important;\n}\n\n.v-application--is-ltr .me-2 {\n  margin-right: 8px !important;\n}\n\n.v-application--is-rtl .me-2 {\n  margin-left: 8px !important;\n}\n\n.v-application--is-ltr .me-3 {\n  margin-right: 12px !important;\n}\n\n.v-application--is-rtl .me-3 {\n  margin-left: 12px !important;\n}\n\n.v-application--is-ltr .me-4 {\n  margin-right: 16px !important;\n}\n\n.v-application--is-rtl .me-4 {\n  margin-left: 16px !important;\n}\n\n.v-application--is-ltr .me-5 {\n  margin-right: 20px !important;\n}\n\n.v-application--is-rtl .me-5 {\n  margin-left: 20px !important;\n}\n\n.v-application--is-ltr .me-6 {\n  margin-right: 24px !important;\n}\n\n.v-application--is-rtl .me-6 {\n  margin-left: 24px !important;\n}\n\n.v-application--is-ltr .me-7 {\n  margin-right: 28px !important;\n}\n\n.v-application--is-rtl .me-7 {\n  margin-left: 28px !important;\n}\n\n.v-application--is-ltr .me-8 {\n  margin-right: 32px !important;\n}\n\n.v-application--is-rtl .me-8 {\n  margin-left: 32px !important;\n}\n\n.v-application--is-ltr .me-9 {\n  margin-right: 36px !important;\n}\n\n.v-application--is-rtl .me-9 {\n  margin-left: 36px !important;\n}\n\n.v-application--is-ltr .me-10 {\n  margin-right: 40px !important;\n}\n\n.v-application--is-rtl .me-10 {\n  margin-left: 40px !important;\n}\n\n.v-application--is-ltr .me-11 {\n  margin-right: 44px !important;\n}\n\n.v-application--is-rtl .me-11 {\n  margin-left: 44px !important;\n}\n\n.v-application--is-ltr .me-12 {\n  margin-right: 48px !important;\n}\n\n.v-application--is-rtl .me-12 {\n  margin-left: 48px !important;\n}\n\n.v-application--is-ltr .me-13 {\n  margin-right: 52px !important;\n}\n\n.v-application--is-rtl .me-13 {\n  margin-left: 52px !important;\n}\n\n.v-application--is-ltr .me-14 {\n  margin-right: 56px !important;\n}\n\n.v-application--is-rtl .me-14 {\n  margin-left: 56px !important;\n}\n\n.v-application--is-ltr .me-15 {\n  margin-right: 60px !important;\n}\n\n.v-application--is-rtl .me-15 {\n  margin-left: 60px !important;\n}\n\n.v-application--is-ltr .me-16 {\n  margin-right: 64px !important;\n}\n\n.v-application--is-rtl .me-16 {\n  margin-left: 64px !important;\n}\n\n.v-application--is-ltr .me-auto {\n  margin-right: auto !important;\n}\n\n.v-application--is-rtl .me-auto {\n  margin-left: auto !important;\n}\n\n.v-application .ma-n1 {\n  margin: -4px !important;\n}\n\n.v-application .ma-n2 {\n  margin: -8px !important;\n}\n\n.v-application .ma-n3 {\n  margin: -12px !important;\n}\n\n.v-application .ma-n4 {\n  margin: -16px !important;\n}\n\n.v-application .ma-n5 {\n  margin: -20px !important;\n}\n\n.v-application .ma-n6 {\n  margin: -24px !important;\n}\n\n.v-application .ma-n7 {\n  margin: -28px !important;\n}\n\n.v-application .ma-n8 {\n  margin: -32px !important;\n}\n\n.v-application .ma-n9 {\n  margin: -36px !important;\n}\n\n.v-application .ma-n10 {\n  margin: -40px !important;\n}\n\n.v-application .ma-n11 {\n  margin: -44px !important;\n}\n\n.v-application .ma-n12 {\n  margin: -48px !important;\n}\n\n.v-application .ma-n13 {\n  margin: -52px !important;\n}\n\n.v-application .ma-n14 {\n  margin: -56px !important;\n}\n\n.v-application .ma-n15 {\n  margin: -60px !important;\n}\n\n.v-application .ma-n16 {\n  margin: -64px !important;\n}\n\n.v-application .mx-n1 {\n  margin-right: -4px !important;\n  margin-left: -4px !important;\n}\n\n.v-application .mx-n2 {\n  margin-right: -8px !important;\n  margin-left: -8px !important;\n}\n\n.v-application .mx-n3 {\n  margin-right: -12px !important;\n  margin-left: -12px !important;\n}\n\n.v-application .mx-n4 {\n  margin-right: -16px !important;\n  margin-left: -16px !important;\n}\n\n.v-application .mx-n5 {\n  margin-right: -20px !important;\n  margin-left: -20px !important;\n}\n\n.v-application .mx-n6 {\n  margin-right: -24px !important;\n  margin-left: -24px !important;\n}\n\n.v-application .mx-n7 {\n  margin-right: -28px !important;\n  margin-left: -28px !important;\n}\n\n.v-application .mx-n8 {\n  margin-right: -32px !important;\n  margin-left: -32px !important;\n}\n\n.v-application .mx-n9 {\n  margin-right: -36px !important;\n  margin-left: -36px !important;\n}\n\n.v-application .mx-n10 {\n  margin-right: -40px !important;\n  margin-left: -40px !important;\n}\n\n.v-application .mx-n11 {\n  margin-right: -44px !important;\n  margin-left: -44px !important;\n}\n\n.v-application .mx-n12 {\n  margin-right: -48px !important;\n  margin-left: -48px !important;\n}\n\n.v-application .mx-n13 {\n  margin-right: -52px !important;\n  margin-left: -52px !important;\n}\n\n.v-application .mx-n14 {\n  margin-right: -56px !important;\n  margin-left: -56px !important;\n}\n\n.v-application .mx-n15 {\n  margin-right: -60px !important;\n  margin-left: -60px !important;\n}\n\n.v-application .mx-n16 {\n  margin-right: -64px !important;\n  margin-left: -64px !important;\n}\n\n.v-application .my-n1 {\n  margin-top: -4px !important;\n  margin-bottom: -4px !important;\n}\n\n.v-application .my-n2 {\n  margin-top: -8px !important;\n  margin-bottom: -8px !important;\n}\n\n.v-application .my-n3 {\n  margin-top: -12px !important;\n  margin-bottom: -12px !important;\n}\n\n.v-application .my-n4 {\n  margin-top: -16px !important;\n  margin-bottom: -16px !important;\n}\n\n.v-application .my-n5 {\n  margin-top: -20px !important;\n  margin-bottom: -20px !important;\n}\n\n.v-application .my-n6 {\n  margin-top: -24px !important;\n  margin-bottom: -24px !important;\n}\n\n.v-application .my-n7 {\n  margin-top: -28px !important;\n  margin-bottom: -28px !important;\n}\n\n.v-application .my-n8 {\n  margin-top: -32px !important;\n  margin-bottom: -32px !important;\n}\n\n.v-application .my-n9 {\n  margin-top: -36px !important;\n  margin-bottom: -36px !important;\n}\n\n.v-application .my-n10 {\n  margin-top: -40px !important;\n  margin-bottom: -40px !important;\n}\n\n.v-application .my-n11 {\n  margin-top: -44px !important;\n  margin-bottom: -44px !important;\n}\n\n.v-application .my-n12 {\n  margin-top: -48px !important;\n  margin-bottom: -48px !important;\n}\n\n.v-application .my-n13 {\n  margin-top: -52px !important;\n  margin-bottom: -52px !important;\n}\n\n.v-application .my-n14 {\n  margin-top: -56px !important;\n  margin-bottom: -56px !important;\n}\n\n.v-application .my-n15 {\n  margin-top: -60px !important;\n  margin-bottom: -60px !important;\n}\n\n.v-application .my-n16 {\n  margin-top: -64px !important;\n  margin-bottom: -64px !important;\n}\n\n.v-application .mt-n1 {\n  margin-top: -4px !important;\n}\n\n.v-application .mt-n2 {\n  margin-top: -8px !important;\n}\n\n.v-application .mt-n3 {\n  margin-top: -12px !important;\n}\n\n.v-application .mt-n4 {\n  margin-top: -16px !important;\n}\n\n.v-application .mt-n5 {\n  margin-top: -20px !important;\n}\n\n.v-application .mt-n6 {\n  margin-top: -24px !important;\n}\n\n.v-application .mt-n7 {\n  margin-top: -28px !important;\n}\n\n.v-application .mt-n8 {\n  margin-top: -32px !important;\n}\n\n.v-application .mt-n9 {\n  margin-top: -36px !important;\n}\n\n.v-application .mt-n10 {\n  margin-top: -40px !important;\n}\n\n.v-application .mt-n11 {\n  margin-top: -44px !important;\n}\n\n.v-application .mt-n12 {\n  margin-top: -48px !important;\n}\n\n.v-application .mt-n13 {\n  margin-top: -52px !important;\n}\n\n.v-application .mt-n14 {\n  margin-top: -56px !important;\n}\n\n.v-application .mt-n15 {\n  margin-top: -60px !important;\n}\n\n.v-application .mt-n16 {\n  margin-top: -64px !important;\n}\n\n.v-application .mr-n1 {\n  margin-right: -4px !important;\n}\n\n.v-application .mr-n2 {\n  margin-right: -8px !important;\n}\n\n.v-application .mr-n3 {\n  margin-right: -12px !important;\n}\n\n.v-application .mr-n4 {\n  margin-right: -16px !important;\n}\n\n.v-application .mr-n5 {\n  margin-right: -20px !important;\n}\n\n.v-application .mr-n6 {\n  margin-right: -24px !important;\n}\n\n.v-application .mr-n7 {\n  margin-right: -28px !important;\n}\n\n.v-application .mr-n8 {\n  margin-right: -32px !important;\n}\n\n.v-application .mr-n9 {\n  margin-right: -36px !important;\n}\n\n.v-application .mr-n10 {\n  margin-right: -40px !important;\n}\n\n.v-application .mr-n11 {\n  margin-right: -44px !important;\n}\n\n.v-application .mr-n12 {\n  margin-right: -48px !important;\n}\n\n.v-application .mr-n13 {\n  margin-right: -52px !important;\n}\n\n.v-application .mr-n14 {\n  margin-right: -56px !important;\n}\n\n.v-application .mr-n15 {\n  margin-right: -60px !important;\n}\n\n.v-application .mr-n16 {\n  margin-right: -64px !important;\n}\n\n.v-application .mb-n1 {\n  margin-bottom: -4px !important;\n}\n\n.v-application .mb-n2 {\n  margin-bottom: -8px !important;\n}\n\n.v-application .mb-n3 {\n  margin-bottom: -12px !important;\n}\n\n.v-application .mb-n4 {\n  margin-bottom: -16px !important;\n}\n\n.v-application .mb-n5 {\n  margin-bottom: -20px !important;\n}\n\n.v-application .mb-n6 {\n  margin-bottom: -24px !important;\n}\n\n.v-application .mb-n7 {\n  margin-bottom: -28px !important;\n}\n\n.v-application .mb-n8 {\n  margin-bottom: -32px !important;\n}\n\n.v-application .mb-n9 {\n  margin-bottom: -36px !important;\n}\n\n.v-application .mb-n10 {\n  margin-bottom: -40px !important;\n}\n\n.v-application .mb-n11 {\n  margin-bottom: -44px !important;\n}\n\n.v-application .mb-n12 {\n  margin-bottom: -48px !important;\n}\n\n.v-application .mb-n13 {\n  margin-bottom: -52px !important;\n}\n\n.v-application .mb-n14 {\n  margin-bottom: -56px !important;\n}\n\n.v-application .mb-n15 {\n  margin-bottom: -60px !important;\n}\n\n.v-application .mb-n16 {\n  margin-bottom: -64px !important;\n}\n\n.v-application .ml-n1 {\n  margin-left: -4px !important;\n}\n\n.v-application .ml-n2 {\n  margin-left: -8px !important;\n}\n\n.v-application .ml-n3 {\n  margin-left: -12px !important;\n}\n\n.v-application .ml-n4 {\n  margin-left: -16px !important;\n}\n\n.v-application .ml-n5 {\n  margin-left: -20px !important;\n}\n\n.v-application .ml-n6 {\n  margin-left: -24px !important;\n}\n\n.v-application .ml-n7 {\n  margin-left: -28px !important;\n}\n\n.v-application .ml-n8 {\n  margin-left: -32px !important;\n}\n\n.v-application .ml-n9 {\n  margin-left: -36px !important;\n}\n\n.v-application .ml-n10 {\n  margin-left: -40px !important;\n}\n\n.v-application .ml-n11 {\n  margin-left: -44px !important;\n}\n\n.v-application .ml-n12 {\n  margin-left: -48px !important;\n}\n\n.v-application .ml-n13 {\n  margin-left: -52px !important;\n}\n\n.v-application .ml-n14 {\n  margin-left: -56px !important;\n}\n\n.v-application .ml-n15 {\n  margin-left: -60px !important;\n}\n\n.v-application .ml-n16 {\n  margin-left: -64px !important;\n}\n\n.v-application--is-ltr .ms-n1 {\n  margin-left: -4px !important;\n}\n\n.v-application--is-rtl .ms-n1 {\n  margin-right: -4px !important;\n}\n\n.v-application--is-ltr .ms-n2 {\n  margin-left: -8px !important;\n}\n\n.v-application--is-rtl .ms-n2 {\n  margin-right: -8px !important;\n}\n\n.v-application--is-ltr .ms-n3 {\n  margin-left: -12px !important;\n}\n\n.v-application--is-rtl .ms-n3 {\n  margin-right: -12px !important;\n}\n\n.v-application--is-ltr .ms-n4 {\n  margin-left: -16px !important;\n}\n\n.v-application--is-rtl .ms-n4 {\n  margin-right: -16px !important;\n}\n\n.v-application--is-ltr .ms-n5 {\n  margin-left: -20px !important;\n}\n\n.v-application--is-rtl .ms-n5 {\n  margin-right: -20px !important;\n}\n\n.v-application--is-ltr .ms-n6 {\n  margin-left: -24px !important;\n}\n\n.v-application--is-rtl .ms-n6 {\n  margin-right: -24px !important;\n}\n\n.v-application--is-ltr .ms-n7 {\n  margin-left: -28px !important;\n}\n\n.v-application--is-rtl .ms-n7 {\n  margin-right: -28px !important;\n}\n\n.v-application--is-ltr .ms-n8 {\n  margin-left: -32px !important;\n}\n\n.v-application--is-rtl .ms-n8 {\n  margin-right: -32px !important;\n}\n\n.v-application--is-ltr .ms-n9 {\n  margin-left: -36px !important;\n}\n\n.v-application--is-rtl .ms-n9 {\n  margin-right: -36px !important;\n}\n\n.v-application--is-ltr .ms-n10 {\n  margin-left: -40px !important;\n}\n\n.v-application--is-rtl .ms-n10 {\n  margin-right: -40px !important;\n}\n\n.v-application--is-ltr .ms-n11 {\n  margin-left: -44px !important;\n}\n\n.v-application--is-rtl .ms-n11 {\n  margin-right: -44px !important;\n}\n\n.v-application--is-ltr .ms-n12 {\n  margin-left: -48px !important;\n}\n\n.v-application--is-rtl .ms-n12 {\n  margin-right: -48px !important;\n}\n\n.v-application--is-ltr .ms-n13 {\n  margin-left: -52px !important;\n}\n\n.v-application--is-rtl .ms-n13 {\n  margin-right: -52px !important;\n}\n\n.v-application--is-ltr .ms-n14 {\n  margin-left: -56px !important;\n}\n\n.v-application--is-rtl .ms-n14 {\n  margin-right: -56px !important;\n}\n\n.v-application--is-ltr .ms-n15 {\n  margin-left: -60px !important;\n}\n\n.v-application--is-rtl .ms-n15 {\n  margin-right: -60px !important;\n}\n\n.v-application--is-ltr .ms-n16 {\n  margin-left: -64px !important;\n}\n\n.v-application--is-rtl .ms-n16 {\n  margin-right: -64px !important;\n}\n\n.v-application--is-ltr .me-n1 {\n  margin-right: -4px !important;\n}\n\n.v-application--is-rtl .me-n1 {\n  margin-left: -4px !important;\n}\n\n.v-application--is-ltr .me-n2 {\n  margin-right: -8px !important;\n}\n\n.v-application--is-rtl .me-n2 {\n  margin-left: -8px !important;\n}\n\n.v-application--is-ltr .me-n3 {\n  margin-right: -12px !important;\n}\n\n.v-application--is-rtl .me-n3 {\n  margin-left: -12px !important;\n}\n\n.v-application--is-ltr .me-n4 {\n  margin-right: -16px !important;\n}\n\n.v-application--is-rtl .me-n4 {\n  margin-left: -16px !important;\n}\n\n.v-application--is-ltr .me-n5 {\n  margin-right: -20px !important;\n}\n\n.v-application--is-rtl .me-n5 {\n  margin-left: -20px !important;\n}\n\n.v-application--is-ltr .me-n6 {\n  margin-right: -24px !important;\n}\n\n.v-application--is-rtl .me-n6 {\n  margin-left: -24px !important;\n}\n\n.v-application--is-ltr .me-n7 {\n  margin-right: -28px !important;\n}\n\n.v-application--is-rtl .me-n7 {\n  margin-left: -28px !important;\n}\n\n.v-application--is-ltr .me-n8 {\n  margin-right: -32px !important;\n}\n\n.v-application--is-rtl .me-n8 {\n  margin-left: -32px !important;\n}\n\n.v-application--is-ltr .me-n9 {\n  margin-right: -36px !important;\n}\n\n.v-application--is-rtl .me-n9 {\n  margin-left: -36px !important;\n}\n\n.v-application--is-ltr .me-n10 {\n  margin-right: -40px !important;\n}\n\n.v-application--is-rtl .me-n10 {\n  margin-left: -40px !important;\n}\n\n.v-application--is-ltr .me-n11 {\n  margin-right: -44px !important;\n}\n\n.v-application--is-rtl .me-n11 {\n  margin-left: -44px !important;\n}\n\n.v-application--is-ltr .me-n12 {\n  margin-right: -48px !important;\n}\n\n.v-application--is-rtl .me-n12 {\n  margin-left: -48px !important;\n}\n\n.v-application--is-ltr .me-n13 {\n  margin-right: -52px !important;\n}\n\n.v-application--is-rtl .me-n13 {\n  margin-left: -52px !important;\n}\n\n.v-application--is-ltr .me-n14 {\n  margin-right: -56px !important;\n}\n\n.v-application--is-rtl .me-n14 {\n  margin-left: -56px !important;\n}\n\n.v-application--is-ltr .me-n15 {\n  margin-right: -60px !important;\n}\n\n.v-application--is-rtl .me-n15 {\n  margin-left: -60px !important;\n}\n\n.v-application--is-ltr .me-n16 {\n  margin-right: -64px !important;\n}\n\n.v-application--is-rtl .me-n16 {\n  margin-left: -64px !important;\n}\n\n.v-application .pa-0 {\n  padding: 0px !important;\n}\n\n.v-application .pa-1 {\n  padding: 4px !important;\n}\n\n.v-application .pa-2 {\n  padding: 8px !important;\n}\n\n.v-application .pa-3 {\n  padding: 12px !important;\n}\n\n.v-application .pa-4 {\n  padding: 16px !important;\n}\n\n.v-application .pa-5 {\n  padding: 20px !important;\n}\n\n.v-application .pa-6 {\n  padding: 24px !important;\n}\n\n.v-application .pa-7 {\n  padding: 28px !important;\n}\n\n.v-application .pa-8 {\n  padding: 32px !important;\n}\n\n.v-application .pa-9 {\n  padding: 36px !important;\n}\n\n.v-application .pa-10 {\n  padding: 40px !important;\n}\n\n.v-application .pa-11 {\n  padding: 44px !important;\n}\n\n.v-application .pa-12 {\n  padding: 48px !important;\n}\n\n.v-application .pa-13 {\n  padding: 52px !important;\n}\n\n.v-application .pa-14 {\n  padding: 56px !important;\n}\n\n.v-application .pa-15 {\n  padding: 60px !important;\n}\n\n.v-application .pa-16 {\n  padding: 64px !important;\n}\n\n.v-application .px-0 {\n  padding-right: 0px !important;\n  padding-left: 0px !important;\n}\n\n.v-application .px-1 {\n  padding-right: 4px !important;\n  padding-left: 4px !important;\n}\n\n.v-application .px-2 {\n  padding-right: 8px !important;\n  padding-left: 8px !important;\n}\n\n.v-application .px-3 {\n  padding-right: 12px !important;\n  padding-left: 12px !important;\n}\n\n.v-application .px-4 {\n  padding-right: 16px !important;\n  padding-left: 16px !important;\n}\n\n.v-application .px-5 {\n  padding-right: 20px !important;\n  padding-left: 20px !important;\n}\n\n.v-application .px-6 {\n  padding-right: 24px !important;\n  padding-left: 24px !important;\n}\n\n.v-application .px-7 {\n  padding-right: 28px !important;\n  padding-left: 28px !important;\n}\n\n.v-application .px-8 {\n  padding-right: 32px !important;\n  padding-left: 32px !important;\n}\n\n.v-application .px-9 {\n  padding-right: 36px !important;\n  padding-left: 36px !important;\n}\n\n.v-application .px-10 {\n  padding-right: 40px !important;\n  padding-left: 40px !important;\n}\n\n.v-application .px-11 {\n  padding-right: 44px !important;\n  padding-left: 44px !important;\n}\n\n.v-application .px-12 {\n  padding-right: 48px !important;\n  padding-left: 48px !important;\n}\n\n.v-application .px-13 {\n  padding-right: 52px !important;\n  padding-left: 52px !important;\n}\n\n.v-application .px-14 {\n  padding-right: 56px !important;\n  padding-left: 56px !important;\n}\n\n.v-application .px-15 {\n  padding-right: 60px !important;\n  padding-left: 60px !important;\n}\n\n.v-application .px-16 {\n  padding-right: 64px !important;\n  padding-left: 64px !important;\n}\n\n.v-application .py-0 {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n\n.v-application .py-1 {\n  padding-top: 4px !important;\n  padding-bottom: 4px !important;\n}\n\n.v-application .py-2 {\n  padding-top: 8px !important;\n  padding-bottom: 8px !important;\n}\n\n.v-application .py-3 {\n  padding-top: 12px !important;\n  padding-bottom: 12px !important;\n}\n\n.v-application .py-4 {\n  padding-top: 16px !important;\n  padding-bottom: 16px !important;\n}\n\n.v-application .py-5 {\n  padding-top: 20px !important;\n  padding-bottom: 20px !important;\n}\n\n.v-application .py-6 {\n  padding-top: 24px !important;\n  padding-bottom: 24px !important;\n}\n\n.v-application .py-7 {\n  padding-top: 28px !important;\n  padding-bottom: 28px !important;\n}\n\n.v-application .py-8 {\n  padding-top: 32px !important;\n  padding-bottom: 32px !important;\n}\n\n.v-application .py-9 {\n  padding-top: 36px !important;\n  padding-bottom: 36px !important;\n}\n\n.v-application .py-10 {\n  padding-top: 40px !important;\n  padding-bottom: 40px !important;\n}\n\n.v-application .py-11 {\n  padding-top: 44px !important;\n  padding-bottom: 44px !important;\n}\n\n.v-application .py-12 {\n  padding-top: 48px !important;\n  padding-bottom: 48px !important;\n}\n\n.v-application .py-13 {\n  padding-top: 52px !important;\n  padding-bottom: 52px !important;\n}\n\n.v-application .py-14 {\n  padding-top: 56px !important;\n  padding-bottom: 56px !important;\n}\n\n.v-application .py-15 {\n  padding-top: 60px !important;\n  padding-bottom: 60px !important;\n}\n\n.v-application .py-16 {\n  padding-top: 64px !important;\n  padding-bottom: 64px !important;\n}\n\n.v-application .pt-0 {\n  padding-top: 0px !important;\n}\n\n.v-application .pt-1 {\n  padding-top: 4px !important;\n}\n\n.v-application .pt-2 {\n  padding-top: 8px !important;\n}\n\n.v-application .pt-3 {\n  padding-top: 12px !important;\n}\n\n.v-application .pt-4 {\n  padding-top: 16px !important;\n}\n\n.v-application .pt-5 {\n  padding-top: 20px !important;\n}\n\n.v-application .pt-6 {\n  padding-top: 24px !important;\n}\n\n.v-application .pt-7 {\n  padding-top: 28px !important;\n}\n\n.v-application .pt-8 {\n  padding-top: 32px !important;\n}\n\n.v-application .pt-9 {\n  padding-top: 36px !important;\n}\n\n.v-application .pt-10 {\n  padding-top: 40px !important;\n}\n\n.v-application .pt-11 {\n  padding-top: 44px !important;\n}\n\n.v-application .pt-12 {\n  padding-top: 48px !important;\n}\n\n.v-application .pt-13 {\n  padding-top: 52px !important;\n}\n\n.v-application .pt-14 {\n  padding-top: 56px !important;\n}\n\n.v-application .pt-15 {\n  padding-top: 60px !important;\n}\n\n.v-application .pt-16 {\n  padding-top: 64px !important;\n}\n\n.v-application .pr-0 {\n  padding-right: 0px !important;\n}\n\n.v-application .pr-1 {\n  padding-right: 4px !important;\n}\n\n.v-application .pr-2 {\n  padding-right: 8px !important;\n}\n\n.v-application .pr-3 {\n  padding-right: 12px !important;\n}\n\n.v-application .pr-4 {\n  padding-right: 16px !important;\n}\n\n.v-application .pr-5 {\n  padding-right: 20px !important;\n}\n\n.v-application .pr-6 {\n  padding-right: 24px !important;\n}\n\n.v-application .pr-7 {\n  padding-right: 28px !important;\n}\n\n.v-application .pr-8 {\n  padding-right: 32px !important;\n}\n\n.v-application .pr-9 {\n  padding-right: 36px !important;\n}\n\n.v-application .pr-10 {\n  padding-right: 40px !important;\n}\n\n.v-application .pr-11 {\n  padding-right: 44px !important;\n}\n\n.v-application .pr-12 {\n  padding-right: 48px !important;\n}\n\n.v-application .pr-13 {\n  padding-right: 52px !important;\n}\n\n.v-application .pr-14 {\n  padding-right: 56px !important;\n}\n\n.v-application .pr-15 {\n  padding-right: 60px !important;\n}\n\n.v-application .pr-16 {\n  padding-right: 64px !important;\n}\n\n.v-application .pb-0 {\n  padding-bottom: 0px !important;\n}\n\n.v-application .pb-1 {\n  padding-bottom: 4px !important;\n}\n\n.v-application .pb-2 {\n  padding-bottom: 8px !important;\n}\n\n.v-application .pb-3 {\n  padding-bottom: 12px !important;\n}\n\n.v-application .pb-4 {\n  padding-bottom: 16px !important;\n}\n\n.v-application .pb-5 {\n  padding-bottom: 20px !important;\n}\n\n.v-application .pb-6 {\n  padding-bottom: 24px !important;\n}\n\n.v-application .pb-7 {\n  padding-bottom: 28px !important;\n}\n\n.v-application .pb-8 {\n  padding-bottom: 32px !important;\n}\n\n.v-application .pb-9 {\n  padding-bottom: 36px !important;\n}\n\n.v-application .pb-10 {\n  padding-bottom: 40px !important;\n}\n\n.v-application .pb-11 {\n  padding-bottom: 44px !important;\n}\n\n.v-application .pb-12 {\n  padding-bottom: 48px !important;\n}\n\n.v-application .pb-13 {\n  padding-bottom: 52px !important;\n}\n\n.v-application .pb-14 {\n  padding-bottom: 56px !important;\n}\n\n.v-application .pb-15 {\n  padding-bottom: 60px !important;\n}\n\n.v-application .pb-16 {\n  padding-bottom: 64px !important;\n}\n\n.v-application .pl-0 {\n  padding-left: 0px !important;\n}\n\n.v-application .pl-1 {\n  padding-left: 4px !important;\n}\n\n.v-application .pl-2 {\n  padding-left: 8px !important;\n}\n\n.v-application .pl-3 {\n  padding-left: 12px !important;\n}\n\n.v-application .pl-4 {\n  padding-left: 16px !important;\n}\n\n.v-application .pl-5 {\n  padding-left: 20px !important;\n}\n\n.v-application .pl-6 {\n  padding-left: 24px !important;\n}\n\n.v-application .pl-7 {\n  padding-left: 28px !important;\n}\n\n.v-application .pl-8 {\n  padding-left: 32px !important;\n}\n\n.v-application .pl-9 {\n  padding-left: 36px !important;\n}\n\n.v-application .pl-10 {\n  padding-left: 40px !important;\n}\n\n.v-application .pl-11 {\n  padding-left: 44px !important;\n}\n\n.v-application .pl-12 {\n  padding-left: 48px !important;\n}\n\n.v-application .pl-13 {\n  padding-left: 52px !important;\n}\n\n.v-application .pl-14 {\n  padding-left: 56px !important;\n}\n\n.v-application .pl-15 {\n  padding-left: 60px !important;\n}\n\n.v-application .pl-16 {\n  padding-left: 64px !important;\n}\n\n.v-application--is-ltr .ps-0 {\n  padding-left: 0px !important;\n}\n\n.v-application--is-rtl .ps-0 {\n  padding-right: 0px !important;\n}\n\n.v-application--is-ltr .ps-1 {\n  padding-left: 4px !important;\n}\n\n.v-application--is-rtl .ps-1 {\n  padding-right: 4px !important;\n}\n\n.v-application--is-ltr .ps-2 {\n  padding-left: 8px !important;\n}\n\n.v-application--is-rtl .ps-2 {\n  padding-right: 8px !important;\n}\n\n.v-application--is-ltr .ps-3 {\n  padding-left: 12px !important;\n}\n\n.v-application--is-rtl .ps-3 {\n  padding-right: 12px !important;\n}\n\n.v-application--is-ltr .ps-4 {\n  padding-left: 16px !important;\n}\n\n.v-application--is-rtl .ps-4 {\n  padding-right: 16px !important;\n}\n\n.v-application--is-ltr .ps-5 {\n  padding-left: 20px !important;\n}\n\n.v-application--is-rtl .ps-5 {\n  padding-right: 20px !important;\n}\n\n.v-application--is-ltr .ps-6 {\n  padding-left: 24px !important;\n}\n\n.v-application--is-rtl .ps-6 {\n  padding-right: 24px !important;\n}\n\n.v-application--is-ltr .ps-7 {\n  padding-left: 28px !important;\n}\n\n.v-application--is-rtl .ps-7 {\n  padding-right: 28px !important;\n}\n\n.v-application--is-ltr .ps-8 {\n  padding-left: 32px !important;\n}\n\n.v-application--is-rtl .ps-8 {\n  padding-right: 32px !important;\n}\n\n.v-application--is-ltr .ps-9 {\n  padding-left: 36px !important;\n}\n\n.v-application--is-rtl .ps-9 {\n  padding-right: 36px !important;\n}\n\n.v-application--is-ltr .ps-10 {\n  padding-left: 40px !important;\n}\n\n.v-application--is-rtl .ps-10 {\n  padding-right: 40px !important;\n}\n\n.v-application--is-ltr .ps-11 {\n  padding-left: 44px !important;\n}\n\n.v-application--is-rtl .ps-11 {\n  padding-right: 44px !important;\n}\n\n.v-application--is-ltr .ps-12 {\n  padding-left: 48px !important;\n}\n\n.v-application--is-rtl .ps-12 {\n  padding-right: 48px !important;\n}\n\n.v-application--is-ltr .ps-13 {\n  padding-left: 52px !important;\n}\n\n.v-application--is-rtl .ps-13 {\n  padding-right: 52px !important;\n}\n\n.v-application--is-ltr .ps-14 {\n  padding-left: 56px !important;\n}\n\n.v-application--is-rtl .ps-14 {\n  padding-right: 56px !important;\n}\n\n.v-application--is-ltr .ps-15 {\n  padding-left: 60px !important;\n}\n\n.v-application--is-rtl .ps-15 {\n  padding-right: 60px !important;\n}\n\n.v-application--is-ltr .ps-16 {\n  padding-left: 64px !important;\n}\n\n.v-application--is-rtl .ps-16 {\n  padding-right: 64px !important;\n}\n\n.v-application--is-ltr .pe-0 {\n  padding-right: 0px !important;\n}\n\n.v-application--is-rtl .pe-0 {\n  padding-left: 0px !important;\n}\n\n.v-application--is-ltr .pe-1 {\n  padding-right: 4px !important;\n}\n\n.v-application--is-rtl .pe-1 {\n  padding-left: 4px !important;\n}\n\n.v-application--is-ltr .pe-2 {\n  padding-right: 8px !important;\n}\n\n.v-application--is-rtl .pe-2 {\n  padding-left: 8px !important;\n}\n\n.v-application--is-ltr .pe-3 {\n  padding-right: 12px !important;\n}\n\n.v-application--is-rtl .pe-3 {\n  padding-left: 12px !important;\n}\n\n.v-application--is-ltr .pe-4 {\n  padding-right: 16px !important;\n}\n\n.v-application--is-rtl .pe-4 {\n  padding-left: 16px !important;\n}\n\n.v-application--is-ltr .pe-5 {\n  padding-right: 20px !important;\n}\n\n.v-application--is-rtl .pe-5 {\n  padding-left: 20px !important;\n}\n\n.v-application--is-ltr .pe-6 {\n  padding-right: 24px !important;\n}\n\n.v-application--is-rtl .pe-6 {\n  padding-left: 24px !important;\n}\n\n.v-application--is-ltr .pe-7 {\n  padding-right: 28px !important;\n}\n\n.v-application--is-rtl .pe-7 {\n  padding-left: 28px !important;\n}\n\n.v-application--is-ltr .pe-8 {\n  padding-right: 32px !important;\n}\n\n.v-application--is-rtl .pe-8 {\n  padding-left: 32px !important;\n}\n\n.v-application--is-ltr .pe-9 {\n  padding-right: 36px !important;\n}\n\n.v-application--is-rtl .pe-9 {\n  padding-left: 36px !important;\n}\n\n.v-application--is-ltr .pe-10 {\n  padding-right: 40px !important;\n}\n\n.v-application--is-rtl .pe-10 {\n  padding-left: 40px !important;\n}\n\n.v-application--is-ltr .pe-11 {\n  padding-right: 44px !important;\n}\n\n.v-application--is-rtl .pe-11 {\n  padding-left: 44px !important;\n}\n\n.v-application--is-ltr .pe-12 {\n  padding-right: 48px !important;\n}\n\n.v-application--is-rtl .pe-12 {\n  padding-left: 48px !important;\n}\n\n.v-application--is-ltr .pe-13 {\n  padding-right: 52px !important;\n}\n\n.v-application--is-rtl .pe-13 {\n  padding-left: 52px !important;\n}\n\n.v-application--is-ltr .pe-14 {\n  padding-right: 56px !important;\n}\n\n.v-application--is-rtl .pe-14 {\n  padding-left: 56px !important;\n}\n\n.v-application--is-ltr .pe-15 {\n  padding-right: 60px !important;\n}\n\n.v-application--is-rtl .pe-15 {\n  padding-left: 60px !important;\n}\n\n.v-application--is-ltr .pe-16 {\n  padding-right: 64px !important;\n}\n\n.v-application--is-rtl .pe-16 {\n  padding-left: 64px !important;\n}\n\n.v-application .rounded-0 {\n  border-radius: 0 !important;\n}\n\n.v-application .rounded-sm {\n  border-radius: 2px !important;\n}\n\n.v-application .rounded {\n  border-radius: 4px !important;\n}\n\n.v-application .rounded-lg {\n  border-radius: 8px !important;\n}\n\n.v-application .rounded-xl {\n  border-radius: 24px !important;\n}\n\n.v-application .rounded-pill {\n  border-radius: 9999px !important;\n}\n\n.v-application .rounded-circle {\n  border-radius: 50% !important;\n}\n\n.v-application .rounded-t-0 {\n  border-top-left-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n\n.v-application .rounded-t-sm {\n  border-top-left-radius: 2px !important;\n  border-top-right-radius: 2px !important;\n}\n\n.v-application .rounded-t {\n  border-top-left-radius: 4px !important;\n  border-top-right-radius: 4px !important;\n}\n\n.v-application .rounded-t-lg {\n  border-top-left-radius: 8px !important;\n  border-top-right-radius: 8px !important;\n}\n\n.v-application .rounded-t-xl {\n  border-top-left-radius: 24px !important;\n  border-top-right-radius: 24px !important;\n}\n\n.v-application .rounded-t-pill {\n  border-top-left-radius: 9999px !important;\n  border-top-right-radius: 9999px !important;\n}\n\n.v-application .rounded-t-circle {\n  border-top-left-radius: 50% !important;\n  border-top-right-radius: 50% !important;\n}\n\n.v-application .rounded-r-0 {\n  border-top-right-radius: 0 !important;\n  border-bottom-right-radius: 0 !important;\n}\n\n.v-application .rounded-r-sm {\n  border-top-right-radius: 2px !important;\n  border-bottom-right-radius: 2px !important;\n}\n\n.v-application .rounded-r {\n  border-top-right-radius: 4px !important;\n  border-bottom-right-radius: 4px !important;\n}\n\n.v-application .rounded-r-lg {\n  border-top-right-radius: 8px !important;\n  border-bottom-right-radius: 8px !important;\n}\n\n.v-application .rounded-r-xl {\n  border-top-right-radius: 24px !important;\n  border-bottom-right-radius: 24px !important;\n}\n\n.v-application .rounded-r-pill {\n  border-top-right-radius: 9999px !important;\n  border-bottom-right-radius: 9999px !important;\n}\n\n.v-application .rounded-r-circle {\n  border-top-right-radius: 50% !important;\n  border-bottom-right-radius: 50% !important;\n}\n\n.v-application .rounded-b-0 {\n  border-bottom-left-radius: 0 !important;\n  border-bottom-right-radius: 0 !important;\n}\n\n.v-application .rounded-b-sm {\n  border-bottom-left-radius: 2px !important;\n  border-bottom-right-radius: 2px !important;\n}\n\n.v-application .rounded-b {\n  border-bottom-left-radius: 4px !important;\n  border-bottom-right-radius: 4px !important;\n}\n\n.v-application .rounded-b-lg {\n  border-bottom-left-radius: 8px !important;\n  border-bottom-right-radius: 8px !important;\n}\n\n.v-application .rounded-b-xl {\n  border-bottom-left-radius: 24px !important;\n  border-bottom-right-radius: 24px !important;\n}\n\n.v-application .rounded-b-pill {\n  border-bottom-left-radius: 9999px !important;\n  border-bottom-right-radius: 9999px !important;\n}\n\n.v-application .rounded-b-circle {\n  border-bottom-left-radius: 50% !important;\n  border-bottom-right-radius: 50% !important;\n}\n\n.v-application .rounded-l-0 {\n  border-top-left-radius: 0 !important;\n  border-bottom-left-radius: 0 !important;\n}\n\n.v-application .rounded-l-sm {\n  border-top-left-radius: 2px !important;\n  border-bottom-left-radius: 2px !important;\n}\n\n.v-application .rounded-l {\n  border-top-left-radius: 4px !important;\n  border-bottom-left-radius: 4px !important;\n}\n\n.v-application .rounded-l-lg {\n  border-top-left-radius: 8px !important;\n  border-bottom-left-radius: 8px !important;\n}\n\n.v-application .rounded-l-xl {\n  border-top-left-radius: 24px !important;\n  border-bottom-left-radius: 24px !important;\n}\n\n.v-application .rounded-l-pill {\n  border-top-left-radius: 9999px !important;\n  border-bottom-left-radius: 9999px !important;\n}\n\n.v-application .rounded-l-circle {\n  border-top-left-radius: 50% !important;\n  border-bottom-left-radius: 50% !important;\n}\n\n.v-application .rounded-tl-0 {\n  border-top-left-radius: 0 !important;\n}\n\n.v-application .rounded-tl-sm {\n  border-top-left-radius: 2px !important;\n}\n\n.v-application .rounded-tl {\n  border-top-left-radius: 4px !important;\n}\n\n.v-application .rounded-tl-lg {\n  border-top-left-radius: 8px !important;\n}\n\n.v-application .rounded-tl-xl {\n  border-top-left-radius: 24px !important;\n}\n\n.v-application .rounded-tl-pill {\n  border-top-left-radius: 9999px !important;\n}\n\n.v-application .rounded-tl-circle {\n  border-top-left-radius: 50% !important;\n}\n\n.v-application .rounded-tr-0 {\n  border-top-right-radius: 0 !important;\n}\n\n.v-application .rounded-tr-sm {\n  border-top-right-radius: 2px !important;\n}\n\n.v-application .rounded-tr {\n  border-top-right-radius: 4px !important;\n}\n\n.v-application .rounded-tr-lg {\n  border-top-right-radius: 8px !important;\n}\n\n.v-application .rounded-tr-xl {\n  border-top-right-radius: 24px !important;\n}\n\n.v-application .rounded-tr-pill {\n  border-top-right-radius: 9999px !important;\n}\n\n.v-application .rounded-tr-circle {\n  border-top-right-radius: 50% !important;\n}\n\n.v-application .rounded-br-0 {\n  border-bottom-right-radius: 0 !important;\n}\n\n.v-application .rounded-br-sm {\n  border-bottom-right-radius: 2px !important;\n}\n\n.v-application .rounded-br {\n  border-bottom-right-radius: 4px !important;\n}\n\n.v-application .rounded-br-lg {\n  border-bottom-right-radius: 8px !important;\n}\n\n.v-application .rounded-br-xl {\n  border-bottom-right-radius: 24px !important;\n}\n\n.v-application .rounded-br-pill {\n  border-bottom-right-radius: 9999px !important;\n}\n\n.v-application .rounded-br-circle {\n  border-bottom-right-radius: 50% !important;\n}\n\n.v-application .rounded-bl-0 {\n  border-bottom-left-radius: 0 !important;\n}\n\n.v-application .rounded-bl-sm {\n  border-bottom-left-radius: 2px !important;\n}\n\n.v-application .rounded-bl {\n  border-bottom-left-radius: 4px !important;\n}\n\n.v-application .rounded-bl-lg {\n  border-bottom-left-radius: 8px !important;\n}\n\n.v-application .rounded-bl-xl {\n  border-bottom-left-radius: 24px !important;\n}\n\n.v-application .rounded-bl-pill {\n  border-bottom-left-radius: 9999px !important;\n}\n\n.v-application .rounded-bl-circle {\n  border-bottom-left-radius: 50% !important;\n}\n\n.v-application .text-left {\n  text-align: left !important;\n}\n\n.v-application .text-right {\n  text-align: right !important;\n}\n\n.v-application .text-center {\n  text-align: center !important;\n}\n\n.v-application .text-justify {\n  text-align: justify !important;\n}\n\n.v-application .text-start {\n  text-align: start !important;\n}\n\n.v-application .text-end {\n  text-align: end !important;\n}\n\n.v-application .text-decoration-line-through {\n  text-decoration: line-through !important;\n}\n\n.v-application .text-decoration-none {\n  text-decoration: none !important;\n}\n\n.v-application .text-decoration-overline {\n  text-decoration: overline !important;\n}\n\n.v-application .text-decoration-underline {\n  text-decoration: underline !important;\n}\n\n.v-application .text-wrap {\n  white-space: normal !important;\n}\n\n.v-application .text-no-wrap {\n  white-space: nowrap !important;\n}\n\n.v-application .text-pre {\n  white-space: pre !important;\n}\n\n.v-application .text-pre-line {\n  white-space: pre-line !important;\n}\n\n.v-application .text-pre-wrap {\n  white-space: pre-wrap !important;\n}\n\n.v-application .text-break {\n  overflow-wrap: break-word !important;\n  word-break: break-word !important;\n}\n\n.v-application .text-truncate {\n  white-space: nowrap !important;\n  overflow: hidden !important;\n  text-overflow: ellipsis !important;\n}\n\n.v-application .text-none {\n  text-transform: none !important;\n}\n\n.v-application .text-capitalize {\n  text-transform: capitalize !important;\n}\n\n.v-application .text-lowercase {\n  text-transform: lowercase !important;\n}\n\n.v-application .text-uppercase {\n  text-transform: uppercase !important;\n}\n\n.v-application .text-h1 {\n  font-size: 6rem !important;\n  font-weight: 300;\n  line-height: 6rem;\n  letter-spacing: -0.015625em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-h2 {\n  font-size: 3.75rem !important;\n  font-weight: 300;\n  line-height: 3.75rem;\n  letter-spacing: -0.0083333333em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-h3 {\n  font-size: 3rem !important;\n  font-weight: 400;\n  line-height: 3.125rem;\n  letter-spacing: normal !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-h4 {\n  font-size: 2.125rem !important;\n  font-weight: 400;\n  line-height: 2.5rem;\n  letter-spacing: 0.0073529412em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-h5 {\n  font-size: 1.5rem !important;\n  font-weight: 400;\n  line-height: 2rem;\n  letter-spacing: normal !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-h6 {\n  font-size: 1.25rem !important;\n  font-weight: 500;\n  line-height: 2rem;\n  letter-spacing: 0.0125em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-subtitle-1 {\n  font-size: 1rem !important;\n  font-weight: normal;\n  line-height: 1.75rem;\n  letter-spacing: 0.009375em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-subtitle-2 {\n  font-size: 0.875rem !important;\n  font-weight: 500;\n  line-height: 1.375rem;\n  letter-spacing: 0.0071428571em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-body-1 {\n  font-size: 1rem !important;\n  font-weight: 400;\n  line-height: 1.5rem;\n  letter-spacing: 0.03125em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-body-2 {\n  font-size: 0.875rem !important;\n  font-weight: 400;\n  line-height: 1.25rem;\n  letter-spacing: 0.0178571429em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-button {\n  font-size: 0.875rem !important;\n  font-weight: 500;\n  line-height: 2.25rem;\n  letter-spacing: 0.0892857143em !important;\n  font-family: \"Roboto\", sans-serif !important;\n  text-transform: uppercase !important;\n}\n\n.v-application .text-caption {\n  font-size: 0.75rem !important;\n  font-weight: 400;\n  line-height: 1.25rem;\n  letter-spacing: 0.0333333333em !important;\n  font-family: \"Roboto\", sans-serif !important;\n}\n\n.v-application .text-overline {\n  font-size: 0.75rem !important;\n  font-weight: 500;\n  line-height: 2rem;\n  letter-spacing: 0.1666666667em !important;\n  font-family: \"Roboto\", sans-serif !important;\n  text-transform: uppercase !important;\n}\n\n@media (min-width: 600px) {\n  .v-application .d-sm-none {\n    display: none !important;\n  }\n\n  .v-application .d-sm-inline {\n    display: inline !important;\n  }\n\n  .v-application .d-sm-inline-block {\n    display: inline-block !important;\n  }\n\n  .v-application .d-sm-block {\n    display: block !important;\n  }\n\n  .v-application .d-sm-table {\n    display: table !important;\n  }\n\n  .v-application .d-sm-table-row {\n    display: table-row !important;\n  }\n\n  .v-application .d-sm-table-cell {\n    display: table-cell !important;\n  }\n\n  .v-application .d-sm-flex {\n    display: flex !important;\n  }\n\n  .v-application .d-sm-inline-flex {\n    display: inline-flex !important;\n  }\n\n  .v-application .float-sm-none {\n    float: none !important;\n  }\n\n  .v-application .float-sm-left {\n    float: left !important;\n  }\n\n  .v-application .float-sm-right {\n    float: right !important;\n  }\n\n  .v-application--is-rtl .float-sm-end {\n    float: left !important;\n  }\n\n  .v-application--is-rtl .float-sm-start {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-sm-end {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-sm-start {\n    float: left !important;\n  }\n\n  .v-application .flex-sm-fill {\n    flex: 1 1 auto !important;\n  }\n\n  .v-application .flex-sm-row {\n    flex-direction: row !important;\n  }\n\n  .v-application .flex-sm-column {\n    flex-direction: column !important;\n  }\n\n  .v-application .flex-sm-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n\n  .v-application .flex-sm-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n\n  .v-application .flex-sm-grow-0 {\n    flex-grow: 0 !important;\n  }\n\n  .v-application .flex-sm-grow-1 {\n    flex-grow: 1 !important;\n  }\n\n  .v-application .flex-sm-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n\n  .v-application .flex-sm-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n\n  .v-application .flex-sm-wrap {\n    flex-wrap: wrap !important;\n  }\n\n  .v-application .flex-sm-nowrap {\n    flex-wrap: nowrap !important;\n  }\n\n  .v-application .flex-sm-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n\n  .v-application .justify-sm-start {\n    justify-content: flex-start !important;\n  }\n\n  .v-application .justify-sm-end {\n    justify-content: flex-end !important;\n  }\n\n  .v-application .justify-sm-center {\n    justify-content: center !important;\n  }\n\n  .v-application .justify-sm-space-between {\n    justify-content: space-between !important;\n  }\n\n  .v-application .justify-sm-space-around {\n    justify-content: space-around !important;\n  }\n\n  .v-application .align-sm-start {\n    align-items: flex-start !important;\n  }\n\n  .v-application .align-sm-end {\n    align-items: flex-end !important;\n  }\n\n  .v-application .align-sm-center {\n    align-items: center !important;\n  }\n\n  .v-application .align-sm-baseline {\n    align-items: baseline !important;\n  }\n\n  .v-application .align-sm-stretch {\n    align-items: stretch !important;\n  }\n\n  .v-application .align-content-sm-start {\n    align-content: flex-start !important;\n  }\n\n  .v-application .align-content-sm-end {\n    align-content: flex-end !important;\n  }\n\n  .v-application .align-content-sm-center {\n    align-content: center !important;\n  }\n\n  .v-application .align-content-sm-space-between {\n    align-content: space-between !important;\n  }\n\n  .v-application .align-content-sm-space-around {\n    align-content: space-around !important;\n  }\n\n  .v-application .align-content-sm-stretch {\n    align-content: stretch !important;\n  }\n\n  .v-application .align-self-sm-auto {\n    align-self: auto !important;\n  }\n\n  .v-application .align-self-sm-start {\n    align-self: flex-start !important;\n  }\n\n  .v-application .align-self-sm-end {\n    align-self: flex-end !important;\n  }\n\n  .v-application .align-self-sm-center {\n    align-self: center !important;\n  }\n\n  .v-application .align-self-sm-baseline {\n    align-self: baseline !important;\n  }\n\n  .v-application .align-self-sm-stretch {\n    align-self: stretch !important;\n  }\n\n  .v-application .order-sm-first {\n    order: -1 !important;\n  }\n\n  .v-application .order-sm-0 {\n    order: 0 !important;\n  }\n\n  .v-application .order-sm-1 {\n    order: 1 !important;\n  }\n\n  .v-application .order-sm-2 {\n    order: 2 !important;\n  }\n\n  .v-application .order-sm-3 {\n    order: 3 !important;\n  }\n\n  .v-application .order-sm-4 {\n    order: 4 !important;\n  }\n\n  .v-application .order-sm-5 {\n    order: 5 !important;\n  }\n\n  .v-application .order-sm-6 {\n    order: 6 !important;\n  }\n\n  .v-application .order-sm-7 {\n    order: 7 !important;\n  }\n\n  .v-application .order-sm-8 {\n    order: 8 !important;\n  }\n\n  .v-application .order-sm-9 {\n    order: 9 !important;\n  }\n\n  .v-application .order-sm-10 {\n    order: 10 !important;\n  }\n\n  .v-application .order-sm-11 {\n    order: 11 !important;\n  }\n\n  .v-application .order-sm-12 {\n    order: 12 !important;\n  }\n\n  .v-application .order-sm-last {\n    order: 13 !important;\n  }\n\n  .v-application .ma-sm-0 {\n    margin: 0px !important;\n  }\n\n  .v-application .ma-sm-1 {\n    margin: 4px !important;\n  }\n\n  .v-application .ma-sm-2 {\n    margin: 8px !important;\n  }\n\n  .v-application .ma-sm-3 {\n    margin: 12px !important;\n  }\n\n  .v-application .ma-sm-4 {\n    margin: 16px !important;\n  }\n\n  .v-application .ma-sm-5 {\n    margin: 20px !important;\n  }\n\n  .v-application .ma-sm-6 {\n    margin: 24px !important;\n  }\n\n  .v-application .ma-sm-7 {\n    margin: 28px !important;\n  }\n\n  .v-application .ma-sm-8 {\n    margin: 32px !important;\n  }\n\n  .v-application .ma-sm-9 {\n    margin: 36px !important;\n  }\n\n  .v-application .ma-sm-10 {\n    margin: 40px !important;\n  }\n\n  .v-application .ma-sm-11 {\n    margin: 44px !important;\n  }\n\n  .v-application .ma-sm-12 {\n    margin: 48px !important;\n  }\n\n  .v-application .ma-sm-13 {\n    margin: 52px !important;\n  }\n\n  .v-application .ma-sm-14 {\n    margin: 56px !important;\n  }\n\n  .v-application .ma-sm-15 {\n    margin: 60px !important;\n  }\n\n  .v-application .ma-sm-16 {\n    margin: 64px !important;\n  }\n\n  .v-application .ma-sm-auto {\n    margin: auto !important;\n  }\n\n  .v-application .mx-sm-0 {\n    margin-right: 0px !important;\n    margin-left: 0px !important;\n  }\n\n  .v-application .mx-sm-1 {\n    margin-right: 4px !important;\n    margin-left: 4px !important;\n  }\n\n  .v-application .mx-sm-2 {\n    margin-right: 8px !important;\n    margin-left: 8px !important;\n  }\n\n  .v-application .mx-sm-3 {\n    margin-right: 12px !important;\n    margin-left: 12px !important;\n  }\n\n  .v-application .mx-sm-4 {\n    margin-right: 16px !important;\n    margin-left: 16px !important;\n  }\n\n  .v-application .mx-sm-5 {\n    margin-right: 20px !important;\n    margin-left: 20px !important;\n  }\n\n  .v-application .mx-sm-6 {\n    margin-right: 24px !important;\n    margin-left: 24px !important;\n  }\n\n  .v-application .mx-sm-7 {\n    margin-right: 28px !important;\n    margin-left: 28px !important;\n  }\n\n  .v-application .mx-sm-8 {\n    margin-right: 32px !important;\n    margin-left: 32px !important;\n  }\n\n  .v-application .mx-sm-9 {\n    margin-right: 36px !important;\n    margin-left: 36px !important;\n  }\n\n  .v-application .mx-sm-10 {\n    margin-right: 40px !important;\n    margin-left: 40px !important;\n  }\n\n  .v-application .mx-sm-11 {\n    margin-right: 44px !important;\n    margin-left: 44px !important;\n  }\n\n  .v-application .mx-sm-12 {\n    margin-right: 48px !important;\n    margin-left: 48px !important;\n  }\n\n  .v-application .mx-sm-13 {\n    margin-right: 52px !important;\n    margin-left: 52px !important;\n  }\n\n  .v-application .mx-sm-14 {\n    margin-right: 56px !important;\n    margin-left: 56px !important;\n  }\n\n  .v-application .mx-sm-15 {\n    margin-right: 60px !important;\n    margin-left: 60px !important;\n  }\n\n  .v-application .mx-sm-16 {\n    margin-right: 64px !important;\n    margin-left: 64px !important;\n  }\n\n  .v-application .mx-sm-auto {\n    margin-right: auto !important;\n    margin-left: auto !important;\n  }\n\n  .v-application .my-sm-0 {\n    margin-top: 0px !important;\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .my-sm-1 {\n    margin-top: 4px !important;\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .my-sm-2 {\n    margin-top: 8px !important;\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .my-sm-3 {\n    margin-top: 12px !important;\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .my-sm-4 {\n    margin-top: 16px !important;\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .my-sm-5 {\n    margin-top: 20px !important;\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .my-sm-6 {\n    margin-top: 24px !important;\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .my-sm-7 {\n    margin-top: 28px !important;\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .my-sm-8 {\n    margin-top: 32px !important;\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .my-sm-9 {\n    margin-top: 36px !important;\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .my-sm-10 {\n    margin-top: 40px !important;\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .my-sm-11 {\n    margin-top: 44px !important;\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .my-sm-12 {\n    margin-top: 48px !important;\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .my-sm-13 {\n    margin-top: 52px !important;\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .my-sm-14 {\n    margin-top: 56px !important;\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .my-sm-15 {\n    margin-top: 60px !important;\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .my-sm-16 {\n    margin-top: 64px !important;\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .my-sm-auto {\n    margin-top: auto !important;\n    margin-bottom: auto !important;\n  }\n\n  .v-application .mt-sm-0 {\n    margin-top: 0px !important;\n  }\n\n  .v-application .mt-sm-1 {\n    margin-top: 4px !important;\n  }\n\n  .v-application .mt-sm-2 {\n    margin-top: 8px !important;\n  }\n\n  .v-application .mt-sm-3 {\n    margin-top: 12px !important;\n  }\n\n  .v-application .mt-sm-4 {\n    margin-top: 16px !important;\n  }\n\n  .v-application .mt-sm-5 {\n    margin-top: 20px !important;\n  }\n\n  .v-application .mt-sm-6 {\n    margin-top: 24px !important;\n  }\n\n  .v-application .mt-sm-7 {\n    margin-top: 28px !important;\n  }\n\n  .v-application .mt-sm-8 {\n    margin-top: 32px !important;\n  }\n\n  .v-application .mt-sm-9 {\n    margin-top: 36px !important;\n  }\n\n  .v-application .mt-sm-10 {\n    margin-top: 40px !important;\n  }\n\n  .v-application .mt-sm-11 {\n    margin-top: 44px !important;\n  }\n\n  .v-application .mt-sm-12 {\n    margin-top: 48px !important;\n  }\n\n  .v-application .mt-sm-13 {\n    margin-top: 52px !important;\n  }\n\n  .v-application .mt-sm-14 {\n    margin-top: 56px !important;\n  }\n\n  .v-application .mt-sm-15 {\n    margin-top: 60px !important;\n  }\n\n  .v-application .mt-sm-16 {\n    margin-top: 64px !important;\n  }\n\n  .v-application .mt-sm-auto {\n    margin-top: auto !important;\n  }\n\n  .v-application .mr-sm-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application .mr-sm-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application .mr-sm-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application .mr-sm-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application .mr-sm-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application .mr-sm-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application .mr-sm-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application .mr-sm-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application .mr-sm-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application .mr-sm-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application .mr-sm-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application .mr-sm-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application .mr-sm-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application .mr-sm-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application .mr-sm-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application .mr-sm-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application .mr-sm-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application .mr-sm-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application .mb-sm-0 {\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .mb-sm-1 {\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .mb-sm-2 {\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .mb-sm-3 {\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .mb-sm-4 {\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .mb-sm-5 {\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .mb-sm-6 {\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .mb-sm-7 {\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .mb-sm-8 {\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .mb-sm-9 {\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .mb-sm-10 {\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .mb-sm-11 {\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .mb-sm-12 {\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .mb-sm-13 {\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .mb-sm-14 {\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .mb-sm-15 {\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .mb-sm-16 {\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .mb-sm-auto {\n    margin-bottom: auto !important;\n  }\n\n  .v-application .ml-sm-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application .ml-sm-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application .ml-sm-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application .ml-sm-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application .ml-sm-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application .ml-sm-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application .ml-sm-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application .ml-sm-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application .ml-sm-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application .ml-sm-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application .ml-sm-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application .ml-sm-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application .ml-sm-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application .ml-sm-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application .ml-sm-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application .ml-sm-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application .ml-sm-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application .ml-sm-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-ltr .ms-sm-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-rtl .ms-sm-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-ltr .me-sm-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-rtl .me-sm-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-ltr .me-sm-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-rtl .me-sm-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-ltr .me-sm-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-rtl .me-sm-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-ltr .me-sm-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-rtl .me-sm-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-ltr .me-sm-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-rtl .me-sm-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-ltr .me-sm-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-rtl .me-sm-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-ltr .me-sm-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-rtl .me-sm-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-ltr .me-sm-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-rtl .me-sm-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-ltr .me-sm-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-rtl .me-sm-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-ltr .me-sm-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-rtl .me-sm-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-ltr .me-sm-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-rtl .me-sm-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-ltr .me-sm-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-rtl .me-sm-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-ltr .me-sm-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-rtl .me-sm-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-ltr .me-sm-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-rtl .me-sm-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-ltr .me-sm-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-rtl .me-sm-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-ltr .me-sm-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-rtl .me-sm-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-ltr .me-sm-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-rtl .me-sm-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-ltr .me-sm-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-rtl .me-sm-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application .ma-sm-n1 {\n    margin: -4px !important;\n  }\n\n  .v-application .ma-sm-n2 {\n    margin: -8px !important;\n  }\n\n  .v-application .ma-sm-n3 {\n    margin: -12px !important;\n  }\n\n  .v-application .ma-sm-n4 {\n    margin: -16px !important;\n  }\n\n  .v-application .ma-sm-n5 {\n    margin: -20px !important;\n  }\n\n  .v-application .ma-sm-n6 {\n    margin: -24px !important;\n  }\n\n  .v-application .ma-sm-n7 {\n    margin: -28px !important;\n  }\n\n  .v-application .ma-sm-n8 {\n    margin: -32px !important;\n  }\n\n  .v-application .ma-sm-n9 {\n    margin: -36px !important;\n  }\n\n  .v-application .ma-sm-n10 {\n    margin: -40px !important;\n  }\n\n  .v-application .ma-sm-n11 {\n    margin: -44px !important;\n  }\n\n  .v-application .ma-sm-n12 {\n    margin: -48px !important;\n  }\n\n  .v-application .ma-sm-n13 {\n    margin: -52px !important;\n  }\n\n  .v-application .ma-sm-n14 {\n    margin: -56px !important;\n  }\n\n  .v-application .ma-sm-n15 {\n    margin: -60px !important;\n  }\n\n  .v-application .ma-sm-n16 {\n    margin: -64px !important;\n  }\n\n  .v-application .mx-sm-n1 {\n    margin-right: -4px !important;\n    margin-left: -4px !important;\n  }\n\n  .v-application .mx-sm-n2 {\n    margin-right: -8px !important;\n    margin-left: -8px !important;\n  }\n\n  .v-application .mx-sm-n3 {\n    margin-right: -12px !important;\n    margin-left: -12px !important;\n  }\n\n  .v-application .mx-sm-n4 {\n    margin-right: -16px !important;\n    margin-left: -16px !important;\n  }\n\n  .v-application .mx-sm-n5 {\n    margin-right: -20px !important;\n    margin-left: -20px !important;\n  }\n\n  .v-application .mx-sm-n6 {\n    margin-right: -24px !important;\n    margin-left: -24px !important;\n  }\n\n  .v-application .mx-sm-n7 {\n    margin-right: -28px !important;\n    margin-left: -28px !important;\n  }\n\n  .v-application .mx-sm-n8 {\n    margin-right: -32px !important;\n    margin-left: -32px !important;\n  }\n\n  .v-application .mx-sm-n9 {\n    margin-right: -36px !important;\n    margin-left: -36px !important;\n  }\n\n  .v-application .mx-sm-n10 {\n    margin-right: -40px !important;\n    margin-left: -40px !important;\n  }\n\n  .v-application .mx-sm-n11 {\n    margin-right: -44px !important;\n    margin-left: -44px !important;\n  }\n\n  .v-application .mx-sm-n12 {\n    margin-right: -48px !important;\n    margin-left: -48px !important;\n  }\n\n  .v-application .mx-sm-n13 {\n    margin-right: -52px !important;\n    margin-left: -52px !important;\n  }\n\n  .v-application .mx-sm-n14 {\n    margin-right: -56px !important;\n    margin-left: -56px !important;\n  }\n\n  .v-application .mx-sm-n15 {\n    margin-right: -60px !important;\n    margin-left: -60px !important;\n  }\n\n  .v-application .mx-sm-n16 {\n    margin-right: -64px !important;\n    margin-left: -64px !important;\n  }\n\n  .v-application .my-sm-n1 {\n    margin-top: -4px !important;\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .my-sm-n2 {\n    margin-top: -8px !important;\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .my-sm-n3 {\n    margin-top: -12px !important;\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .my-sm-n4 {\n    margin-top: -16px !important;\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .my-sm-n5 {\n    margin-top: -20px !important;\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .my-sm-n6 {\n    margin-top: -24px !important;\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .my-sm-n7 {\n    margin-top: -28px !important;\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .my-sm-n8 {\n    margin-top: -32px !important;\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .my-sm-n9 {\n    margin-top: -36px !important;\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .my-sm-n10 {\n    margin-top: -40px !important;\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .my-sm-n11 {\n    margin-top: -44px !important;\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .my-sm-n12 {\n    margin-top: -48px !important;\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .my-sm-n13 {\n    margin-top: -52px !important;\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .my-sm-n14 {\n    margin-top: -56px !important;\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .my-sm-n15 {\n    margin-top: -60px !important;\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .my-sm-n16 {\n    margin-top: -64px !important;\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .mt-sm-n1 {\n    margin-top: -4px !important;\n  }\n\n  .v-application .mt-sm-n2 {\n    margin-top: -8px !important;\n  }\n\n  .v-application .mt-sm-n3 {\n    margin-top: -12px !important;\n  }\n\n  .v-application .mt-sm-n4 {\n    margin-top: -16px !important;\n  }\n\n  .v-application .mt-sm-n5 {\n    margin-top: -20px !important;\n  }\n\n  .v-application .mt-sm-n6 {\n    margin-top: -24px !important;\n  }\n\n  .v-application .mt-sm-n7 {\n    margin-top: -28px !important;\n  }\n\n  .v-application .mt-sm-n8 {\n    margin-top: -32px !important;\n  }\n\n  .v-application .mt-sm-n9 {\n    margin-top: -36px !important;\n  }\n\n  .v-application .mt-sm-n10 {\n    margin-top: -40px !important;\n  }\n\n  .v-application .mt-sm-n11 {\n    margin-top: -44px !important;\n  }\n\n  .v-application .mt-sm-n12 {\n    margin-top: -48px !important;\n  }\n\n  .v-application .mt-sm-n13 {\n    margin-top: -52px !important;\n  }\n\n  .v-application .mt-sm-n14 {\n    margin-top: -56px !important;\n  }\n\n  .v-application .mt-sm-n15 {\n    margin-top: -60px !important;\n  }\n\n  .v-application .mt-sm-n16 {\n    margin-top: -64px !important;\n  }\n\n  .v-application .mr-sm-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application .mr-sm-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application .mr-sm-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application .mr-sm-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application .mr-sm-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application .mr-sm-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application .mr-sm-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application .mr-sm-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application .mr-sm-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application .mr-sm-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application .mr-sm-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application .mr-sm-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application .mr-sm-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application .mr-sm-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application .mr-sm-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application .mr-sm-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application .mb-sm-n1 {\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .mb-sm-n2 {\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .mb-sm-n3 {\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .mb-sm-n4 {\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .mb-sm-n5 {\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .mb-sm-n6 {\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .mb-sm-n7 {\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .mb-sm-n8 {\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .mb-sm-n9 {\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .mb-sm-n10 {\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .mb-sm-n11 {\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .mb-sm-n12 {\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .mb-sm-n13 {\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .mb-sm-n14 {\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .mb-sm-n15 {\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .mb-sm-n16 {\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .ml-sm-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application .ml-sm-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application .ml-sm-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application .ml-sm-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application .ml-sm-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application .ml-sm-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application .ml-sm-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application .ml-sm-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application .ml-sm-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application .ml-sm-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application .ml-sm-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application .ml-sm-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application .ml-sm-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application .ml-sm-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application .ml-sm-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application .ml-sm-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-ltr .ms-sm-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-rtl .ms-sm-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-ltr .me-sm-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-rtl .me-sm-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application .pa-sm-0 {\n    padding: 0px !important;\n  }\n\n  .v-application .pa-sm-1 {\n    padding: 4px !important;\n  }\n\n  .v-application .pa-sm-2 {\n    padding: 8px !important;\n  }\n\n  .v-application .pa-sm-3 {\n    padding: 12px !important;\n  }\n\n  .v-application .pa-sm-4 {\n    padding: 16px !important;\n  }\n\n  .v-application .pa-sm-5 {\n    padding: 20px !important;\n  }\n\n  .v-application .pa-sm-6 {\n    padding: 24px !important;\n  }\n\n  .v-application .pa-sm-7 {\n    padding: 28px !important;\n  }\n\n  .v-application .pa-sm-8 {\n    padding: 32px !important;\n  }\n\n  .v-application .pa-sm-9 {\n    padding: 36px !important;\n  }\n\n  .v-application .pa-sm-10 {\n    padding: 40px !important;\n  }\n\n  .v-application .pa-sm-11 {\n    padding: 44px !important;\n  }\n\n  .v-application .pa-sm-12 {\n    padding: 48px !important;\n  }\n\n  .v-application .pa-sm-13 {\n    padding: 52px !important;\n  }\n\n  .v-application .pa-sm-14 {\n    padding: 56px !important;\n  }\n\n  .v-application .pa-sm-15 {\n    padding: 60px !important;\n  }\n\n  .v-application .pa-sm-16 {\n    padding: 64px !important;\n  }\n\n  .v-application .px-sm-0 {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .v-application .px-sm-1 {\n    padding-right: 4px !important;\n    padding-left: 4px !important;\n  }\n\n  .v-application .px-sm-2 {\n    padding-right: 8px !important;\n    padding-left: 8px !important;\n  }\n\n  .v-application .px-sm-3 {\n    padding-right: 12px !important;\n    padding-left: 12px !important;\n  }\n\n  .v-application .px-sm-4 {\n    padding-right: 16px !important;\n    padding-left: 16px !important;\n  }\n\n  .v-application .px-sm-5 {\n    padding-right: 20px !important;\n    padding-left: 20px !important;\n  }\n\n  .v-application .px-sm-6 {\n    padding-right: 24px !important;\n    padding-left: 24px !important;\n  }\n\n  .v-application .px-sm-7 {\n    padding-right: 28px !important;\n    padding-left: 28px !important;\n  }\n\n  .v-application .px-sm-8 {\n    padding-right: 32px !important;\n    padding-left: 32px !important;\n  }\n\n  .v-application .px-sm-9 {\n    padding-right: 36px !important;\n    padding-left: 36px !important;\n  }\n\n  .v-application .px-sm-10 {\n    padding-right: 40px !important;\n    padding-left: 40px !important;\n  }\n\n  .v-application .px-sm-11 {\n    padding-right: 44px !important;\n    padding-left: 44px !important;\n  }\n\n  .v-application .px-sm-12 {\n    padding-right: 48px !important;\n    padding-left: 48px !important;\n  }\n\n  .v-application .px-sm-13 {\n    padding-right: 52px !important;\n    padding-left: 52px !important;\n  }\n\n  .v-application .px-sm-14 {\n    padding-right: 56px !important;\n    padding-left: 56px !important;\n  }\n\n  .v-application .px-sm-15 {\n    padding-right: 60px !important;\n    padding-left: 60px !important;\n  }\n\n  .v-application .px-sm-16 {\n    padding-right: 64px !important;\n    padding-left: 64px !important;\n  }\n\n  .v-application .py-sm-0 {\n    padding-top: 0px !important;\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .py-sm-1 {\n    padding-top: 4px !important;\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .py-sm-2 {\n    padding-top: 8px !important;\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .py-sm-3 {\n    padding-top: 12px !important;\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .py-sm-4 {\n    padding-top: 16px !important;\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .py-sm-5 {\n    padding-top: 20px !important;\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .py-sm-6 {\n    padding-top: 24px !important;\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .py-sm-7 {\n    padding-top: 28px !important;\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .py-sm-8 {\n    padding-top: 32px !important;\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .py-sm-9 {\n    padding-top: 36px !important;\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .py-sm-10 {\n    padding-top: 40px !important;\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .py-sm-11 {\n    padding-top: 44px !important;\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .py-sm-12 {\n    padding-top: 48px !important;\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .py-sm-13 {\n    padding-top: 52px !important;\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .py-sm-14 {\n    padding-top: 56px !important;\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .py-sm-15 {\n    padding-top: 60px !important;\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .py-sm-16 {\n    padding-top: 64px !important;\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pt-sm-0 {\n    padding-top: 0px !important;\n  }\n\n  .v-application .pt-sm-1 {\n    padding-top: 4px !important;\n  }\n\n  .v-application .pt-sm-2 {\n    padding-top: 8px !important;\n  }\n\n  .v-application .pt-sm-3 {\n    padding-top: 12px !important;\n  }\n\n  .v-application .pt-sm-4 {\n    padding-top: 16px !important;\n  }\n\n  .v-application .pt-sm-5 {\n    padding-top: 20px !important;\n  }\n\n  .v-application .pt-sm-6 {\n    padding-top: 24px !important;\n  }\n\n  .v-application .pt-sm-7 {\n    padding-top: 28px !important;\n  }\n\n  .v-application .pt-sm-8 {\n    padding-top: 32px !important;\n  }\n\n  .v-application .pt-sm-9 {\n    padding-top: 36px !important;\n  }\n\n  .v-application .pt-sm-10 {\n    padding-top: 40px !important;\n  }\n\n  .v-application .pt-sm-11 {\n    padding-top: 44px !important;\n  }\n\n  .v-application .pt-sm-12 {\n    padding-top: 48px !important;\n  }\n\n  .v-application .pt-sm-13 {\n    padding-top: 52px !important;\n  }\n\n  .v-application .pt-sm-14 {\n    padding-top: 56px !important;\n  }\n\n  .v-application .pt-sm-15 {\n    padding-top: 60px !important;\n  }\n\n  .v-application .pt-sm-16 {\n    padding-top: 64px !important;\n  }\n\n  .v-application .pr-sm-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application .pr-sm-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application .pr-sm-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application .pr-sm-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application .pr-sm-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application .pr-sm-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application .pr-sm-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application .pr-sm-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application .pr-sm-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application .pr-sm-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application .pr-sm-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application .pr-sm-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application .pr-sm-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application .pr-sm-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application .pr-sm-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application .pr-sm-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application .pr-sm-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application .pb-sm-0 {\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .pb-sm-1 {\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .pb-sm-2 {\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .pb-sm-3 {\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .pb-sm-4 {\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .pb-sm-5 {\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .pb-sm-6 {\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .pb-sm-7 {\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .pb-sm-8 {\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .pb-sm-9 {\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .pb-sm-10 {\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .pb-sm-11 {\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .pb-sm-12 {\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .pb-sm-13 {\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .pb-sm-14 {\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .pb-sm-15 {\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .pb-sm-16 {\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pl-sm-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application .pl-sm-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application .pl-sm-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application .pl-sm-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application .pl-sm-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application .pl-sm-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application .pl-sm-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application .pl-sm-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application .pl-sm-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application .pl-sm-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application .pl-sm-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application .pl-sm-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application .pl-sm-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application .pl-sm-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application .pl-sm-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application .pl-sm-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application .pl-sm-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ps-sm-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ps-sm-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-ltr .pe-sm-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-rtl .pe-sm-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application .text-sm-left {\n    text-align: left !important;\n  }\n\n  .v-application .text-sm-right {\n    text-align: right !important;\n  }\n\n  .v-application .text-sm-center {\n    text-align: center !important;\n  }\n\n  .v-application .text-sm-justify {\n    text-align: justify !important;\n  }\n\n  .v-application .text-sm-start {\n    text-align: start !important;\n  }\n\n  .v-application .text-sm-end {\n    text-align: end !important;\n  }\n\n  .v-application .text-sm-h1 {\n    font-size: 6rem !important;\n    font-weight: 300;\n    line-height: 6rem;\n    letter-spacing: -0.015625em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-h2 {\n    font-size: 3.75rem !important;\n    font-weight: 300;\n    line-height: 3.75rem;\n    letter-spacing: -0.0083333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-h3 {\n    font-size: 3rem !important;\n    font-weight: 400;\n    line-height: 3.125rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-h4 {\n    font-size: 2.125rem !important;\n    font-weight: 400;\n    line-height: 2.5rem;\n    letter-spacing: 0.0073529412em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-h5 {\n    font-size: 1.5rem !important;\n    font-weight: 400;\n    line-height: 2rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-h6 {\n    font-size: 1.25rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.0125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-subtitle-1 {\n    font-size: 1rem !important;\n    font-weight: normal;\n    line-height: 1.75rem;\n    letter-spacing: 0.009375em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-subtitle-2 {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 1.375rem;\n    letter-spacing: 0.0071428571em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-body-1 {\n    font-size: 1rem !important;\n    font-weight: 400;\n    line-height: 1.5rem;\n    letter-spacing: 0.03125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-body-2 {\n    font-size: 0.875rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0178571429em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-button {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 2.25rem;\n    letter-spacing: 0.0892857143em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n\n  .v-application .text-sm-caption {\n    font-size: 0.75rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0333333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-sm-overline {\n    font-size: 0.75rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.1666666667em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n}\n@media (min-width: 960px) {\n  .v-application .d-md-none {\n    display: none !important;\n  }\n\n  .v-application .d-md-inline {\n    display: inline !important;\n  }\n\n  .v-application .d-md-inline-block {\n    display: inline-block !important;\n  }\n\n  .v-application .d-md-block {\n    display: block !important;\n  }\n\n  .v-application .d-md-table {\n    display: table !important;\n  }\n\n  .v-application .d-md-table-row {\n    display: table-row !important;\n  }\n\n  .v-application .d-md-table-cell {\n    display: table-cell !important;\n  }\n\n  .v-application .d-md-flex {\n    display: flex !important;\n  }\n\n  .v-application .d-md-inline-flex {\n    display: inline-flex !important;\n  }\n\n  .v-application .float-md-none {\n    float: none !important;\n  }\n\n  .v-application .float-md-left {\n    float: left !important;\n  }\n\n  .v-application .float-md-right {\n    float: right !important;\n  }\n\n  .v-application--is-rtl .float-md-end {\n    float: left !important;\n  }\n\n  .v-application--is-rtl .float-md-start {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-md-end {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-md-start {\n    float: left !important;\n  }\n\n  .v-application .flex-md-fill {\n    flex: 1 1 auto !important;\n  }\n\n  .v-application .flex-md-row {\n    flex-direction: row !important;\n  }\n\n  .v-application .flex-md-column {\n    flex-direction: column !important;\n  }\n\n  .v-application .flex-md-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n\n  .v-application .flex-md-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n\n  .v-application .flex-md-grow-0 {\n    flex-grow: 0 !important;\n  }\n\n  .v-application .flex-md-grow-1 {\n    flex-grow: 1 !important;\n  }\n\n  .v-application .flex-md-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n\n  .v-application .flex-md-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n\n  .v-application .flex-md-wrap {\n    flex-wrap: wrap !important;\n  }\n\n  .v-application .flex-md-nowrap {\n    flex-wrap: nowrap !important;\n  }\n\n  .v-application .flex-md-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n\n  .v-application .justify-md-start {\n    justify-content: flex-start !important;\n  }\n\n  .v-application .justify-md-end {\n    justify-content: flex-end !important;\n  }\n\n  .v-application .justify-md-center {\n    justify-content: center !important;\n  }\n\n  .v-application .justify-md-space-between {\n    justify-content: space-between !important;\n  }\n\n  .v-application .justify-md-space-around {\n    justify-content: space-around !important;\n  }\n\n  .v-application .align-md-start {\n    align-items: flex-start !important;\n  }\n\n  .v-application .align-md-end {\n    align-items: flex-end !important;\n  }\n\n  .v-application .align-md-center {\n    align-items: center !important;\n  }\n\n  .v-application .align-md-baseline {\n    align-items: baseline !important;\n  }\n\n  .v-application .align-md-stretch {\n    align-items: stretch !important;\n  }\n\n  .v-application .align-content-md-start {\n    align-content: flex-start !important;\n  }\n\n  .v-application .align-content-md-end {\n    align-content: flex-end !important;\n  }\n\n  .v-application .align-content-md-center {\n    align-content: center !important;\n  }\n\n  .v-application .align-content-md-space-between {\n    align-content: space-between !important;\n  }\n\n  .v-application .align-content-md-space-around {\n    align-content: space-around !important;\n  }\n\n  .v-application .align-content-md-stretch {\n    align-content: stretch !important;\n  }\n\n  .v-application .align-self-md-auto {\n    align-self: auto !important;\n  }\n\n  .v-application .align-self-md-start {\n    align-self: flex-start !important;\n  }\n\n  .v-application .align-self-md-end {\n    align-self: flex-end !important;\n  }\n\n  .v-application .align-self-md-center {\n    align-self: center !important;\n  }\n\n  .v-application .align-self-md-baseline {\n    align-self: baseline !important;\n  }\n\n  .v-application .align-self-md-stretch {\n    align-self: stretch !important;\n  }\n\n  .v-application .order-md-first {\n    order: -1 !important;\n  }\n\n  .v-application .order-md-0 {\n    order: 0 !important;\n  }\n\n  .v-application .order-md-1 {\n    order: 1 !important;\n  }\n\n  .v-application .order-md-2 {\n    order: 2 !important;\n  }\n\n  .v-application .order-md-3 {\n    order: 3 !important;\n  }\n\n  .v-application .order-md-4 {\n    order: 4 !important;\n  }\n\n  .v-application .order-md-5 {\n    order: 5 !important;\n  }\n\n  .v-application .order-md-6 {\n    order: 6 !important;\n  }\n\n  .v-application .order-md-7 {\n    order: 7 !important;\n  }\n\n  .v-application .order-md-8 {\n    order: 8 !important;\n  }\n\n  .v-application .order-md-9 {\n    order: 9 !important;\n  }\n\n  .v-application .order-md-10 {\n    order: 10 !important;\n  }\n\n  .v-application .order-md-11 {\n    order: 11 !important;\n  }\n\n  .v-application .order-md-12 {\n    order: 12 !important;\n  }\n\n  .v-application .order-md-last {\n    order: 13 !important;\n  }\n\n  .v-application .ma-md-0 {\n    margin: 0px !important;\n  }\n\n  .v-application .ma-md-1 {\n    margin: 4px !important;\n  }\n\n  .v-application .ma-md-2 {\n    margin: 8px !important;\n  }\n\n  .v-application .ma-md-3 {\n    margin: 12px !important;\n  }\n\n  .v-application .ma-md-4 {\n    margin: 16px !important;\n  }\n\n  .v-application .ma-md-5 {\n    margin: 20px !important;\n  }\n\n  .v-application .ma-md-6 {\n    margin: 24px !important;\n  }\n\n  .v-application .ma-md-7 {\n    margin: 28px !important;\n  }\n\n  .v-application .ma-md-8 {\n    margin: 32px !important;\n  }\n\n  .v-application .ma-md-9 {\n    margin: 36px !important;\n  }\n\n  .v-application .ma-md-10 {\n    margin: 40px !important;\n  }\n\n  .v-application .ma-md-11 {\n    margin: 44px !important;\n  }\n\n  .v-application .ma-md-12 {\n    margin: 48px !important;\n  }\n\n  .v-application .ma-md-13 {\n    margin: 52px !important;\n  }\n\n  .v-application .ma-md-14 {\n    margin: 56px !important;\n  }\n\n  .v-application .ma-md-15 {\n    margin: 60px !important;\n  }\n\n  .v-application .ma-md-16 {\n    margin: 64px !important;\n  }\n\n  .v-application .ma-md-auto {\n    margin: auto !important;\n  }\n\n  .v-application .mx-md-0 {\n    margin-right: 0px !important;\n    margin-left: 0px !important;\n  }\n\n  .v-application .mx-md-1 {\n    margin-right: 4px !important;\n    margin-left: 4px !important;\n  }\n\n  .v-application .mx-md-2 {\n    margin-right: 8px !important;\n    margin-left: 8px !important;\n  }\n\n  .v-application .mx-md-3 {\n    margin-right: 12px !important;\n    margin-left: 12px !important;\n  }\n\n  .v-application .mx-md-4 {\n    margin-right: 16px !important;\n    margin-left: 16px !important;\n  }\n\n  .v-application .mx-md-5 {\n    margin-right: 20px !important;\n    margin-left: 20px !important;\n  }\n\n  .v-application .mx-md-6 {\n    margin-right: 24px !important;\n    margin-left: 24px !important;\n  }\n\n  .v-application .mx-md-7 {\n    margin-right: 28px !important;\n    margin-left: 28px !important;\n  }\n\n  .v-application .mx-md-8 {\n    margin-right: 32px !important;\n    margin-left: 32px !important;\n  }\n\n  .v-application .mx-md-9 {\n    margin-right: 36px !important;\n    margin-left: 36px !important;\n  }\n\n  .v-application .mx-md-10 {\n    margin-right: 40px !important;\n    margin-left: 40px !important;\n  }\n\n  .v-application .mx-md-11 {\n    margin-right: 44px !important;\n    margin-left: 44px !important;\n  }\n\n  .v-application .mx-md-12 {\n    margin-right: 48px !important;\n    margin-left: 48px !important;\n  }\n\n  .v-application .mx-md-13 {\n    margin-right: 52px !important;\n    margin-left: 52px !important;\n  }\n\n  .v-application .mx-md-14 {\n    margin-right: 56px !important;\n    margin-left: 56px !important;\n  }\n\n  .v-application .mx-md-15 {\n    margin-right: 60px !important;\n    margin-left: 60px !important;\n  }\n\n  .v-application .mx-md-16 {\n    margin-right: 64px !important;\n    margin-left: 64px !important;\n  }\n\n  .v-application .mx-md-auto {\n    margin-right: auto !important;\n    margin-left: auto !important;\n  }\n\n  .v-application .my-md-0 {\n    margin-top: 0px !important;\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .my-md-1 {\n    margin-top: 4px !important;\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .my-md-2 {\n    margin-top: 8px !important;\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .my-md-3 {\n    margin-top: 12px !important;\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .my-md-4 {\n    margin-top: 16px !important;\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .my-md-5 {\n    margin-top: 20px !important;\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .my-md-6 {\n    margin-top: 24px !important;\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .my-md-7 {\n    margin-top: 28px !important;\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .my-md-8 {\n    margin-top: 32px !important;\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .my-md-9 {\n    margin-top: 36px !important;\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .my-md-10 {\n    margin-top: 40px !important;\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .my-md-11 {\n    margin-top: 44px !important;\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .my-md-12 {\n    margin-top: 48px !important;\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .my-md-13 {\n    margin-top: 52px !important;\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .my-md-14 {\n    margin-top: 56px !important;\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .my-md-15 {\n    margin-top: 60px !important;\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .my-md-16 {\n    margin-top: 64px !important;\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .my-md-auto {\n    margin-top: auto !important;\n    margin-bottom: auto !important;\n  }\n\n  .v-application .mt-md-0 {\n    margin-top: 0px !important;\n  }\n\n  .v-application .mt-md-1 {\n    margin-top: 4px !important;\n  }\n\n  .v-application .mt-md-2 {\n    margin-top: 8px !important;\n  }\n\n  .v-application .mt-md-3 {\n    margin-top: 12px !important;\n  }\n\n  .v-application .mt-md-4 {\n    margin-top: 16px !important;\n  }\n\n  .v-application .mt-md-5 {\n    margin-top: 20px !important;\n  }\n\n  .v-application .mt-md-6 {\n    margin-top: 24px !important;\n  }\n\n  .v-application .mt-md-7 {\n    margin-top: 28px !important;\n  }\n\n  .v-application .mt-md-8 {\n    margin-top: 32px !important;\n  }\n\n  .v-application .mt-md-9 {\n    margin-top: 36px !important;\n  }\n\n  .v-application .mt-md-10 {\n    margin-top: 40px !important;\n  }\n\n  .v-application .mt-md-11 {\n    margin-top: 44px !important;\n  }\n\n  .v-application .mt-md-12 {\n    margin-top: 48px !important;\n  }\n\n  .v-application .mt-md-13 {\n    margin-top: 52px !important;\n  }\n\n  .v-application .mt-md-14 {\n    margin-top: 56px !important;\n  }\n\n  .v-application .mt-md-15 {\n    margin-top: 60px !important;\n  }\n\n  .v-application .mt-md-16 {\n    margin-top: 64px !important;\n  }\n\n  .v-application .mt-md-auto {\n    margin-top: auto !important;\n  }\n\n  .v-application .mr-md-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application .mr-md-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application .mr-md-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application .mr-md-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application .mr-md-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application .mr-md-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application .mr-md-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application .mr-md-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application .mr-md-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application .mr-md-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application .mr-md-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application .mr-md-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application .mr-md-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application .mr-md-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application .mr-md-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application .mr-md-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application .mr-md-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application .mr-md-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application .mb-md-0 {\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .mb-md-1 {\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .mb-md-2 {\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .mb-md-3 {\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .mb-md-4 {\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .mb-md-5 {\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .mb-md-6 {\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .mb-md-7 {\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .mb-md-8 {\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .mb-md-9 {\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .mb-md-10 {\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .mb-md-11 {\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .mb-md-12 {\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .mb-md-13 {\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .mb-md-14 {\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .mb-md-15 {\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .mb-md-16 {\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .mb-md-auto {\n    margin-bottom: auto !important;\n  }\n\n  .v-application .ml-md-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application .ml-md-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application .ml-md-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application .ml-md-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application .ml-md-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application .ml-md-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application .ml-md-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application .ml-md-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application .ml-md-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application .ml-md-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application .ml-md-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application .ml-md-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application .ml-md-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application .ml-md-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application .ml-md-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application .ml-md-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application .ml-md-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application .ml-md-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-ltr .ms-md-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ms-md-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ms-md-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ms-md-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ms-md-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ms-md-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ms-md-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ms-md-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ms-md-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ms-md-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ms-md-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ms-md-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ms-md-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ms-md-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ms-md-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ms-md-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ms-md-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ms-md-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ms-md-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ms-md-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ms-md-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ms-md-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ms-md-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ms-md-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ms-md-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ms-md-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ms-md-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ms-md-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ms-md-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ms-md-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ms-md-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ms-md-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ms-md-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ms-md-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-ltr .ms-md-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-rtl .ms-md-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-ltr .me-md-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-rtl .me-md-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-ltr .me-md-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-rtl .me-md-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-ltr .me-md-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-rtl .me-md-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-ltr .me-md-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-rtl .me-md-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-ltr .me-md-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-rtl .me-md-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-ltr .me-md-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-rtl .me-md-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-ltr .me-md-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-rtl .me-md-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-ltr .me-md-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-rtl .me-md-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-ltr .me-md-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-rtl .me-md-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-ltr .me-md-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-rtl .me-md-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-ltr .me-md-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-rtl .me-md-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-ltr .me-md-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-rtl .me-md-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-ltr .me-md-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-rtl .me-md-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-ltr .me-md-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-rtl .me-md-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-ltr .me-md-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-rtl .me-md-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-ltr .me-md-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-rtl .me-md-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-ltr .me-md-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-rtl .me-md-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-ltr .me-md-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-rtl .me-md-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application .ma-md-n1 {\n    margin: -4px !important;\n  }\n\n  .v-application .ma-md-n2 {\n    margin: -8px !important;\n  }\n\n  .v-application .ma-md-n3 {\n    margin: -12px !important;\n  }\n\n  .v-application .ma-md-n4 {\n    margin: -16px !important;\n  }\n\n  .v-application .ma-md-n5 {\n    margin: -20px !important;\n  }\n\n  .v-application .ma-md-n6 {\n    margin: -24px !important;\n  }\n\n  .v-application .ma-md-n7 {\n    margin: -28px !important;\n  }\n\n  .v-application .ma-md-n8 {\n    margin: -32px !important;\n  }\n\n  .v-application .ma-md-n9 {\n    margin: -36px !important;\n  }\n\n  .v-application .ma-md-n10 {\n    margin: -40px !important;\n  }\n\n  .v-application .ma-md-n11 {\n    margin: -44px !important;\n  }\n\n  .v-application .ma-md-n12 {\n    margin: -48px !important;\n  }\n\n  .v-application .ma-md-n13 {\n    margin: -52px !important;\n  }\n\n  .v-application .ma-md-n14 {\n    margin: -56px !important;\n  }\n\n  .v-application .ma-md-n15 {\n    margin: -60px !important;\n  }\n\n  .v-application .ma-md-n16 {\n    margin: -64px !important;\n  }\n\n  .v-application .mx-md-n1 {\n    margin-right: -4px !important;\n    margin-left: -4px !important;\n  }\n\n  .v-application .mx-md-n2 {\n    margin-right: -8px !important;\n    margin-left: -8px !important;\n  }\n\n  .v-application .mx-md-n3 {\n    margin-right: -12px !important;\n    margin-left: -12px !important;\n  }\n\n  .v-application .mx-md-n4 {\n    margin-right: -16px !important;\n    margin-left: -16px !important;\n  }\n\n  .v-application .mx-md-n5 {\n    margin-right: -20px !important;\n    margin-left: -20px !important;\n  }\n\n  .v-application .mx-md-n6 {\n    margin-right: -24px !important;\n    margin-left: -24px !important;\n  }\n\n  .v-application .mx-md-n7 {\n    margin-right: -28px !important;\n    margin-left: -28px !important;\n  }\n\n  .v-application .mx-md-n8 {\n    margin-right: -32px !important;\n    margin-left: -32px !important;\n  }\n\n  .v-application .mx-md-n9 {\n    margin-right: -36px !important;\n    margin-left: -36px !important;\n  }\n\n  .v-application .mx-md-n10 {\n    margin-right: -40px !important;\n    margin-left: -40px !important;\n  }\n\n  .v-application .mx-md-n11 {\n    margin-right: -44px !important;\n    margin-left: -44px !important;\n  }\n\n  .v-application .mx-md-n12 {\n    margin-right: -48px !important;\n    margin-left: -48px !important;\n  }\n\n  .v-application .mx-md-n13 {\n    margin-right: -52px !important;\n    margin-left: -52px !important;\n  }\n\n  .v-application .mx-md-n14 {\n    margin-right: -56px !important;\n    margin-left: -56px !important;\n  }\n\n  .v-application .mx-md-n15 {\n    margin-right: -60px !important;\n    margin-left: -60px !important;\n  }\n\n  .v-application .mx-md-n16 {\n    margin-right: -64px !important;\n    margin-left: -64px !important;\n  }\n\n  .v-application .my-md-n1 {\n    margin-top: -4px !important;\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .my-md-n2 {\n    margin-top: -8px !important;\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .my-md-n3 {\n    margin-top: -12px !important;\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .my-md-n4 {\n    margin-top: -16px !important;\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .my-md-n5 {\n    margin-top: -20px !important;\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .my-md-n6 {\n    margin-top: -24px !important;\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .my-md-n7 {\n    margin-top: -28px !important;\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .my-md-n8 {\n    margin-top: -32px !important;\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .my-md-n9 {\n    margin-top: -36px !important;\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .my-md-n10 {\n    margin-top: -40px !important;\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .my-md-n11 {\n    margin-top: -44px !important;\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .my-md-n12 {\n    margin-top: -48px !important;\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .my-md-n13 {\n    margin-top: -52px !important;\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .my-md-n14 {\n    margin-top: -56px !important;\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .my-md-n15 {\n    margin-top: -60px !important;\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .my-md-n16 {\n    margin-top: -64px !important;\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .mt-md-n1 {\n    margin-top: -4px !important;\n  }\n\n  .v-application .mt-md-n2 {\n    margin-top: -8px !important;\n  }\n\n  .v-application .mt-md-n3 {\n    margin-top: -12px !important;\n  }\n\n  .v-application .mt-md-n4 {\n    margin-top: -16px !important;\n  }\n\n  .v-application .mt-md-n5 {\n    margin-top: -20px !important;\n  }\n\n  .v-application .mt-md-n6 {\n    margin-top: -24px !important;\n  }\n\n  .v-application .mt-md-n7 {\n    margin-top: -28px !important;\n  }\n\n  .v-application .mt-md-n8 {\n    margin-top: -32px !important;\n  }\n\n  .v-application .mt-md-n9 {\n    margin-top: -36px !important;\n  }\n\n  .v-application .mt-md-n10 {\n    margin-top: -40px !important;\n  }\n\n  .v-application .mt-md-n11 {\n    margin-top: -44px !important;\n  }\n\n  .v-application .mt-md-n12 {\n    margin-top: -48px !important;\n  }\n\n  .v-application .mt-md-n13 {\n    margin-top: -52px !important;\n  }\n\n  .v-application .mt-md-n14 {\n    margin-top: -56px !important;\n  }\n\n  .v-application .mt-md-n15 {\n    margin-top: -60px !important;\n  }\n\n  .v-application .mt-md-n16 {\n    margin-top: -64px !important;\n  }\n\n  .v-application .mr-md-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application .mr-md-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application .mr-md-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application .mr-md-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application .mr-md-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application .mr-md-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application .mr-md-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application .mr-md-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application .mr-md-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application .mr-md-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application .mr-md-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application .mr-md-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application .mr-md-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application .mr-md-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application .mr-md-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application .mr-md-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application .mb-md-n1 {\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .mb-md-n2 {\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .mb-md-n3 {\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .mb-md-n4 {\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .mb-md-n5 {\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .mb-md-n6 {\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .mb-md-n7 {\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .mb-md-n8 {\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .mb-md-n9 {\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .mb-md-n10 {\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .mb-md-n11 {\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .mb-md-n12 {\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .mb-md-n13 {\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .mb-md-n14 {\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .mb-md-n15 {\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .mb-md-n16 {\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .ml-md-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application .ml-md-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application .ml-md-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application .ml-md-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application .ml-md-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application .ml-md-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application .ml-md-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application .ml-md-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application .ml-md-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application .ml-md-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application .ml-md-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application .ml-md-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application .ml-md-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application .ml-md-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application .ml-md-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application .ml-md-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-ltr .ms-md-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-rtl .ms-md-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-ltr .me-md-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-rtl .me-md-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-ltr .me-md-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-rtl .me-md-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-ltr .me-md-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-rtl .me-md-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-ltr .me-md-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-rtl .me-md-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-ltr .me-md-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-rtl .me-md-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-ltr .me-md-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-rtl .me-md-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-ltr .me-md-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-rtl .me-md-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-ltr .me-md-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-rtl .me-md-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-ltr .me-md-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-rtl .me-md-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-ltr .me-md-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-rtl .me-md-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-ltr .me-md-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-rtl .me-md-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-ltr .me-md-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-rtl .me-md-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-ltr .me-md-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-rtl .me-md-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-ltr .me-md-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-rtl .me-md-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-ltr .me-md-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-rtl .me-md-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-ltr .me-md-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-rtl .me-md-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application .pa-md-0 {\n    padding: 0px !important;\n  }\n\n  .v-application .pa-md-1 {\n    padding: 4px !important;\n  }\n\n  .v-application .pa-md-2 {\n    padding: 8px !important;\n  }\n\n  .v-application .pa-md-3 {\n    padding: 12px !important;\n  }\n\n  .v-application .pa-md-4 {\n    padding: 16px !important;\n  }\n\n  .v-application .pa-md-5 {\n    padding: 20px !important;\n  }\n\n  .v-application .pa-md-6 {\n    padding: 24px !important;\n  }\n\n  .v-application .pa-md-7 {\n    padding: 28px !important;\n  }\n\n  .v-application .pa-md-8 {\n    padding: 32px !important;\n  }\n\n  .v-application .pa-md-9 {\n    padding: 36px !important;\n  }\n\n  .v-application .pa-md-10 {\n    padding: 40px !important;\n  }\n\n  .v-application .pa-md-11 {\n    padding: 44px !important;\n  }\n\n  .v-application .pa-md-12 {\n    padding: 48px !important;\n  }\n\n  .v-application .pa-md-13 {\n    padding: 52px !important;\n  }\n\n  .v-application .pa-md-14 {\n    padding: 56px !important;\n  }\n\n  .v-application .pa-md-15 {\n    padding: 60px !important;\n  }\n\n  .v-application .pa-md-16 {\n    padding: 64px !important;\n  }\n\n  .v-application .px-md-0 {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .v-application .px-md-1 {\n    padding-right: 4px !important;\n    padding-left: 4px !important;\n  }\n\n  .v-application .px-md-2 {\n    padding-right: 8px !important;\n    padding-left: 8px !important;\n  }\n\n  .v-application .px-md-3 {\n    padding-right: 12px !important;\n    padding-left: 12px !important;\n  }\n\n  .v-application .px-md-4 {\n    padding-right: 16px !important;\n    padding-left: 16px !important;\n  }\n\n  .v-application .px-md-5 {\n    padding-right: 20px !important;\n    padding-left: 20px !important;\n  }\n\n  .v-application .px-md-6 {\n    padding-right: 24px !important;\n    padding-left: 24px !important;\n  }\n\n  .v-application .px-md-7 {\n    padding-right: 28px !important;\n    padding-left: 28px !important;\n  }\n\n  .v-application .px-md-8 {\n    padding-right: 32px !important;\n    padding-left: 32px !important;\n  }\n\n  .v-application .px-md-9 {\n    padding-right: 36px !important;\n    padding-left: 36px !important;\n  }\n\n  .v-application .px-md-10 {\n    padding-right: 40px !important;\n    padding-left: 40px !important;\n  }\n\n  .v-application .px-md-11 {\n    padding-right: 44px !important;\n    padding-left: 44px !important;\n  }\n\n  .v-application .px-md-12 {\n    padding-right: 48px !important;\n    padding-left: 48px !important;\n  }\n\n  .v-application .px-md-13 {\n    padding-right: 52px !important;\n    padding-left: 52px !important;\n  }\n\n  .v-application .px-md-14 {\n    padding-right: 56px !important;\n    padding-left: 56px !important;\n  }\n\n  .v-application .px-md-15 {\n    padding-right: 60px !important;\n    padding-left: 60px !important;\n  }\n\n  .v-application .px-md-16 {\n    padding-right: 64px !important;\n    padding-left: 64px !important;\n  }\n\n  .v-application .py-md-0 {\n    padding-top: 0px !important;\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .py-md-1 {\n    padding-top: 4px !important;\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .py-md-2 {\n    padding-top: 8px !important;\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .py-md-3 {\n    padding-top: 12px !important;\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .py-md-4 {\n    padding-top: 16px !important;\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .py-md-5 {\n    padding-top: 20px !important;\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .py-md-6 {\n    padding-top: 24px !important;\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .py-md-7 {\n    padding-top: 28px !important;\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .py-md-8 {\n    padding-top: 32px !important;\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .py-md-9 {\n    padding-top: 36px !important;\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .py-md-10 {\n    padding-top: 40px !important;\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .py-md-11 {\n    padding-top: 44px !important;\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .py-md-12 {\n    padding-top: 48px !important;\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .py-md-13 {\n    padding-top: 52px !important;\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .py-md-14 {\n    padding-top: 56px !important;\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .py-md-15 {\n    padding-top: 60px !important;\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .py-md-16 {\n    padding-top: 64px !important;\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pt-md-0 {\n    padding-top: 0px !important;\n  }\n\n  .v-application .pt-md-1 {\n    padding-top: 4px !important;\n  }\n\n  .v-application .pt-md-2 {\n    padding-top: 8px !important;\n  }\n\n  .v-application .pt-md-3 {\n    padding-top: 12px !important;\n  }\n\n  .v-application .pt-md-4 {\n    padding-top: 16px !important;\n  }\n\n  .v-application .pt-md-5 {\n    padding-top: 20px !important;\n  }\n\n  .v-application .pt-md-6 {\n    padding-top: 24px !important;\n  }\n\n  .v-application .pt-md-7 {\n    padding-top: 28px !important;\n  }\n\n  .v-application .pt-md-8 {\n    padding-top: 32px !important;\n  }\n\n  .v-application .pt-md-9 {\n    padding-top: 36px !important;\n  }\n\n  .v-application .pt-md-10 {\n    padding-top: 40px !important;\n  }\n\n  .v-application .pt-md-11 {\n    padding-top: 44px !important;\n  }\n\n  .v-application .pt-md-12 {\n    padding-top: 48px !important;\n  }\n\n  .v-application .pt-md-13 {\n    padding-top: 52px !important;\n  }\n\n  .v-application .pt-md-14 {\n    padding-top: 56px !important;\n  }\n\n  .v-application .pt-md-15 {\n    padding-top: 60px !important;\n  }\n\n  .v-application .pt-md-16 {\n    padding-top: 64px !important;\n  }\n\n  .v-application .pr-md-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application .pr-md-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application .pr-md-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application .pr-md-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application .pr-md-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application .pr-md-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application .pr-md-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application .pr-md-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application .pr-md-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application .pr-md-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application .pr-md-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application .pr-md-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application .pr-md-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application .pr-md-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application .pr-md-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application .pr-md-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application .pr-md-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application .pb-md-0 {\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .pb-md-1 {\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .pb-md-2 {\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .pb-md-3 {\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .pb-md-4 {\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .pb-md-5 {\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .pb-md-6 {\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .pb-md-7 {\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .pb-md-8 {\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .pb-md-9 {\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .pb-md-10 {\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .pb-md-11 {\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .pb-md-12 {\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .pb-md-13 {\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .pb-md-14 {\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .pb-md-15 {\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .pb-md-16 {\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pl-md-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application .pl-md-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application .pl-md-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application .pl-md-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application .pl-md-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application .pl-md-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application .pl-md-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application .pl-md-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application .pl-md-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application .pl-md-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application .pl-md-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application .pl-md-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application .pl-md-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application .pl-md-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application .pl-md-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application .pl-md-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application .pl-md-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-ltr .ps-md-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ps-md-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ps-md-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ps-md-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ps-md-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ps-md-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ps-md-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ps-md-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ps-md-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ps-md-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ps-md-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ps-md-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ps-md-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ps-md-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ps-md-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ps-md-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ps-md-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ps-md-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ps-md-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ps-md-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ps-md-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ps-md-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ps-md-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ps-md-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ps-md-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ps-md-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ps-md-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ps-md-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ps-md-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ps-md-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ps-md-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ps-md-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ps-md-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ps-md-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-ltr .pe-md-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-rtl .pe-md-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-ltr .pe-md-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-rtl .pe-md-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-ltr .pe-md-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-rtl .pe-md-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-ltr .pe-md-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-rtl .pe-md-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-ltr .pe-md-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-rtl .pe-md-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-ltr .pe-md-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-rtl .pe-md-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-ltr .pe-md-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-rtl .pe-md-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-ltr .pe-md-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-rtl .pe-md-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-ltr .pe-md-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-rtl .pe-md-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-ltr .pe-md-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-rtl .pe-md-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-ltr .pe-md-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-rtl .pe-md-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-ltr .pe-md-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-rtl .pe-md-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-ltr .pe-md-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-rtl .pe-md-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-ltr .pe-md-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-rtl .pe-md-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-ltr .pe-md-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-rtl .pe-md-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-ltr .pe-md-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-rtl .pe-md-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-ltr .pe-md-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-rtl .pe-md-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application .text-md-left {\n    text-align: left !important;\n  }\n\n  .v-application .text-md-right {\n    text-align: right !important;\n  }\n\n  .v-application .text-md-center {\n    text-align: center !important;\n  }\n\n  .v-application .text-md-justify {\n    text-align: justify !important;\n  }\n\n  .v-application .text-md-start {\n    text-align: start !important;\n  }\n\n  .v-application .text-md-end {\n    text-align: end !important;\n  }\n\n  .v-application .text-md-h1 {\n    font-size: 6rem !important;\n    font-weight: 300;\n    line-height: 6rem;\n    letter-spacing: -0.015625em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-h2 {\n    font-size: 3.75rem !important;\n    font-weight: 300;\n    line-height: 3.75rem;\n    letter-spacing: -0.0083333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-h3 {\n    font-size: 3rem !important;\n    font-weight: 400;\n    line-height: 3.125rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-h4 {\n    font-size: 2.125rem !important;\n    font-weight: 400;\n    line-height: 2.5rem;\n    letter-spacing: 0.0073529412em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-h5 {\n    font-size: 1.5rem !important;\n    font-weight: 400;\n    line-height: 2rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-h6 {\n    font-size: 1.25rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.0125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-subtitle-1 {\n    font-size: 1rem !important;\n    font-weight: normal;\n    line-height: 1.75rem;\n    letter-spacing: 0.009375em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-subtitle-2 {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 1.375rem;\n    letter-spacing: 0.0071428571em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-body-1 {\n    font-size: 1rem !important;\n    font-weight: 400;\n    line-height: 1.5rem;\n    letter-spacing: 0.03125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-body-2 {\n    font-size: 0.875rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0178571429em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-button {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 2.25rem;\n    letter-spacing: 0.0892857143em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n\n  .v-application .text-md-caption {\n    font-size: 0.75rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0333333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-md-overline {\n    font-size: 0.75rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.1666666667em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n}\n@media (min-width: 1264px) {\n  .v-application .d-lg-none {\n    display: none !important;\n  }\n\n  .v-application .d-lg-inline {\n    display: inline !important;\n  }\n\n  .v-application .d-lg-inline-block {\n    display: inline-block !important;\n  }\n\n  .v-application .d-lg-block {\n    display: block !important;\n  }\n\n  .v-application .d-lg-table {\n    display: table !important;\n  }\n\n  .v-application .d-lg-table-row {\n    display: table-row !important;\n  }\n\n  .v-application .d-lg-table-cell {\n    display: table-cell !important;\n  }\n\n  .v-application .d-lg-flex {\n    display: flex !important;\n  }\n\n  .v-application .d-lg-inline-flex {\n    display: inline-flex !important;\n  }\n\n  .v-application .float-lg-none {\n    float: none !important;\n  }\n\n  .v-application .float-lg-left {\n    float: left !important;\n  }\n\n  .v-application .float-lg-right {\n    float: right !important;\n  }\n\n  .v-application--is-rtl .float-lg-end {\n    float: left !important;\n  }\n\n  .v-application--is-rtl .float-lg-start {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-lg-end {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-lg-start {\n    float: left !important;\n  }\n\n  .v-application .flex-lg-fill {\n    flex: 1 1 auto !important;\n  }\n\n  .v-application .flex-lg-row {\n    flex-direction: row !important;\n  }\n\n  .v-application .flex-lg-column {\n    flex-direction: column !important;\n  }\n\n  .v-application .flex-lg-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n\n  .v-application .flex-lg-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n\n  .v-application .flex-lg-grow-0 {\n    flex-grow: 0 !important;\n  }\n\n  .v-application .flex-lg-grow-1 {\n    flex-grow: 1 !important;\n  }\n\n  .v-application .flex-lg-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n\n  .v-application .flex-lg-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n\n  .v-application .flex-lg-wrap {\n    flex-wrap: wrap !important;\n  }\n\n  .v-application .flex-lg-nowrap {\n    flex-wrap: nowrap !important;\n  }\n\n  .v-application .flex-lg-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n\n  .v-application .justify-lg-start {\n    justify-content: flex-start !important;\n  }\n\n  .v-application .justify-lg-end {\n    justify-content: flex-end !important;\n  }\n\n  .v-application .justify-lg-center {\n    justify-content: center !important;\n  }\n\n  .v-application .justify-lg-space-between {\n    justify-content: space-between !important;\n  }\n\n  .v-application .justify-lg-space-around {\n    justify-content: space-around !important;\n  }\n\n  .v-application .align-lg-start {\n    align-items: flex-start !important;\n  }\n\n  .v-application .align-lg-end {\n    align-items: flex-end !important;\n  }\n\n  .v-application .align-lg-center {\n    align-items: center !important;\n  }\n\n  .v-application .align-lg-baseline {\n    align-items: baseline !important;\n  }\n\n  .v-application .align-lg-stretch {\n    align-items: stretch !important;\n  }\n\n  .v-application .align-content-lg-start {\n    align-content: flex-start !important;\n  }\n\n  .v-application .align-content-lg-end {\n    align-content: flex-end !important;\n  }\n\n  .v-application .align-content-lg-center {\n    align-content: center !important;\n  }\n\n  .v-application .align-content-lg-space-between {\n    align-content: space-between !important;\n  }\n\n  .v-application .align-content-lg-space-around {\n    align-content: space-around !important;\n  }\n\n  .v-application .align-content-lg-stretch {\n    align-content: stretch !important;\n  }\n\n  .v-application .align-self-lg-auto {\n    align-self: auto !important;\n  }\n\n  .v-application .align-self-lg-start {\n    align-self: flex-start !important;\n  }\n\n  .v-application .align-self-lg-end {\n    align-self: flex-end !important;\n  }\n\n  .v-application .align-self-lg-center {\n    align-self: center !important;\n  }\n\n  .v-application .align-self-lg-baseline {\n    align-self: baseline !important;\n  }\n\n  .v-application .align-self-lg-stretch {\n    align-self: stretch !important;\n  }\n\n  .v-application .order-lg-first {\n    order: -1 !important;\n  }\n\n  .v-application .order-lg-0 {\n    order: 0 !important;\n  }\n\n  .v-application .order-lg-1 {\n    order: 1 !important;\n  }\n\n  .v-application .order-lg-2 {\n    order: 2 !important;\n  }\n\n  .v-application .order-lg-3 {\n    order: 3 !important;\n  }\n\n  .v-application .order-lg-4 {\n    order: 4 !important;\n  }\n\n  .v-application .order-lg-5 {\n    order: 5 !important;\n  }\n\n  .v-application .order-lg-6 {\n    order: 6 !important;\n  }\n\n  .v-application .order-lg-7 {\n    order: 7 !important;\n  }\n\n  .v-application .order-lg-8 {\n    order: 8 !important;\n  }\n\n  .v-application .order-lg-9 {\n    order: 9 !important;\n  }\n\n  .v-application .order-lg-10 {\n    order: 10 !important;\n  }\n\n  .v-application .order-lg-11 {\n    order: 11 !important;\n  }\n\n  .v-application .order-lg-12 {\n    order: 12 !important;\n  }\n\n  .v-application .order-lg-last {\n    order: 13 !important;\n  }\n\n  .v-application .ma-lg-0 {\n    margin: 0px !important;\n  }\n\n  .v-application .ma-lg-1 {\n    margin: 4px !important;\n  }\n\n  .v-application .ma-lg-2 {\n    margin: 8px !important;\n  }\n\n  .v-application .ma-lg-3 {\n    margin: 12px !important;\n  }\n\n  .v-application .ma-lg-4 {\n    margin: 16px !important;\n  }\n\n  .v-application .ma-lg-5 {\n    margin: 20px !important;\n  }\n\n  .v-application .ma-lg-6 {\n    margin: 24px !important;\n  }\n\n  .v-application .ma-lg-7 {\n    margin: 28px !important;\n  }\n\n  .v-application .ma-lg-8 {\n    margin: 32px !important;\n  }\n\n  .v-application .ma-lg-9 {\n    margin: 36px !important;\n  }\n\n  .v-application .ma-lg-10 {\n    margin: 40px !important;\n  }\n\n  .v-application .ma-lg-11 {\n    margin: 44px !important;\n  }\n\n  .v-application .ma-lg-12 {\n    margin: 48px !important;\n  }\n\n  .v-application .ma-lg-13 {\n    margin: 52px !important;\n  }\n\n  .v-application .ma-lg-14 {\n    margin: 56px !important;\n  }\n\n  .v-application .ma-lg-15 {\n    margin: 60px !important;\n  }\n\n  .v-application .ma-lg-16 {\n    margin: 64px !important;\n  }\n\n  .v-application .ma-lg-auto {\n    margin: auto !important;\n  }\n\n  .v-application .mx-lg-0 {\n    margin-right: 0px !important;\n    margin-left: 0px !important;\n  }\n\n  .v-application .mx-lg-1 {\n    margin-right: 4px !important;\n    margin-left: 4px !important;\n  }\n\n  .v-application .mx-lg-2 {\n    margin-right: 8px !important;\n    margin-left: 8px !important;\n  }\n\n  .v-application .mx-lg-3 {\n    margin-right: 12px !important;\n    margin-left: 12px !important;\n  }\n\n  .v-application .mx-lg-4 {\n    margin-right: 16px !important;\n    margin-left: 16px !important;\n  }\n\n  .v-application .mx-lg-5 {\n    margin-right: 20px !important;\n    margin-left: 20px !important;\n  }\n\n  .v-application .mx-lg-6 {\n    margin-right: 24px !important;\n    margin-left: 24px !important;\n  }\n\n  .v-application .mx-lg-7 {\n    margin-right: 28px !important;\n    margin-left: 28px !important;\n  }\n\n  .v-application .mx-lg-8 {\n    margin-right: 32px !important;\n    margin-left: 32px !important;\n  }\n\n  .v-application .mx-lg-9 {\n    margin-right: 36px !important;\n    margin-left: 36px !important;\n  }\n\n  .v-application .mx-lg-10 {\n    margin-right: 40px !important;\n    margin-left: 40px !important;\n  }\n\n  .v-application .mx-lg-11 {\n    margin-right: 44px !important;\n    margin-left: 44px !important;\n  }\n\n  .v-application .mx-lg-12 {\n    margin-right: 48px !important;\n    margin-left: 48px !important;\n  }\n\n  .v-application .mx-lg-13 {\n    margin-right: 52px !important;\n    margin-left: 52px !important;\n  }\n\n  .v-application .mx-lg-14 {\n    margin-right: 56px !important;\n    margin-left: 56px !important;\n  }\n\n  .v-application .mx-lg-15 {\n    margin-right: 60px !important;\n    margin-left: 60px !important;\n  }\n\n  .v-application .mx-lg-16 {\n    margin-right: 64px !important;\n    margin-left: 64px !important;\n  }\n\n  .v-application .mx-lg-auto {\n    margin-right: auto !important;\n    margin-left: auto !important;\n  }\n\n  .v-application .my-lg-0 {\n    margin-top: 0px !important;\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .my-lg-1 {\n    margin-top: 4px !important;\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .my-lg-2 {\n    margin-top: 8px !important;\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .my-lg-3 {\n    margin-top: 12px !important;\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .my-lg-4 {\n    margin-top: 16px !important;\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .my-lg-5 {\n    margin-top: 20px !important;\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .my-lg-6 {\n    margin-top: 24px !important;\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .my-lg-7 {\n    margin-top: 28px !important;\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .my-lg-8 {\n    margin-top: 32px !important;\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .my-lg-9 {\n    margin-top: 36px !important;\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .my-lg-10 {\n    margin-top: 40px !important;\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .my-lg-11 {\n    margin-top: 44px !important;\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .my-lg-12 {\n    margin-top: 48px !important;\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .my-lg-13 {\n    margin-top: 52px !important;\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .my-lg-14 {\n    margin-top: 56px !important;\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .my-lg-15 {\n    margin-top: 60px !important;\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .my-lg-16 {\n    margin-top: 64px !important;\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .my-lg-auto {\n    margin-top: auto !important;\n    margin-bottom: auto !important;\n  }\n\n  .v-application .mt-lg-0 {\n    margin-top: 0px !important;\n  }\n\n  .v-application .mt-lg-1 {\n    margin-top: 4px !important;\n  }\n\n  .v-application .mt-lg-2 {\n    margin-top: 8px !important;\n  }\n\n  .v-application .mt-lg-3 {\n    margin-top: 12px !important;\n  }\n\n  .v-application .mt-lg-4 {\n    margin-top: 16px !important;\n  }\n\n  .v-application .mt-lg-5 {\n    margin-top: 20px !important;\n  }\n\n  .v-application .mt-lg-6 {\n    margin-top: 24px !important;\n  }\n\n  .v-application .mt-lg-7 {\n    margin-top: 28px !important;\n  }\n\n  .v-application .mt-lg-8 {\n    margin-top: 32px !important;\n  }\n\n  .v-application .mt-lg-9 {\n    margin-top: 36px !important;\n  }\n\n  .v-application .mt-lg-10 {\n    margin-top: 40px !important;\n  }\n\n  .v-application .mt-lg-11 {\n    margin-top: 44px !important;\n  }\n\n  .v-application .mt-lg-12 {\n    margin-top: 48px !important;\n  }\n\n  .v-application .mt-lg-13 {\n    margin-top: 52px !important;\n  }\n\n  .v-application .mt-lg-14 {\n    margin-top: 56px !important;\n  }\n\n  .v-application .mt-lg-15 {\n    margin-top: 60px !important;\n  }\n\n  .v-application .mt-lg-16 {\n    margin-top: 64px !important;\n  }\n\n  .v-application .mt-lg-auto {\n    margin-top: auto !important;\n  }\n\n  .v-application .mr-lg-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application .mr-lg-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application .mr-lg-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application .mr-lg-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application .mr-lg-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application .mr-lg-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application .mr-lg-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application .mr-lg-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application .mr-lg-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application .mr-lg-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application .mr-lg-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application .mr-lg-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application .mr-lg-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application .mr-lg-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application .mr-lg-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application .mr-lg-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application .mr-lg-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application .mr-lg-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application .mb-lg-0 {\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .mb-lg-1 {\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .mb-lg-2 {\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .mb-lg-3 {\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .mb-lg-4 {\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .mb-lg-5 {\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .mb-lg-6 {\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .mb-lg-7 {\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .mb-lg-8 {\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .mb-lg-9 {\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .mb-lg-10 {\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .mb-lg-11 {\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .mb-lg-12 {\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .mb-lg-13 {\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .mb-lg-14 {\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .mb-lg-15 {\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .mb-lg-16 {\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .mb-lg-auto {\n    margin-bottom: auto !important;\n  }\n\n  .v-application .ml-lg-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application .ml-lg-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application .ml-lg-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application .ml-lg-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application .ml-lg-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application .ml-lg-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application .ml-lg-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application .ml-lg-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application .ml-lg-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application .ml-lg-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application .ml-lg-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application .ml-lg-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application .ml-lg-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application .ml-lg-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application .ml-lg-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application .ml-lg-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application .ml-lg-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application .ml-lg-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-ltr .ms-lg-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-rtl .ms-lg-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-ltr .me-lg-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-rtl .me-lg-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-ltr .me-lg-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-rtl .me-lg-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-ltr .me-lg-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-rtl .me-lg-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-ltr .me-lg-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-rtl .me-lg-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-ltr .me-lg-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-rtl .me-lg-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-ltr .me-lg-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-rtl .me-lg-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-ltr .me-lg-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-rtl .me-lg-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-ltr .me-lg-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-rtl .me-lg-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-ltr .me-lg-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-rtl .me-lg-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-ltr .me-lg-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-rtl .me-lg-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-ltr .me-lg-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-rtl .me-lg-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-ltr .me-lg-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-rtl .me-lg-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-ltr .me-lg-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-rtl .me-lg-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-ltr .me-lg-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-rtl .me-lg-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-ltr .me-lg-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-rtl .me-lg-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-ltr .me-lg-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-rtl .me-lg-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-ltr .me-lg-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-rtl .me-lg-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-ltr .me-lg-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-rtl .me-lg-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application .ma-lg-n1 {\n    margin: -4px !important;\n  }\n\n  .v-application .ma-lg-n2 {\n    margin: -8px !important;\n  }\n\n  .v-application .ma-lg-n3 {\n    margin: -12px !important;\n  }\n\n  .v-application .ma-lg-n4 {\n    margin: -16px !important;\n  }\n\n  .v-application .ma-lg-n5 {\n    margin: -20px !important;\n  }\n\n  .v-application .ma-lg-n6 {\n    margin: -24px !important;\n  }\n\n  .v-application .ma-lg-n7 {\n    margin: -28px !important;\n  }\n\n  .v-application .ma-lg-n8 {\n    margin: -32px !important;\n  }\n\n  .v-application .ma-lg-n9 {\n    margin: -36px !important;\n  }\n\n  .v-application .ma-lg-n10 {\n    margin: -40px !important;\n  }\n\n  .v-application .ma-lg-n11 {\n    margin: -44px !important;\n  }\n\n  .v-application .ma-lg-n12 {\n    margin: -48px !important;\n  }\n\n  .v-application .ma-lg-n13 {\n    margin: -52px !important;\n  }\n\n  .v-application .ma-lg-n14 {\n    margin: -56px !important;\n  }\n\n  .v-application .ma-lg-n15 {\n    margin: -60px !important;\n  }\n\n  .v-application .ma-lg-n16 {\n    margin: -64px !important;\n  }\n\n  .v-application .mx-lg-n1 {\n    margin-right: -4px !important;\n    margin-left: -4px !important;\n  }\n\n  .v-application .mx-lg-n2 {\n    margin-right: -8px !important;\n    margin-left: -8px !important;\n  }\n\n  .v-application .mx-lg-n3 {\n    margin-right: -12px !important;\n    margin-left: -12px !important;\n  }\n\n  .v-application .mx-lg-n4 {\n    margin-right: -16px !important;\n    margin-left: -16px !important;\n  }\n\n  .v-application .mx-lg-n5 {\n    margin-right: -20px !important;\n    margin-left: -20px !important;\n  }\n\n  .v-application .mx-lg-n6 {\n    margin-right: -24px !important;\n    margin-left: -24px !important;\n  }\n\n  .v-application .mx-lg-n7 {\n    margin-right: -28px !important;\n    margin-left: -28px !important;\n  }\n\n  .v-application .mx-lg-n8 {\n    margin-right: -32px !important;\n    margin-left: -32px !important;\n  }\n\n  .v-application .mx-lg-n9 {\n    margin-right: -36px !important;\n    margin-left: -36px !important;\n  }\n\n  .v-application .mx-lg-n10 {\n    margin-right: -40px !important;\n    margin-left: -40px !important;\n  }\n\n  .v-application .mx-lg-n11 {\n    margin-right: -44px !important;\n    margin-left: -44px !important;\n  }\n\n  .v-application .mx-lg-n12 {\n    margin-right: -48px !important;\n    margin-left: -48px !important;\n  }\n\n  .v-application .mx-lg-n13 {\n    margin-right: -52px !important;\n    margin-left: -52px !important;\n  }\n\n  .v-application .mx-lg-n14 {\n    margin-right: -56px !important;\n    margin-left: -56px !important;\n  }\n\n  .v-application .mx-lg-n15 {\n    margin-right: -60px !important;\n    margin-left: -60px !important;\n  }\n\n  .v-application .mx-lg-n16 {\n    margin-right: -64px !important;\n    margin-left: -64px !important;\n  }\n\n  .v-application .my-lg-n1 {\n    margin-top: -4px !important;\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .my-lg-n2 {\n    margin-top: -8px !important;\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .my-lg-n3 {\n    margin-top: -12px !important;\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .my-lg-n4 {\n    margin-top: -16px !important;\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .my-lg-n5 {\n    margin-top: -20px !important;\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .my-lg-n6 {\n    margin-top: -24px !important;\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .my-lg-n7 {\n    margin-top: -28px !important;\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .my-lg-n8 {\n    margin-top: -32px !important;\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .my-lg-n9 {\n    margin-top: -36px !important;\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .my-lg-n10 {\n    margin-top: -40px !important;\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .my-lg-n11 {\n    margin-top: -44px !important;\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .my-lg-n12 {\n    margin-top: -48px !important;\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .my-lg-n13 {\n    margin-top: -52px !important;\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .my-lg-n14 {\n    margin-top: -56px !important;\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .my-lg-n15 {\n    margin-top: -60px !important;\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .my-lg-n16 {\n    margin-top: -64px !important;\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .mt-lg-n1 {\n    margin-top: -4px !important;\n  }\n\n  .v-application .mt-lg-n2 {\n    margin-top: -8px !important;\n  }\n\n  .v-application .mt-lg-n3 {\n    margin-top: -12px !important;\n  }\n\n  .v-application .mt-lg-n4 {\n    margin-top: -16px !important;\n  }\n\n  .v-application .mt-lg-n5 {\n    margin-top: -20px !important;\n  }\n\n  .v-application .mt-lg-n6 {\n    margin-top: -24px !important;\n  }\n\n  .v-application .mt-lg-n7 {\n    margin-top: -28px !important;\n  }\n\n  .v-application .mt-lg-n8 {\n    margin-top: -32px !important;\n  }\n\n  .v-application .mt-lg-n9 {\n    margin-top: -36px !important;\n  }\n\n  .v-application .mt-lg-n10 {\n    margin-top: -40px !important;\n  }\n\n  .v-application .mt-lg-n11 {\n    margin-top: -44px !important;\n  }\n\n  .v-application .mt-lg-n12 {\n    margin-top: -48px !important;\n  }\n\n  .v-application .mt-lg-n13 {\n    margin-top: -52px !important;\n  }\n\n  .v-application .mt-lg-n14 {\n    margin-top: -56px !important;\n  }\n\n  .v-application .mt-lg-n15 {\n    margin-top: -60px !important;\n  }\n\n  .v-application .mt-lg-n16 {\n    margin-top: -64px !important;\n  }\n\n  .v-application .mr-lg-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application .mr-lg-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application .mr-lg-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application .mr-lg-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application .mr-lg-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application .mr-lg-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application .mr-lg-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application .mr-lg-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application .mr-lg-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application .mr-lg-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application .mr-lg-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application .mr-lg-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application .mr-lg-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application .mr-lg-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application .mr-lg-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application .mr-lg-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application .mb-lg-n1 {\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .mb-lg-n2 {\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .mb-lg-n3 {\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .mb-lg-n4 {\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .mb-lg-n5 {\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .mb-lg-n6 {\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .mb-lg-n7 {\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .mb-lg-n8 {\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .mb-lg-n9 {\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .mb-lg-n10 {\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .mb-lg-n11 {\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .mb-lg-n12 {\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .mb-lg-n13 {\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .mb-lg-n14 {\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .mb-lg-n15 {\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .mb-lg-n16 {\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .ml-lg-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application .ml-lg-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application .ml-lg-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application .ml-lg-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application .ml-lg-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application .ml-lg-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application .ml-lg-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application .ml-lg-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application .ml-lg-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application .ml-lg-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application .ml-lg-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application .ml-lg-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application .ml-lg-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application .ml-lg-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application .ml-lg-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application .ml-lg-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-ltr .ms-lg-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-rtl .ms-lg-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-ltr .me-lg-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-rtl .me-lg-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application .pa-lg-0 {\n    padding: 0px !important;\n  }\n\n  .v-application .pa-lg-1 {\n    padding: 4px !important;\n  }\n\n  .v-application .pa-lg-2 {\n    padding: 8px !important;\n  }\n\n  .v-application .pa-lg-3 {\n    padding: 12px !important;\n  }\n\n  .v-application .pa-lg-4 {\n    padding: 16px !important;\n  }\n\n  .v-application .pa-lg-5 {\n    padding: 20px !important;\n  }\n\n  .v-application .pa-lg-6 {\n    padding: 24px !important;\n  }\n\n  .v-application .pa-lg-7 {\n    padding: 28px !important;\n  }\n\n  .v-application .pa-lg-8 {\n    padding: 32px !important;\n  }\n\n  .v-application .pa-lg-9 {\n    padding: 36px !important;\n  }\n\n  .v-application .pa-lg-10 {\n    padding: 40px !important;\n  }\n\n  .v-application .pa-lg-11 {\n    padding: 44px !important;\n  }\n\n  .v-application .pa-lg-12 {\n    padding: 48px !important;\n  }\n\n  .v-application .pa-lg-13 {\n    padding: 52px !important;\n  }\n\n  .v-application .pa-lg-14 {\n    padding: 56px !important;\n  }\n\n  .v-application .pa-lg-15 {\n    padding: 60px !important;\n  }\n\n  .v-application .pa-lg-16 {\n    padding: 64px !important;\n  }\n\n  .v-application .px-lg-0 {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .v-application .px-lg-1 {\n    padding-right: 4px !important;\n    padding-left: 4px !important;\n  }\n\n  .v-application .px-lg-2 {\n    padding-right: 8px !important;\n    padding-left: 8px !important;\n  }\n\n  .v-application .px-lg-3 {\n    padding-right: 12px !important;\n    padding-left: 12px !important;\n  }\n\n  .v-application .px-lg-4 {\n    padding-right: 16px !important;\n    padding-left: 16px !important;\n  }\n\n  .v-application .px-lg-5 {\n    padding-right: 20px !important;\n    padding-left: 20px !important;\n  }\n\n  .v-application .px-lg-6 {\n    padding-right: 24px !important;\n    padding-left: 24px !important;\n  }\n\n  .v-application .px-lg-7 {\n    padding-right: 28px !important;\n    padding-left: 28px !important;\n  }\n\n  .v-application .px-lg-8 {\n    padding-right: 32px !important;\n    padding-left: 32px !important;\n  }\n\n  .v-application .px-lg-9 {\n    padding-right: 36px !important;\n    padding-left: 36px !important;\n  }\n\n  .v-application .px-lg-10 {\n    padding-right: 40px !important;\n    padding-left: 40px !important;\n  }\n\n  .v-application .px-lg-11 {\n    padding-right: 44px !important;\n    padding-left: 44px !important;\n  }\n\n  .v-application .px-lg-12 {\n    padding-right: 48px !important;\n    padding-left: 48px !important;\n  }\n\n  .v-application .px-lg-13 {\n    padding-right: 52px !important;\n    padding-left: 52px !important;\n  }\n\n  .v-application .px-lg-14 {\n    padding-right: 56px !important;\n    padding-left: 56px !important;\n  }\n\n  .v-application .px-lg-15 {\n    padding-right: 60px !important;\n    padding-left: 60px !important;\n  }\n\n  .v-application .px-lg-16 {\n    padding-right: 64px !important;\n    padding-left: 64px !important;\n  }\n\n  .v-application .py-lg-0 {\n    padding-top: 0px !important;\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .py-lg-1 {\n    padding-top: 4px !important;\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .py-lg-2 {\n    padding-top: 8px !important;\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .py-lg-3 {\n    padding-top: 12px !important;\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .py-lg-4 {\n    padding-top: 16px !important;\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .py-lg-5 {\n    padding-top: 20px !important;\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .py-lg-6 {\n    padding-top: 24px !important;\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .py-lg-7 {\n    padding-top: 28px !important;\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .py-lg-8 {\n    padding-top: 32px !important;\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .py-lg-9 {\n    padding-top: 36px !important;\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .py-lg-10 {\n    padding-top: 40px !important;\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .py-lg-11 {\n    padding-top: 44px !important;\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .py-lg-12 {\n    padding-top: 48px !important;\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .py-lg-13 {\n    padding-top: 52px !important;\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .py-lg-14 {\n    padding-top: 56px !important;\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .py-lg-15 {\n    padding-top: 60px !important;\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .py-lg-16 {\n    padding-top: 64px !important;\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pt-lg-0 {\n    padding-top: 0px !important;\n  }\n\n  .v-application .pt-lg-1 {\n    padding-top: 4px !important;\n  }\n\n  .v-application .pt-lg-2 {\n    padding-top: 8px !important;\n  }\n\n  .v-application .pt-lg-3 {\n    padding-top: 12px !important;\n  }\n\n  .v-application .pt-lg-4 {\n    padding-top: 16px !important;\n  }\n\n  .v-application .pt-lg-5 {\n    padding-top: 20px !important;\n  }\n\n  .v-application .pt-lg-6 {\n    padding-top: 24px !important;\n  }\n\n  .v-application .pt-lg-7 {\n    padding-top: 28px !important;\n  }\n\n  .v-application .pt-lg-8 {\n    padding-top: 32px !important;\n  }\n\n  .v-application .pt-lg-9 {\n    padding-top: 36px !important;\n  }\n\n  .v-application .pt-lg-10 {\n    padding-top: 40px !important;\n  }\n\n  .v-application .pt-lg-11 {\n    padding-top: 44px !important;\n  }\n\n  .v-application .pt-lg-12 {\n    padding-top: 48px !important;\n  }\n\n  .v-application .pt-lg-13 {\n    padding-top: 52px !important;\n  }\n\n  .v-application .pt-lg-14 {\n    padding-top: 56px !important;\n  }\n\n  .v-application .pt-lg-15 {\n    padding-top: 60px !important;\n  }\n\n  .v-application .pt-lg-16 {\n    padding-top: 64px !important;\n  }\n\n  .v-application .pr-lg-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application .pr-lg-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application .pr-lg-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application .pr-lg-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application .pr-lg-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application .pr-lg-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application .pr-lg-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application .pr-lg-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application .pr-lg-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application .pr-lg-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application .pr-lg-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application .pr-lg-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application .pr-lg-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application .pr-lg-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application .pr-lg-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application .pr-lg-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application .pr-lg-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application .pb-lg-0 {\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .pb-lg-1 {\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .pb-lg-2 {\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .pb-lg-3 {\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .pb-lg-4 {\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .pb-lg-5 {\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .pb-lg-6 {\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .pb-lg-7 {\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .pb-lg-8 {\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .pb-lg-9 {\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .pb-lg-10 {\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .pb-lg-11 {\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .pb-lg-12 {\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .pb-lg-13 {\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .pb-lg-14 {\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .pb-lg-15 {\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .pb-lg-16 {\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pl-lg-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application .pl-lg-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application .pl-lg-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application .pl-lg-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application .pl-lg-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application .pl-lg-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application .pl-lg-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application .pl-lg-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application .pl-lg-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application .pl-lg-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application .pl-lg-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application .pl-lg-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application .pl-lg-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application .pl-lg-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application .pl-lg-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application .pl-lg-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application .pl-lg-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ps-lg-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ps-lg-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-ltr .pe-lg-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-rtl .pe-lg-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application .text-lg-left {\n    text-align: left !important;\n  }\n\n  .v-application .text-lg-right {\n    text-align: right !important;\n  }\n\n  .v-application .text-lg-center {\n    text-align: center !important;\n  }\n\n  .v-application .text-lg-justify {\n    text-align: justify !important;\n  }\n\n  .v-application .text-lg-start {\n    text-align: start !important;\n  }\n\n  .v-application .text-lg-end {\n    text-align: end !important;\n  }\n\n  .v-application .text-lg-h1 {\n    font-size: 6rem !important;\n    font-weight: 300;\n    line-height: 6rem;\n    letter-spacing: -0.015625em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-h2 {\n    font-size: 3.75rem !important;\n    font-weight: 300;\n    line-height: 3.75rem;\n    letter-spacing: -0.0083333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-h3 {\n    font-size: 3rem !important;\n    font-weight: 400;\n    line-height: 3.125rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-h4 {\n    font-size: 2.125rem !important;\n    font-weight: 400;\n    line-height: 2.5rem;\n    letter-spacing: 0.0073529412em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-h5 {\n    font-size: 1.5rem !important;\n    font-weight: 400;\n    line-height: 2rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-h6 {\n    font-size: 1.25rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.0125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-subtitle-1 {\n    font-size: 1rem !important;\n    font-weight: normal;\n    line-height: 1.75rem;\n    letter-spacing: 0.009375em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-subtitle-2 {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 1.375rem;\n    letter-spacing: 0.0071428571em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-body-1 {\n    font-size: 1rem !important;\n    font-weight: 400;\n    line-height: 1.5rem;\n    letter-spacing: 0.03125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-body-2 {\n    font-size: 0.875rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0178571429em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-button {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 2.25rem;\n    letter-spacing: 0.0892857143em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n\n  .v-application .text-lg-caption {\n    font-size: 0.75rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0333333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-lg-overline {\n    font-size: 0.75rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.1666666667em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n}\n@media (min-width: 1904px) {\n  .v-application .d-xl-none {\n    display: none !important;\n  }\n\n  .v-application .d-xl-inline {\n    display: inline !important;\n  }\n\n  .v-application .d-xl-inline-block {\n    display: inline-block !important;\n  }\n\n  .v-application .d-xl-block {\n    display: block !important;\n  }\n\n  .v-application .d-xl-table {\n    display: table !important;\n  }\n\n  .v-application .d-xl-table-row {\n    display: table-row !important;\n  }\n\n  .v-application .d-xl-table-cell {\n    display: table-cell !important;\n  }\n\n  .v-application .d-xl-flex {\n    display: flex !important;\n  }\n\n  .v-application .d-xl-inline-flex {\n    display: inline-flex !important;\n  }\n\n  .v-application .float-xl-none {\n    float: none !important;\n  }\n\n  .v-application .float-xl-left {\n    float: left !important;\n  }\n\n  .v-application .float-xl-right {\n    float: right !important;\n  }\n\n  .v-application--is-rtl .float-xl-end {\n    float: left !important;\n  }\n\n  .v-application--is-rtl .float-xl-start {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-xl-end {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-xl-start {\n    float: left !important;\n  }\n\n  .v-application .flex-xl-fill {\n    flex: 1 1 auto !important;\n  }\n\n  .v-application .flex-xl-row {\n    flex-direction: row !important;\n  }\n\n  .v-application .flex-xl-column {\n    flex-direction: column !important;\n  }\n\n  .v-application .flex-xl-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n\n  .v-application .flex-xl-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n\n  .v-application .flex-xl-grow-0 {\n    flex-grow: 0 !important;\n  }\n\n  .v-application .flex-xl-grow-1 {\n    flex-grow: 1 !important;\n  }\n\n  .v-application .flex-xl-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n\n  .v-application .flex-xl-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n\n  .v-application .flex-xl-wrap {\n    flex-wrap: wrap !important;\n  }\n\n  .v-application .flex-xl-nowrap {\n    flex-wrap: nowrap !important;\n  }\n\n  .v-application .flex-xl-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n\n  .v-application .justify-xl-start {\n    justify-content: flex-start !important;\n  }\n\n  .v-application .justify-xl-end {\n    justify-content: flex-end !important;\n  }\n\n  .v-application .justify-xl-center {\n    justify-content: center !important;\n  }\n\n  .v-application .justify-xl-space-between {\n    justify-content: space-between !important;\n  }\n\n  .v-application .justify-xl-space-around {\n    justify-content: space-around !important;\n  }\n\n  .v-application .align-xl-start {\n    align-items: flex-start !important;\n  }\n\n  .v-application .align-xl-end {\n    align-items: flex-end !important;\n  }\n\n  .v-application .align-xl-center {\n    align-items: center !important;\n  }\n\n  .v-application .align-xl-baseline {\n    align-items: baseline !important;\n  }\n\n  .v-application .align-xl-stretch {\n    align-items: stretch !important;\n  }\n\n  .v-application .align-content-xl-start {\n    align-content: flex-start !important;\n  }\n\n  .v-application .align-content-xl-end {\n    align-content: flex-end !important;\n  }\n\n  .v-application .align-content-xl-center {\n    align-content: center !important;\n  }\n\n  .v-application .align-content-xl-space-between {\n    align-content: space-between !important;\n  }\n\n  .v-application .align-content-xl-space-around {\n    align-content: space-around !important;\n  }\n\n  .v-application .align-content-xl-stretch {\n    align-content: stretch !important;\n  }\n\n  .v-application .align-self-xl-auto {\n    align-self: auto !important;\n  }\n\n  .v-application .align-self-xl-start {\n    align-self: flex-start !important;\n  }\n\n  .v-application .align-self-xl-end {\n    align-self: flex-end !important;\n  }\n\n  .v-application .align-self-xl-center {\n    align-self: center !important;\n  }\n\n  .v-application .align-self-xl-baseline {\n    align-self: baseline !important;\n  }\n\n  .v-application .align-self-xl-stretch {\n    align-self: stretch !important;\n  }\n\n  .v-application .order-xl-first {\n    order: -1 !important;\n  }\n\n  .v-application .order-xl-0 {\n    order: 0 !important;\n  }\n\n  .v-application .order-xl-1 {\n    order: 1 !important;\n  }\n\n  .v-application .order-xl-2 {\n    order: 2 !important;\n  }\n\n  .v-application .order-xl-3 {\n    order: 3 !important;\n  }\n\n  .v-application .order-xl-4 {\n    order: 4 !important;\n  }\n\n  .v-application .order-xl-5 {\n    order: 5 !important;\n  }\n\n  .v-application .order-xl-6 {\n    order: 6 !important;\n  }\n\n  .v-application .order-xl-7 {\n    order: 7 !important;\n  }\n\n  .v-application .order-xl-8 {\n    order: 8 !important;\n  }\n\n  .v-application .order-xl-9 {\n    order: 9 !important;\n  }\n\n  .v-application .order-xl-10 {\n    order: 10 !important;\n  }\n\n  .v-application .order-xl-11 {\n    order: 11 !important;\n  }\n\n  .v-application .order-xl-12 {\n    order: 12 !important;\n  }\n\n  .v-application .order-xl-last {\n    order: 13 !important;\n  }\n\n  .v-application .ma-xl-0 {\n    margin: 0px !important;\n  }\n\n  .v-application .ma-xl-1 {\n    margin: 4px !important;\n  }\n\n  .v-application .ma-xl-2 {\n    margin: 8px !important;\n  }\n\n  .v-application .ma-xl-3 {\n    margin: 12px !important;\n  }\n\n  .v-application .ma-xl-4 {\n    margin: 16px !important;\n  }\n\n  .v-application .ma-xl-5 {\n    margin: 20px !important;\n  }\n\n  .v-application .ma-xl-6 {\n    margin: 24px !important;\n  }\n\n  .v-application .ma-xl-7 {\n    margin: 28px !important;\n  }\n\n  .v-application .ma-xl-8 {\n    margin: 32px !important;\n  }\n\n  .v-application .ma-xl-9 {\n    margin: 36px !important;\n  }\n\n  .v-application .ma-xl-10 {\n    margin: 40px !important;\n  }\n\n  .v-application .ma-xl-11 {\n    margin: 44px !important;\n  }\n\n  .v-application .ma-xl-12 {\n    margin: 48px !important;\n  }\n\n  .v-application .ma-xl-13 {\n    margin: 52px !important;\n  }\n\n  .v-application .ma-xl-14 {\n    margin: 56px !important;\n  }\n\n  .v-application .ma-xl-15 {\n    margin: 60px !important;\n  }\n\n  .v-application .ma-xl-16 {\n    margin: 64px !important;\n  }\n\n  .v-application .ma-xl-auto {\n    margin: auto !important;\n  }\n\n  .v-application .mx-xl-0 {\n    margin-right: 0px !important;\n    margin-left: 0px !important;\n  }\n\n  .v-application .mx-xl-1 {\n    margin-right: 4px !important;\n    margin-left: 4px !important;\n  }\n\n  .v-application .mx-xl-2 {\n    margin-right: 8px !important;\n    margin-left: 8px !important;\n  }\n\n  .v-application .mx-xl-3 {\n    margin-right: 12px !important;\n    margin-left: 12px !important;\n  }\n\n  .v-application .mx-xl-4 {\n    margin-right: 16px !important;\n    margin-left: 16px !important;\n  }\n\n  .v-application .mx-xl-5 {\n    margin-right: 20px !important;\n    margin-left: 20px !important;\n  }\n\n  .v-application .mx-xl-6 {\n    margin-right: 24px !important;\n    margin-left: 24px !important;\n  }\n\n  .v-application .mx-xl-7 {\n    margin-right: 28px !important;\n    margin-left: 28px !important;\n  }\n\n  .v-application .mx-xl-8 {\n    margin-right: 32px !important;\n    margin-left: 32px !important;\n  }\n\n  .v-application .mx-xl-9 {\n    margin-right: 36px !important;\n    margin-left: 36px !important;\n  }\n\n  .v-application .mx-xl-10 {\n    margin-right: 40px !important;\n    margin-left: 40px !important;\n  }\n\n  .v-application .mx-xl-11 {\n    margin-right: 44px !important;\n    margin-left: 44px !important;\n  }\n\n  .v-application .mx-xl-12 {\n    margin-right: 48px !important;\n    margin-left: 48px !important;\n  }\n\n  .v-application .mx-xl-13 {\n    margin-right: 52px !important;\n    margin-left: 52px !important;\n  }\n\n  .v-application .mx-xl-14 {\n    margin-right: 56px !important;\n    margin-left: 56px !important;\n  }\n\n  .v-application .mx-xl-15 {\n    margin-right: 60px !important;\n    margin-left: 60px !important;\n  }\n\n  .v-application .mx-xl-16 {\n    margin-right: 64px !important;\n    margin-left: 64px !important;\n  }\n\n  .v-application .mx-xl-auto {\n    margin-right: auto !important;\n    margin-left: auto !important;\n  }\n\n  .v-application .my-xl-0 {\n    margin-top: 0px !important;\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .my-xl-1 {\n    margin-top: 4px !important;\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .my-xl-2 {\n    margin-top: 8px !important;\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .my-xl-3 {\n    margin-top: 12px !important;\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .my-xl-4 {\n    margin-top: 16px !important;\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .my-xl-5 {\n    margin-top: 20px !important;\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .my-xl-6 {\n    margin-top: 24px !important;\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .my-xl-7 {\n    margin-top: 28px !important;\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .my-xl-8 {\n    margin-top: 32px !important;\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .my-xl-9 {\n    margin-top: 36px !important;\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .my-xl-10 {\n    margin-top: 40px !important;\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .my-xl-11 {\n    margin-top: 44px !important;\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .my-xl-12 {\n    margin-top: 48px !important;\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .my-xl-13 {\n    margin-top: 52px !important;\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .my-xl-14 {\n    margin-top: 56px !important;\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .my-xl-15 {\n    margin-top: 60px !important;\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .my-xl-16 {\n    margin-top: 64px !important;\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .my-xl-auto {\n    margin-top: auto !important;\n    margin-bottom: auto !important;\n  }\n\n  .v-application .mt-xl-0 {\n    margin-top: 0px !important;\n  }\n\n  .v-application .mt-xl-1 {\n    margin-top: 4px !important;\n  }\n\n  .v-application .mt-xl-2 {\n    margin-top: 8px !important;\n  }\n\n  .v-application .mt-xl-3 {\n    margin-top: 12px !important;\n  }\n\n  .v-application .mt-xl-4 {\n    margin-top: 16px !important;\n  }\n\n  .v-application .mt-xl-5 {\n    margin-top: 20px !important;\n  }\n\n  .v-application .mt-xl-6 {\n    margin-top: 24px !important;\n  }\n\n  .v-application .mt-xl-7 {\n    margin-top: 28px !important;\n  }\n\n  .v-application .mt-xl-8 {\n    margin-top: 32px !important;\n  }\n\n  .v-application .mt-xl-9 {\n    margin-top: 36px !important;\n  }\n\n  .v-application .mt-xl-10 {\n    margin-top: 40px !important;\n  }\n\n  .v-application .mt-xl-11 {\n    margin-top: 44px !important;\n  }\n\n  .v-application .mt-xl-12 {\n    margin-top: 48px !important;\n  }\n\n  .v-application .mt-xl-13 {\n    margin-top: 52px !important;\n  }\n\n  .v-application .mt-xl-14 {\n    margin-top: 56px !important;\n  }\n\n  .v-application .mt-xl-15 {\n    margin-top: 60px !important;\n  }\n\n  .v-application .mt-xl-16 {\n    margin-top: 64px !important;\n  }\n\n  .v-application .mt-xl-auto {\n    margin-top: auto !important;\n  }\n\n  .v-application .mr-xl-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application .mr-xl-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application .mr-xl-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application .mr-xl-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application .mr-xl-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application .mr-xl-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application .mr-xl-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application .mr-xl-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application .mr-xl-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application .mr-xl-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application .mr-xl-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application .mr-xl-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application .mr-xl-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application .mr-xl-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application .mr-xl-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application .mr-xl-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application .mr-xl-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application .mr-xl-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application .mb-xl-0 {\n    margin-bottom: 0px !important;\n  }\n\n  .v-application .mb-xl-1 {\n    margin-bottom: 4px !important;\n  }\n\n  .v-application .mb-xl-2 {\n    margin-bottom: 8px !important;\n  }\n\n  .v-application .mb-xl-3 {\n    margin-bottom: 12px !important;\n  }\n\n  .v-application .mb-xl-4 {\n    margin-bottom: 16px !important;\n  }\n\n  .v-application .mb-xl-5 {\n    margin-bottom: 20px !important;\n  }\n\n  .v-application .mb-xl-6 {\n    margin-bottom: 24px !important;\n  }\n\n  .v-application .mb-xl-7 {\n    margin-bottom: 28px !important;\n  }\n\n  .v-application .mb-xl-8 {\n    margin-bottom: 32px !important;\n  }\n\n  .v-application .mb-xl-9 {\n    margin-bottom: 36px !important;\n  }\n\n  .v-application .mb-xl-10 {\n    margin-bottom: 40px !important;\n  }\n\n  .v-application .mb-xl-11 {\n    margin-bottom: 44px !important;\n  }\n\n  .v-application .mb-xl-12 {\n    margin-bottom: 48px !important;\n  }\n\n  .v-application .mb-xl-13 {\n    margin-bottom: 52px !important;\n  }\n\n  .v-application .mb-xl-14 {\n    margin-bottom: 56px !important;\n  }\n\n  .v-application .mb-xl-15 {\n    margin-bottom: 60px !important;\n  }\n\n  .v-application .mb-xl-16 {\n    margin-bottom: 64px !important;\n  }\n\n  .v-application .mb-xl-auto {\n    margin-bottom: auto !important;\n  }\n\n  .v-application .ml-xl-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application .ml-xl-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application .ml-xl-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application .ml-xl-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application .ml-xl-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application .ml-xl-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application .ml-xl-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application .ml-xl-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application .ml-xl-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application .ml-xl-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application .ml-xl-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application .ml-xl-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application .ml-xl-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application .ml-xl-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application .ml-xl-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application .ml-xl-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application .ml-xl-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application .ml-xl-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-ltr .ms-xl-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application--is-rtl .ms-xl-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-ltr .me-xl-0 {\n    margin-right: 0px !important;\n  }\n\n  .v-application--is-rtl .me-xl-0 {\n    margin-left: 0px !important;\n  }\n\n  .v-application--is-ltr .me-xl-1 {\n    margin-right: 4px !important;\n  }\n\n  .v-application--is-rtl .me-xl-1 {\n    margin-left: 4px !important;\n  }\n\n  .v-application--is-ltr .me-xl-2 {\n    margin-right: 8px !important;\n  }\n\n  .v-application--is-rtl .me-xl-2 {\n    margin-left: 8px !important;\n  }\n\n  .v-application--is-ltr .me-xl-3 {\n    margin-right: 12px !important;\n  }\n\n  .v-application--is-rtl .me-xl-3 {\n    margin-left: 12px !important;\n  }\n\n  .v-application--is-ltr .me-xl-4 {\n    margin-right: 16px !important;\n  }\n\n  .v-application--is-rtl .me-xl-4 {\n    margin-left: 16px !important;\n  }\n\n  .v-application--is-ltr .me-xl-5 {\n    margin-right: 20px !important;\n  }\n\n  .v-application--is-rtl .me-xl-5 {\n    margin-left: 20px !important;\n  }\n\n  .v-application--is-ltr .me-xl-6 {\n    margin-right: 24px !important;\n  }\n\n  .v-application--is-rtl .me-xl-6 {\n    margin-left: 24px !important;\n  }\n\n  .v-application--is-ltr .me-xl-7 {\n    margin-right: 28px !important;\n  }\n\n  .v-application--is-rtl .me-xl-7 {\n    margin-left: 28px !important;\n  }\n\n  .v-application--is-ltr .me-xl-8 {\n    margin-right: 32px !important;\n  }\n\n  .v-application--is-rtl .me-xl-8 {\n    margin-left: 32px !important;\n  }\n\n  .v-application--is-ltr .me-xl-9 {\n    margin-right: 36px !important;\n  }\n\n  .v-application--is-rtl .me-xl-9 {\n    margin-left: 36px !important;\n  }\n\n  .v-application--is-ltr .me-xl-10 {\n    margin-right: 40px !important;\n  }\n\n  .v-application--is-rtl .me-xl-10 {\n    margin-left: 40px !important;\n  }\n\n  .v-application--is-ltr .me-xl-11 {\n    margin-right: 44px !important;\n  }\n\n  .v-application--is-rtl .me-xl-11 {\n    margin-left: 44px !important;\n  }\n\n  .v-application--is-ltr .me-xl-12 {\n    margin-right: 48px !important;\n  }\n\n  .v-application--is-rtl .me-xl-12 {\n    margin-left: 48px !important;\n  }\n\n  .v-application--is-ltr .me-xl-13 {\n    margin-right: 52px !important;\n  }\n\n  .v-application--is-rtl .me-xl-13 {\n    margin-left: 52px !important;\n  }\n\n  .v-application--is-ltr .me-xl-14 {\n    margin-right: 56px !important;\n  }\n\n  .v-application--is-rtl .me-xl-14 {\n    margin-left: 56px !important;\n  }\n\n  .v-application--is-ltr .me-xl-15 {\n    margin-right: 60px !important;\n  }\n\n  .v-application--is-rtl .me-xl-15 {\n    margin-left: 60px !important;\n  }\n\n  .v-application--is-ltr .me-xl-16 {\n    margin-right: 64px !important;\n  }\n\n  .v-application--is-rtl .me-xl-16 {\n    margin-left: 64px !important;\n  }\n\n  .v-application--is-ltr .me-xl-auto {\n    margin-right: auto !important;\n  }\n\n  .v-application--is-rtl .me-xl-auto {\n    margin-left: auto !important;\n  }\n\n  .v-application .ma-xl-n1 {\n    margin: -4px !important;\n  }\n\n  .v-application .ma-xl-n2 {\n    margin: -8px !important;\n  }\n\n  .v-application .ma-xl-n3 {\n    margin: -12px !important;\n  }\n\n  .v-application .ma-xl-n4 {\n    margin: -16px !important;\n  }\n\n  .v-application .ma-xl-n5 {\n    margin: -20px !important;\n  }\n\n  .v-application .ma-xl-n6 {\n    margin: -24px !important;\n  }\n\n  .v-application .ma-xl-n7 {\n    margin: -28px !important;\n  }\n\n  .v-application .ma-xl-n8 {\n    margin: -32px !important;\n  }\n\n  .v-application .ma-xl-n9 {\n    margin: -36px !important;\n  }\n\n  .v-application .ma-xl-n10 {\n    margin: -40px !important;\n  }\n\n  .v-application .ma-xl-n11 {\n    margin: -44px !important;\n  }\n\n  .v-application .ma-xl-n12 {\n    margin: -48px !important;\n  }\n\n  .v-application .ma-xl-n13 {\n    margin: -52px !important;\n  }\n\n  .v-application .ma-xl-n14 {\n    margin: -56px !important;\n  }\n\n  .v-application .ma-xl-n15 {\n    margin: -60px !important;\n  }\n\n  .v-application .ma-xl-n16 {\n    margin: -64px !important;\n  }\n\n  .v-application .mx-xl-n1 {\n    margin-right: -4px !important;\n    margin-left: -4px !important;\n  }\n\n  .v-application .mx-xl-n2 {\n    margin-right: -8px !important;\n    margin-left: -8px !important;\n  }\n\n  .v-application .mx-xl-n3 {\n    margin-right: -12px !important;\n    margin-left: -12px !important;\n  }\n\n  .v-application .mx-xl-n4 {\n    margin-right: -16px !important;\n    margin-left: -16px !important;\n  }\n\n  .v-application .mx-xl-n5 {\n    margin-right: -20px !important;\n    margin-left: -20px !important;\n  }\n\n  .v-application .mx-xl-n6 {\n    margin-right: -24px !important;\n    margin-left: -24px !important;\n  }\n\n  .v-application .mx-xl-n7 {\n    margin-right: -28px !important;\n    margin-left: -28px !important;\n  }\n\n  .v-application .mx-xl-n8 {\n    margin-right: -32px !important;\n    margin-left: -32px !important;\n  }\n\n  .v-application .mx-xl-n9 {\n    margin-right: -36px !important;\n    margin-left: -36px !important;\n  }\n\n  .v-application .mx-xl-n10 {\n    margin-right: -40px !important;\n    margin-left: -40px !important;\n  }\n\n  .v-application .mx-xl-n11 {\n    margin-right: -44px !important;\n    margin-left: -44px !important;\n  }\n\n  .v-application .mx-xl-n12 {\n    margin-right: -48px !important;\n    margin-left: -48px !important;\n  }\n\n  .v-application .mx-xl-n13 {\n    margin-right: -52px !important;\n    margin-left: -52px !important;\n  }\n\n  .v-application .mx-xl-n14 {\n    margin-right: -56px !important;\n    margin-left: -56px !important;\n  }\n\n  .v-application .mx-xl-n15 {\n    margin-right: -60px !important;\n    margin-left: -60px !important;\n  }\n\n  .v-application .mx-xl-n16 {\n    margin-right: -64px !important;\n    margin-left: -64px !important;\n  }\n\n  .v-application .my-xl-n1 {\n    margin-top: -4px !important;\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .my-xl-n2 {\n    margin-top: -8px !important;\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .my-xl-n3 {\n    margin-top: -12px !important;\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .my-xl-n4 {\n    margin-top: -16px !important;\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .my-xl-n5 {\n    margin-top: -20px !important;\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .my-xl-n6 {\n    margin-top: -24px !important;\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .my-xl-n7 {\n    margin-top: -28px !important;\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .my-xl-n8 {\n    margin-top: -32px !important;\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .my-xl-n9 {\n    margin-top: -36px !important;\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .my-xl-n10 {\n    margin-top: -40px !important;\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .my-xl-n11 {\n    margin-top: -44px !important;\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .my-xl-n12 {\n    margin-top: -48px !important;\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .my-xl-n13 {\n    margin-top: -52px !important;\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .my-xl-n14 {\n    margin-top: -56px !important;\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .my-xl-n15 {\n    margin-top: -60px !important;\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .my-xl-n16 {\n    margin-top: -64px !important;\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .mt-xl-n1 {\n    margin-top: -4px !important;\n  }\n\n  .v-application .mt-xl-n2 {\n    margin-top: -8px !important;\n  }\n\n  .v-application .mt-xl-n3 {\n    margin-top: -12px !important;\n  }\n\n  .v-application .mt-xl-n4 {\n    margin-top: -16px !important;\n  }\n\n  .v-application .mt-xl-n5 {\n    margin-top: -20px !important;\n  }\n\n  .v-application .mt-xl-n6 {\n    margin-top: -24px !important;\n  }\n\n  .v-application .mt-xl-n7 {\n    margin-top: -28px !important;\n  }\n\n  .v-application .mt-xl-n8 {\n    margin-top: -32px !important;\n  }\n\n  .v-application .mt-xl-n9 {\n    margin-top: -36px !important;\n  }\n\n  .v-application .mt-xl-n10 {\n    margin-top: -40px !important;\n  }\n\n  .v-application .mt-xl-n11 {\n    margin-top: -44px !important;\n  }\n\n  .v-application .mt-xl-n12 {\n    margin-top: -48px !important;\n  }\n\n  .v-application .mt-xl-n13 {\n    margin-top: -52px !important;\n  }\n\n  .v-application .mt-xl-n14 {\n    margin-top: -56px !important;\n  }\n\n  .v-application .mt-xl-n15 {\n    margin-top: -60px !important;\n  }\n\n  .v-application .mt-xl-n16 {\n    margin-top: -64px !important;\n  }\n\n  .v-application .mr-xl-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application .mr-xl-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application .mr-xl-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application .mr-xl-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application .mr-xl-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application .mr-xl-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application .mr-xl-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application .mr-xl-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application .mr-xl-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application .mr-xl-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application .mr-xl-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application .mr-xl-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application .mr-xl-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application .mr-xl-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application .mr-xl-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application .mr-xl-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application .mb-xl-n1 {\n    margin-bottom: -4px !important;\n  }\n\n  .v-application .mb-xl-n2 {\n    margin-bottom: -8px !important;\n  }\n\n  .v-application .mb-xl-n3 {\n    margin-bottom: -12px !important;\n  }\n\n  .v-application .mb-xl-n4 {\n    margin-bottom: -16px !important;\n  }\n\n  .v-application .mb-xl-n5 {\n    margin-bottom: -20px !important;\n  }\n\n  .v-application .mb-xl-n6 {\n    margin-bottom: -24px !important;\n  }\n\n  .v-application .mb-xl-n7 {\n    margin-bottom: -28px !important;\n  }\n\n  .v-application .mb-xl-n8 {\n    margin-bottom: -32px !important;\n  }\n\n  .v-application .mb-xl-n9 {\n    margin-bottom: -36px !important;\n  }\n\n  .v-application .mb-xl-n10 {\n    margin-bottom: -40px !important;\n  }\n\n  .v-application .mb-xl-n11 {\n    margin-bottom: -44px !important;\n  }\n\n  .v-application .mb-xl-n12 {\n    margin-bottom: -48px !important;\n  }\n\n  .v-application .mb-xl-n13 {\n    margin-bottom: -52px !important;\n  }\n\n  .v-application .mb-xl-n14 {\n    margin-bottom: -56px !important;\n  }\n\n  .v-application .mb-xl-n15 {\n    margin-bottom: -60px !important;\n  }\n\n  .v-application .mb-xl-n16 {\n    margin-bottom: -64px !important;\n  }\n\n  .v-application .ml-xl-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application .ml-xl-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application .ml-xl-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application .ml-xl-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application .ml-xl-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application .ml-xl-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application .ml-xl-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application .ml-xl-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application .ml-xl-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application .ml-xl-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application .ml-xl-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application .ml-xl-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application .ml-xl-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application .ml-xl-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application .ml-xl-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application .ml-xl-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-ltr .ms-xl-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application--is-rtl .ms-xl-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n1 {\n    margin-right: -4px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n1 {\n    margin-left: -4px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n2 {\n    margin-right: -8px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n2 {\n    margin-left: -8px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n3 {\n    margin-right: -12px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n3 {\n    margin-left: -12px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n4 {\n    margin-right: -16px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n4 {\n    margin-left: -16px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n5 {\n    margin-right: -20px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n5 {\n    margin-left: -20px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n6 {\n    margin-right: -24px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n6 {\n    margin-left: -24px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n7 {\n    margin-right: -28px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n7 {\n    margin-left: -28px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n8 {\n    margin-right: -32px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n8 {\n    margin-left: -32px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n9 {\n    margin-right: -36px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n9 {\n    margin-left: -36px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n10 {\n    margin-right: -40px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n10 {\n    margin-left: -40px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n11 {\n    margin-right: -44px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n11 {\n    margin-left: -44px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n12 {\n    margin-right: -48px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n12 {\n    margin-left: -48px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n13 {\n    margin-right: -52px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n13 {\n    margin-left: -52px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n14 {\n    margin-right: -56px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n14 {\n    margin-left: -56px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n15 {\n    margin-right: -60px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n15 {\n    margin-left: -60px !important;\n  }\n\n  .v-application--is-ltr .me-xl-n16 {\n    margin-right: -64px !important;\n  }\n\n  .v-application--is-rtl .me-xl-n16 {\n    margin-left: -64px !important;\n  }\n\n  .v-application .pa-xl-0 {\n    padding: 0px !important;\n  }\n\n  .v-application .pa-xl-1 {\n    padding: 4px !important;\n  }\n\n  .v-application .pa-xl-2 {\n    padding: 8px !important;\n  }\n\n  .v-application .pa-xl-3 {\n    padding: 12px !important;\n  }\n\n  .v-application .pa-xl-4 {\n    padding: 16px !important;\n  }\n\n  .v-application .pa-xl-5 {\n    padding: 20px !important;\n  }\n\n  .v-application .pa-xl-6 {\n    padding: 24px !important;\n  }\n\n  .v-application .pa-xl-7 {\n    padding: 28px !important;\n  }\n\n  .v-application .pa-xl-8 {\n    padding: 32px !important;\n  }\n\n  .v-application .pa-xl-9 {\n    padding: 36px !important;\n  }\n\n  .v-application .pa-xl-10 {\n    padding: 40px !important;\n  }\n\n  .v-application .pa-xl-11 {\n    padding: 44px !important;\n  }\n\n  .v-application .pa-xl-12 {\n    padding: 48px !important;\n  }\n\n  .v-application .pa-xl-13 {\n    padding: 52px !important;\n  }\n\n  .v-application .pa-xl-14 {\n    padding: 56px !important;\n  }\n\n  .v-application .pa-xl-15 {\n    padding: 60px !important;\n  }\n\n  .v-application .pa-xl-16 {\n    padding: 64px !important;\n  }\n\n  .v-application .px-xl-0 {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .v-application .px-xl-1 {\n    padding-right: 4px !important;\n    padding-left: 4px !important;\n  }\n\n  .v-application .px-xl-2 {\n    padding-right: 8px !important;\n    padding-left: 8px !important;\n  }\n\n  .v-application .px-xl-3 {\n    padding-right: 12px !important;\n    padding-left: 12px !important;\n  }\n\n  .v-application .px-xl-4 {\n    padding-right: 16px !important;\n    padding-left: 16px !important;\n  }\n\n  .v-application .px-xl-5 {\n    padding-right: 20px !important;\n    padding-left: 20px !important;\n  }\n\n  .v-application .px-xl-6 {\n    padding-right: 24px !important;\n    padding-left: 24px !important;\n  }\n\n  .v-application .px-xl-7 {\n    padding-right: 28px !important;\n    padding-left: 28px !important;\n  }\n\n  .v-application .px-xl-8 {\n    padding-right: 32px !important;\n    padding-left: 32px !important;\n  }\n\n  .v-application .px-xl-9 {\n    padding-right: 36px !important;\n    padding-left: 36px !important;\n  }\n\n  .v-application .px-xl-10 {\n    padding-right: 40px !important;\n    padding-left: 40px !important;\n  }\n\n  .v-application .px-xl-11 {\n    padding-right: 44px !important;\n    padding-left: 44px !important;\n  }\n\n  .v-application .px-xl-12 {\n    padding-right: 48px !important;\n    padding-left: 48px !important;\n  }\n\n  .v-application .px-xl-13 {\n    padding-right: 52px !important;\n    padding-left: 52px !important;\n  }\n\n  .v-application .px-xl-14 {\n    padding-right: 56px !important;\n    padding-left: 56px !important;\n  }\n\n  .v-application .px-xl-15 {\n    padding-right: 60px !important;\n    padding-left: 60px !important;\n  }\n\n  .v-application .px-xl-16 {\n    padding-right: 64px !important;\n    padding-left: 64px !important;\n  }\n\n  .v-application .py-xl-0 {\n    padding-top: 0px !important;\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .py-xl-1 {\n    padding-top: 4px !important;\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .py-xl-2 {\n    padding-top: 8px !important;\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .py-xl-3 {\n    padding-top: 12px !important;\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .py-xl-4 {\n    padding-top: 16px !important;\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .py-xl-5 {\n    padding-top: 20px !important;\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .py-xl-6 {\n    padding-top: 24px !important;\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .py-xl-7 {\n    padding-top: 28px !important;\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .py-xl-8 {\n    padding-top: 32px !important;\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .py-xl-9 {\n    padding-top: 36px !important;\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .py-xl-10 {\n    padding-top: 40px !important;\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .py-xl-11 {\n    padding-top: 44px !important;\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .py-xl-12 {\n    padding-top: 48px !important;\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .py-xl-13 {\n    padding-top: 52px !important;\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .py-xl-14 {\n    padding-top: 56px !important;\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .py-xl-15 {\n    padding-top: 60px !important;\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .py-xl-16 {\n    padding-top: 64px !important;\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pt-xl-0 {\n    padding-top: 0px !important;\n  }\n\n  .v-application .pt-xl-1 {\n    padding-top: 4px !important;\n  }\n\n  .v-application .pt-xl-2 {\n    padding-top: 8px !important;\n  }\n\n  .v-application .pt-xl-3 {\n    padding-top: 12px !important;\n  }\n\n  .v-application .pt-xl-4 {\n    padding-top: 16px !important;\n  }\n\n  .v-application .pt-xl-5 {\n    padding-top: 20px !important;\n  }\n\n  .v-application .pt-xl-6 {\n    padding-top: 24px !important;\n  }\n\n  .v-application .pt-xl-7 {\n    padding-top: 28px !important;\n  }\n\n  .v-application .pt-xl-8 {\n    padding-top: 32px !important;\n  }\n\n  .v-application .pt-xl-9 {\n    padding-top: 36px !important;\n  }\n\n  .v-application .pt-xl-10 {\n    padding-top: 40px !important;\n  }\n\n  .v-application .pt-xl-11 {\n    padding-top: 44px !important;\n  }\n\n  .v-application .pt-xl-12 {\n    padding-top: 48px !important;\n  }\n\n  .v-application .pt-xl-13 {\n    padding-top: 52px !important;\n  }\n\n  .v-application .pt-xl-14 {\n    padding-top: 56px !important;\n  }\n\n  .v-application .pt-xl-15 {\n    padding-top: 60px !important;\n  }\n\n  .v-application .pt-xl-16 {\n    padding-top: 64px !important;\n  }\n\n  .v-application .pr-xl-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application .pr-xl-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application .pr-xl-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application .pr-xl-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application .pr-xl-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application .pr-xl-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application .pr-xl-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application .pr-xl-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application .pr-xl-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application .pr-xl-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application .pr-xl-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application .pr-xl-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application .pr-xl-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application .pr-xl-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application .pr-xl-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application .pr-xl-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application .pr-xl-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application .pb-xl-0 {\n    padding-bottom: 0px !important;\n  }\n\n  .v-application .pb-xl-1 {\n    padding-bottom: 4px !important;\n  }\n\n  .v-application .pb-xl-2 {\n    padding-bottom: 8px !important;\n  }\n\n  .v-application .pb-xl-3 {\n    padding-bottom: 12px !important;\n  }\n\n  .v-application .pb-xl-4 {\n    padding-bottom: 16px !important;\n  }\n\n  .v-application .pb-xl-5 {\n    padding-bottom: 20px !important;\n  }\n\n  .v-application .pb-xl-6 {\n    padding-bottom: 24px !important;\n  }\n\n  .v-application .pb-xl-7 {\n    padding-bottom: 28px !important;\n  }\n\n  .v-application .pb-xl-8 {\n    padding-bottom: 32px !important;\n  }\n\n  .v-application .pb-xl-9 {\n    padding-bottom: 36px !important;\n  }\n\n  .v-application .pb-xl-10 {\n    padding-bottom: 40px !important;\n  }\n\n  .v-application .pb-xl-11 {\n    padding-bottom: 44px !important;\n  }\n\n  .v-application .pb-xl-12 {\n    padding-bottom: 48px !important;\n  }\n\n  .v-application .pb-xl-13 {\n    padding-bottom: 52px !important;\n  }\n\n  .v-application .pb-xl-14 {\n    padding-bottom: 56px !important;\n  }\n\n  .v-application .pb-xl-15 {\n    padding-bottom: 60px !important;\n  }\n\n  .v-application .pb-xl-16 {\n    padding-bottom: 64px !important;\n  }\n\n  .v-application .pl-xl-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application .pl-xl-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application .pl-xl-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application .pl-xl-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application .pl-xl-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application .pl-xl-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application .pl-xl-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application .pl-xl-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application .pl-xl-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application .pl-xl-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application .pl-xl-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application .pl-xl-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application .pl-xl-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application .pl-xl-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application .pl-xl-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application .pl-xl-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application .pl-xl-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-ltr .ps-xl-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application--is-rtl .ps-xl-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-0 {\n    padding-right: 0px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-0 {\n    padding-left: 0px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-1 {\n    padding-right: 4px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-1 {\n    padding-left: 4px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-2 {\n    padding-right: 8px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-2 {\n    padding-left: 8px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-3 {\n    padding-right: 12px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-3 {\n    padding-left: 12px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-4 {\n    padding-right: 16px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-4 {\n    padding-left: 16px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-5 {\n    padding-right: 20px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-5 {\n    padding-left: 20px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-6 {\n    padding-right: 24px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-6 {\n    padding-left: 24px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-7 {\n    padding-right: 28px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-7 {\n    padding-left: 28px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-8 {\n    padding-right: 32px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-8 {\n    padding-left: 32px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-9 {\n    padding-right: 36px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-9 {\n    padding-left: 36px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-10 {\n    padding-right: 40px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-10 {\n    padding-left: 40px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-11 {\n    padding-right: 44px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-11 {\n    padding-left: 44px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-12 {\n    padding-right: 48px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-12 {\n    padding-left: 48px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-13 {\n    padding-right: 52px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-13 {\n    padding-left: 52px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-14 {\n    padding-right: 56px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-14 {\n    padding-left: 56px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-15 {\n    padding-right: 60px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-15 {\n    padding-left: 60px !important;\n  }\n\n  .v-application--is-ltr .pe-xl-16 {\n    padding-right: 64px !important;\n  }\n\n  .v-application--is-rtl .pe-xl-16 {\n    padding-left: 64px !important;\n  }\n\n  .v-application .text-xl-left {\n    text-align: left !important;\n  }\n\n  .v-application .text-xl-right {\n    text-align: right !important;\n  }\n\n  .v-application .text-xl-center {\n    text-align: center !important;\n  }\n\n  .v-application .text-xl-justify {\n    text-align: justify !important;\n  }\n\n  .v-application .text-xl-start {\n    text-align: start !important;\n  }\n\n  .v-application .text-xl-end {\n    text-align: end !important;\n  }\n\n  .v-application .text-xl-h1 {\n    font-size: 6rem !important;\n    font-weight: 300;\n    line-height: 6rem;\n    letter-spacing: -0.015625em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-h2 {\n    font-size: 3.75rem !important;\n    font-weight: 300;\n    line-height: 3.75rem;\n    letter-spacing: -0.0083333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-h3 {\n    font-size: 3rem !important;\n    font-weight: 400;\n    line-height: 3.125rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-h4 {\n    font-size: 2.125rem !important;\n    font-weight: 400;\n    line-height: 2.5rem;\n    letter-spacing: 0.0073529412em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-h5 {\n    font-size: 1.5rem !important;\n    font-weight: 400;\n    line-height: 2rem;\n    letter-spacing: normal !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-h6 {\n    font-size: 1.25rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.0125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-subtitle-1 {\n    font-size: 1rem !important;\n    font-weight: normal;\n    line-height: 1.75rem;\n    letter-spacing: 0.009375em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-subtitle-2 {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 1.375rem;\n    letter-spacing: 0.0071428571em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-body-1 {\n    font-size: 1rem !important;\n    font-weight: 400;\n    line-height: 1.5rem;\n    letter-spacing: 0.03125em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-body-2 {\n    font-size: 0.875rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0178571429em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-button {\n    font-size: 0.875rem !important;\n    font-weight: 500;\n    line-height: 2.25rem;\n    letter-spacing: 0.0892857143em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n\n  .v-application .text-xl-caption {\n    font-size: 0.75rem !important;\n    font-weight: 400;\n    line-height: 1.25rem;\n    letter-spacing: 0.0333333333em !important;\n    font-family: \"Roboto\", sans-serif !important;\n  }\n\n  .v-application .text-xl-overline {\n    font-size: 0.75rem !important;\n    font-weight: 500;\n    line-height: 2rem;\n    letter-spacing: 0.1666666667em !important;\n    font-family: \"Roboto\", sans-serif !important;\n    text-transform: uppercase !important;\n  }\n}\n@media print {\n  .v-application .d-print-none {\n    display: none !important;\n  }\n\n  .v-application .d-print-inline {\n    display: inline !important;\n  }\n\n  .v-application .d-print-inline-block {\n    display: inline-block !important;\n  }\n\n  .v-application .d-print-block {\n    display: block !important;\n  }\n\n  .v-application .d-print-table {\n    display: table !important;\n  }\n\n  .v-application .d-print-table-row {\n    display: table-row !important;\n  }\n\n  .v-application .d-print-table-cell {\n    display: table-cell !important;\n  }\n\n  .v-application .d-print-flex {\n    display: flex !important;\n  }\n\n  .v-application .d-print-inline-flex {\n    display: inline-flex !important;\n  }\n\n  .v-application .float-print-none {\n    float: none !important;\n  }\n\n  .v-application .float-print-left {\n    float: left !important;\n  }\n\n  .v-application .float-print-right {\n    float: right !important;\n  }\n\n  .v-application--is-rtl .float-print-end {\n    float: left !important;\n  }\n\n  .v-application--is-rtl .float-print-start {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-print-end {\n    float: right !important;\n  }\n\n  .v-application--is-ltr .float-print-start {\n    float: left !important;\n  }\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n#app-main {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  color: #ccc;\r\n  overflow: hidden;\n}\n.flipbook .viewport {\r\n  width: 100vw;\r\n  height: calc(100vh - 48px - 56px);\n}\n.flipbook .bounding-box {\r\n  box-shadow: 0 0 20px #000;\n}\n.loading {\r\n  position: absolute;\r\n  height: 100%;\r\n  top: 50%;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.app-main {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  color: #ccc;\r\n  overflow: hidden;\n}\n.loading {\r\n  position: absolute;\r\n  height: 100%;\r\n  top: 50%;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
 
 /***/ }),
 
@@ -21259,10 +22632,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/js/components/VueExample.vue":
-/*!************************************************!*\
-  !*** ./resources/js/components/VueExample.vue ***!
-  \************************************************/
+/***/ "./resources/js/App.vue":
+/*!******************************!*\
+  !*** ./resources/js/App.vue ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21270,9 +22643,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VueExample.vue?vue&type=template&id=bb1e70a2& */ "./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2&");
-/* harmony import */ var _VueExample_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VueExample.vue?vue&type=script&lang=js& */ "./resources/js/components/VueExample.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=f348271a& */ "./resources/js/App.vue?vue&type=template&id=f348271a&");
+/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/App.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -21281,9 +22654,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _VueExample_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__.render,
-  _VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -21293,15 +22666,15 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/VueExample.vue"
+component.options.__file = "resources/js/App.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/VueExample.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/VueExample.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
+/***/ "./resources/js/views/Catalogo.vue":
+/*!*****************************************!*\
+  !*** ./resources/js/views/Catalogo.vue ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21309,32 +22682,214 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueExample_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./VueExample.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueExample_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+/* harmony import */ var _Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Catalogo.vue?vue&type=template&id=0781fc95& */ "./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95&");
+/* harmony import */ var _Catalogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Catalogo.vue?vue&type=script&lang=js& */ "./resources/js/views/Catalogo.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Catalogo.vue?vue&type=style&index=0&lang=css& */ "./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _Catalogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Catalogo.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2& ***!
-  \*******************************************************************************/
+/***/ "./resources/js/views/Home.vue":
+/*!*************************************!*\
+  !*** ./resources/js/views/Home.vue ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueExample_vue_vue_type_template_id_bb1e70a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./VueExample.vue?vue&type=template&id=bb1e70a2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2&");
+/* harmony import */ var _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=63cd6604& */ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&");
+/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/views/Home.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.vue?vue&type=style&index=0&lang=css& */ "./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Home.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/App.vue?vue&type=script&lang=js&":
+/*!*******************************************************!*\
+  !*** ./resources/js/App.vue?vue&type=script&lang=js& ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Catalogo.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/views/Catalogo.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Catalogo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Home.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/views/Home.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/App.vue?vue&type=template&id=f348271a&":
+/*!*************************************************************!*\
+  !*** ./resources/js/App.vue?vue&type=template&id=f348271a& ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=f348271a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=template&id=f348271a&");
 
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VueExample.vue?vue&type=template&id=bb1e70a2& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95&":
+/*!************************************************************************!*\
+  !*** ./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_template_id_0781fc95___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Catalogo.vue?vue&type=template&id=0781fc95& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&":
+/*!********************************************************************!*\
+  !*** ./resources/js/views/Home.vue?vue&type=template&id=63cd6604& ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=63cd6604& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader/index.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Catalogo.vue?vue&type=style&index=0&lang=css& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Catalogo_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/views/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader/index.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=style&index=0&lang=css& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=template&id=f348271a&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=template&id=f348271a& ***!
+  \****************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21347,16 +22902,1343 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "v-app",
+    { attrs: { id: "inspire" } },
+    [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: { app: "" },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
+        [
+          _c(
+            "v-list-item",
+            { staticClass: "px-2 red darken-1" },
+            [
+              _c("v-list-item-title", { staticClass: "white--text" }, [
+                _vm._v("D´Lirio")
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { icon: "", dark: "" },
+                  on: {
+                    click: function($event) {
+                      $event.stopPropagation()
+                      return _vm.setClickNavigationDrawer.apply(null, arguments)
+                    }
+                  }
+                },
+                [_c("v-icon", [_vm._v("mdi-chevron-left")])],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-divider"),
+          _vm._v(" "),
+          _c(
+            "v-list",
+            { attrs: { dense: "" } },
+            [
+              _c(
+                "v-list-item",
+                { attrs: { link: "" }, on: { click: _vm.setDescagarCatalogo } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [_c("v-icon", [_vm._v("mdi-cloud-download-outline")])],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-list-item-content",
+                    [_c("v-list-item-title", [_vm._v("Descargar Catálogo")])],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-divider"),
+          _vm._v(" "),
+          _c(
+            "v-list",
+            { attrs: { dense: "" } },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "text-decoration-none",
+                  attrs: { to: { path: "/" } }
+                },
+                [
+                  _c(
+                    "v-list-item",
+                    { attrs: { link: "" } },
+                    [
+                      _c(
+                        "v-list-item-icon",
+                        [_c("v-icon", [_vm._v("mdi-book-open-variant")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-content",
+                        [_c("v-list-item-title", [_vm._v("Catálogos")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                [
+                  _c(
+                    "v-list-item-content",
+                    { staticClass: "py-2 px-0" },
+                    [
+                      _c(
+                        "v-container",
+                        { staticClass: "py-1 px-3" },
+                        [
+                          _c(
+                            "v-row",
+                            _vm._l(_vm.catalogos, function(card) {
+                              return _c(
+                                "v-col",
+                                {
+                                  key: card.id,
+                                  staticClass: "pa-1",
+                                  attrs: { cols: "6" }
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "text-decoration-none",
+                                      attrs: {
+                                        to: { path: "/catalogo/" + card.id }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        [
+                                          _c("v-img", {
+                                            staticClass:
+                                              "white--text align-end",
+                                            attrs: {
+                                              src: card.imagen,
+                                              "aspect-ratio": "0.8"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("v-card-title", {
+                                            staticClass: "pa-2 caption",
+                                            class: {
+                                              "font-weight-bold": _vm.getExisteCatalogoId(
+                                                card.id
+                                              )
+                                            },
+                                            domProps: {
+                                              textContent: _vm._s(card.titulo)
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            }),
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-app-bar",
+        { attrs: { app: "", dark: "", color: "red darken-1", dense: "" } },
+        [
+          _c("v-app-bar-nav-icon", {
+            on: {
+              click: function($event) {
+                _vm.drawer = !_vm.drawer
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("v-toolbar-title", { staticClass: "pl-0" }, [
+            _vm._v(_vm._s(_vm.catalogoTitulo))
+          ]),
+          _vm._v(" "),
+          _c("v-spacer"),
+          _vm._v(" "),
+          _c(
+            "v-dialog",
+            {
+              attrs: {
+                transition: "dialog-bottom-transition",
+                scrollable: "",
+                "hide-overlay": "",
+                "max-width": "760px"
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-btn",
+                        _vm._g(
+                          _vm._b(
+                            {
+                              attrs: { icon: "" },
+                              on: { click: _vm.setClickBuscar }
+                            },
+                            "v-btn",
+                            attrs,
+                            false
+                          ),
+                          on
+                        ),
+                        [_c("v-icon", [_vm._v("mdi-magnify")])],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.isDialogBuscar,
+                callback: function($$v) {
+                  _vm.isDialogBuscar = $$v
+                },
+                expression: "isDialogBuscar"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-toolbar",
+                    {
+                      staticClass: "py-1",
+                      attrs: { dark: "", height: "45", color: "red darken-1" }
+                    },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.isDialogBuscar = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-divider"),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: {
+                          dense: "",
+                          height: "35",
+                          placeholder: "Buscar",
+                          autofocus: ""
+                        },
+                        model: {
+                          value: _vm.textBuscar,
+                          callback: function($$v) {
+                            _vm.textBuscar = $$v
+                          },
+                          expression: "textBuscar"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-divider"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "" },
+                          on: { click: _vm.setClickBuscarPaginas }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-magnify")])],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    { staticClass: "pa-1", staticStyle: { height: "640px" } },
+                    [
+                      _c(
+                        "v-container",
+                        [
+                          _vm.isLoadingBuscar
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "d-flex align-center justify-center",
+                                  staticStyle: { height: "600px" }
+                                },
+                                [
+                                  _c("v-progress-circular", {
+                                    attrs: { indeterminate: "", color: "red" }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          !_vm.isLoadingBuscar
+                            ? _c(
+                                "v-row",
+                                _vm._l(_vm.paginasBuscar, function(card) {
+                                  return _c(
+                                    "v-col",
+                                    {
+                                      key: card.id,
+                                      staticClass: "pa-1",
+                                      attrs: { cols: "6", sm: "3" }
+                                    },
+                                    [
+                                      card.nro_pagina
+                                        ? _c(
+                                            "router-link",
+                                            {
+                                              staticClass:
+                                                "text-decoration-none",
+                                              attrs: {
+                                                to: {
+                                                  path:
+                                                    "/catalogo/" +
+                                                    card.catalogo_id +
+                                                    "/" +
+                                                    card.nro_pagina
+                                                }
+                                              },
+                                              nativeOn: {
+                                                click: function($event) {
+                                                  _vm.isDialogBuscar = false
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                { attrs: { tile: "" } },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass:
+                                                      "white--text align-end",
+                                                    attrs: {
+                                                      src: card.imagen,
+                                                      "aspect-ratio": "0.8"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "p",
+                                                    {
+                                                      staticClass:
+                                                        "ma-0 pa-2 text-center caption"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(card.nro_pagina)
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                }),
+                                1
+                              )
+                            : _vm._e()
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("router-view"),
+      _vm._v(" "),
+      _c(
+        "v-bottom-navigation",
+        {
+          attrs: { app: "", color: "red darken-1" },
+          model: {
+            value: _vm.value,
+            callback: function($$v) {
+              _vm.value = $$v
+            },
+            expression: "value"
+          }
+        },
+        [
+          _c(
+            "v-dialog",
+            {
+              attrs: {
+                transition: "dialog-bottom-transition",
+                scrollable: "",
+                "hide-overlay": "",
+                "max-width": "760px"
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-btn",
+                        _vm._g(
+                          _vm._b(
+                            {
+                              attrs: { small: "", value: "pages" },
+                              on: { click: _vm.setClickPaginas }
+                            },
+                            "v-btn",
+                            attrs,
+                            false
+                          ),
+                          on
+                        ),
+                        [
+                          _c("span", [_vm._v("Páginas")]),
+                          _vm._v(" "),
+                          _c("v-icon", [_vm._v("mdi-view-module")])
+                        ],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.isDialogPaginas,
+                callback: function($$v) {
+                  _vm.isDialogPaginas = $$v
+                },
+                expression: "isDialogPaginas"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-toolbar",
+                    {
+                      attrs: { dark: "", height: "40", color: "red darken-1" }
+                    },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "", dark: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.isDialogPaginas = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-toolbar-title", [_vm._v("Páginas")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    {
+                      staticClass: "px-2 py-4",
+                      staticStyle: { height: "640px" }
+                    },
+                    [
+                      _c(
+                        "v-container",
+                        { staticClass: "py-1 px-3" },
+                        [
+                          _c(
+                            "v-row",
+                            _vm._l(_vm.paginasEnDos, function(card) {
+                              return _c(
+                                "v-col",
+                                {
+                                  key: card.id,
+                                  staticClass: "py-3 px-4",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c(
+                                    "v-row",
+                                    [
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "py-1 px-0",
+                                          attrs: { cols: "6" }
+                                        },
+                                        [
+                                          card.nro_pagina_1
+                                            ? _c(
+                                                "router-link",
+                                                {
+                                                  staticClass:
+                                                    "text-decoration-none",
+                                                  attrs: {
+                                                    to: {
+                                                      path:
+                                                        "/catalogo/" +
+                                                        card.catalogo_id +
+                                                        "/" +
+                                                        card.nro_pagina_1
+                                                    }
+                                                  },
+                                                  nativeOn: {
+                                                    click: function($event) {
+                                                      _vm.isDialogPaginas = false
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    { attrs: { tile: "" } },
+                                                    [
+                                                      _c("v-img", {
+                                                        staticClass:
+                                                          "white--text align-end",
+                                                        attrs: {
+                                                          src: card.imagen_1,
+                                                          "aspect-ratio": "0.8"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "p",
+                                                        {
+                                                          staticClass:
+                                                            "pa-2 text-center caption"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              card.nro_pagina_1
+                                                            )
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e()
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "py-1 px-0",
+                                          attrs: { cols: "6" }
+                                        },
+                                        [
+                                          card.nro_pagina_2
+                                            ? _c(
+                                                "router-link",
+                                                {
+                                                  staticClass:
+                                                    "text-decoration-none",
+                                                  attrs: {
+                                                    to: {
+                                                      path:
+                                                        "/catalogo/" +
+                                                        card.catalogo_id +
+                                                        "/" +
+                                                        card.nro_pagina_2
+                                                    }
+                                                  },
+                                                  nativeOn: {
+                                                    click: function($event) {
+                                                      _vm.isDialogPaginas = false
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    { attrs: { tile: "" } },
+                                                    [
+                                                      _c("v-img", {
+                                                        staticClass:
+                                                          "white--text align-end",
+                                                        attrs: {
+                                                          src: card.imagen_2,
+                                                          "aspect-ratio": "0.8"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "p",
+                                                        {
+                                                          staticClass:
+                                                            "pa-2 text-center caption"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              card.nro_pagina_2
+                                                            )
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e()
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            }),
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-dialog",
+            {
+              attrs: { persistent: "", "max-width": "290" },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-btn",
+                        _vm._g(
+                          _vm._b(
+                            {
+                              attrs: { small: "", value: "download" },
+                              on: { click: _vm.setDescagarCatalogo }
+                            },
+                            "v-btn",
+                            attrs,
+                            false
+                          ),
+                          on
+                        ),
+                        [
+                          _c("span", [_vm._v("Descargar")]),
+                          _vm._v(" "),
+                          _c("v-icon", [_vm._v("mdi-cloud-download-outline")])
+                        ],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.isDialogDescargar,
+                callback: function($$v) {
+                  _vm.isDialogDescargar = $$v
+                },
+                expression: "isDialogDescargar"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c("v-card-title", { staticClass: "subtitle-1" }, [
+                    _vm._v(
+                      "\n          ¿Desea descargar el Catálogo?\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", [_vm._v(_vm._s(_vm.catalogoTitulo))]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", text: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.isDialogDescargar = false
+                            }
+                          }
+                        },
+                        [_vm._v("\n            Cancelar\n          ")]
+                      ),
+                      _vm._v(" "),
+                      _vm.catalogoId
+                        ? _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-decoration-none text-button green--text text--darken-1",
+                              attrs: { href: _vm.getUrlPdf, download: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.isDialogDescargar = false
+                                }
+                              }
+                            },
+                            [_vm._v("\n            ACEPTAR\n          ")]
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-dialog",
+            {
+              attrs: {
+                transition: "dialog-bottom-transition",
+                scrollable: "",
+                "hide-overlay": "",
+                "max-width": "760px"
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-btn",
+                        _vm._g(
+                          _vm._b(
+                            {
+                              attrs: { small: "", value: "catalogs" },
+                              on: { click: _vm.setClickCatalogos }
+                            },
+                            "v-btn",
+                            attrs,
+                            false
+                          ),
+                          on
+                        ),
+                        [
+                          _c("span", [_vm._v("Catálogos")]),
+                          _vm._v(" "),
+                          _c("v-icon", [_vm._v("mdi-book-open-variant")])
+                        ],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.isDialogCatalogos,
+                callback: function($$v) {
+                  _vm.isDialogCatalogos = $$v
+                },
+                expression: "isDialogCatalogos"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-toolbar",
+                    {
+                      attrs: { dark: "", height: "40", color: "red darken-1" }
+                    },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "", dark: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.isDialogCatalogos = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-toolbar-title", [_vm._v("Catálogos")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    {
+                      staticClass: "px-2 py-4",
+                      staticStyle: { height: "640px" }
+                    },
+                    [
+                      _c(
+                        "v-container",
+                        { staticClass: "py-1 px-3" },
+                        [
+                          _c(
+                            "v-row",
+                            _vm._l(_vm.catalogos, function(card) {
+                              return _c(
+                                "v-col",
+                                {
+                                  key: card.id,
+                                  staticClass: "pa-1",
+                                  attrs: { cols: "6", sm: "3" }
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "text-decoration-none",
+                                      attrs: {
+                                        to: { path: "/catalogo/" + card.id }
+                                      },
+                                      nativeOn: {
+                                        click: function($event) {
+                                          _vm.isDialogCatalogos = false
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        [
+                                          _c("v-img", {
+                                            staticClass:
+                                              "white--text align-end",
+                                            attrs: {
+                                              src: card.imagen,
+                                              "aspect-ratio": "0.8"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("v-card-title", {
+                                            staticClass: "pa-2 caption",
+                                            class: {
+                                              "font-weight-bold": _vm.getExisteCatalogoId(
+                                                card.id
+                                              )
+                                            },
+                                            domProps: {
+                                              textContent: _vm._s(card.titulo)
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            }),
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-dialog",
+            {
+              attrs: {
+                transition: "dialog-bottom-transition",
+                scrollable: "",
+                "hide-overlay": "",
+                "max-width": "380px"
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-btn",
+                        _vm._g(
+                          _vm._b(
+                            {
+                              attrs: { small: "", value: "share" },
+                              on: { click: _vm.setClickShare }
+                            },
+                            "v-btn",
+                            attrs,
+                            false
+                          ),
+                          on
+                        ),
+                        [
+                          _c("span", [_vm._v("Compartir")]),
+                          _vm._v(" "),
+                          _c("v-icon", [_vm._v("mdi-share-variant")])
+                        ],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.isDialogShare,
+                callback: function($$v) {
+                  _vm.isDialogShare = $$v
+                },
+                expression: "isDialogShare"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-toolbar",
+                    {
+                      attrs: { dark: "", height: "40", color: "red darken-1" }
+                    },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "", dark: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.isDialogShare = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-toolbar-title", [_vm._v("Compartir la Página")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    {
+                      staticClass: "px-1 py-3",
+                      staticStyle: { height: "80px" }
+                    },
+                    [
+                      _c(
+                        "v-container",
+                        { staticClass: "py-0 px-0" },
+                        [
+                          _c(
+                            "v-row",
+                            {
+                              staticClass: "ma-0",
+                              attrs: { justify: "center" }
+                            },
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "4" } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    { attrs: { justify: "center" } },
+                                    [
+                                      _c("facebook", {
+                                        attrs: { url: _vm.getUrl, scale: "3" }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "4" } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    { attrs: { justify: "center" } },
+                                    [
+                                      _c("twitter", {
+                                        attrs: {
+                                          url: _vm.getUrl,
+                                          title: _vm.catalogoTitulo,
+                                          scale: "3"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "4" } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    { attrs: { justify: "center" } },
+                                    [
+                                      _c("pinterest", {
+                                        attrs: { url: _vm.getUrl, scale: "3" }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("HOLA MUNDO")])])
-  }
-]
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=template&id=0781fc95& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-main",
+    {
+      class: { "has-mouse": _vm.hasMouse },
+      attrs: { id: "app-main" },
+      on: {
+        touchstart: function($event) {
+          _vm.hasMouse = false
+        }
+      }
+    },
+    [
+      _vm.isLoading
+        ? _c(
+            "div",
+            { staticClass: "loading" },
+            [
+              _c("v-progress-circular", {
+                attrs: { indeterminate: "", color: "primary" }
+              })
+            ],
+            1
+          )
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-main",
+    { class: { "app-main": _vm.isLoading } },
+    [
+      _vm.isLoading
+        ? _c(
+            "div",
+            { staticClass: "loading" },
+            [
+              _c("v-progress-circular", {
+                attrs: { indeterminate: "", color: "primary" }
+              })
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.isLoading
+        ? _c(
+            "v-container",
+            { attrs: { fluid: "" } },
+            [
+              _c(
+                "v-row",
+                { staticClass: "pa-1" },
+                _vm._l(_vm.cards, function(card) {
+                  return _c(
+                    "v-col",
+                    {
+                      key: card.id,
+                      staticClass: "pa-1",
+                      attrs: { cols: "6", sm: "4", md: "3" }
+                    },
+                    [
+                      _c(
+                        "v-card",
+                        { staticClass: "pt-5 pb-3" },
+                        [
+                          _c("v-img", {
+                            staticClass: "white--text align-end",
+                            attrs: {
+                              src: card.imagen,
+                              "aspect-ratio": "0.9",
+                              contain: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-card-title", {
+                            staticClass: "py-2 px-4 caption font-weight-bold",
+                            domProps: { textContent: _vm._s(card.titulo) }
+                          }),
+                          _vm._v(" "),
+                          card.subtitulo
+                            ? _c("v-card-subtitle", {
+                                domProps: {
+                                  textContent: _vm._s(card.subtitulo)
+                                }
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          card.contenido
+                            ? _c("v-card-text", [
+                                _c("div", { staticClass: "text--primary" }, [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(card.contenido) +
+                                      "\n            "
+                                  )
+                                ])
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "v-card-actions",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: {
+                                    block: "",
+                                    color: "red darken-1 white--text"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.setVerCatalogo(card.id)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n              Ver Catalogo\n            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("v-spacer")
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                }),
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -21471,6 +24353,6029 @@ function normalizeComponent (
     exports: scriptExports,
     options: options
   }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-router/dist/vue-router.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vue-router/dist/vue-router.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/*!
+  * vue-router v3.5.1
+  * (c) 2021 Evan You
+  * @license MIT
+  */
+/*  */
+
+function assert (condition, message) {
+  if (!condition) {
+    throw new Error(("[vue-router] " + message))
+  }
+}
+
+function warn (condition, message) {
+  if ( true && !condition) {
+    typeof console !== 'undefined' && console.warn(("[vue-router] " + message));
+  }
+}
+
+function extend (a, b) {
+  for (var key in b) {
+    a[key] = b[key];
+  }
+  return a
+}
+
+/*  */
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function (c) { return '%' + c.charCodeAt(0).toString(16); };
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function (str) { return encodeURIComponent(str)
+    .replace(encodeReserveRE, encodeReserveReplacer)
+    .replace(commaRE, ','); };
+
+function decode (str) {
+  try {
+    return decodeURIComponent(str)
+  } catch (err) {
+    if (true) {
+      warn(false, ("Error decoding \"" + str + "\". Leaving it intact."));
+    }
+  }
+  return str
+}
+
+function resolveQuery (
+  query,
+  extraQuery,
+  _parseQuery
+) {
+  if ( extraQuery === void 0 ) extraQuery = {};
+
+  var parse = _parseQuery || parseQuery;
+  var parsedQuery;
+  try {
+    parsedQuery = parse(query || '');
+  } catch (e) {
+     true && warn(false, e.message);
+    parsedQuery = {};
+  }
+  for (var key in extraQuery) {
+    var value = extraQuery[key];
+    parsedQuery[key] = Array.isArray(value)
+      ? value.map(castQueryParamValue)
+      : castQueryParamValue(value);
+  }
+  return parsedQuery
+}
+
+var castQueryParamValue = function (value) { return (value == null || typeof value === 'object' ? value : String(value)); };
+
+function parseQuery (query) {
+  var res = {};
+
+  query = query.trim().replace(/^(\?|#|&)/, '');
+
+  if (!query) {
+    return res
+  }
+
+  query.split('&').forEach(function (param) {
+    var parts = param.replace(/\+/g, ' ').split('=');
+    var key = decode(parts.shift());
+    var val = parts.length > 0 ? decode(parts.join('=')) : null;
+
+    if (res[key] === undefined) {
+      res[key] = val;
+    } else if (Array.isArray(res[key])) {
+      res[key].push(val);
+    } else {
+      res[key] = [res[key], val];
+    }
+  });
+
+  return res
+}
+
+function stringifyQuery (obj) {
+  var res = obj
+    ? Object.keys(obj)
+      .map(function (key) {
+        var val = obj[key];
+
+        if (val === undefined) {
+          return ''
+        }
+
+        if (val === null) {
+          return encode(key)
+        }
+
+        if (Array.isArray(val)) {
+          var result = [];
+          val.forEach(function (val2) {
+            if (val2 === undefined) {
+              return
+            }
+            if (val2 === null) {
+              result.push(encode(key));
+            } else {
+              result.push(encode(key) + '=' + encode(val2));
+            }
+          });
+          return result.join('&')
+        }
+
+        return encode(key) + '=' + encode(val)
+      })
+      .filter(function (x) { return x.length > 0; })
+      .join('&')
+    : null;
+  return res ? ("?" + res) : ''
+}
+
+/*  */
+
+var trailingSlashRE = /\/?$/;
+
+function createRoute (
+  record,
+  location,
+  redirectedFrom,
+  router
+) {
+  var stringifyQuery = router && router.options.stringifyQuery;
+
+  var query = location.query || {};
+  try {
+    query = clone(query);
+  } catch (e) {}
+
+  var route = {
+    name: location.name || (record && record.name),
+    meta: (record && record.meta) || {},
+    path: location.path || '/',
+    hash: location.hash || '',
+    query: query,
+    params: location.params || {},
+    fullPath: getFullPath(location, stringifyQuery),
+    matched: record ? formatMatch(record) : []
+  };
+  if (redirectedFrom) {
+    route.redirectedFrom = getFullPath(redirectedFrom, stringifyQuery);
+  }
+  return Object.freeze(route)
+}
+
+function clone (value) {
+  if (Array.isArray(value)) {
+    return value.map(clone)
+  } else if (value && typeof value === 'object') {
+    var res = {};
+    for (var key in value) {
+      res[key] = clone(value[key]);
+    }
+    return res
+  } else {
+    return value
+  }
+}
+
+// the starting route that represents the initial state
+var START = createRoute(null, {
+  path: '/'
+});
+
+function formatMatch (record) {
+  var res = [];
+  while (record) {
+    res.unshift(record);
+    record = record.parent;
+  }
+  return res
+}
+
+function getFullPath (
+  ref,
+  _stringifyQuery
+) {
+  var path = ref.path;
+  var query = ref.query; if ( query === void 0 ) query = {};
+  var hash = ref.hash; if ( hash === void 0 ) hash = '';
+
+  var stringify = _stringifyQuery || stringifyQuery;
+  return (path || '/') + stringify(query) + hash
+}
+
+function isSameRoute (a, b, onlyPath) {
+  if (b === START) {
+    return a === b
+  } else if (!b) {
+    return false
+  } else if (a.path && b.path) {
+    return a.path.replace(trailingSlashRE, '') === b.path.replace(trailingSlashRE, '') && (onlyPath ||
+      a.hash === b.hash &&
+      isObjectEqual(a.query, b.query))
+  } else if (a.name && b.name) {
+    return (
+      a.name === b.name &&
+      (onlyPath || (
+        a.hash === b.hash &&
+      isObjectEqual(a.query, b.query) &&
+      isObjectEqual(a.params, b.params))
+      )
+    )
+  } else {
+    return false
+  }
+}
+
+function isObjectEqual (a, b) {
+  if ( a === void 0 ) a = {};
+  if ( b === void 0 ) b = {};
+
+  // handle null value #1566
+  if (!a || !b) { return a === b }
+  var aKeys = Object.keys(a).sort();
+  var bKeys = Object.keys(b).sort();
+  if (aKeys.length !== bKeys.length) {
+    return false
+  }
+  return aKeys.every(function (key, i) {
+    var aVal = a[key];
+    var bKey = bKeys[i];
+    if (bKey !== key) { return false }
+    var bVal = b[key];
+    // query values can be null and undefined
+    if (aVal == null || bVal == null) { return aVal === bVal }
+    // check nested equality
+    if (typeof aVal === 'object' && typeof bVal === 'object') {
+      return isObjectEqual(aVal, bVal)
+    }
+    return String(aVal) === String(bVal)
+  })
+}
+
+function isIncludedRoute (current, target) {
+  return (
+    current.path.replace(trailingSlashRE, '/').indexOf(
+      target.path.replace(trailingSlashRE, '/')
+    ) === 0 &&
+    (!target.hash || current.hash === target.hash) &&
+    queryIncludes(current.query, target.query)
+  )
+}
+
+function queryIncludes (current, target) {
+  for (var key in target) {
+    if (!(key in current)) {
+      return false
+    }
+  }
+  return true
+}
+
+function handleRouteEntered (route) {
+  for (var i = 0; i < route.matched.length; i++) {
+    var record = route.matched[i];
+    for (var name in record.instances) {
+      var instance = record.instances[name];
+      var cbs = record.enteredCbs[name];
+      if (!instance || !cbs) { continue }
+      delete record.enteredCbs[name];
+      for (var i$1 = 0; i$1 < cbs.length; i$1++) {
+        if (!instance._isBeingDestroyed) { cbs[i$1](instance); }
+      }
+    }
+  }
+}
+
+var View = {
+  name: 'RouterView',
+  functional: true,
+  props: {
+    name: {
+      type: String,
+      default: 'default'
+    }
+  },
+  render: function render (_, ref) {
+    var props = ref.props;
+    var children = ref.children;
+    var parent = ref.parent;
+    var data = ref.data;
+
+    // used by devtools to display a router-view badge
+    data.routerView = true;
+
+    // directly use parent context's createElement() function
+    // so that components rendered by router-view can resolve named slots
+    var h = parent.$createElement;
+    var name = props.name;
+    var route = parent.$route;
+    var cache = parent._routerViewCache || (parent._routerViewCache = {});
+
+    // determine current view depth, also check to see if the tree
+    // has been toggled inactive but kept-alive.
+    var depth = 0;
+    var inactive = false;
+    while (parent && parent._routerRoot !== parent) {
+      var vnodeData = parent.$vnode ? parent.$vnode.data : {};
+      if (vnodeData.routerView) {
+        depth++;
+      }
+      if (vnodeData.keepAlive && parent._directInactive && parent._inactive) {
+        inactive = true;
+      }
+      parent = parent.$parent;
+    }
+    data.routerViewDepth = depth;
+
+    // render previous view if the tree is inactive and kept-alive
+    if (inactive) {
+      var cachedData = cache[name];
+      var cachedComponent = cachedData && cachedData.component;
+      if (cachedComponent) {
+        // #2301
+        // pass props
+        if (cachedData.configProps) {
+          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
+        }
+        return h(cachedComponent, data, children)
+      } else {
+        // render previous empty view
+        return h()
+      }
+    }
+
+    var matched = route.matched[depth];
+    var component = matched && matched.components[name];
+
+    // render empty node if no matched route or no config component
+    if (!matched || !component) {
+      cache[name] = null;
+      return h()
+    }
+
+    // cache component
+    cache[name] = { component: component };
+
+    // attach instance registration hook
+    // this will be called in the instance's injected lifecycle hooks
+    data.registerRouteInstance = function (vm, val) {
+      // val could be undefined for unregistration
+      var current = matched.instances[name];
+      if (
+        (val && current !== vm) ||
+        (!val && current === vm)
+      ) {
+        matched.instances[name] = val;
+      }
+    }
+
+    // also register instance in prepatch hook
+    // in case the same component instance is reused across different routes
+    ;(data.hook || (data.hook = {})).prepatch = function (_, vnode) {
+      matched.instances[name] = vnode.componentInstance;
+    };
+
+    // register instance in init hook
+    // in case kept-alive component be actived when routes changed
+    data.hook.init = function (vnode) {
+      if (vnode.data.keepAlive &&
+        vnode.componentInstance &&
+        vnode.componentInstance !== matched.instances[name]
+      ) {
+        matched.instances[name] = vnode.componentInstance;
+      }
+
+      // if the route transition has already been confirmed then we weren't
+      // able to call the cbs during confirmation as the component was not
+      // registered yet, so we call it here.
+      handleRouteEntered(route);
+    };
+
+    var configProps = matched.props && matched.props[name];
+    // save route and configProps in cache
+    if (configProps) {
+      extend(cache[name], {
+        route: route,
+        configProps: configProps
+      });
+      fillPropsinData(component, data, route, configProps);
+    }
+
+    return h(component, data, children)
+  }
+};
+
+function fillPropsinData (component, data, route, configProps) {
+  // resolve props
+  var propsToPass = data.props = resolveProps(route, configProps);
+  if (propsToPass) {
+    // clone to prevent mutation
+    propsToPass = data.props = extend({}, propsToPass);
+    // pass non-declared props as attrs
+    var attrs = data.attrs = data.attrs || {};
+    for (var key in propsToPass) {
+      if (!component.props || !(key in component.props)) {
+        attrs[key] = propsToPass[key];
+        delete propsToPass[key];
+      }
+    }
+  }
+}
+
+function resolveProps (route, config) {
+  switch (typeof config) {
+    case 'undefined':
+      return
+    case 'object':
+      return config
+    case 'function':
+      return config(route)
+    case 'boolean':
+      return config ? route.params : undefined
+    default:
+      if (true) {
+        warn(
+          false,
+          "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
+          "expecting an object, function or boolean."
+        );
+      }
+  }
+}
+
+/*  */
+
+function resolvePath (
+  relative,
+  base,
+  append
+) {
+  var firstChar = relative.charAt(0);
+  if (firstChar === '/') {
+    return relative
+  }
+
+  if (firstChar === '?' || firstChar === '#') {
+    return base + relative
+  }
+
+  var stack = base.split('/');
+
+  // remove trailing segment if:
+  // - not appending
+  // - appending to trailing slash (last segment is empty)
+  if (!append || !stack[stack.length - 1]) {
+    stack.pop();
+  }
+
+  // resolve relative path
+  var segments = relative.replace(/^\//, '').split('/');
+  for (var i = 0; i < segments.length; i++) {
+    var segment = segments[i];
+    if (segment === '..') {
+      stack.pop();
+    } else if (segment !== '.') {
+      stack.push(segment);
+    }
+  }
+
+  // ensure leading slash
+  if (stack[0] !== '') {
+    stack.unshift('');
+  }
+
+  return stack.join('/')
+}
+
+function parsePath (path) {
+  var hash = '';
+  var query = '';
+
+  var hashIndex = path.indexOf('#');
+  if (hashIndex >= 0) {
+    hash = path.slice(hashIndex);
+    path = path.slice(0, hashIndex);
+  }
+
+  var queryIndex = path.indexOf('?');
+  if (queryIndex >= 0) {
+    query = path.slice(queryIndex + 1);
+    path = path.slice(0, queryIndex);
+  }
+
+  return {
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+function cleanPath (path) {
+  return path.replace(/\/\//g, '/')
+}
+
+var isarray = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+/**
+ * Expose `pathToRegexp`.
+ */
+var pathToRegexp_1 = pathToRegexp;
+var parse_1 = parse;
+var compile_1 = compile;
+var tokensToFunction_1 = tokensToFunction;
+var tokensToRegExp_1 = tokensToRegExp;
+
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+var PATH_REGEXP = new RegExp([
+  // Match escaped characters that would otherwise appear in future matches.
+  // This allows the user to escape special characters that won't transform.
+  '(\\\\.)',
+  // Match Express-style parameters and un-named parameters with a prefix
+  // and optional suffixes. Matches appear as:
+  //
+  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+  '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
+].join('|'), 'g');
+
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+function parse (str, options) {
+  var tokens = [];
+  var key = 0;
+  var index = 0;
+  var path = '';
+  var defaultDelimiter = options && options.delimiter || '/';
+  var res;
+
+  while ((res = PATH_REGEXP.exec(str)) != null) {
+    var m = res[0];
+    var escaped = res[1];
+    var offset = res.index;
+    path += str.slice(index, offset);
+    index = offset + m.length;
+
+    // Ignore already escaped sequences.
+    if (escaped) {
+      path += escaped[1];
+      continue
+    }
+
+    var next = str[index];
+    var prefix = res[2];
+    var name = res[3];
+    var capture = res[4];
+    var group = res[5];
+    var modifier = res[6];
+    var asterisk = res[7];
+
+    // Push the current path onto the tokens.
+    if (path) {
+      tokens.push(path);
+      path = '';
+    }
+
+    var partial = prefix != null && next != null && next !== prefix;
+    var repeat = modifier === '+' || modifier === '*';
+    var optional = modifier === '?' || modifier === '*';
+    var delimiter = res[2] || defaultDelimiter;
+    var pattern = capture || group;
+
+    tokens.push({
+      name: name || key++,
+      prefix: prefix || '',
+      delimiter: delimiter,
+      optional: optional,
+      repeat: repeat,
+      partial: partial,
+      asterisk: !!asterisk,
+      pattern: pattern ? escapeGroup(pattern) : (asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?')
+    });
+  }
+
+  // Match any characters still remaining.
+  if (index < str.length) {
+    path += str.substr(index);
+  }
+
+  // If the path exists, push it onto the end.
+  if (path) {
+    tokens.push(path);
+  }
+
+  return tokens
+}
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+function compile (str, options) {
+  return tokensToFunction(parse(str, options), options)
+}
+
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeURIComponentPretty (str) {
+  return encodeURI(str).replace(/[\/?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeAsterisk (str) {
+  return encodeURI(str).replace(/[?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+function tokensToFunction (tokens, options) {
+  // Compile all the tokens into regexps.
+  var matches = new Array(tokens.length);
+
+  // Compile all the patterns before compilation.
+  for (var i = 0; i < tokens.length; i++) {
+    if (typeof tokens[i] === 'object') {
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options));
+    }
+  }
+
+  return function (obj, opts) {
+    var path = '';
+    var data = obj || {};
+    var options = opts || {};
+    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent;
+
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i];
+
+      if (typeof token === 'string') {
+        path += token;
+
+        continue
+      }
+
+      var value = data[token.name];
+      var segment;
+
+      if (value == null) {
+        if (token.optional) {
+          // Prepend partial segment prefixes.
+          if (token.partial) {
+            path += token.prefix;
+          }
+
+          continue
+        } else {
+          throw new TypeError('Expected "' + token.name + '" to be defined')
+        }
+      }
+
+      if (isarray(value)) {
+        if (!token.repeat) {
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
+        }
+
+        if (value.length === 0) {
+          if (token.optional) {
+            continue
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to not be empty')
+          }
+        }
+
+        for (var j = 0; j < value.length; j++) {
+          segment = encode(value[j]);
+
+          if (!matches[i].test(segment)) {
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
+          }
+
+          path += (j === 0 ? token.prefix : token.delimiter) + segment;
+        }
+
+        continue
+      }
+
+      segment = token.asterisk ? encodeAsterisk(value) : encode(value);
+
+      if (!matches[i].test(segment)) {
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
+      }
+
+      path += token.prefix + segment;
+    }
+
+    return path
+  }
+}
+
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+function escapeString (str) {
+  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
+}
+
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+function escapeGroup (group) {
+  return group.replace(/([=!:$\/()])/g, '\\$1')
+}
+
+/**
+ * Attach the keys as a property of the regexp.
+ *
+ * @param  {!RegExp} re
+ * @param  {Array}   keys
+ * @return {!RegExp}
+ */
+function attachKeys (re, keys) {
+  re.keys = keys;
+  return re
+}
+
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+function flags (options) {
+  return options && options.sensitive ? '' : 'i'
+}
+
+/**
+ * Pull out keys from a regexp.
+ *
+ * @param  {!RegExp} path
+ * @param  {!Array}  keys
+ * @return {!RegExp}
+ */
+function regexpToRegexp (path, keys) {
+  // Use a negative lookahead to match only capturing groups.
+  var groups = path.source.match(/\((?!\?)/g);
+
+  if (groups) {
+    for (var i = 0; i < groups.length; i++) {
+      keys.push({
+        name: i,
+        prefix: null,
+        delimiter: null,
+        optional: false,
+        repeat: false,
+        partial: false,
+        asterisk: false,
+        pattern: null
+      });
+    }
+  }
+
+  return attachKeys(path, keys)
+}
+
+/**
+ * Transform an array into a regexp.
+ *
+ * @param  {!Array}  path
+ * @param  {Array}   keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function arrayToRegexp (path, keys, options) {
+  var parts = [];
+
+  for (var i = 0; i < path.length; i++) {
+    parts.push(pathToRegexp(path[i], keys, options).source);
+  }
+
+  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options));
+
+  return attachKeys(regexp, keys)
+}
+
+/**
+ * Create a path regexp from string input.
+ *
+ * @param  {string}  path
+ * @param  {!Array}  keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function stringToRegexp (path, keys, options) {
+  return tokensToRegExp(parse(path, options), keys, options)
+}
+
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ *
+ * @param  {!Array}          tokens
+ * @param  {(Array|Object)=} keys
+ * @param  {Object=}         options
+ * @return {!RegExp}
+ */
+function tokensToRegExp (tokens, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  var strict = options.strict;
+  var end = options.end !== false;
+  var route = '';
+
+  // Iterate over the tokens and create our regexp string.
+  for (var i = 0; i < tokens.length; i++) {
+    var token = tokens[i];
+
+    if (typeof token === 'string') {
+      route += escapeString(token);
+    } else {
+      var prefix = escapeString(token.prefix);
+      var capture = '(?:' + token.pattern + ')';
+
+      keys.push(token);
+
+      if (token.repeat) {
+        capture += '(?:' + prefix + capture + ')*';
+      }
+
+      if (token.optional) {
+        if (!token.partial) {
+          capture = '(?:' + prefix + '(' + capture + '))?';
+        } else {
+          capture = prefix + '(' + capture + ')?';
+        }
+      } else {
+        capture = prefix + '(' + capture + ')';
+      }
+
+      route += capture;
+    }
+  }
+
+  var delimiter = escapeString(options.delimiter || '/');
+  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter;
+
+  // In non-strict mode we allow a slash at the end of match. If the path to
+  // match already ends with a slash, we remove it for consistency. The slash
+  // is valid at the end of a path match, not in the middle. This is important
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  if (!strict) {
+    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?';
+  }
+
+  if (end) {
+    route += '$';
+  } else {
+    // In non-ending mode, we need the capturing groups to match as much as
+    // possible by using a positive lookahead to the end or next path segment.
+    route += strict && endsWithDelimiter ? '' : '(?=' + delimiter + '|$)';
+  }
+
+  return attachKeys(new RegExp('^' + route, flags(options)), keys)
+}
+
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ *
+ * @param  {(string|RegExp|Array)} path
+ * @param  {(Array|Object)=}       keys
+ * @param  {Object=}               options
+ * @return {!RegExp}
+ */
+function pathToRegexp (path, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  if (path instanceof RegExp) {
+    return regexpToRegexp(path, /** @type {!Array} */ (keys))
+  }
+
+  if (isarray(path)) {
+    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
+  }
+
+  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
+}
+pathToRegexp_1.parse = parse_1;
+pathToRegexp_1.compile = compile_1;
+pathToRegexp_1.tokensToFunction = tokensToFunction_1;
+pathToRegexp_1.tokensToRegExp = tokensToRegExp_1;
+
+/*  */
+
+// $flow-disable-line
+var regexpCompileCache = Object.create(null);
+
+function fillParams (
+  path,
+  params,
+  routeMsg
+) {
+  params = params || {};
+  try {
+    var filler =
+      regexpCompileCache[path] ||
+      (regexpCompileCache[path] = pathToRegexp_1.compile(path));
+
+    // Fix #2505 resolving asterisk routes { name: 'not-found', params: { pathMatch: '/not-found' }}
+    // and fix #3106 so that you can work with location descriptor object having params.pathMatch equal to empty string
+    if (typeof params.pathMatch === 'string') { params[0] = params.pathMatch; }
+
+    return filler(params, { pretty: true })
+  } catch (e) {
+    if (true) {
+      // Fix #3072 no warn if `pathMatch` is string
+      warn(typeof params.pathMatch === 'string', ("missing param for " + routeMsg + ": " + (e.message)));
+    }
+    return ''
+  } finally {
+    // delete the 0 if it was added
+    delete params[0];
+  }
+}
+
+/*  */
+
+function normalizeLocation (
+  raw,
+  current,
+  append,
+  router
+) {
+  var next = typeof raw === 'string' ? { path: raw } : raw;
+  // named target
+  if (next._normalized) {
+    return next
+  } else if (next.name) {
+    next = extend({}, raw);
+    var params = next.params;
+    if (params && typeof params === 'object') {
+      next.params = extend({}, params);
+    }
+    return next
+  }
+
+  // relative params
+  if (!next.path && next.params && current) {
+    next = extend({}, next);
+    next._normalized = true;
+    var params$1 = extend(extend({}, current.params), next.params);
+    if (current.name) {
+      next.name = current.name;
+      next.params = params$1;
+    } else if (current.matched.length) {
+      var rawPath = current.matched[current.matched.length - 1].path;
+      next.path = fillParams(rawPath, params$1, ("path " + (current.path)));
+    } else if (true) {
+      warn(false, "relative params navigation requires a current route.");
+    }
+    return next
+  }
+
+  var parsedPath = parsePath(next.path || '');
+  var basePath = (current && current.path) || '/';
+  var path = parsedPath.path
+    ? resolvePath(parsedPath.path, basePath, append || next.append)
+    : basePath;
+
+  var query = resolveQuery(
+    parsedPath.query,
+    next.query,
+    router && router.options.parseQuery
+  );
+
+  var hash = next.hash || parsedPath.hash;
+  if (hash && hash.charAt(0) !== '#') {
+    hash = "#" + hash;
+  }
+
+  return {
+    _normalized: true,
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+/*  */
+
+// work around weird flow bug
+var toTypes = [String, Object];
+var eventTypes = [String, Array];
+
+var noop = function () {};
+
+var warnedCustomSlot;
+var warnedTagProp;
+var warnedEventProp;
+
+var Link = {
+  name: 'RouterLink',
+  props: {
+    to: {
+      type: toTypes,
+      required: true
+    },
+    tag: {
+      type: String,
+      default: 'a'
+    },
+    custom: Boolean,
+    exact: Boolean,
+    exactPath: Boolean,
+    append: Boolean,
+    replace: Boolean,
+    activeClass: String,
+    exactActiveClass: String,
+    ariaCurrentValue: {
+      type: String,
+      default: 'page'
+    },
+    event: {
+      type: eventTypes,
+      default: 'click'
+    }
+  },
+  render: function render (h) {
+    var this$1 = this;
+
+    var router = this.$router;
+    var current = this.$route;
+    var ref = router.resolve(
+      this.to,
+      current,
+      this.append
+    );
+    var location = ref.location;
+    var route = ref.route;
+    var href = ref.href;
+
+    var classes = {};
+    var globalActiveClass = router.options.linkActiveClass;
+    var globalExactActiveClass = router.options.linkExactActiveClass;
+    // Support global empty active class
+    var activeClassFallback =
+      globalActiveClass == null ? 'router-link-active' : globalActiveClass;
+    var exactActiveClassFallback =
+      globalExactActiveClass == null
+        ? 'router-link-exact-active'
+        : globalExactActiveClass;
+    var activeClass =
+      this.activeClass == null ? activeClassFallback : this.activeClass;
+    var exactActiveClass =
+      this.exactActiveClass == null
+        ? exactActiveClassFallback
+        : this.exactActiveClass;
+
+    var compareTarget = route.redirectedFrom
+      ? createRoute(null, normalizeLocation(route.redirectedFrom), null, router)
+      : route;
+
+    classes[exactActiveClass] = isSameRoute(current, compareTarget, this.exactPath);
+    classes[activeClass] = this.exact || this.exactPath
+      ? classes[exactActiveClass]
+      : isIncludedRoute(current, compareTarget);
+
+    var ariaCurrentValue = classes[exactActiveClass] ? this.ariaCurrentValue : null;
+
+    var handler = function (e) {
+      if (guardEvent(e)) {
+        if (this$1.replace) {
+          router.replace(location, noop);
+        } else {
+          router.push(location, noop);
+        }
+      }
+    };
+
+    var on = { click: guardEvent };
+    if (Array.isArray(this.event)) {
+      this.event.forEach(function (e) {
+        on[e] = handler;
+      });
+    } else {
+      on[this.event] = handler;
+    }
+
+    var data = { class: classes };
+
+    var scopedSlot =
+      !this.$scopedSlots.$hasNormal &&
+      this.$scopedSlots.default &&
+      this.$scopedSlots.default({
+        href: href,
+        route: route,
+        navigate: handler,
+        isActive: classes[activeClass],
+        isExactActive: classes[exactActiveClass]
+      });
+
+    if (scopedSlot) {
+      if ( true && !this.custom) {
+        !warnedCustomSlot && warn(false, 'In Vue Router 4, the v-slot API will by default wrap its content with an <a> element. Use the custom prop to remove this warning:\n<router-link v-slot="{ navigate, href }" custom></router-link>\n');
+        warnedCustomSlot = true;
+      }
+      if (scopedSlot.length === 1) {
+        return scopedSlot[0]
+      } else if (scopedSlot.length > 1 || !scopedSlot.length) {
+        if (true) {
+          warn(
+            false,
+            ("<router-link> with to=\"" + (this.to) + "\" is trying to use a scoped slot but it didn't provide exactly one child. Wrapping the content with a span element.")
+          );
+        }
+        return scopedSlot.length === 0 ? h() : h('span', {}, scopedSlot)
+      }
+    }
+
+    if (true) {
+      if ('tag' in this.$options.propsData && !warnedTagProp) {
+        warn(
+          false,
+          "<router-link>'s tag prop is deprecated and has been removed in Vue Router 4. Use the v-slot API to remove this warning: https://next.router.vuejs.org/guide/migration/#removal-of-event-and-tag-props-in-router-link."
+        );
+        warnedTagProp = true;
+      }
+      if ('event' in this.$options.propsData && !warnedEventProp) {
+        warn(
+          false,
+          "<router-link>'s event prop is deprecated and has been removed in Vue Router 4. Use the v-slot API to remove this warning: https://next.router.vuejs.org/guide/migration/#removal-of-event-and-tag-props-in-router-link."
+        );
+        warnedEventProp = true;
+      }
+    }
+
+    if (this.tag === 'a') {
+      data.on = on;
+      data.attrs = { href: href, 'aria-current': ariaCurrentValue };
+    } else {
+      // find the first <a> child and apply listener and href
+      var a = findAnchor(this.$slots.default);
+      if (a) {
+        // in case the <a> is a static node
+        a.isStatic = false;
+        var aData = (a.data = extend({}, a.data));
+        aData.on = aData.on || {};
+        // transform existing events in both objects into arrays so we can push later
+        for (var event in aData.on) {
+          var handler$1 = aData.on[event];
+          if (event in on) {
+            aData.on[event] = Array.isArray(handler$1) ? handler$1 : [handler$1];
+          }
+        }
+        // append new listeners for router-link
+        for (var event$1 in on) {
+          if (event$1 in aData.on) {
+            // on[event] is always a function
+            aData.on[event$1].push(on[event$1]);
+          } else {
+            aData.on[event$1] = handler;
+          }
+        }
+
+        var aAttrs = (a.data.attrs = extend({}, a.data.attrs));
+        aAttrs.href = href;
+        aAttrs['aria-current'] = ariaCurrentValue;
+      } else {
+        // doesn't have <a> child, apply listener to self
+        data.on = on;
+      }
+    }
+
+    return h(this.tag, data, this.$slots.default)
+  }
+};
+
+function guardEvent (e) {
+  // don't redirect with control keys
+  if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) { return }
+  // don't redirect when preventDefault called
+  if (e.defaultPrevented) { return }
+  // don't redirect on right click
+  if (e.button !== undefined && e.button !== 0) { return }
+  // don't redirect if `target="_blank"`
+  if (e.currentTarget && e.currentTarget.getAttribute) {
+    var target = e.currentTarget.getAttribute('target');
+    if (/\b_blank\b/i.test(target)) { return }
+  }
+  // this may be a Weex event which doesn't have this method
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return true
+}
+
+function findAnchor (children) {
+  if (children) {
+    var child;
+    for (var i = 0; i < children.length; i++) {
+      child = children[i];
+      if (child.tag === 'a') {
+        return child
+      }
+      if (child.children && (child = findAnchor(child.children))) {
+        return child
+      }
+    }
+  }
+}
+
+var _Vue;
+
+function install (Vue) {
+  if (install.installed && _Vue === Vue) { return }
+  install.installed = true;
+
+  _Vue = Vue;
+
+  var isDef = function (v) { return v !== undefined; };
+
+  var registerInstance = function (vm, callVal) {
+    var i = vm.$options._parentVnode;
+    if (isDef(i) && isDef(i = i.data) && isDef(i = i.registerRouteInstance)) {
+      i(vm, callVal);
+    }
+  };
+
+  Vue.mixin({
+    beforeCreate: function beforeCreate () {
+      if (isDef(this.$options.router)) {
+        this._routerRoot = this;
+        this._router = this.$options.router;
+        this._router.init(this);
+        Vue.util.defineReactive(this, '_route', this._router.history.current);
+      } else {
+        this._routerRoot = (this.$parent && this.$parent._routerRoot) || this;
+      }
+      registerInstance(this, this);
+    },
+    destroyed: function destroyed () {
+      registerInstance(this);
+    }
+  });
+
+  Object.defineProperty(Vue.prototype, '$router', {
+    get: function get () { return this._routerRoot._router }
+  });
+
+  Object.defineProperty(Vue.prototype, '$route', {
+    get: function get () { return this._routerRoot._route }
+  });
+
+  Vue.component('RouterView', View);
+  Vue.component('RouterLink', Link);
+
+  var strats = Vue.config.optionMergeStrategies;
+  // use the same hook merging strategy for route hooks
+  strats.beforeRouteEnter = strats.beforeRouteLeave = strats.beforeRouteUpdate = strats.created;
+}
+
+/*  */
+
+var inBrowser = typeof window !== 'undefined';
+
+/*  */
+
+function createRouteMap (
+  routes,
+  oldPathList,
+  oldPathMap,
+  oldNameMap,
+  parentRoute
+) {
+  // the path list is used to control path matching priority
+  var pathList = oldPathList || [];
+  // $flow-disable-line
+  var pathMap = oldPathMap || Object.create(null);
+  // $flow-disable-line
+  var nameMap = oldNameMap || Object.create(null);
+
+  routes.forEach(function (route) {
+    addRouteRecord(pathList, pathMap, nameMap, route, parentRoute);
+  });
+
+  // ensure wildcard routes are always at the end
+  for (var i = 0, l = pathList.length; i < l; i++) {
+    if (pathList[i] === '*') {
+      pathList.push(pathList.splice(i, 1)[0]);
+      l--;
+      i--;
+    }
+  }
+
+  if (true) {
+    // warn if routes do not include leading slashes
+    var found = pathList
+    // check for missing leading slash
+      .filter(function (path) { return path && path.charAt(0) !== '*' && path.charAt(0) !== '/'; });
+
+    if (found.length > 0) {
+      var pathNames = found.map(function (path) { return ("- " + path); }).join('\n');
+      warn(false, ("Non-nested routes must include a leading slash character. Fix the following routes: \n" + pathNames));
+    }
+  }
+
+  return {
+    pathList: pathList,
+    pathMap: pathMap,
+    nameMap: nameMap
+  }
+}
+
+function addRouteRecord (
+  pathList,
+  pathMap,
+  nameMap,
+  route,
+  parent,
+  matchAs
+) {
+  var path = route.path;
+  var name = route.name;
+  if (true) {
+    assert(path != null, "\"path\" is required in a route configuration.");
+    assert(
+      typeof route.component !== 'string',
+      "route config \"component\" for path: " + (String(
+        path || name
+      )) + " cannot be a " + "string id. Use an actual component instead."
+    );
+
+    warn(
+      // eslint-disable-next-line no-control-regex
+      !/[^\u0000-\u007F]+/.test(path),
+      "Route with path \"" + path + "\" contains unencoded characters, make sure " +
+        "your path is correctly encoded before passing it to the router. Use " +
+        "encodeURI to encode static segments of your path."
+    );
+  }
+
+  var pathToRegexpOptions =
+    route.pathToRegexpOptions || {};
+  var normalizedPath = normalizePath(path, parent, pathToRegexpOptions.strict);
+
+  if (typeof route.caseSensitive === 'boolean') {
+    pathToRegexpOptions.sensitive = route.caseSensitive;
+  }
+
+  var record = {
+    path: normalizedPath,
+    regex: compileRouteRegex(normalizedPath, pathToRegexpOptions),
+    components: route.components || { default: route.component },
+    alias: route.alias
+      ? typeof route.alias === 'string'
+        ? [route.alias]
+        : route.alias
+      : [],
+    instances: {},
+    enteredCbs: {},
+    name: name,
+    parent: parent,
+    matchAs: matchAs,
+    redirect: route.redirect,
+    beforeEnter: route.beforeEnter,
+    meta: route.meta || {},
+    props:
+      route.props == null
+        ? {}
+        : route.components
+          ? route.props
+          : { default: route.props }
+  };
+
+  if (route.children) {
+    // Warn if route is named, does not redirect and has a default child route.
+    // If users navigate to this route by name, the default child will
+    // not be rendered (GH Issue #629)
+    if (true) {
+      if (
+        route.name &&
+        !route.redirect &&
+        route.children.some(function (child) { return /^\/?$/.test(child.path); })
+      ) {
+        warn(
+          false,
+          "Named Route '" + (route.name) + "' has a default child route. " +
+            "When navigating to this named route (:to=\"{name: '" + (route.name) + "'\"), " +
+            "the default child route will not be rendered. Remove the name from " +
+            "this route and use the name of the default child route for named " +
+            "links instead."
+        );
+      }
+    }
+    route.children.forEach(function (child) {
+      var childMatchAs = matchAs
+        ? cleanPath((matchAs + "/" + (child.path)))
+        : undefined;
+      addRouteRecord(pathList, pathMap, nameMap, child, record, childMatchAs);
+    });
+  }
+
+  if (!pathMap[record.path]) {
+    pathList.push(record.path);
+    pathMap[record.path] = record;
+  }
+
+  if (route.alias !== undefined) {
+    var aliases = Array.isArray(route.alias) ? route.alias : [route.alias];
+    for (var i = 0; i < aliases.length; ++i) {
+      var alias = aliases[i];
+      if ( true && alias === path) {
+        warn(
+          false,
+          ("Found an alias with the same value as the path: \"" + path + "\". You have to remove that alias. It will be ignored in development.")
+        );
+        // skip in dev to make it work
+        continue
+      }
+
+      var aliasRoute = {
+        path: alias,
+        children: route.children
+      };
+      addRouteRecord(
+        pathList,
+        pathMap,
+        nameMap,
+        aliasRoute,
+        parent,
+        record.path || '/' // matchAs
+      );
+    }
+  }
+
+  if (name) {
+    if (!nameMap[name]) {
+      nameMap[name] = record;
+    } else if ( true && !matchAs) {
+      warn(
+        false,
+        "Duplicate named routes definition: " +
+          "{ name: \"" + name + "\", path: \"" + (record.path) + "\" }"
+      );
+    }
+  }
+}
+
+function compileRouteRegex (
+  path,
+  pathToRegexpOptions
+) {
+  var regex = pathToRegexp_1(path, [], pathToRegexpOptions);
+  if (true) {
+    var keys = Object.create(null);
+    regex.keys.forEach(function (key) {
+      warn(
+        !keys[key.name],
+        ("Duplicate param keys in route with path: \"" + path + "\"")
+      );
+      keys[key.name] = true;
+    });
+  }
+  return regex
+}
+
+function normalizePath (
+  path,
+  parent,
+  strict
+) {
+  if (!strict) { path = path.replace(/\/$/, ''); }
+  if (path[0] === '/') { return path }
+  if (parent == null) { return path }
+  return cleanPath(((parent.path) + "/" + path))
+}
+
+/*  */
+
+
+
+function createMatcher (
+  routes,
+  router
+) {
+  var ref = createRouteMap(routes);
+  var pathList = ref.pathList;
+  var pathMap = ref.pathMap;
+  var nameMap = ref.nameMap;
+
+  function addRoutes (routes) {
+    createRouteMap(routes, pathList, pathMap, nameMap);
+  }
+
+  function addRoute (parentOrRoute, route) {
+    var parent = (typeof parentOrRoute !== 'object') ? nameMap[parentOrRoute] : undefined;
+    // $flow-disable-line
+    createRouteMap([route || parentOrRoute], pathList, pathMap, nameMap, parent);
+
+    // add aliases of parent
+    if (parent) {
+      createRouteMap(
+        // $flow-disable-line route is defined if parent is
+        parent.alias.map(function (alias) { return ({ path: alias, children: [route] }); }),
+        pathList,
+        pathMap,
+        nameMap,
+        parent
+      );
+    }
+  }
+
+  function getRoutes () {
+    return pathList.map(function (path) { return pathMap[path]; })
+  }
+
+  function match (
+    raw,
+    currentRoute,
+    redirectedFrom
+  ) {
+    var location = normalizeLocation(raw, currentRoute, false, router);
+    var name = location.name;
+
+    if (name) {
+      var record = nameMap[name];
+      if (true) {
+        warn(record, ("Route with name '" + name + "' does not exist"));
+      }
+      if (!record) { return _createRoute(null, location) }
+      var paramNames = record.regex.keys
+        .filter(function (key) { return !key.optional; })
+        .map(function (key) { return key.name; });
+
+      if (typeof location.params !== 'object') {
+        location.params = {};
+      }
+
+      if (currentRoute && typeof currentRoute.params === 'object') {
+        for (var key in currentRoute.params) {
+          if (!(key in location.params) && paramNames.indexOf(key) > -1) {
+            location.params[key] = currentRoute.params[key];
+          }
+        }
+      }
+
+      location.path = fillParams(record.path, location.params, ("named route \"" + name + "\""));
+      return _createRoute(record, location, redirectedFrom)
+    } else if (location.path) {
+      location.params = {};
+      for (var i = 0; i < pathList.length; i++) {
+        var path = pathList[i];
+        var record$1 = pathMap[path];
+        if (matchRoute(record$1.regex, location.path, location.params)) {
+          return _createRoute(record$1, location, redirectedFrom)
+        }
+      }
+    }
+    // no match
+    return _createRoute(null, location)
+  }
+
+  function redirect (
+    record,
+    location
+  ) {
+    var originalRedirect = record.redirect;
+    var redirect = typeof originalRedirect === 'function'
+      ? originalRedirect(createRoute(record, location, null, router))
+      : originalRedirect;
+
+    if (typeof redirect === 'string') {
+      redirect = { path: redirect };
+    }
+
+    if (!redirect || typeof redirect !== 'object') {
+      if (true) {
+        warn(
+          false, ("invalid redirect option: " + (JSON.stringify(redirect)))
+        );
+      }
+      return _createRoute(null, location)
+    }
+
+    var re = redirect;
+    var name = re.name;
+    var path = re.path;
+    var query = location.query;
+    var hash = location.hash;
+    var params = location.params;
+    query = re.hasOwnProperty('query') ? re.query : query;
+    hash = re.hasOwnProperty('hash') ? re.hash : hash;
+    params = re.hasOwnProperty('params') ? re.params : params;
+
+    if (name) {
+      // resolved named direct
+      var targetRecord = nameMap[name];
+      if (true) {
+        assert(targetRecord, ("redirect failed: named route \"" + name + "\" not found."));
+      }
+      return match({
+        _normalized: true,
+        name: name,
+        query: query,
+        hash: hash,
+        params: params
+      }, undefined, location)
+    } else if (path) {
+      // 1. resolve relative redirect
+      var rawPath = resolveRecordPath(path, record);
+      // 2. resolve params
+      var resolvedPath = fillParams(rawPath, params, ("redirect route with path \"" + rawPath + "\""));
+      // 3. rematch with existing query and hash
+      return match({
+        _normalized: true,
+        path: resolvedPath,
+        query: query,
+        hash: hash
+      }, undefined, location)
+    } else {
+      if (true) {
+        warn(false, ("invalid redirect option: " + (JSON.stringify(redirect))));
+      }
+      return _createRoute(null, location)
+    }
+  }
+
+  function alias (
+    record,
+    location,
+    matchAs
+  ) {
+    var aliasedPath = fillParams(matchAs, location.params, ("aliased route with path \"" + matchAs + "\""));
+    var aliasedMatch = match({
+      _normalized: true,
+      path: aliasedPath
+    });
+    if (aliasedMatch) {
+      var matched = aliasedMatch.matched;
+      var aliasedRecord = matched[matched.length - 1];
+      location.params = aliasedMatch.params;
+      return _createRoute(aliasedRecord, location)
+    }
+    return _createRoute(null, location)
+  }
+
+  function _createRoute (
+    record,
+    location,
+    redirectedFrom
+  ) {
+    if (record && record.redirect) {
+      return redirect(record, redirectedFrom || location)
+    }
+    if (record && record.matchAs) {
+      return alias(record, location, record.matchAs)
+    }
+    return createRoute(record, location, redirectedFrom, router)
+  }
+
+  return {
+    match: match,
+    addRoute: addRoute,
+    getRoutes: getRoutes,
+    addRoutes: addRoutes
+  }
+}
+
+function matchRoute (
+  regex,
+  path,
+  params
+) {
+  var m = path.match(regex);
+
+  if (!m) {
+    return false
+  } else if (!params) {
+    return true
+  }
+
+  for (var i = 1, len = m.length; i < len; ++i) {
+    var key = regex.keys[i - 1];
+    if (key) {
+      // Fix #1994: using * with props: true generates a param named 0
+      params[key.name || 'pathMatch'] = typeof m[i] === 'string' ? decode(m[i]) : m[i];
+    }
+  }
+
+  return true
+}
+
+function resolveRecordPath (path, record) {
+  return resolvePath(path, record.parent ? record.parent.path : '/', true)
+}
+
+/*  */
+
+// use User Timing api (if present) for more accurate key precision
+var Time =
+  inBrowser && window.performance && window.performance.now
+    ? window.performance
+    : Date;
+
+function genStateKey () {
+  return Time.now().toFixed(3)
+}
+
+var _key = genStateKey();
+
+function getStateKey () {
+  return _key
+}
+
+function setStateKey (key) {
+  return (_key = key)
+}
+
+/*  */
+
+var positionStore = Object.create(null);
+
+function setupScroll () {
+  // Prevent browser scroll behavior on History popstate
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+  // Fix for #1585 for Firefox
+  // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
+  // Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with
+  // window.location.protocol + '//' + window.location.host
+  // location.host contains the port and location.hostname doesn't
+  var protocolAndPath = window.location.protocol + '//' + window.location.host;
+  var absolutePath = window.location.href.replace(protocolAndPath, '');
+  // preserve existing history state as it could be overriden by the user
+  var stateCopy = extend({}, window.history.state);
+  stateCopy.key = getStateKey();
+  window.history.replaceState(stateCopy, '', absolutePath);
+  window.addEventListener('popstate', handlePopState);
+  return function () {
+    window.removeEventListener('popstate', handlePopState);
+  }
+}
+
+function handleScroll (
+  router,
+  to,
+  from,
+  isPop
+) {
+  if (!router.app) {
+    return
+  }
+
+  var behavior = router.options.scrollBehavior;
+  if (!behavior) {
+    return
+  }
+
+  if (true) {
+    assert(typeof behavior === 'function', "scrollBehavior must be a function");
+  }
+
+  // wait until re-render finishes before scrolling
+  router.app.$nextTick(function () {
+    var position = getScrollPosition();
+    var shouldScroll = behavior.call(
+      router,
+      to,
+      from,
+      isPop ? position : null
+    );
+
+    if (!shouldScroll) {
+      return
+    }
+
+    if (typeof shouldScroll.then === 'function') {
+      shouldScroll
+        .then(function (shouldScroll) {
+          scrollToPosition((shouldScroll), position);
+        })
+        .catch(function (err) {
+          if (true) {
+            assert(false, err.toString());
+          }
+        });
+    } else {
+      scrollToPosition(shouldScroll, position);
+    }
+  });
+}
+
+function saveScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    positionStore[key] = {
+      x: window.pageXOffset,
+      y: window.pageYOffset
+    };
+  }
+}
+
+function handlePopState (e) {
+  saveScrollPosition();
+  if (e.state && e.state.key) {
+    setStateKey(e.state.key);
+  }
+}
+
+function getScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    return positionStore[key]
+  }
+}
+
+function getElementPosition (el, offset) {
+  var docEl = document.documentElement;
+  var docRect = docEl.getBoundingClientRect();
+  var elRect = el.getBoundingClientRect();
+  return {
+    x: elRect.left - docRect.left - offset.x,
+    y: elRect.top - docRect.top - offset.y
+  }
+}
+
+function isValidPosition (obj) {
+  return isNumber(obj.x) || isNumber(obj.y)
+}
+
+function normalizePosition (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : window.pageXOffset,
+    y: isNumber(obj.y) ? obj.y : window.pageYOffset
+  }
+}
+
+function normalizeOffset (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : 0,
+    y: isNumber(obj.y) ? obj.y : 0
+  }
+}
+
+function isNumber (v) {
+  return typeof v === 'number'
+}
+
+var hashStartsWithNumberRE = /^#\d/;
+
+function scrollToPosition (shouldScroll, position) {
+  var isObject = typeof shouldScroll === 'object';
+  if (isObject && typeof shouldScroll.selector === 'string') {
+    // getElementById would still fail if the selector contains a more complicated query like #main[data-attr]
+    // but at the same time, it doesn't make much sense to select an element with an id and an extra selector
+    var el = hashStartsWithNumberRE.test(shouldScroll.selector) // $flow-disable-line
+      ? document.getElementById(shouldScroll.selector.slice(1)) // $flow-disable-line
+      : document.querySelector(shouldScroll.selector);
+
+    if (el) {
+      var offset =
+        shouldScroll.offset && typeof shouldScroll.offset === 'object'
+          ? shouldScroll.offset
+          : {};
+      offset = normalizeOffset(offset);
+      position = getElementPosition(el, offset);
+    } else if (isValidPosition(shouldScroll)) {
+      position = normalizePosition(shouldScroll);
+    }
+  } else if (isObject && isValidPosition(shouldScroll)) {
+    position = normalizePosition(shouldScroll);
+  }
+
+  if (position) {
+    // $flow-disable-line
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        left: position.x,
+        top: position.y,
+        // $flow-disable-line
+        behavior: shouldScroll.behavior
+      });
+    } else {
+      window.scrollTo(position.x, position.y);
+    }
+  }
+}
+
+/*  */
+
+var supportsPushState =
+  inBrowser &&
+  (function () {
+    var ua = window.navigator.userAgent;
+
+    if (
+      (ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) &&
+      ua.indexOf('Mobile Safari') !== -1 &&
+      ua.indexOf('Chrome') === -1 &&
+      ua.indexOf('Windows Phone') === -1
+    ) {
+      return false
+    }
+
+    return window.history && typeof window.history.pushState === 'function'
+  })();
+
+function pushState (url, replace) {
+  saveScrollPosition();
+  // try...catch the pushState call to get around Safari
+  // DOM Exception 18 where it limits to 100 pushState calls
+  var history = window.history;
+  try {
+    if (replace) {
+      // preserve existing history state as it could be overriden by the user
+      var stateCopy = extend({}, history.state);
+      stateCopy.key = getStateKey();
+      history.replaceState(stateCopy, '', url);
+    } else {
+      history.pushState({ key: setStateKey(genStateKey()) }, '', url);
+    }
+  } catch (e) {
+    window.location[replace ? 'replace' : 'assign'](url);
+  }
+}
+
+function replaceState (url) {
+  pushState(url, true);
+}
+
+/*  */
+
+function runQueue (queue, fn, cb) {
+  var step = function (index) {
+    if (index >= queue.length) {
+      cb();
+    } else {
+      if (queue[index]) {
+        fn(queue[index], function () {
+          step(index + 1);
+        });
+      } else {
+        step(index + 1);
+      }
+    }
+  };
+  step(0);
+}
+
+// When changing thing, also edit router.d.ts
+var NavigationFailureType = {
+  redirected: 2,
+  aborted: 4,
+  cancelled: 8,
+  duplicated: 16
+};
+
+function createNavigationRedirectedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.redirected,
+    ("Redirected when going from \"" + (from.fullPath) + "\" to \"" + (stringifyRoute(
+      to
+    )) + "\" via a navigation guard.")
+  )
+}
+
+function createNavigationDuplicatedError (from, to) {
+  var error = createRouterError(
+    from,
+    to,
+    NavigationFailureType.duplicated,
+    ("Avoided redundant navigation to current location: \"" + (from.fullPath) + "\".")
+  );
+  // backwards compatible with the first introduction of Errors
+  error.name = 'NavigationDuplicated';
+  return error
+}
+
+function createNavigationCancelledError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.cancelled,
+    ("Navigation cancelled from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" with a new navigation.")
+  )
+}
+
+function createNavigationAbortedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.aborted,
+    ("Navigation aborted from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" via a navigation guard.")
+  )
+}
+
+function createRouterError (from, to, type, message) {
+  var error = new Error(message);
+  error._isRouter = true;
+  error.from = from;
+  error.to = to;
+  error.type = type;
+
+  return error
+}
+
+var propertiesToLog = ['params', 'query', 'hash'];
+
+function stringifyRoute (to) {
+  if (typeof to === 'string') { return to }
+  if ('path' in to) { return to.path }
+  var location = {};
+  propertiesToLog.forEach(function (key) {
+    if (key in to) { location[key] = to[key]; }
+  });
+  return JSON.stringify(location, null, 2)
+}
+
+function isError (err) {
+  return Object.prototype.toString.call(err).indexOf('Error') > -1
+}
+
+function isNavigationFailure (err, errorType) {
+  return (
+    isError(err) &&
+    err._isRouter &&
+    (errorType == null || err.type === errorType)
+  )
+}
+
+/*  */
+
+function resolveAsyncComponents (matched) {
+  return function (to, from, next) {
+    var hasAsync = false;
+    var pending = 0;
+    var error = null;
+
+    flatMapComponents(matched, function (def, _, match, key) {
+      // if it's a function and doesn't have cid attached,
+      // assume it's an async component resolve function.
+      // we are not using Vue's default async resolving mechanism because
+      // we want to halt the navigation until the incoming component has been
+      // resolved.
+      if (typeof def === 'function' && def.cid === undefined) {
+        hasAsync = true;
+        pending++;
+
+        var resolve = once(function (resolvedDef) {
+          if (isESModule(resolvedDef)) {
+            resolvedDef = resolvedDef.default;
+          }
+          // save resolved on async factory in case it's used elsewhere
+          def.resolved = typeof resolvedDef === 'function'
+            ? resolvedDef
+            : _Vue.extend(resolvedDef);
+          match.components[key] = resolvedDef;
+          pending--;
+          if (pending <= 0) {
+            next();
+          }
+        });
+
+        var reject = once(function (reason) {
+          var msg = "Failed to resolve async component " + key + ": " + reason;
+           true && warn(false, msg);
+          if (!error) {
+            error = isError(reason)
+              ? reason
+              : new Error(msg);
+            next(error);
+          }
+        });
+
+        var res;
+        try {
+          res = def(resolve, reject);
+        } catch (e) {
+          reject(e);
+        }
+        if (res) {
+          if (typeof res.then === 'function') {
+            res.then(resolve, reject);
+          } else {
+            // new syntax in Vue 2.3
+            var comp = res.component;
+            if (comp && typeof comp.then === 'function') {
+              comp.then(resolve, reject);
+            }
+          }
+        }
+      }
+    });
+
+    if (!hasAsync) { next(); }
+  }
+}
+
+function flatMapComponents (
+  matched,
+  fn
+) {
+  return flatten(matched.map(function (m) {
+    return Object.keys(m.components).map(function (key) { return fn(
+      m.components[key],
+      m.instances[key],
+      m, key
+    ); })
+  }))
+}
+
+function flatten (arr) {
+  return Array.prototype.concat.apply([], arr)
+}
+
+var hasSymbol =
+  typeof Symbol === 'function' &&
+  typeof Symbol.toStringTag === 'symbol';
+
+function isESModule (obj) {
+  return obj.__esModule || (hasSymbol && obj[Symbol.toStringTag] === 'Module')
+}
+
+// in Webpack 2, require.ensure now also returns a Promise
+// so the resolve/reject functions may get called an extra time
+// if the user uses an arrow function shorthand that happens to
+// return that Promise.
+function once (fn) {
+  var called = false;
+  return function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    if (called) { return }
+    called = true;
+    return fn.apply(this, args)
+  }
+}
+
+/*  */
+
+var History = function History (router, base) {
+  this.router = router;
+  this.base = normalizeBase(base);
+  // start with a route object that stands for "nowhere"
+  this.current = START;
+  this.pending = null;
+  this.ready = false;
+  this.readyCbs = [];
+  this.readyErrorCbs = [];
+  this.errorCbs = [];
+  this.listeners = [];
+};
+
+History.prototype.listen = function listen (cb) {
+  this.cb = cb;
+};
+
+History.prototype.onReady = function onReady (cb, errorCb) {
+  if (this.ready) {
+    cb();
+  } else {
+    this.readyCbs.push(cb);
+    if (errorCb) {
+      this.readyErrorCbs.push(errorCb);
+    }
+  }
+};
+
+History.prototype.onError = function onError (errorCb) {
+  this.errorCbs.push(errorCb);
+};
+
+History.prototype.transitionTo = function transitionTo (
+  location,
+  onComplete,
+  onAbort
+) {
+    var this$1 = this;
+
+  var route;
+  // catch redirect option https://github.com/vuejs/vue-router/issues/3201
+  try {
+    route = this.router.match(location, this.current);
+  } catch (e) {
+    this.errorCbs.forEach(function (cb) {
+      cb(e);
+    });
+    // Exception should still be thrown
+    throw e
+  }
+  var prev = this.current;
+  this.confirmTransition(
+    route,
+    function () {
+      this$1.updateRoute(route);
+      onComplete && onComplete(route);
+      this$1.ensureURL();
+      this$1.router.afterHooks.forEach(function (hook) {
+        hook && hook(route, prev);
+      });
+
+      // fire ready cbs once
+      if (!this$1.ready) {
+        this$1.ready = true;
+        this$1.readyCbs.forEach(function (cb) {
+          cb(route);
+        });
+      }
+    },
+    function (err) {
+      if (onAbort) {
+        onAbort(err);
+      }
+      if (err && !this$1.ready) {
+        // Initial redirection should not mark the history as ready yet
+        // because it's triggered by the redirection instead
+        // https://github.com/vuejs/vue-router/issues/3225
+        // https://github.com/vuejs/vue-router/issues/3331
+        if (!isNavigationFailure(err, NavigationFailureType.redirected) || prev !== START) {
+          this$1.ready = true;
+          this$1.readyErrorCbs.forEach(function (cb) {
+            cb(err);
+          });
+        }
+      }
+    }
+  );
+};
+
+History.prototype.confirmTransition = function confirmTransition (route, onComplete, onAbort) {
+    var this$1 = this;
+
+  var current = this.current;
+  this.pending = route;
+  var abort = function (err) {
+    // changed after adding errors with
+    // https://github.com/vuejs/vue-router/pull/3047 before that change,
+    // redirect and aborted navigation would produce an err == null
+    if (!isNavigationFailure(err) && isError(err)) {
+      if (this$1.errorCbs.length) {
+        this$1.errorCbs.forEach(function (cb) {
+          cb(err);
+        });
+      } else {
+        warn(false, 'uncaught error during route navigation:');
+        console.error(err);
+      }
+    }
+    onAbort && onAbort(err);
+  };
+  var lastRouteIndex = route.matched.length - 1;
+  var lastCurrentIndex = current.matched.length - 1;
+  if (
+    isSameRoute(route, current) &&
+    // in the case the route map has been dynamically appended to
+    lastRouteIndex === lastCurrentIndex &&
+    route.matched[lastRouteIndex] === current.matched[lastCurrentIndex]
+  ) {
+    this.ensureURL();
+    return abort(createNavigationDuplicatedError(current, route))
+  }
+
+  var ref = resolveQueue(
+    this.current.matched,
+    route.matched
+  );
+    var updated = ref.updated;
+    var deactivated = ref.deactivated;
+    var activated = ref.activated;
+
+  var queue = [].concat(
+    // in-component leave guards
+    extractLeaveGuards(deactivated),
+    // global before hooks
+    this.router.beforeHooks,
+    // in-component update hooks
+    extractUpdateHooks(updated),
+    // in-config enter guards
+    activated.map(function (m) { return m.beforeEnter; }),
+    // async components
+    resolveAsyncComponents(activated)
+  );
+
+  var iterator = function (hook, next) {
+    if (this$1.pending !== route) {
+      return abort(createNavigationCancelledError(current, route))
+    }
+    try {
+      hook(route, current, function (to) {
+        if (to === false) {
+          // next(false) -> abort navigation, ensure current URL
+          this$1.ensureURL(true);
+          abort(createNavigationAbortedError(current, route));
+        } else if (isError(to)) {
+          this$1.ensureURL(true);
+          abort(to);
+        } else if (
+          typeof to === 'string' ||
+          (typeof to === 'object' &&
+            (typeof to.path === 'string' || typeof to.name === 'string'))
+        ) {
+          // next('/') or next({ path: '/' }) -> redirect
+          abort(createNavigationRedirectedError(current, route));
+          if (typeof to === 'object' && to.replace) {
+            this$1.replace(to);
+          } else {
+            this$1.push(to);
+          }
+        } else {
+          // confirm transition and pass on the value
+          next(to);
+        }
+      });
+    } catch (e) {
+      abort(e);
+    }
+  };
+
+  runQueue(queue, iterator, function () {
+    // wait until async components are resolved before
+    // extracting in-component enter guards
+    var enterGuards = extractEnterGuards(activated);
+    var queue = enterGuards.concat(this$1.router.resolveHooks);
+    runQueue(queue, iterator, function () {
+      if (this$1.pending !== route) {
+        return abort(createNavigationCancelledError(current, route))
+      }
+      this$1.pending = null;
+      onComplete(route);
+      if (this$1.router.app) {
+        this$1.router.app.$nextTick(function () {
+          handleRouteEntered(route);
+        });
+      }
+    });
+  });
+};
+
+History.prototype.updateRoute = function updateRoute (route) {
+  this.current = route;
+  this.cb && this.cb(route);
+};
+
+History.prototype.setupListeners = function setupListeners () {
+  // Default implementation is empty
+};
+
+History.prototype.teardown = function teardown () {
+  // clean up event listeners
+  // https://github.com/vuejs/vue-router/issues/2341
+  this.listeners.forEach(function (cleanupListener) {
+    cleanupListener();
+  });
+  this.listeners = [];
+
+  // reset current history route
+  // https://github.com/vuejs/vue-router/issues/3294
+  this.current = START;
+  this.pending = null;
+};
+
+function normalizeBase (base) {
+  if (!base) {
+    if (inBrowser) {
+      // respect <base> tag
+      var baseEl = document.querySelector('base');
+      base = (baseEl && baseEl.getAttribute('href')) || '/';
+      // strip full URL origin
+      base = base.replace(/^https?:\/\/[^\/]+/, '');
+    } else {
+      base = '/';
+    }
+  }
+  // make sure there's the starting slash
+  if (base.charAt(0) !== '/') {
+    base = '/' + base;
+  }
+  // remove trailing slash
+  return base.replace(/\/$/, '')
+}
+
+function resolveQueue (
+  current,
+  next
+) {
+  var i;
+  var max = Math.max(current.length, next.length);
+  for (i = 0; i < max; i++) {
+    if (current[i] !== next[i]) {
+      break
+    }
+  }
+  return {
+    updated: next.slice(0, i),
+    activated: next.slice(i),
+    deactivated: current.slice(i)
+  }
+}
+
+function extractGuards (
+  records,
+  name,
+  bind,
+  reverse
+) {
+  var guards = flatMapComponents(records, function (def, instance, match, key) {
+    var guard = extractGuard(def, name);
+    if (guard) {
+      return Array.isArray(guard)
+        ? guard.map(function (guard) { return bind(guard, instance, match, key); })
+        : bind(guard, instance, match, key)
+    }
+  });
+  return flatten(reverse ? guards.reverse() : guards)
+}
+
+function extractGuard (
+  def,
+  key
+) {
+  if (typeof def !== 'function') {
+    // extend now so that global mixins are applied.
+    def = _Vue.extend(def);
+  }
+  return def.options[key]
+}
+
+function extractLeaveGuards (deactivated) {
+  return extractGuards(deactivated, 'beforeRouteLeave', bindGuard, true)
+}
+
+function extractUpdateHooks (updated) {
+  return extractGuards(updated, 'beforeRouteUpdate', bindGuard)
+}
+
+function bindGuard (guard, instance) {
+  if (instance) {
+    return function boundRouteGuard () {
+      return guard.apply(instance, arguments)
+    }
+  }
+}
+
+function extractEnterGuards (
+  activated
+) {
+  return extractGuards(
+    activated,
+    'beforeRouteEnter',
+    function (guard, _, match, key) {
+      return bindEnterGuard(guard, match, key)
+    }
+  )
+}
+
+function bindEnterGuard (
+  guard,
+  match,
+  key
+) {
+  return function routeEnterGuard (to, from, next) {
+    return guard(to, from, function (cb) {
+      if (typeof cb === 'function') {
+        if (!match.enteredCbs[key]) {
+          match.enteredCbs[key] = [];
+        }
+        match.enteredCbs[key].push(cb);
+      }
+      next(cb);
+    })
+  }
+}
+
+/*  */
+
+var HTML5History = /*@__PURE__*/(function (History) {
+  function HTML5History (router, base) {
+    History.call(this, router, base);
+
+    this._startLocation = getLocation(this.base);
+  }
+
+  if ( History ) HTML5History.__proto__ = History;
+  HTML5History.prototype = Object.create( History && History.prototype );
+  HTML5History.prototype.constructor = HTML5History;
+
+  HTML5History.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    if (this.listeners.length > 0) {
+      return
+    }
+
+    var router = this.router;
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      this.listeners.push(setupScroll());
+    }
+
+    var handleRoutingEvent = function () {
+      var current = this$1.current;
+
+      // Avoiding first `popstate` event dispatched in some browsers but first
+      // history route not updated since async guard at the same time.
+      var location = getLocation(this$1.base);
+      if (this$1.current === START && location === this$1._startLocation) {
+        return
+      }
+
+      this$1.transitionTo(location, function (route) {
+        if (supportsScroll) {
+          handleScroll(router, route, current, true);
+        }
+      });
+    };
+    window.addEventListener('popstate', handleRoutingEvent);
+    this.listeners.push(function () {
+      window.removeEventListener('popstate', handleRoutingEvent);
+    });
+  };
+
+  HTML5History.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HTML5History.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      pushState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      replaceState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.ensureURL = function ensureURL (push) {
+    if (getLocation(this.base) !== this.current.fullPath) {
+      var current = cleanPath(this.base + this.current.fullPath);
+      push ? pushState(current) : replaceState(current);
+    }
+  };
+
+  HTML5History.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getLocation(this.base)
+  };
+
+  return HTML5History;
+}(History));
+
+function getLocation (base) {
+  var path = window.location.pathname;
+  if (base && path.toLowerCase().indexOf(base.toLowerCase()) === 0) {
+    path = path.slice(base.length);
+  }
+  return (path || '/') + window.location.search + window.location.hash
+}
+
+/*  */
+
+var HashHistory = /*@__PURE__*/(function (History) {
+  function HashHistory (router, base, fallback) {
+    History.call(this, router, base);
+    // check history fallback deeplinking
+    if (fallback && checkFallback(this.base)) {
+      return
+    }
+    ensureSlash();
+  }
+
+  if ( History ) HashHistory.__proto__ = History;
+  HashHistory.prototype = Object.create( History && History.prototype );
+  HashHistory.prototype.constructor = HashHistory;
+
+  // this is delayed until the app mounts
+  // to avoid the hashchange listener being fired too early
+  HashHistory.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    if (this.listeners.length > 0) {
+      return
+    }
+
+    var router = this.router;
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      this.listeners.push(setupScroll());
+    }
+
+    var handleRoutingEvent = function () {
+      var current = this$1.current;
+      if (!ensureSlash()) {
+        return
+      }
+      this$1.transitionTo(getHash(), function (route) {
+        if (supportsScroll) {
+          handleScroll(this$1.router, route, current, true);
+        }
+        if (!supportsPushState) {
+          replaceHash(route.fullPath);
+        }
+      });
+    };
+    var eventType = supportsPushState ? 'popstate' : 'hashchange';
+    window.addEventListener(
+      eventType,
+      handleRoutingEvent
+    );
+    this.listeners.push(function () {
+      window.removeEventListener(eventType, handleRoutingEvent);
+    });
+  };
+
+  HashHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(
+      location,
+      function (route) {
+        pushHash(route.fullPath);
+        handleScroll(this$1.router, route, fromRoute, false);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  HashHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(
+      location,
+      function (route) {
+        replaceHash(route.fullPath);
+        handleScroll(this$1.router, route, fromRoute, false);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  HashHistory.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HashHistory.prototype.ensureURL = function ensureURL (push) {
+    var current = this.current.fullPath;
+    if (getHash() !== current) {
+      push ? pushHash(current) : replaceHash(current);
+    }
+  };
+
+  HashHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getHash()
+  };
+
+  return HashHistory;
+}(History));
+
+function checkFallback (base) {
+  var location = getLocation(base);
+  if (!/^\/#/.test(location)) {
+    window.location.replace(cleanPath(base + '/#' + location));
+    return true
+  }
+}
+
+function ensureSlash () {
+  var path = getHash();
+  if (path.charAt(0) === '/') {
+    return true
+  }
+  replaceHash('/' + path);
+  return false
+}
+
+function getHash () {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  var href = window.location.href;
+  var index = href.indexOf('#');
+  // empty path
+  if (index < 0) { return '' }
+
+  href = href.slice(index + 1);
+
+  return href
+}
+
+function getUrl (path) {
+  var href = window.location.href;
+  var i = href.indexOf('#');
+  var base = i >= 0 ? href.slice(0, i) : href;
+  return (base + "#" + path)
+}
+
+function pushHash (path) {
+  if (supportsPushState) {
+    pushState(getUrl(path));
+  } else {
+    window.location.hash = path;
+  }
+}
+
+function replaceHash (path) {
+  if (supportsPushState) {
+    replaceState(getUrl(path));
+  } else {
+    window.location.replace(getUrl(path));
+  }
+}
+
+/*  */
+
+var AbstractHistory = /*@__PURE__*/(function (History) {
+  function AbstractHistory (router, base) {
+    History.call(this, router, base);
+    this.stack = [];
+    this.index = -1;
+  }
+
+  if ( History ) AbstractHistory.__proto__ = History;
+  AbstractHistory.prototype = Object.create( History && History.prototype );
+  AbstractHistory.prototype.constructor = AbstractHistory;
+
+  AbstractHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(
+      location,
+      function (route) {
+        this$1.stack = this$1.stack.slice(0, this$1.index + 1).concat(route);
+        this$1.index++;
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  AbstractHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(
+      location,
+      function (route) {
+        this$1.stack = this$1.stack.slice(0, this$1.index).concat(route);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  AbstractHistory.prototype.go = function go (n) {
+    var this$1 = this;
+
+    var targetIndex = this.index + n;
+    if (targetIndex < 0 || targetIndex >= this.stack.length) {
+      return
+    }
+    var route = this.stack[targetIndex];
+    this.confirmTransition(
+      route,
+      function () {
+        var prev = this$1.current;
+        this$1.index = targetIndex;
+        this$1.updateRoute(route);
+        this$1.router.afterHooks.forEach(function (hook) {
+          hook && hook(route, prev);
+        });
+      },
+      function (err) {
+        if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+          this$1.index = targetIndex;
+        }
+      }
+    );
+  };
+
+  AbstractHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    var current = this.stack[this.stack.length - 1];
+    return current ? current.fullPath : '/'
+  };
+
+  AbstractHistory.prototype.ensureURL = function ensureURL () {
+    // noop
+  };
+
+  return AbstractHistory;
+}(History));
+
+/*  */
+
+var VueRouter = function VueRouter (options) {
+  if ( options === void 0 ) options = {};
+
+  this.app = null;
+  this.apps = [];
+  this.options = options;
+  this.beforeHooks = [];
+  this.resolveHooks = [];
+  this.afterHooks = [];
+  this.matcher = createMatcher(options.routes || [], this);
+
+  var mode = options.mode || 'hash';
+  this.fallback =
+    mode === 'history' && !supportsPushState && options.fallback !== false;
+  if (this.fallback) {
+    mode = 'hash';
+  }
+  if (!inBrowser) {
+    mode = 'abstract';
+  }
+  this.mode = mode;
+
+  switch (mode) {
+    case 'history':
+      this.history = new HTML5History(this, options.base);
+      break
+    case 'hash':
+      this.history = new HashHistory(this, options.base, this.fallback);
+      break
+    case 'abstract':
+      this.history = new AbstractHistory(this, options.base);
+      break
+    default:
+      if (true) {
+        assert(false, ("invalid mode: " + mode));
+      }
+  }
+};
+
+var prototypeAccessors = { currentRoute: { configurable: true } };
+
+VueRouter.prototype.match = function match (raw, current, redirectedFrom) {
+  return this.matcher.match(raw, current, redirectedFrom)
+};
+
+prototypeAccessors.currentRoute.get = function () {
+  return this.history && this.history.current
+};
+
+VueRouter.prototype.init = function init (app /* Vue component instance */) {
+    var this$1 = this;
+
+   true &&
+    assert(
+      install.installed,
+      "not installed. Make sure to call `Vue.use(VueRouter)` " +
+        "before creating root instance."
+    );
+
+  this.apps.push(app);
+
+  // set up app destroyed handler
+  // https://github.com/vuejs/vue-router/issues/2639
+  app.$once('hook:destroyed', function () {
+    // clean out app from this.apps array once destroyed
+    var index = this$1.apps.indexOf(app);
+    if (index > -1) { this$1.apps.splice(index, 1); }
+    // ensure we still have a main app or null if no apps
+    // we do not release the router so it can be reused
+    if (this$1.app === app) { this$1.app = this$1.apps[0] || null; }
+
+    if (!this$1.app) { this$1.history.teardown(); }
+  });
+
+  // main app previously initialized
+  // return as we don't need to set up new history listener
+  if (this.app) {
+    return
+  }
+
+  this.app = app;
+
+  var history = this.history;
+
+  if (history instanceof HTML5History || history instanceof HashHistory) {
+    var handleInitialScroll = function (routeOrError) {
+      var from = history.current;
+      var expectScroll = this$1.options.scrollBehavior;
+      var supportsScroll = supportsPushState && expectScroll;
+
+      if (supportsScroll && 'fullPath' in routeOrError) {
+        handleScroll(this$1, routeOrError, from, false);
+      }
+    };
+    var setupListeners = function (routeOrError) {
+      history.setupListeners();
+      handleInitialScroll(routeOrError);
+    };
+    history.transitionTo(
+      history.getCurrentLocation(),
+      setupListeners,
+      setupListeners
+    );
+  }
+
+  history.listen(function (route) {
+    this$1.apps.forEach(function (app) {
+      app._route = route;
+    });
+  });
+};
+
+VueRouter.prototype.beforeEach = function beforeEach (fn) {
+  return registerHook(this.beforeHooks, fn)
+};
+
+VueRouter.prototype.beforeResolve = function beforeResolve (fn) {
+  return registerHook(this.resolveHooks, fn)
+};
+
+VueRouter.prototype.afterEach = function afterEach (fn) {
+  return registerHook(this.afterHooks, fn)
+};
+
+VueRouter.prototype.onReady = function onReady (cb, errorCb) {
+  this.history.onReady(cb, errorCb);
+};
+
+VueRouter.prototype.onError = function onError (errorCb) {
+  this.history.onError(errorCb);
+};
+
+VueRouter.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+  // $flow-disable-line
+  if (!onComplete && !onAbort && typeof Promise !== 'undefined') {
+    return new Promise(function (resolve, reject) {
+      this$1.history.push(location, resolve, reject);
+    })
+  } else {
+    this.history.push(location, onComplete, onAbort);
+  }
+};
+
+VueRouter.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+  // $flow-disable-line
+  if (!onComplete && !onAbort && typeof Promise !== 'undefined') {
+    return new Promise(function (resolve, reject) {
+      this$1.history.replace(location, resolve, reject);
+    })
+  } else {
+    this.history.replace(location, onComplete, onAbort);
+  }
+};
+
+VueRouter.prototype.go = function go (n) {
+  this.history.go(n);
+};
+
+VueRouter.prototype.back = function back () {
+  this.go(-1);
+};
+
+VueRouter.prototype.forward = function forward () {
+  this.go(1);
+};
+
+VueRouter.prototype.getMatchedComponents = function getMatchedComponents (to) {
+  var route = to
+    ? to.matched
+      ? to
+      : this.resolve(to).route
+    : this.currentRoute;
+  if (!route) {
+    return []
+  }
+  return [].concat.apply(
+    [],
+    route.matched.map(function (m) {
+      return Object.keys(m.components).map(function (key) {
+        return m.components[key]
+      })
+    })
+  )
+};
+
+VueRouter.prototype.resolve = function resolve (
+  to,
+  current,
+  append
+) {
+  current = current || this.history.current;
+  var location = normalizeLocation(to, current, append, this);
+  var route = this.match(location, current);
+  var fullPath = route.redirectedFrom || route.fullPath;
+  var base = this.history.base;
+  var href = createHref(base, fullPath, this.mode);
+  return {
+    location: location,
+    route: route,
+    href: href,
+    // for backwards compat
+    normalizedTo: location,
+    resolved: route
+  }
+};
+
+VueRouter.prototype.getRoutes = function getRoutes () {
+  return this.matcher.getRoutes()
+};
+
+VueRouter.prototype.addRoute = function addRoute (parentOrRoute, route) {
+  this.matcher.addRoute(parentOrRoute, route);
+  if (this.history.current !== START) {
+    this.history.transitionTo(this.history.getCurrentLocation());
+  }
+};
+
+VueRouter.prototype.addRoutes = function addRoutes (routes) {
+  if (true) {
+    warn(false, 'router.addRoutes() is deprecated and has been removed in Vue Router 4. Use router.addRoute() instead.');
+  }
+  this.matcher.addRoutes(routes);
+  if (this.history.current !== START) {
+    this.history.transitionTo(this.history.getCurrentLocation());
+  }
+};
+
+Object.defineProperties( VueRouter.prototype, prototypeAccessors );
+
+function registerHook (list, fn) {
+  list.push(fn);
+  return function () {
+    var i = list.indexOf(fn);
+    if (i > -1) { list.splice(i, 1); }
+  }
+}
+
+function createHref (base, fullPath, mode) {
+  var path = mode === 'hash' ? '#' + fullPath : fullPath;
+  return base ? cleanPath(base + '/' + path) : path
+}
+
+VueRouter.install = install;
+VueRouter.version = '3.5.1';
+VueRouter.isNavigationFailure = isNavigationFailure;
+VueRouter.NavigationFailureType = NavigationFailureType;
+VueRouter.START_LOCATION = START;
+
+if (inBrowser && window.Vue) {
+  window.Vue.use(VueRouter);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VueRouter);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-socialmedia-share/dist/vue-socialmedia-share.common.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/vue-socialmedia-share/dist/vue-socialmedia-share.common.js ***!
+  \*********************************************************************************/
+/***/ ((module) => {
+
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __nested_webpack_require_187__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_187__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__nested_webpack_require_187__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__nested_webpack_require_187__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__nested_webpack_require_187__.d = function(exports, name, getter) {
+/******/ 		if(!__nested_webpack_require_187__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__nested_webpack_require_187__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__nested_webpack_require_187__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __nested_webpack_require_187__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__nested_webpack_require_187__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __nested_webpack_require_187__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__nested_webpack_require_187__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__nested_webpack_require_187__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__nested_webpack_require_187__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__nested_webpack_require_187__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __nested_webpack_require_187__(__nested_webpack_require_187__.s = "+xUi");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "+rLv":
+/***/ (function(module, exports, __nested_webpack_require_3663__) {
+
+var document = __nested_webpack_require_3663__("dyZX").document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+
+/***/ "+xUi":
+/***/ (function(module, __webpack_exports__, __nested_webpack_require_3867__) {
+
+"use strict";
+__nested_webpack_require_3867__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+var setPublicPath = __nested_webpack_require_3867__("HrLf");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Facebook.vue?vue&type=template&id=1bcf245f
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.facebookLink(_vm.url)}}},[_c('icon',{attrs:{"name":"brands/facebook","color":"#3B5998","scale":_vm.scale}})],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Facebook.vue?vue&type=template&id=1bcf245f
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
+var web_dom_iterable = __nested_webpack_require_3867__("rGqo");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
+var es6_array_iterator = __nested_webpack_require_3867__("yt8O");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
+var es6_object_keys = __nested_webpack_require_3867__("RW0V");
+
+// CONCATENATED MODULE: ./src/utils/objectToGetParams.js
+
+
+
+
+/* eslint-disable prefer-template */
+function objectToGetParams(object) {
+  return '?' + Object.keys(object).filter(function (key) {
+    return !!object[key];
+  }).map(function (key) {
+    return "".concat(key, "=").concat(encodeURIComponent(object[key]));
+  }).join('&');
+}
+/* eslint-enable prefer-template */
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-awesome/components/Icon.vue?vue&type=template&id=4061c7f6
+var Iconvue_type_template_id_4061c7f6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{class:_vm.klass,style:(_vm.style),attrs:{"version":"1.1","role":_vm.label ? 'img' : 'presentation',"aria-label":_vm.label,"x":_vm.x,"y":_vm.y,"width":_vm.width,"height":_vm.height,"viewBox":_vm.box}},[_vm._t("default",[(_vm.icon && _vm.icon.paths)?_vm._l((_vm.icon.paths),function(path,i){return _c('path',_vm._b({key:("path-" + i)},'path',path,false))}):_vm._e(),(_vm.icon && _vm.icon.polygons)?_vm._l((_vm.icon.polygons),function(polygon,i){return _c('polygon',_vm._b({key:("polygon-" + i)},'polygon',polygon,false))}):_vm._e(),(_vm.icon && _vm.icon.raw)?[_c('g',{domProps:{"innerHTML":_vm._s(_vm.raw)}})]:_vm._e()])],2)}
+var Iconvue_type_template_id_4061c7f6_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/components/Icon.vue?vue&type=template&id=4061c7f6
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-awesome/components/Icon.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+let icons = {};
+/* harmony default export */ var Iconvue_type_script_lang_js = ({
+  name: 'icon',
+  props: {
+    name: {
+      type: String,
+
+      validator(val) {
+        if (val) {
+          if (!(val in icons)) {
+            console.warn(`Invalid prop: prop "name" is referring to an unregistered icon "${val}".` + `\nPlease make sure you have imported this icon before using it.`);
+            return false;
+          }
+
+          return true;
+        }
+
+        console.warn(`Invalid prop: prop "name" is required.`);
+        return false;
+      }
+
+    },
+    scale: [Number, String],
+    spin: Boolean,
+    inverse: Boolean,
+    pulse: Boolean,
+    flip: {
+      validator(val) {
+        return val === 'horizontal' || val === 'vertical';
+      }
+
+    },
+    label: String
+  },
+
+  data() {
+    return {
+      x: false,
+      y: false,
+      childrenWidth: 0,
+      childrenHeight: 0,
+      outerScale: 1
+    };
+  },
+
+  computed: {
+    normalizedScale() {
+      let scale = this.scale;
+      scale = typeof scale === 'undefined' ? 1 : Number(scale);
+
+      if (isNaN(scale) || scale <= 0) {
+        console.warn(`Invalid prop: prop "scale" should be a number over 0.`, this);
+        return this.outerScale;
+      }
+
+      return scale * this.outerScale;
+    },
+
+    klass() {
+      return {
+        'fa-icon': true,
+        'fa-spin': this.spin,
+        'fa-flip-horizontal': this.flip === 'horizontal',
+        'fa-flip-vertical': this.flip === 'vertical',
+        'fa-inverse': this.inverse,
+        'fa-pulse': this.pulse
+      };
+    },
+
+    icon() {
+      if (this.name) {
+        return icons[this.name];
+      }
+
+      return null;
+    },
+
+    box() {
+      if (this.icon) {
+        return `0 0 ${this.icon.width} ${this.icon.height}`;
+      }
+
+      return `0 0 ${this.width} ${this.height}`;
+    },
+
+    ratio() {
+      if (!this.icon) {
+        return 1;
+      }
+
+      let {
+        width,
+        height
+      } = this.icon;
+      return Math.max(width, height) / 16;
+    },
+
+    width() {
+      return this.childrenWidth || this.icon && this.icon.width / this.ratio * this.normalizedScale || 0;
+    },
+
+    height() {
+      return this.childrenHeight || this.icon && this.icon.height / this.ratio * this.normalizedScale || 0;
+    },
+
+    style() {
+      if (this.normalizedScale === 1) {
+        return false;
+      }
+
+      return {
+        fontSize: this.normalizedScale + 'em'
+      };
+    },
+
+    raw() {
+      // generate unique id for each icon's SVG element with ID
+      if (!this.icon || !this.icon.raw) {
+        return null;
+      }
+
+      let raw = this.icon.raw;
+      let ids = {};
+      raw = raw.replace(/\s(?:xml:)?id=(["']?)([^"')\s]+)\1/g, (match, quote, id) => {
+        let uniqueId = getId();
+        ids[id] = uniqueId;
+        return ` id="${uniqueId}"`;
+      });
+      raw = raw.replace(/#(?:([^'")\s]+)|xpointer\(id\((['"]?)([^')]+)\2\)\))/g, (match, rawId, _, pointerId) => {
+        let id = rawId || pointerId;
+
+        if (!id || !ids[id]) {
+          return match;
+        }
+
+        return `#${ids[id]}`;
+      });
+      return raw;
+    }
+
+  },
+
+  mounted() {
+    if (this.icon) {
+      return;
+    }
+
+    this.$children.forEach(child => {
+      child.outerScale = this.normalizedScale;
+    });
+    let width = 0;
+    let height = 0;
+    this.$children.forEach(child => {
+      width = Math.max(width, child.width);
+      height = Math.max(height, child.height);
+    });
+    this.childrenWidth = width;
+    this.childrenHeight = height;
+    this.$children.forEach(child => {
+      child.x = (width - child.width) / 2;
+      child.y = (height - child.height) / 2;
+    });
+  },
+
+  register(data) {
+    for (let name in data) {
+      let icon = data[name];
+
+      if (!icon.paths) {
+        icon.paths = [];
+      }
+
+      if (icon.d) {
+        icon.paths.push({
+          d: icon.d
+        });
+      }
+
+      if (!icon.polygons) {
+        icon.polygons = [];
+      }
+
+      if (icon.points) {
+        icon.polygons.push({
+          points: icon.points
+        });
+      }
+
+      icons[name] = icon;
+    }
+  },
+
+  icons
+});
+let cursor = 0xd4937;
+
+function getId() {
+  return `fa-${(cursor++).toString(16)}`;
+}
+// CONCATENATED MODULE: ./node_modules/vue-awesome/components/Icon.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Iconvue_type_script_lang_js = (Iconvue_type_script_lang_js); 
+// EXTERNAL MODULE: ./node_modules/vue-awesome/components/Icon.vue?vue&type=style&index=0&lang=css
+var Iconvue_type_style_index_0_lang_css = __nested_webpack_require_3867__("SPf7");
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/components/Icon.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  components_Iconvue_type_script_lang_js,
+  Iconvue_type_template_id_4061c7f6_render,
+  Iconvue_type_template_id_4061c7f6_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Icon = (component.exports);
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/facebook.js
+
+
+Icon.register({"brands/facebook":{"width":448,"height":512,"paths":[{"d":"M448 56.7V455.2C448 468.9 436.9 479.9 423.3 479.9H309.1V306.5H367.3L376 238.9H309V195.7C309 176.1 314.4 162.8 342.5 162.8H378.3V102.3C372.1 101.5 350.9 99.6 326.1 99.6 274.5 99.6 239.1 131.1 239.1 189V238.9H180.7V306.5H239.1V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32H423.2C436.9 32 448 43.1 448 56.7z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Facebook.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Facebookvue_type_script_lang_js = ({
+  name: 'facebook',
+  components: {
+    Icon: Icon
+  },
+  methods: {
+    facebookLink: function facebookLink(url) {
+      window.open("https://www.facebook.com/sharer/sharer.php" + objectToGetParams({
+        u: url
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Facebook.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Facebookvue_type_script_lang_js = (Facebookvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Facebook.vue
+
+
+
+
+
+/* normalize component */
+
+var Facebook_component = normalizeComponent(
+  components_Facebookvue_type_script_lang_js,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Facebook = (Facebook_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Twitter.vue?vue&type=template&id=03e18f12
+var Twittervue_type_template_id_03e18f12_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.twitterLink(_vm.url, {title: _vm.title})}}},[_c('icon',{attrs:{"name":"brands/twitter-square","color":"#1DA1F2","scale":_vm.scale}})],1)}
+var Twittervue_type_template_id_03e18f12_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Twitter.vue?vue&type=template&id=03e18f12
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/twitter-square.js
+
+
+Icon.register({"brands/twitter-square":{"width":448,"height":512,"paths":[{"d":"M400 32H48C21.5 32 0 53.5 0 80V432C0 458.5 21.5 480 48 480H400C426.5 480 448 458.5 448 432V80C448 53.5 426.5 32 400 32zM351.1 190.8C351.3 193.6 351.3 196.5 351.3 199.3 351.3 286 285.3 385.9 164.7 385.9 127.5 385.9 93 375.1 64 356.5 69.3 357.1 74.4 357.3 79.8 357.3 110.5 357.3 138.7 346.9 161.2 329.3 132.4 328.7 108.2 309.8 99.9 283.8 110 285.3 119.1 285.3 129.5 282.6 99.5 276.5 77 250.1 77 218.2V217.4C85.7 222.3 95.9 225.3 106.6 225.7A65.4-65.4 0 0 0 77.4 171.1C77.4 158.9 80.6 147.7 86.3 138 118.6 177.8 167.1 203.8 221.5 206.6 212.2 162.1 245.5 126 285.5 126 304.4 126 321.4 133.9 333.4 146.7 348.2 143.9 362.4 138.4 375 130.9 370.1 146.1 359.8 158.9 346.2 167 359.4 165.6 372.2 161.9 384 156.8 375.1 169.9 363.9 181.5 351.1 190.8z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Twitter.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Twittervue_type_script_lang_js = ({
+  name: 'twitter',
+  methods: {
+    twitterLink: function twitterLink(url, _ref) {
+      var title = _ref.title;
+      window.open('https://www.twitter.com/share' + objectToGetParams({
+        url: url,
+        text: title
+      }), '__blank');
+    }
+  },
+  components: {
+    Icon: Icon
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    title: {
+      required: false,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Twitter.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Twittervue_type_script_lang_js = (Twittervue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Twitter.vue
+
+
+
+
+
+/* normalize component */
+
+var Twitter_component = normalizeComponent(
+  components_Twittervue_type_script_lang_js,
+  Twittervue_type_template_id_03e18f12_render,
+  Twittervue_type_template_id_03e18f12_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Twitter = (Twitter_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Telegram.vue?vue&type=template&id=3e7b6073
+var Telegramvue_type_template_id_3e7b6073_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.telegramLink(_vm.url, {title: _vm.title})}}},[_c('icon',{attrs:{"name":"brands/telegram-plane","color":"#0088cc","scale":_vm.scale}})],1)}
+var Telegramvue_type_template_id_3e7b6073_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Telegram.vue?vue&type=template&id=3e7b6073
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/telegram-plane.js
+
+
+Icon.register({"brands/telegram-plane":{"width":448,"height":512,"paths":[{"d":"M446.7 98.6L379.1 417.4C374 439.9 360.7 445.5 341.8 434.9L238.8 359 189.1 406.8C183.6 412.3 179 416.9 168.4 416.9L175.8 312 366.7 139.5C375 132.1 364.9 128 353.8 135.4L117.8 284 16.2 252.2C-5.9 245.3-6.3 230.1 20.8 219.5L418.2 66.4C436.6 59.5 452.7 70.5 446.7 98.6z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Telegram.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Telegramvue_type_script_lang_js = ({
+  name: 'telegram',
+  methods: {
+    telegramLink: function telegramLink(url, _ref) {
+      var title = _ref.title;
+      window.open('https://telegram.me/share/' + objectToGetParams({
+        url: url,
+        text: title
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    title: {
+      required: false,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  },
+  components: {
+    Icon: Icon
+  }
+});
+// CONCATENATED MODULE: ./src/components/Telegram.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Telegramvue_type_script_lang_js = (Telegramvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Telegram.vue
+
+
+
+
+
+/* normalize component */
+
+var Telegram_component = normalizeComponent(
+  components_Telegramvue_type_script_lang_js,
+  Telegramvue_type_template_id_3e7b6073_render,
+  Telegramvue_type_template_id_3e7b6073_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Telegram = (Telegram_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Whatsapp.vue?vue&type=template&id=6eefd356
+var Whatsappvue_type_template_id_6eefd356_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.whatsappLink(_vm.url, _vm.title)}}},[_c('icon',{attrs:{"name":"brands/whatsapp-square","color":"#34af23","scale":_vm.scale}})],1)}
+var Whatsappvue_type_template_id_6eefd356_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Whatsapp.vue?vue&type=template&id=6eefd356
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/whatsapp-square.js
+
+
+Icon.register({"brands/whatsapp-square":{"width":448,"height":512,"paths":[{"d":"M224 122.8C151.3 122.8 92.2 181.9 92.1 254.6 92.1 279.5 99.1 303.8 112.3 324.7L115.4 329.7 102.1 378.3 152 365.2 156.8 368.1C177 380.1 200.2 386.5 223.9 386.5H224C296.6 386.5 357.3 327.4 357.3 254.7 357.3 219.5 342.1 186.4 317.2 161.5 292.2 136.5 259.2 122.8 224 122.8zM301.5 311.2C298.2 320.5 282.4 328.9 274.8 330 262.2 331.9 252.4 330.9 227.3 320.1 187.6 302.9 161.6 262.9 159.6 260.3 157.6 257.7 143.4 238.8 143.4 219.3S153.6 190.2 157.3 186.2C160.9 182.2 165.2 181.2 167.9 181.2 170.5 181.2 173.2 181.2 175.5 181.3 177.9 181.4 181.2 180.4 184.4 188.1 187.7 196 195.6 215.5 196.6 217.5S198.3 221.8 196.9 224.4C189.3 239.6 181.2 239 185.3 246 200.6 272.3 215.9 281.4 239.2 293.1 243.2 295.1 245.5 294.8 247.8 292.1 250.1 289.5 257.7 280.5 260.3 276.6 262.9 272.6 265.6 273.3 269.2 274.6 272.8 275.9 292.3 285.5 296.3 287.5S302.9 290.5 303.9 292.1C304.8 294 304.8 302 301.5 311.2zM400 32H48C21.5 32 0 53.5 0 80V432C0 458.5 21.5 480 48 480H400C426.5 480 448 458.5 448 432V80C448 53.5 426.5 32 400 32zM223.9 413.2C197.3 413.2 171.2 406.5 148.1 393.9L64 416 86.5 333.8C72.6 309.8 65.3 282.5 65.3 254.5 65.4 167.1 136.5 96 223.9 96 266.3 96 306.1 112.5 336.1 142.5 366 172.5 384 212.3 384 254.7 384 342.1 311.3 413.2 223.9 413.2z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Whatsapp.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Whatsappvue_type_script_lang_js = ({
+  name: 'whatsapp',
+  methods: {
+    whatsappLink: function whatsappLink(url, separator, title) {
+      window.open('https://api.whatsapp.com/send' + objectToGetParams({
+        text: title ? title + separator + url : url
+      }), '__blank');
+    }
+  },
+  components: {
+    Icon: Icon
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    title: {
+      required: false,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  },
+  data: function data() {
+    return {
+      separator: ''
+    };
+  }
+});
+// CONCATENATED MODULE: ./src/components/Whatsapp.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Whatsappvue_type_script_lang_js = (Whatsappvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Whatsapp.vue
+
+
+
+
+
+/* normalize component */
+
+var Whatsapp_component = normalizeComponent(
+  components_Whatsappvue_type_script_lang_js,
+  Whatsappvue_type_template_id_6eefd356_render,
+  Whatsappvue_type_template_id_6eefd356_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Whatsapp = (Whatsapp_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pinterest.vue?vue&type=template&id=ed152fa8
+var Pinterestvue_type_template_id_ed152fa8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.pinterestLink(_vm.url)}}},[_c('icon',{attrs:{"name":"brands/pinterest-square","color":"#BD081C","scale":_vm.scale}})],1)}
+var Pinterestvue_type_template_id_ed152fa8_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Pinterest.vue?vue&type=template&id=ed152fa8
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/pinterest-square.js
+
+
+Icon.register({"brands/pinterest-square":{"width":448,"height":512,"paths":[{"d":"M448 80V432C448 458.5 426.5 480 400 480H154.4C164.2 463.6 176.8 440 181.8 420.7 184.8 409.2 197.1 362.3 197.1 362.3 205.1 377.6 228.5 390.5 253.4 390.5 327.5 390.5 380.8 322.4 380.8 237.8 380.8 156.7 314.6 96 229.4 96 123.4 96 67.2 167.1 67.2 244.6 67.2 280.6 86.4 325.4 117 339.7 121.7 341.9 124.1 340.9 125.2 336.4 126 333 130.2 316.3 132 308.6 132.6 306.1 132.3 304 130.3 301.6 120.2 289.3 112 266.7 112 245.6 112 191.4 153 139 222.9 139 283.2 139 325.5 180.1 325.5 238.9 325.5 305.3 292 351.3 248.3 351.3 224.2 351.3 206.2 331.4 211.9 306.9 218.8 277.7 232.2 246.2 232.2 225.1 232.2 172.1 156.7 179.4 156.7 250.1 156.7 271.8 164 286.6 164 286.6 132.6 419.4 127.9 421.1 134.4 479.2L136.6 480H48C21.5 480 0 458.5 0 432V80C0 53.5 21.5 32 48 32H400C426.5 32 448 53.5 448 80z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pinterest.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Pinterestvue_type_script_lang_js = ({
+  name: 'pinterest',
+  methods: {
+    pinterestLink: function pinterestLink(url) {
+      window.open('https://pinterest.com/pin/create/button' + objectToGetParams({
+        url: url
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  },
+  components: {
+    Icon: Icon
+  }
+});
+// CONCATENATED MODULE: ./src/components/Pinterest.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Pinterestvue_type_script_lang_js = (Pinterestvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Pinterest.vue
+
+
+
+
+
+/* normalize component */
+
+var Pinterest_component = normalizeComponent(
+  components_Pinterestvue_type_script_lang_js,
+  Pinterestvue_type_template_id_ed152fa8_render,
+  Pinterestvue_type_template_id_ed152fa8_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Pinterest = (Pinterest_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Google.vue?vue&type=template&id=39e2436e
+var Googlevue_type_template_id_39e2436e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.googleLink(_vm.url)}}},[_c('icon',{attrs:{"name":"brands/google-plus-square","scale":_vm.scale,"color":"#dd4b39"}})],1)}
+var Googlevue_type_template_id_39e2436e_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Google.vue?vue&type=template&id=39e2436e
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/google-plus-square.js
+
+
+Icon.register({"brands/google-plus-square":{"width":448,"height":512,"paths":[{"d":"M400 32H48C21.5 32 0 53.5 0 80V432C0 458.5 21.5 480 48 480H400C426.5 480 448 458.5 448 432V80C448 53.5 426.5 32 400 32zM164 356C108.7 356 64 311.3 64 256S108.7 156 164 156C191 156 213.5 165.8 231 182.2L203.9 208.3C196.5 201.2 183.6 192.9 164.1 192.9 130 192.9 102.2 221.1 102.2 256.1 102.2 291 130 319.3 164.1 319.3 203.7 319.3 218.5 290.8 220.9 276.2H164V241.8H258.4C259.4 246.8 260 251.9 260 258.4 260 315.5 221.7 356 164 356zM384 274.2H355V303.2H325.8V274.2H296.8V245H325.8V216H355V245H384V274.2z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Google.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Googlevue_type_script_lang_js = ({
+  name: 'google',
+  methods: {
+    googleLink: function googleLink(url) {
+      window.open('https://plus.google.com/share' + objectToGetParams({
+        url: url
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  },
+  components: {
+    Icon: Icon
+  }
+});
+// CONCATENATED MODULE: ./src/components/Google.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Googlevue_type_script_lang_js = (Googlevue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Google.vue
+
+
+
+
+
+/* normalize component */
+
+var Google_component = normalizeComponent(
+  components_Googlevue_type_script_lang_js,
+  Googlevue_type_template_id_39e2436e_render,
+  Googlevue_type_template_id_39e2436e_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Google = (Google_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Email.vue?vue&type=template&id=40f439a5
+var Emailvue_type_template_id_40f439a5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.emailLink(_vm.url, {subject: _vm.subject, body: _vm.body})}}},[_c('icon',{attrs:{"name":"envelope-square","scale":_vm.scale,"color":"#ff4343"}})],1)}
+var Emailvue_type_template_id_40f439a5_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Email.vue?vue&type=template&id=40f439a5
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/envelope-square.js
+
+
+Icon.register({"envelope-square":{"width":448,"height":512,"paths":[{"d":"M400 32H48C21.5 32 0 53.5 0 80V432C0 458.5 21.5 480 48 480H400C426.5 480 448 458.5 448 432V80C448 53.5 426.5 32 400 32zM178.1 262.1C87.4 196.3 88.4 196.1 64 177.2V152C64 138.7 74.7 128 88 128H360C373.3 128 384 138.7 384 152V177.2C359.6 196.1 360.6 196.3 269.9 262.1 259.4 269.8 238.5 288.2 224 288 209.5 288.2 188.6 269.8 178.1 262.1zM384 217.8V360C384 373.3 373.3 384 360 384H88C74.7 384 64 373.3 64 360V217.8C78 228.6 97.3 243 159.3 288 173.5 298.3 197.3 320.1 224 320 250.9 320.1 275 298 288.7 288 350.7 243 370 228.6 384 217.8z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Email.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Emailvue_type_script_lang_js = ({
+  name: 'email',
+  methods: {
+    emailLink: function emailLink(url, _ref) {
+      var subject = _ref.subject,
+          body = _ref.body;
+      window.open('mailto:' + objectToGetParams({
+        subject: subject,
+        body: body || url
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    scale: {
+      required: false,
+      type: String
+    },
+    subject: {
+      required: false,
+      type: String
+    },
+    body: {
+      required: false,
+      type: String
+    }
+  },
+  components: {
+    Icon: Icon
+  }
+});
+// CONCATENATED MODULE: ./src/components/Email.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Emailvue_type_script_lang_js = (Emailvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Email.vue
+
+
+
+
+
+/* normalize component */
+
+var Email_component = normalizeComponent(
+  components_Emailvue_type_script_lang_js,
+  Emailvue_type_template_id_40f439a5_render,
+  Emailvue_type_template_id_40f439a5_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Email = (Email_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LinkedIn.vue?vue&type=template&id=cf76d900
+var LinkedInvue_type_template_id_cf76d900_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.linkedinLink(_vm.url)}}},[_c('icon',{attrs:{"name":"brands/linkedin-in","color":"#0077B5","scale":_vm.scale}})],1)}
+var LinkedInvue_type_template_id_cf76d900_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/LinkedIn.vue?vue&type=template&id=cf76d900
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/linkedin-in.js
+
+
+Icon.register({"brands/linkedin-in":{"width":448,"height":512,"paths":[{"d":"M100.3 480H7.4V180.9H100.3V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32 83.5 32 107.6 56.1 107.6 85.8 107.6 115.5 83.5 140.1 53.8 140.1zM448 480H355.3V334.4C355.3 299.7 354.6 255.2 307 255.2 258.7 255.2 251.3 292.9 251.3 331.9V480H158.5V180.9H247.6V221.7H248.9C261.3 198.2 291.6 173.4 336.8 173.4 430.8 173.4 448.1 235.3 448.1 315.7V480z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LinkedIn.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var LinkedInvue_type_script_lang_js = ({
+  name: 'Linkedin',
+  components: {
+    Icon: Icon
+  },
+  methods: {
+    linkedinLink: function linkedinLink(url) {
+      window.open('https://linkedin.com/shareArticle' + objectToGetParams({
+        mini: true,
+        url: url
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      required: true,
+      type: String
+    },
+    scale: {
+      required: false,
+      type: String
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/LinkedIn.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_LinkedInvue_type_script_lang_js = (LinkedInvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/LinkedIn.vue
+
+
+
+
+
+/* normalize component */
+
+var LinkedIn_component = normalizeComponent(
+  components_LinkedInvue_type_script_lang_js,
+  LinkedInvue_type_template_id_cf76d900_render,
+  LinkedInvue_type_template_id_cf76d900_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var LinkedIn = (LinkedIn_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/mbj36/Desktop/Code/project/vue-social-share/node_modules/.cache/vue-loader","cacheIdentifier":"9702606c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Reddit.vue?vue&type=template&id=5b51e6c1
+var Redditvue_type_template_id_5b51e6c1_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{on:{"click":function($event){_vm.redditLink(_vm.url, {title: _vm.title})}}},[_c('icon',{attrs:{"name":"brands/reddit-square","color":"#ff4500","scale":_vm.scale}})],1)}
+var Redditvue_type_template_id_5b51e6c1_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Reddit.vue?vue&type=template&id=5b51e6c1
+
+// CONCATENATED MODULE: ./node_modules/vue-awesome/icons/brands/reddit-square.js
+
+
+Icon.register({"brands/reddit-square":{"width":448,"height":512,"paths":[{"d":"M283.2 345.5C285.9 348.2 285.9 352.3 283.2 354.7 258.7 379.2 189.4 379.3 164.8 354.7 162.1 352.3 162.1 348.2 164.8 345.5 167.2 343.1 171.3 343.1 173.7 345.5 192.4 364.7 254.7 365.1 274.2 345.5 276.6 343.2 280.8 343.2 283.2 345.5zM191.9 291.7C191.9 276.8 180 264.9 165.4 264.9 150.5 264.9 138.6 276.8 138.6 291.7 138.6 306.3 150.5 318.2 165.4 318.2 180 318.2 191.9 306.3 191.9 291.7zM282.6 264.9C268 264.9 256.1 276.8 256.1 291.7 256.1 306.3 268 318.2 282.6 318.2 297.5 318.2 309.4 306.3 309.4 291.7 309.4 276.8 297.5 264.9 282.6 264.9zM448 80V432C448 458.5 426.5 480 400 480H48C21.5 480 0 458.5 0 432V80C0 53.5 21.5 32 48 32H400C426.5 32 448 53.5 448 80zM348.3 220.6C338.2 220.6 329.3 224.8 322.7 231.3 298.6 214.6 266.2 203.9 230.2 202.7L248.9 118.5 308.4 131.9C308.4 146.5 320.3 158.4 334.9 158.4 349.8 158.4 361.7 146.2 361.7 131.6 361.7 117 349.8 104.8 334.9 104.8 324.5 104.8 315.6 111 311.1 119.7L245.4 105.1C242.1 104.2 238.9 106.6 238 109.9L217.5 202.7C181.8 204.2 149.7 214.9 125.6 231.6 119.1 224.8 109.8 220.6 99.7 220.6 62.2 220.6 49.9 271 84.2 288.1 83 293.5 82.4 299.1 82.4 304.8 82.4 361.3 146.1 407.1 224.3 407.1 302.8 407.1 366.5 361.3 366.5 304.8 366.5 299.1 365.9 293.2 364.4 287.8 398 270.6 385.6 220.6 348.3 220.6z"}]}})
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Reddit.vue?vue&type=script&lang=js
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var Redditvue_type_script_lang_js = ({
+  name: 'reddit',
+  methods: {
+    redditLink: function redditLink(url, _ref) {
+      var title = _ref.title;
+      window.open('https://reddit.com/submit' + objectToGetParams({
+        url: url,
+        title: title
+      }), '__blank');
+    }
+  },
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    scale: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: false
+    }
+  },
+  components: {
+    Icon: Icon
+  }
+});
+// CONCATENATED MODULE: ./src/components/Reddit.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Redditvue_type_script_lang_js = (Redditvue_type_script_lang_js); 
+// CONCATENATED MODULE: ./src/components/Reddit.vue
+
+
+
+
+
+/* normalize component */
+
+var Reddit_component = normalizeComponent(
+  components_Redditvue_type_script_lang_js,
+  Redditvue_type_template_id_5b51e6c1_render,
+  Redditvue_type_template_id_5b51e6c1_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Reddit = (Reddit_component.exports);
+// CONCATENATED MODULE: ./src/components/index.js
+
+
+
+
+
+
+
+
+
+/* harmony default export */ var components = ({
+  Facebook: Facebook,
+  Twitter: Twitter,
+  Reddit: Reddit,
+  Pinterest: Pinterest,
+  Linkedin: LinkedIn,
+  Email: Email,
+  Google: Google,
+  Telegram: Telegram,
+  WhatsApp: Whatsapp
+});
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (components);
+
+
+
+/***/ }),
+
+/***/ "0/R4":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+
+/***/ "1TsA":
+/***/ (function(module, exports) {
+
+module.exports = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+
+/***/ }),
+
+/***/ "2OiF":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "4R4u":
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+
+/***/ "Afnz":
+/***/ (function(module, exports, __nested_webpack_require_43548__) {
+
+"use strict";
+
+var LIBRARY = __nested_webpack_require_43548__("LQAc");
+var $export = __nested_webpack_require_43548__("XKFU");
+var redefine = __nested_webpack_require_43548__("KroJ");
+var hide = __nested_webpack_require_43548__("Mukb");
+var Iterators = __nested_webpack_require_43548__("hPIQ");
+var $iterCreate = __nested_webpack_require_43548__("QaDb");
+var setToStringTag = __nested_webpack_require_43548__("fyDq");
+var getPrototypeOf = __nested_webpack_require_43548__("OP3Y");
+var ITERATOR = __nested_webpack_require_43548__("K0xU")('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = $native || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+
+/***/ }),
+
+/***/ "DVgA":
+/***/ (function(module, exports, __nested_webpack_require_46454__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __nested_webpack_require_46454__("zhAb");
+var enumBugKeys = __nested_webpack_require_46454__("4R4u");
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+
+/***/ "FJW5":
+/***/ (function(module, exports, __nested_webpack_require_46753__) {
+
+var dP = __nested_webpack_require_46753__("hswa");
+var anObject = __nested_webpack_require_46753__("y3w9");
+var getKeys = __nested_webpack_require_46753__("DVgA");
+
+module.exports = __nested_webpack_require_46753__("nh4g") ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "HrLf":
+/***/ (function(module, exports, __nested_webpack_require_47253__) {
+
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  let i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js$/))) {
+    __nested_webpack_require_47253__.p = i[1] // eslint-disable-line
+  }
+}
+
+
+/***/ }),
+
+/***/ "I1BE":
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "Iw71":
+/***/ (function(module, exports, __nested_webpack_require_49907__) {
+
+var isObject = __nested_webpack_require_49907__("0/R4");
+var document = __nested_webpack_require_49907__("dyZX").document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+
+/***/ "K0xU":
+/***/ (function(module, exports, __nested_webpack_require_50291__) {
+
+var store = __nested_webpack_require_50291__("VTer")('wks');
+var uid = __nested_webpack_require_50291__("ylqs");
+var Symbol = __nested_webpack_require_50291__("dyZX").Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+
+/***/ "KroJ":
+/***/ (function(module, exports, __nested_webpack_require_50757__) {
+
+var global = __nested_webpack_require_50757__("dyZX");
+var hide = __nested_webpack_require_50757__("Mukb");
+var has = __nested_webpack_require_50757__("aagx");
+var SRC = __nested_webpack_require_50757__("ylqs")('src');
+var TO_STRING = 'toString';
+var $toString = Function[TO_STRING];
+var TPL = ('' + $toString).split(TO_STRING);
+
+__nested_webpack_require_50757__("g3g5").inspectSource = function (it) {
+  return $toString.call(it);
+};
+
+(module.exports = function (O, key, val, safe) {
+  var isFunction = typeof val == 'function';
+  if (isFunction) has(val, 'name') || hide(val, 'name', key);
+  if (O[key] === val) return;
+  if (isFunction) has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
+  if (O === global) {
+    O[key] = val;
+  } else if (!safe) {
+    delete O[key];
+    hide(O, key, val);
+  } else if (O[key]) {
+    O[key] = val;
+  } else {
+    hide(O, key, val);
+  }
+// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
+})(Function.prototype, TO_STRING, function toString() {
+  return typeof this == 'function' && this[SRC] || $toString.call(this);
+});
+
+
+/***/ }),
+
+/***/ "Kuth":
+/***/ (function(module, exports, __nested_webpack_require_51923__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __nested_webpack_require_51923__("y3w9");
+var dPs = __nested_webpack_require_51923__("FJW5");
+var enumBugKeys = __nested_webpack_require_51923__("4R4u");
+var IE_PROTO = __nested_webpack_require_51923__("YTvA")('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __nested_webpack_require_51923__("Iw71")('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __nested_webpack_require_51923__("+rLv").appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+
+/***/ "LQAc":
+/***/ (function(module, exports) {
+
+module.exports = false;
+
+
+/***/ }),
+
+/***/ "LZWt":
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+
+/***/ "Mukb":
+/***/ (function(module, exports, __nested_webpack_require_53790__) {
+
+var dP = __nested_webpack_require_53790__("hswa");
+var createDesc = __nested_webpack_require_53790__("RjD/");
+module.exports = __nested_webpack_require_53790__("nh4g") ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+
+/***/ "OP3Y":
+/***/ (function(module, exports, __nested_webpack_require_54166__) {
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has = __nested_webpack_require_54166__("aagx");
+var toObject = __nested_webpack_require_54166__("S/j/");
+var IE_PROTO = __nested_webpack_require_54166__("YTvA")('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function (O) {
+  O = toObject(O);
+  if (has(O, IE_PROTO)) return O[IE_PROTO];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+
+/***/ }),
+
+/***/ "QaDb":
+/***/ (function(module, exports, __nested_webpack_require_54760__) {
+
+"use strict";
+
+var create = __nested_webpack_require_54760__("Kuth");
+var descriptor = __nested_webpack_require_54760__("RjD/");
+var setToStringTag = __nested_webpack_require_54760__("fyDq");
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__nested_webpack_require_54760__("Mukb")(IteratorPrototype, __nested_webpack_require_54760__("K0xU")('iterator'), function () { return this; });
+
+module.exports = function (Constructor, NAME, next) {
+  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+
+/***/ }),
+
+/***/ "RW0V":
+/***/ (function(module, exports, __nested_webpack_require_55386__) {
+
+// 19.1.2.14 Object.keys(O)
+var toObject = __nested_webpack_require_55386__("S/j/");
+var $keys = __nested_webpack_require_55386__("DVgA");
+
+__nested_webpack_require_55386__("Xtr8")('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
+  };
+});
+
+
+/***/ }),
+
+/***/ "RYi7":
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+
+/***/ "RjD/":
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+
+/***/ "S/j/":
+/***/ (function(module, exports, __nested_webpack_require_56164__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __nested_webpack_require_56164__("vhPU");
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "SPf7":
+/***/ (function(module, __webpack_exports__, __nested_webpack_require_56398__) {
+
+"use strict";
+/* harmony import */ var _vue_style_loader_index_js_ref_6_oneOf_1_0_css_loader_index_js_ref_6_oneOf_1_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_lib_index_js_ref_6_oneOf_1_2_cache_loader_dist_cjs_js_ref_0_0_vue_loader_lib_index_js_vue_loader_options_Icon_vue_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_56398__("VoXy");
+/* harmony import */ var _vue_style_loader_index_js_ref_6_oneOf_1_0_css_loader_index_js_ref_6_oneOf_1_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_lib_index_js_ref_6_oneOf_1_2_cache_loader_dist_cjs_js_ref_0_0_vue_loader_lib_index_js_vue_loader_options_Icon_vue_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_56398__.n(_vue_style_loader_index_js_ref_6_oneOf_1_0_css_loader_index_js_ref_6_oneOf_1_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_lib_index_js_ref_6_oneOf_1_2_cache_loader_dist_cjs_js_ref_0_0_vue_loader_lib_index_js_vue_loader_options_Icon_vue_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_vue_style_loader_index_js_ref_6_oneOf_1_0_css_loader_index_js_ref_6_oneOf_1_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_lib_index_js_ref_6_oneOf_1_2_cache_loader_dist_cjs_js_ref_0_0_vue_loader_lib_index_js_vue_loader_options_Icon_vue_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "SZ7m":
+/***/ (function(module, __webpack_exports__, __nested_webpack_require_57999__) {
+
+"use strict";
+__nested_webpack_require_57999__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/addStylesClient.js
+/* harmony export (binding) */ __nested_webpack_require_57999__.d(__webpack_exports__, "default", function() { return addStylesClient; });
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+var options = null
+var ssrIdKey = 'data-vue-ssr-id'
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+function addStylesClient (parentId, list, _isProduction, _options) {
+  isProduction = _isProduction
+
+  options = _options || {}
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+  if (options.ssrId) {
+    styleElement.setAttribute(ssrIdKey, obj.id)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+
+/***/ "VTer":
+/***/ (function(module, exports, __nested_webpack_require_65222__) {
+
+var core = __nested_webpack_require_65222__("g3g5");
+var global = __nested_webpack_require_65222__("dyZX");
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __nested_webpack_require_65222__("LQAc") ? 'pure' : 'global',
+  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+
+/***/ "VoXy":
+/***/ (function(module, exports, __nested_webpack_require_65755__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __nested_webpack_require_65755__("rYXw");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __nested_webpack_require_65755__("SZ7m").default
+var update = add("4b882b4e", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
+/***/ "XKFU":
+/***/ (function(module, exports, __nested_webpack_require_66248__) {
+
+var global = __nested_webpack_require_66248__("dyZX");
+var core = __nested_webpack_require_66248__("g3g5");
+var hide = __nested_webpack_require_66248__("Mukb");
+var redefine = __nested_webpack_require_66248__("KroJ");
+var ctx = __nested_webpack_require_66248__("m0Pp");
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE];
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE] || (exports[PROTOTYPE] = {});
+  var key, own, out, exp;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    // export native or passed
+    out = (own ? target : source)[key];
+    // bind timers to global for call from export context
+    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // extend global
+    if (target) redefine(target, key, out, type & $export.U);
+    // export
+    if (exports[key] != out) hide(exports, key, exp);
+    if (IS_PROTO && expProto[key] != out) expProto[key] = out;
+  }
+};
+global.core = core;
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+
+/***/ "Xtr8":
+/***/ (function(module, exports, __nested_webpack_require_67973__) {
+
+// most Object methods by ES6 should accept primitives
+var $export = __nested_webpack_require_67973__("XKFU");
+var core = __nested_webpack_require_67973__("g3g5");
+var fails = __nested_webpack_require_67973__("eeVq");
+module.exports = function (KEY, exec) {
+  var fn = (core.Object || {})[KEY] || Object[KEY];
+  var exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
+};
+
+
+/***/ }),
+
+/***/ "YTvA":
+/***/ (function(module, exports, __nested_webpack_require_68451__) {
+
+var shared = __nested_webpack_require_68451__("VTer")('keys');
+var uid = __nested_webpack_require_68451__("ylqs");
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+
+/***/ "Ymqv":
+/***/ (function(module, exports, __nested_webpack_require_68711__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __nested_webpack_require_68711__("LZWt");
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+
+/***/ "aCFj":
+/***/ (function(module, exports, __nested_webpack_require_69094__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __nested_webpack_require_69094__("Ymqv");
+var defined = __nested_webpack_require_69094__("vhPU");
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "aagx":
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+
+/***/ "apmT":
+/***/ (function(module, exports, __nested_webpack_require_69590__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __nested_webpack_require_69590__("0/R4");
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+
+/***/ "d/Gc":
+/***/ (function(module, exports, __nested_webpack_require_70333__) {
+
+var toInteger = __nested_webpack_require_70333__("RYi7");
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+
+/***/ "dyZX":
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "eeVq":
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+
+/***/ "fyDq":
+/***/ (function(module, exports, __nested_webpack_require_71242__) {
+
+var def = __nested_webpack_require_71242__("hswa").f;
+var has = __nested_webpack_require_71242__("aagx");
+var TAG = __nested_webpack_require_71242__("K0xU")('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+
+/***/ "g3g5":
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.5.7' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "hPIQ":
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+
+/***/ "hswa":
+/***/ (function(module, exports, __nested_webpack_require_71881__) {
+
+var anObject = __nested_webpack_require_71881__("y3w9");
+var IE8_DOM_DEFINE = __nested_webpack_require_71881__("xpql");
+var toPrimitive = __nested_webpack_require_71881__("apmT");
+var dP = Object.defineProperty;
+
+exports.f = __nested_webpack_require_71881__("nh4g") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "m0Pp":
+/***/ (function(module, exports, __nested_webpack_require_72571__) {
+
+// optional / simple context binding
+var aFunction = __nested_webpack_require_72571__("2OiF");
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+
+/***/ "nGyu":
+/***/ (function(module, exports, __nested_webpack_require_73178__) {
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+var UNSCOPABLES = __nested_webpack_require_73178__("K0xU")('unscopables');
+var ArrayProto = Array.prototype;
+if (ArrayProto[UNSCOPABLES] == undefined) __nested_webpack_require_73178__("Mukb")(ArrayProto, UNSCOPABLES, {});
+module.exports = function (key) {
+  ArrayProto[UNSCOPABLES][key] = true;
+};
+
+
+/***/ }),
+
+/***/ "ne8i":
+/***/ (function(module, exports, __nested_webpack_require_73578__) {
+
+// 7.1.15 ToLength
+var toInteger = __nested_webpack_require_73578__("RYi7");
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+
+/***/ "nh4g":
+/***/ (function(module, exports, __nested_webpack_require_73880__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__nested_webpack_require_73880__("eeVq")(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "rGqo":
+/***/ (function(module, exports, __nested_webpack_require_74156__) {
+
+var $iterators = __nested_webpack_require_74156__("yt8O");
+var getKeys = __nested_webpack_require_74156__("DVgA");
+var redefine = __nested_webpack_require_74156__("KroJ");
+var global = __nested_webpack_require_74156__("dyZX");
+var hide = __nested_webpack_require_74156__("Mukb");
+var Iterators = __nested_webpack_require_74156__("hPIQ");
+var wks = __nested_webpack_require_74156__("K0xU");
+var ITERATOR = wks('iterator');
+var TO_STRING_TAG = wks('toStringTag');
+var ArrayValues = Iterators.Array;
+
+var DOMIterables = {
+  CSSRuleList: true, // TODO: Not spec compliant, should be false.
+  CSSStyleDeclaration: false,
+  CSSValueList: false,
+  ClientRectList: false,
+  DOMRectList: false,
+  DOMStringList: false,
+  DOMTokenList: true,
+  DataTransferItemList: false,
+  FileList: false,
+  HTMLAllCollection: false,
+  HTMLCollection: false,
+  HTMLFormElement: false,
+  HTMLSelectElement: false,
+  MediaList: true, // TODO: Not spec compliant, should be false.
+  MimeTypeArray: false,
+  NamedNodeMap: false,
+  NodeList: true,
+  PaintRequestList: false,
+  Plugin: false,
+  PluginArray: false,
+  SVGLengthList: false,
+  SVGNumberList: false,
+  SVGPathSegList: false,
+  SVGPointList: false,
+  SVGStringList: false,
+  SVGTransformList: false,
+  SourceBufferList: false,
+  StyleSheetList: true, // TODO: Not spec compliant, should be false.
+  TextTrackCueList: false,
+  TextTrackList: false,
+  TouchList: false
+};
+
+for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++) {
+  var NAME = collections[i];
+  var explicit = DOMIterables[NAME];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  var key;
+  if (proto) {
+    if (!proto[ITERATOR]) hide(proto, ITERATOR, ArrayValues);
+    if (!proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+    Iterators[NAME] = ArrayValues;
+    if (explicit) for (key in $iterators) if (!proto[key]) redefine(proto, key, $iterators[key], true);
+  }
+}
+
+
+/***/ }),
+
+/***/ "rYXw":
+/***/ (function(module, exports, __nested_webpack_require_76083__) {
+
+exports = module.exports = __nested_webpack_require_76083__("I1BE")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".fa-icon{display:inline-block;fill:currentColor}.fa-flip-horizontal{-webkit-transform:scaleX(-1);transform:scaleX(-1)}.fa-flip-vertical{-webkit-transform:scaleY(-1);transform:scaleY(-1)}.fa-spin{-webkit-animation:fa-spin 1s 0s infinite linear;animation:fa-spin 1s 0s infinite linear}.fa-inverse{color:#fff}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "vhPU":
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "w2a5":
+/***/ (function(module, exports, __nested_webpack_require_77206__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __nested_webpack_require_77206__("aCFj");
+var toLength = __nested_webpack_require_77206__("ne8i");
+var toAbsoluteIndex = __nested_webpack_require_77206__("d/Gc");
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+
+/***/ "xpql":
+/***/ (function(module, exports, __nested_webpack_require_78217__) {
+
+module.exports = !__nested_webpack_require_78217__("nh4g") && !__nested_webpack_require_78217__("eeVq")(function () {
+  return Object.defineProperty(__nested_webpack_require_78217__("Iw71")('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "y3w9":
+/***/ (function(module, exports, __nested_webpack_require_78513__) {
+
+var isObject = __nested_webpack_require_78513__("0/R4");
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "ylqs":
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+
+/***/ "yt8O":
+/***/ (function(module, exports, __nested_webpack_require_78980__) {
+
+"use strict";
+
+var addToUnscopables = __nested_webpack_require_78980__("nGyu");
+var step = __nested_webpack_require_78980__("1TsA");
+var Iterators = __nested_webpack_require_78980__("hPIQ");
+var toIObject = __nested_webpack_require_78980__("aCFj");
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __nested_webpack_require_78980__("Afnz")(Array, 'Array', function (iterated, kind) {
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return step(1);
+  }
+  if (kind == 'keys') return step(0, index);
+  if (kind == 'values') return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+
+/***/ }),
+
+/***/ "zhAb":
+/***/ (function(module, exports, __nested_webpack_require_80189__) {
+
+var has = __nested_webpack_require_80189__("aagx");
+var toIObject = __nested_webpack_require_80189__("aCFj");
+var arrayIndexOf = __nested_webpack_require_80189__("w2a5")(false);
+var IE_PROTO = __nested_webpack_require_80189__("YTvA")('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ })
+
+/******/ })["default"];
+//# sourceMappingURL=vue-socialmedia-share.common.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/src/styles/main.sass":
+/*!***************************************************!*\
+  !*** ./node_modules/vuetify/src/styles/main.sass ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../css-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[1]!../../../postcss-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[2]!../../../sass-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[3]!./main.sass */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-15[0].rules[0].use[3]!./node_modules/vuetify/src/styles/main.sass");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("13802f1e", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Catalogo.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Catalogo.vue?vue&type=style&index=0&lang=css&");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("5904d573", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&lang=css&");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("57b31353", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/lib/addStylesClient.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/vue-style-loader/lib/addStylesClient.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addStylesClient)
+/* harmony export */ });
+/* harmony import */ var _listToStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./listToStyles */ "./node_modules/vue-style-loader/lib/listToStyles.js");
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+var options = null
+var ssrIdKey = 'data-vue-ssr-id'
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+function addStylesClient (parentId, list, _isProduction, _options) {
+  isProduction = _isProduction
+
+  options = _options || {}
+
+  var styles = (0,_listToStyles__WEBPACK_IMPORTED_MODULE_0__.default)(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = (0,_listToStyles__WEBPACK_IMPORTED_MODULE_0__.default)(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+  if (options.ssrId) {
+    styleElement.setAttribute(ssrIdKey, obj.id)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/lib/listToStyles.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vue-style-loader/lib/listToStyles.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ listToStyles)
+/* harmony export */ });
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
 }
 
 
@@ -33518,6 +42423,3925 @@ Vue.compile = compileToFunctions;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Vue);
 
 
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/framework.js":
+/*!***********************************************!*\
+  !*** ./node_modules/vuetify/lib/framework.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Vuetify)
+/* harmony export */ });
+/* harmony import */ var _install__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./install */ "./node_modules/vuetify/lib/install.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/presets/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/application/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/breakpoint/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/goto/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/icons/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/lang/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services */ "./node_modules/vuetify/lib/services/theme/index.js");
+ // Services
+
+
+class Vuetify {
+  constructor(userPreset = {}) {
+    this.framework = {
+      isHydrating: false
+    };
+    this.installed = [];
+    this.preset = {};
+    this.userPreset = {};
+    this.userPreset = userPreset;
+    this.use(_services__WEBPACK_IMPORTED_MODULE_0__.Presets);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_1__.Application);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_2__.Breakpoint);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_3__.Goto);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_4__.Icons);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_5__.Lang);
+    this.use(_services__WEBPACK_IMPORTED_MODULE_6__.Theme);
+  } // Called on the new vuetify instance
+  // bootstrap in install beforeCreate
+  // Exposes ssrContext if available
+
+
+  init(root, ssrContext) {
+    this.installed.forEach(property => {
+      const service = this.framework[property];
+      service.framework = this.framework;
+      service.init(root, ssrContext);
+    }); // rtl is not installed and
+    // will never be called by
+    // the init process
+
+    this.framework.rtl = Boolean(this.preset.rtl);
+  } // Instantiate a VuetifyService
+
+
+  use(Service) {
+    const property = Service.property;
+    if (this.installed.includes(property)) return; // TODO maybe a specific type for arg 2?
+
+    this.framework[property] = new Service(this.preset, this);
+    this.installed.push(property);
+  }
+
+}
+Vuetify.install = _install__WEBPACK_IMPORTED_MODULE_7__.install;
+Vuetify.installed = false;
+Vuetify.version = "2.5.3";
+Vuetify.config = {
+  silent: false
+};
+//# sourceMappingURL=framework.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/install.js":
+/*!*********************************************!*\
+  !*** ./node_modules/vuetify/lib/install.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "install": () => (/* binding */ install)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _util_console__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/console */ "./node_modules/vuetify/lib/util/console.js");
+
+
+function install(Vue, args = {}) {
+  if (install.installed) return;
+  install.installed = true;
+
+  if (vue__WEBPACK_IMPORTED_MODULE_0__.default !== Vue) {
+    (0,_util_console__WEBPACK_IMPORTED_MODULE_1__.consoleError)(`Multiple instances of Vue detected
+See https://github.com/vuetifyjs/vuetify/issues/4068
+
+If you're seeing "$attrs is readonly", it's caused by this`);
+  }
+
+  const components = args.components || {};
+  const directives = args.directives || {};
+
+  for (const name in directives) {
+    const directive = directives[name];
+    Vue.directive(name, directive);
+  }
+
+  (function registerComponents(components) {
+    if (components) {
+      for (const key in components) {
+        const component = components[key];
+
+        if (component && !registerComponents(component.$_vuetify_subcomponents)) {
+          Vue.component(key, component);
+        }
+      }
+
+      return true;
+    }
+
+    return false;
+  })(components); // Used to avoid multiple mixins being setup
+  // when in dev mode and hot module reload
+  // https://github.com/vuejs/vue/issues/5089#issuecomment-284260111
+
+
+  if (Vue.$_vuetify_installed) return;
+  Vue.$_vuetify_installed = true;
+  Vue.mixin({
+    beforeCreate() {
+      const options = this.$options;
+
+      if (options.vuetify) {
+        options.vuetify.init(this, this.$ssrContext);
+        this.$vuetify = Vue.observable(options.vuetify.framework);
+      } else {
+        this.$vuetify = options.parent && options.parent.$vuetify || this;
+      }
+    },
+
+    beforeMount() {
+      // @ts-ignore
+      if (this.$options.vuetify && this.$el && this.$el.hasAttribute('data-server-rendered')) {
+        // @ts-ignore
+        this.$vuetify.isHydrating = true; // @ts-ignore
+
+        this.$vuetify.breakpoint.update(true);
+      }
+    },
+
+    mounted() {
+      // @ts-ignore
+      if (this.$options.vuetify && this.$vuetify.isHydrating) {
+        // @ts-ignore
+        this.$vuetify.isHydrating = false; // @ts-ignore
+
+        this.$vuetify.breakpoint.update();
+      }
+    }
+
+  });
+}
+//# sourceMappingURL=install.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/locale/en.js":
+/*!***********************************************!*\
+  !*** ./node_modules/vuetify/lib/locale/en.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  badge: 'Badge',
+  close: 'Close',
+  dataIterator: {
+    noResultsText: 'No matching records found',
+    loadingText: 'Loading items...'
+  },
+  dataTable: {
+    itemsPerPageText: 'Rows per page:',
+    ariaLabel: {
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending.',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
+    },
+    sortBy: 'Sort by'
+  },
+  dataFooter: {
+    itemsPerPageText: 'Items per page:',
+    itemsPerPageAll: 'All',
+    nextPage: 'Next page',
+    prevPage: 'Previous page',
+    firstPage: 'First page',
+    lastPage: 'Last page',
+    pageText: '{0}-{1} of {2}'
+  },
+  datePicker: {
+    itemsSelected: '{0} selected',
+    nextMonthAriaLabel: 'Next month',
+    nextYearAriaLabel: 'Next year',
+    prevMonthAriaLabel: 'Previous month',
+    prevYearAriaLabel: 'Previous year'
+  },
+  noDataText: 'No data available',
+  carousel: {
+    prev: 'Previous visual',
+    next: 'Next visual',
+    ariaLabel: {
+      delimiter: 'Carousel slide {0} of {1}'
+    }
+  },
+  calendar: {
+    moreEvents: '{0} more'
+  },
+  fileInput: {
+    counter: '{0} files',
+    counterSize: '{0} files ({1} in total)'
+  },
+  timePicker: {
+    am: 'AM',
+    pm: 'PM'
+  },
+  pagination: {
+    ariaLabel: {
+      wrapper: 'Pagination Navigation',
+      next: 'Next page',
+      previous: 'Previous page',
+      page: 'Goto Page {0}',
+      currentPage: 'Current Page, Page {0}'
+    }
+  },
+  rating: {
+    ariaLabel: {
+      icon: 'Rating {0} of {1}'
+    }
+  }
+});
+//# sourceMappingURL=en.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/presets/default/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vuetify/lib/presets/default/index.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "preset": () => (/* binding */ preset)
+/* harmony export */ });
+/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/styles/main.sass */ "./node_modules/vuetify/src/styles/main.sass");
+/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _locale__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../locale */ "./node_modules/vuetify/lib/locale/en.js");
+// Styles
+ // Locale
+
+
+const preset = {
+  breakpoint: {
+    // TODO: update to MD2 spec in v3 - 1280
+    mobileBreakpoint: 1264,
+    scrollBarWidth: 16,
+    thresholds: {
+      xs: 600,
+      sm: 960,
+      md: 1280,
+      lg: 1920
+    }
+  },
+  icons: {
+    // TODO: remove v3
+    iconfont: 'mdi',
+    values: {}
+  },
+  lang: {
+    current: 'en',
+    locales: {
+      en: _locale__WEBPACK_IMPORTED_MODULE_1__.default
+    },
+    // Default translator exists in lang service
+    t: undefined
+  },
+  rtl: false,
+  theme: {
+    dark: false,
+    default: 'light',
+    disable: false,
+    options: {
+      cspNonce: undefined,
+      customProperties: undefined,
+      minifyTheme: undefined,
+      themeCache: undefined,
+      variations: true
+    },
+    themes: {
+      light: {
+        primary: '#1976D2',
+        secondary: '#424242',
+        accent: '#82B1FF',
+        error: '#FF5252',
+        info: '#2196F3',
+        success: '#4CAF50',
+        warning: '#FB8C00'
+      },
+      dark: {
+        primary: '#2196F3',
+        secondary: '#424242',
+        accent: '#FF4081',
+        error: '#FF5252',
+        info: '#2196F3',
+        success: '#4CAF50',
+        warning: '#FB8C00'
+      }
+    }
+  }
+};
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/application/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/application/index.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Application": () => (/* binding */ Application)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+// Extensions
+
+class Application extends _service__WEBPACK_IMPORTED_MODULE_0__.Service {
+  constructor() {
+    super(...arguments);
+    this.bar = 0;
+    this.top = 0;
+    this.left = 0;
+    this.insetFooter = 0;
+    this.right = 0;
+    this.bottom = 0;
+    this.footer = 0;
+    this.application = {
+      bar: {},
+      top: {},
+      left: {},
+      insetFooter: {},
+      right: {},
+      bottom: {},
+      footer: {}
+    };
+  }
+
+  register(uid, location, size) {
+    this.application[location] = {
+      [uid]: size
+    };
+    this.update(location);
+  }
+
+  unregister(uid, location) {
+    if (this.application[location][uid] == null) return;
+    delete this.application[location][uid];
+    this.update(location);
+  }
+
+  update(location) {
+    this[location] = Object.values(this.application[location]).reduce((acc, cur) => acc + cur, 0);
+  }
+
+}
+Application.property = 'application';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/breakpoint/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/breakpoint/index.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Breakpoint": () => (/* binding */ Breakpoint)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+// Extensions
+
+class Breakpoint extends _service__WEBPACK_IMPORTED_MODULE_0__.Service {
+  constructor(preset) {
+    super(); // Public
+
+    this.xs = false;
+    this.sm = false;
+    this.md = false;
+    this.lg = false;
+    this.xl = false;
+    this.xsOnly = false;
+    this.smOnly = false;
+    this.smAndDown = false;
+    this.smAndUp = false;
+    this.mdOnly = false;
+    this.mdAndDown = false;
+    this.mdAndUp = false;
+    this.lgOnly = false;
+    this.lgAndDown = false;
+    this.lgAndUp = false;
+    this.xlOnly = false; // Value is xs to match v2.x functionality
+
+    this.name = 'xs';
+    this.height = 0;
+    this.width = 0; // TODO: Add functionality to detect this dynamically in v3
+    // Value is true to match v2.x functionality
+
+    this.mobile = true;
+    this.resizeTimeout = 0;
+    const {
+      mobileBreakpoint,
+      scrollBarWidth,
+      thresholds
+    } = preset[Breakpoint.property];
+    this.mobileBreakpoint = mobileBreakpoint;
+    this.scrollBarWidth = scrollBarWidth;
+    this.thresholds = thresholds;
+  }
+
+  init() {
+    this.update();
+    /* istanbul ignore if */
+
+    if (typeof window === 'undefined') return;
+    window.addEventListener('resize', this.onResize.bind(this), {
+      passive: true
+    });
+  }
+  /* eslint-disable-next-line max-statements */
+
+
+  update(ssr = false) {
+    const height = ssr ? 0 : this.getClientHeight();
+    const width = ssr ? 0 : this.getClientWidth();
+    const xs = width < this.thresholds.xs;
+    const sm = width < this.thresholds.sm && !xs;
+    const md = width < this.thresholds.md - this.scrollBarWidth && !(sm || xs);
+    const lg = width < this.thresholds.lg - this.scrollBarWidth && !(md || sm || xs);
+    const xl = width >= this.thresholds.lg - this.scrollBarWidth;
+    this.height = height;
+    this.width = width;
+    this.xs = xs;
+    this.sm = sm;
+    this.md = md;
+    this.lg = lg;
+    this.xl = xl;
+    this.xsOnly = xs;
+    this.smOnly = sm;
+    this.smAndDown = (xs || sm) && !(md || lg || xl);
+    this.smAndUp = !xs && (sm || md || lg || xl);
+    this.mdOnly = md;
+    this.mdAndDown = (xs || sm || md) && !(lg || xl);
+    this.mdAndUp = !(xs || sm) && (md || lg || xl);
+    this.lgOnly = lg;
+    this.lgAndDown = (xs || sm || md || lg) && !xl;
+    this.lgAndUp = !(xs || sm || md) && (lg || xl);
+    this.xlOnly = xl;
+
+    switch (true) {
+      case xs:
+        this.name = 'xs';
+        break;
+
+      case sm:
+        this.name = 'sm';
+        break;
+
+      case md:
+        this.name = 'md';
+        break;
+
+      case lg:
+        this.name = 'lg';
+        break;
+
+      default:
+        this.name = 'xl';
+        break;
+    }
+
+    if (typeof this.mobileBreakpoint === 'number') {
+      this.mobile = width < parseInt(this.mobileBreakpoint, 10);
+      return;
+    }
+
+    const breakpoints = {
+      xs: 0,
+      sm: 1,
+      md: 2,
+      lg: 3,
+      xl: 4
+    };
+    const current = breakpoints[this.name];
+    const max = breakpoints[this.mobileBreakpoint];
+    this.mobile = current <= max;
+  }
+
+  onResize() {
+    clearTimeout(this.resizeTimeout); // Added debounce to match what
+    // v-resize used to do but was
+    // removed due to a memory leak
+    // https://github.com/vuetifyjs/vuetify/pull/2997
+
+    this.resizeTimeout = window.setTimeout(this.update.bind(this), 200);
+  } // Cross-browser support as described in:
+  // https://stackoverflow.com/questions/1248081
+
+
+  getClientWidth() {
+    /* istanbul ignore if */
+    if (typeof document === 'undefined') return 0; // SSR
+
+    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  }
+
+  getClientHeight() {
+    /* istanbul ignore if */
+    if (typeof document === 'undefined') return 0; // SSR
+
+    return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  }
+
+}
+Breakpoint.property = 'breakpoint';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/goto/easing-patterns.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/goto/easing-patterns.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "linear": () => (/* binding */ linear),
+/* harmony export */   "easeInQuad": () => (/* binding */ easeInQuad),
+/* harmony export */   "easeOutQuad": () => (/* binding */ easeOutQuad),
+/* harmony export */   "easeInOutQuad": () => (/* binding */ easeInOutQuad),
+/* harmony export */   "easeInCubic": () => (/* binding */ easeInCubic),
+/* harmony export */   "easeOutCubic": () => (/* binding */ easeOutCubic),
+/* harmony export */   "easeInOutCubic": () => (/* binding */ easeInOutCubic),
+/* harmony export */   "easeInQuart": () => (/* binding */ easeInQuart),
+/* harmony export */   "easeOutQuart": () => (/* binding */ easeOutQuart),
+/* harmony export */   "easeInOutQuart": () => (/* binding */ easeInOutQuart),
+/* harmony export */   "easeInQuint": () => (/* binding */ easeInQuint),
+/* harmony export */   "easeOutQuint": () => (/* binding */ easeOutQuint),
+/* harmony export */   "easeInOutQuint": () => (/* binding */ easeInOutQuint)
+/* harmony export */ });
+// linear
+const linear = t => t; // accelerating from zero velocity
+
+const easeInQuad = t => t ** 2; // decelerating to zero velocity
+
+const easeOutQuad = t => t * (2 - t); // acceleration until halfway, then deceleration
+
+const easeInOutQuad = t => t < 0.5 ? 2 * t ** 2 : -1 + (4 - 2 * t) * t; // accelerating from zero velocity
+
+const easeInCubic = t => t ** 3; // decelerating to zero velocity
+
+const easeOutCubic = t => --t ** 3 + 1; // acceleration until halfway, then deceleration
+
+const easeInOutCubic = t => t < 0.5 ? 4 * t ** 3 : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; // accelerating from zero velocity
+
+const easeInQuart = t => t ** 4; // decelerating to zero velocity
+
+const easeOutQuart = t => 1 - --t ** 4; // acceleration until halfway, then deceleration
+
+const easeInOutQuart = t => t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t; // accelerating from zero velocity
+
+const easeInQuint = t => t ** 5; // decelerating to zero velocity
+
+const easeOutQuint = t => 1 + --t ** 5; // acceleration until halfway, then deceleration
+
+const easeInOutQuint = t => t < 0.5 ? 16 * t ** 5 : 1 + 16 * --t ** 5;
+//# sourceMappingURL=easing-patterns.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/goto/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/goto/index.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ goTo),
+/* harmony export */   "Goto": () => (/* binding */ Goto)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+/* harmony import */ var _easing_patterns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./easing-patterns */ "./node_modules/vuetify/lib/services/goto/easing-patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util */ "./node_modules/vuetify/lib/services/goto/util.js");
+// Extensions
+ // Utilities
+
+
+
+function goTo(_target, _settings = {}) {
+  const settings = {
+    container: document.scrollingElement || document.body || document.documentElement,
+    duration: 500,
+    offset: 0,
+    easing: 'easeInOutCubic',
+    appOffset: true,
+    ..._settings
+  };
+  const container = (0,_util__WEBPACK_IMPORTED_MODULE_0__.getContainer)(settings.container);
+  /* istanbul ignore else */
+
+  if (settings.appOffset && goTo.framework.application) {
+    const isDrawer = container.classList.contains('v-navigation-drawer');
+    const isClipped = container.classList.contains('v-navigation-drawer--clipped');
+    const {
+      bar,
+      top
+    } = goTo.framework.application;
+    settings.offset += bar;
+    /* istanbul ignore else */
+
+    if (!isDrawer || isClipped) settings.offset += top;
+  }
+
+  const startTime = performance.now();
+  let targetLocation;
+
+  if (typeof _target === 'number') {
+    targetLocation = (0,_util__WEBPACK_IMPORTED_MODULE_0__.getOffset)(_target) - settings.offset;
+  } else {
+    targetLocation = (0,_util__WEBPACK_IMPORTED_MODULE_0__.getOffset)(_target) - (0,_util__WEBPACK_IMPORTED_MODULE_0__.getOffset)(container) - settings.offset;
+  }
+
+  const startLocation = container.scrollTop;
+  if (targetLocation === startLocation) return Promise.resolve(targetLocation);
+  const ease = typeof settings.easing === 'function' ? settings.easing : _easing_patterns__WEBPACK_IMPORTED_MODULE_1__[settings.easing];
+  /* istanbul ignore else */
+
+  if (!ease) throw new TypeError(`Easing function "${settings.easing}" not found.`); // Cannot be tested properly in jsdom
+
+  /* istanbul ignore next */
+
+  return new Promise(resolve => requestAnimationFrame(function step(currentTime) {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.abs(settings.duration ? Math.min(timeElapsed / settings.duration, 1) : 1);
+    container.scrollTop = Math.floor(startLocation + (targetLocation - startLocation) * ease(progress));
+    const clientHeight = container === document.body ? document.documentElement.clientHeight : container.clientHeight;
+
+    if (progress === 1 || clientHeight + container.scrollTop === container.scrollHeight) {
+      return resolve(targetLocation);
+    }
+
+    requestAnimationFrame(step);
+  }));
+}
+goTo.framework = {};
+
+goTo.init = () => {};
+
+class Goto extends _service__WEBPACK_IMPORTED_MODULE_2__.Service {
+  constructor() {
+    super();
+    return goTo;
+  }
+
+}
+Goto.property = 'goTo';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/goto/util.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/goto/util.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getOffset": () => (/* binding */ getOffset),
+/* harmony export */   "getContainer": () => (/* binding */ getContainer)
+/* harmony export */ });
+// Return target's cumulative offset from the top
+function getOffset(target) {
+  if (typeof target === 'number') {
+    return target;
+  }
+
+  let el = $(target);
+
+  if (!el) {
+    throw typeof target === 'string' ? new Error(`Target element "${target}" not found.`) : new TypeError(`Target must be a Number/Selector/HTMLElement/VueComponent, received ${type(target)} instead.`);
+  }
+
+  let totalOffset = 0;
+
+  while (el) {
+    totalOffset += el.offsetTop;
+    el = el.offsetParent;
+  }
+
+  return totalOffset;
+}
+function getContainer(container) {
+  const el = $(container);
+  if (el) return el;
+  throw typeof container === 'string' ? new Error(`Container element "${container}" not found.`) : new TypeError(`Container must be a Selector/HTMLElement/VueComponent, received ${type(container)} instead.`);
+}
+
+function type(el) {
+  return el == null ? el : el.constructor.name;
+}
+
+function $(el) {
+  if (typeof el === 'string') {
+    return document.querySelector(el);
+  } else if (el && el._isVue) {
+    return el.$el;
+  } else if (el instanceof HTMLElement) {
+    return el;
+  } else {
+    return null;
+  }
+}
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Icons": () => (/* binding */ Icons)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var _presets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./presets */ "./node_modules/vuetify/lib/services/icons/presets/index.js");
+// Extensions
+ // Utilities
+
+ // Presets
+
+
+class Icons extends _service__WEBPACK_IMPORTED_MODULE_0__.Service {
+  constructor(preset) {
+    super();
+    const {
+      iconfont,
+      values,
+      component
+    } = preset[Icons.property];
+    this.component = component;
+    this.iconfont = iconfont;
+    this.values = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.mergeDeep)(_presets__WEBPACK_IMPORTED_MODULE_2__.default[iconfont], values);
+  }
+
+}
+Icons.property = 'icons';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/fa-svg.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/fa-svg.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "convertToComponentDeclarations": () => (/* binding */ convertToComponentDeclarations),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fa */ "./node_modules/vuetify/lib/services/icons/presets/fa.js");
+
+function convertToComponentDeclarations(component, iconSet) {
+  const result = {};
+
+  for (const key in iconSet) {
+    result[key] = {
+      component,
+      props: {
+        icon: iconSet[key].split(' fa-')
+      }
+    };
+  }
+
+  return result;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (convertToComponentDeclarations('font-awesome-icon', _fa__WEBPACK_IMPORTED_MODULE_0__.default));
+//# sourceMappingURL=fa-svg.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/fa.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/fa.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const icons = {
+  complete: 'fas fa-check',
+  cancel: 'fas fa-times-circle',
+  close: 'fas fa-times',
+  delete: 'fas fa-times-circle',
+  clear: 'fas fa-times-circle',
+  success: 'fas fa-check-circle',
+  info: 'fas fa-info-circle',
+  warning: 'fas fa-exclamation',
+  error: 'fas fa-exclamation-triangle',
+  prev: 'fas fa-chevron-left',
+  next: 'fas fa-chevron-right',
+  checkboxOn: 'fas fa-check-square',
+  checkboxOff: 'far fa-square',
+  checkboxIndeterminate: 'fas fa-minus-square',
+  delimiter: 'fas fa-circle',
+  sort: 'fas fa-sort-up',
+  expand: 'fas fa-chevron-down',
+  menu: 'fas fa-bars',
+  subgroup: 'fas fa-caret-down',
+  dropdown: 'fas fa-caret-down',
+  radioOn: 'far fa-dot-circle',
+  radioOff: 'far fa-circle',
+  edit: 'fas fa-edit',
+  ratingEmpty: 'far fa-star',
+  ratingFull: 'fas fa-star',
+  ratingHalf: 'fas fa-star-half',
+  loading: 'fas fa-sync',
+  first: 'fas fa-step-backward',
+  last: 'fas fa-step-forward',
+  unfold: 'fas fa-arrows-alt-v',
+  file: 'fas fa-paperclip',
+  plus: 'fas fa-plus',
+  minus: 'fas fa-minus'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icons);
+//# sourceMappingURL=fa.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/fa4.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/fa4.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const icons = {
+  complete: 'fa fa-check',
+  cancel: 'fa fa-times-circle',
+  close: 'fa fa-times',
+  delete: 'fa fa-times-circle',
+  clear: 'fa fa-times-circle',
+  success: 'fa fa-check-circle',
+  info: 'fa fa-info-circle',
+  warning: 'fa fa-exclamation',
+  error: 'fa fa-exclamation-triangle',
+  prev: 'fa fa-chevron-left',
+  next: 'fa fa-chevron-right',
+  checkboxOn: 'fa fa-check-square',
+  checkboxOff: 'fa fa-square-o',
+  checkboxIndeterminate: 'fa fa-minus-square',
+  delimiter: 'fa fa-circle',
+  sort: 'fa fa-sort-up',
+  expand: 'fa fa-chevron-down',
+  menu: 'fa fa-bars',
+  subgroup: 'fa fa-caret-down',
+  dropdown: 'fa fa-caret-down',
+  radioOn: 'fa fa-dot-circle-o',
+  radioOff: 'fa fa-circle-o',
+  edit: 'fa fa-pencil',
+  ratingEmpty: 'fa fa-star-o',
+  ratingFull: 'fa fa-star',
+  ratingHalf: 'fa fa-star-half-o',
+  loading: 'fa fa-refresh',
+  first: 'fa fa-step-backward',
+  last: 'fa fa-step-forward',
+  unfold: 'fa fa-angle-double-down',
+  file: 'fa fa-paperclip',
+  plus: 'fa fa-plus',
+  minus: 'fa fa-minus'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icons);
+//# sourceMappingURL=fa4.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/index.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mdi_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mdi-svg */ "./node_modules/vuetify/lib/services/icons/presets/mdi-svg.js");
+/* harmony import */ var _md__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./md */ "./node_modules/vuetify/lib/services/icons/presets/md.js");
+/* harmony import */ var _mdi__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mdi */ "./node_modules/vuetify/lib/services/icons/presets/mdi.js");
+/* harmony import */ var _fa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fa */ "./node_modules/vuetify/lib/services/icons/presets/fa.js");
+/* harmony import */ var _fa4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fa4 */ "./node_modules/vuetify/lib/services/icons/presets/fa4.js");
+/* harmony import */ var _fa_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./fa-svg */ "./node_modules/vuetify/lib/services/icons/presets/fa-svg.js");
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.freeze({
+  mdiSvg: _mdi_svg__WEBPACK_IMPORTED_MODULE_0__.default,
+  md: _md__WEBPACK_IMPORTED_MODULE_1__.default,
+  mdi: _mdi__WEBPACK_IMPORTED_MODULE_2__.default,
+  fa: _fa__WEBPACK_IMPORTED_MODULE_3__.default,
+  fa4: _fa4__WEBPACK_IMPORTED_MODULE_4__.default,
+  faSvg: _fa_svg__WEBPACK_IMPORTED_MODULE_5__.default
+}));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/md.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/md.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const icons = {
+  complete: 'check',
+  cancel: 'cancel',
+  close: 'close',
+  delete: 'cancel',
+  clear: 'clear',
+  success: 'check_circle',
+  info: 'info',
+  warning: 'priority_high',
+  error: 'warning',
+  prev: 'chevron_left',
+  next: 'chevron_right',
+  checkboxOn: 'check_box',
+  checkboxOff: 'check_box_outline_blank',
+  checkboxIndeterminate: 'indeterminate_check_box',
+  delimiter: 'fiber_manual_record',
+  sort: 'arrow_upward',
+  expand: 'keyboard_arrow_down',
+  menu: 'menu',
+  subgroup: 'arrow_drop_down',
+  dropdown: 'arrow_drop_down',
+  radioOn: 'radio_button_checked',
+  radioOff: 'radio_button_unchecked',
+  edit: 'edit',
+  ratingEmpty: 'star_border',
+  ratingFull: 'star',
+  ratingHalf: 'star_half',
+  loading: 'cached',
+  first: 'first_page',
+  last: 'last_page',
+  unfold: 'unfold_more',
+  file: 'attach_file',
+  plus: 'add',
+  minus: 'remove'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icons);
+//# sourceMappingURL=md.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/mdi-svg.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/mdi-svg.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const icons = {
+  complete: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z',
+  cancel: 'M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z',
+  close: 'M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z',
+  delete: 'M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z',
+  clear: 'M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z',
+  success: 'M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C6.48,22 2,17.52 2,12C2,6.48 6.48,2 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z',
+  info: 'M13,9H11V7H13M13,17H11V11H13M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2Z',
+  warning: 'M11,4.5H13V15.5H11V4.5M13,17.5V19.5H11V17.5H13Z',
+  error: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
+  prev: 'M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z',
+  next: 'M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z',
+  checkboxOn: 'M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3Z',
+  checkboxOff: 'M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z',
+  checkboxIndeterminate: 'M17,13H7V11H17M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3Z',
+  delimiter: 'M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2Z',
+  sort: 'M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z',
+  expand: 'M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z',
+  menu: 'M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z',
+  subgroup: 'M7,10L12,15L17,10H7Z',
+  dropdown: 'M7,10L12,15L17,10H7Z',
+  radioOn: 'M12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,16.42 16.42,20 12,20M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,7C9.24,7 7,9.24 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,9.24 14.76,7 12,7Z',
+  radioOff: 'M12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,16.42 16.42,20 12,20M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2Z',
+  edit: 'M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z',
+  ratingEmpty: 'M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z',
+  ratingFull: 'M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z',
+  ratingHalf: 'M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z',
+  loading: 'M19,8L15,12H18C18,15.31 15.31,18 12,18C11,18 10.03,17.75 9.2,17.3L7.74,18.76C8.97,19.54 10.43,20 12,20C16.42,20 20,16.42 20,12H23M6,12C6,8.69 8.69,6 12,6C13,6 13.97,6.25 14.8,6.7L16.26,5.24C15.03,4.46 13.57,4 12,4C7.58,4 4,7.58 4,12H1L5,16L9,12',
+  first: 'M18.41,16.59L13.82,12L18.41,7.41L17,6L11,12L17,18L18.41,16.59M6,6H8V18H6V6Z',
+  last: 'M5.59,7.41L10.18,12L5.59,16.59L7,18L13,12L7,6L5.59,7.41M16,6H18V18H16V6Z',
+  unfold: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z',
+  file: 'M16.5,6V17.5C16.5,19.71 14.71,21.5 12.5,21.5C10.29,21.5 8.5,19.71 8.5,17.5V5C8.5,3.62 9.62,2.5 11,2.5C12.38,2.5 13.5,3.62 13.5,5V15.5C13.5,16.05 13.05,16.5 12.5,16.5C11.95,16.5 11.5,16.05 11.5,15.5V6H10V15.5C10,16.88 11.12,18 12.5,18C13.88,18 15,16.88 15,15.5V5C15,2.79 13.21,1 11,1C8.79,1 7,2.79 7,5V17.5C7,20.54 9.46,23 12.5,23C15.54,23 18,20.54 18,17.5V6H16.5Z',
+  plus: 'M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z',
+  minus: 'M19,13H5V11H19V13Z'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icons);
+//# sourceMappingURL=mdi-svg.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/icons/presets/mdi.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/icons/presets/mdi.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const icons = {
+  complete: 'mdi-check',
+  cancel: 'mdi-close-circle',
+  close: 'mdi-close',
+  delete: 'mdi-close-circle',
+  clear: 'mdi-close',
+  success: 'mdi-check-circle',
+  info: 'mdi-information',
+  warning: 'mdi-exclamation',
+  error: 'mdi-alert',
+  prev: 'mdi-chevron-left',
+  next: 'mdi-chevron-right',
+  checkboxOn: 'mdi-checkbox-marked',
+  checkboxOff: 'mdi-checkbox-blank-outline',
+  checkboxIndeterminate: 'mdi-minus-box',
+  delimiter: 'mdi-circle',
+  sort: 'mdi-arrow-up',
+  expand: 'mdi-chevron-down',
+  menu: 'mdi-menu',
+  subgroup: 'mdi-menu-down',
+  dropdown: 'mdi-menu-down',
+  radioOn: 'mdi-radiobox-marked',
+  radioOff: 'mdi-radiobox-blank',
+  edit: 'mdi-pencil',
+  ratingEmpty: 'mdi-star-outline',
+  ratingFull: 'mdi-star',
+  ratingHalf: 'mdi-star-half-full',
+  loading: 'mdi-cached',
+  first: 'mdi-page-first',
+  last: 'mdi-page-last',
+  unfold: 'mdi-unfold-more-horizontal',
+  file: 'mdi-paperclip',
+  plus: 'mdi-plus',
+  minus: 'mdi-minus'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icons);
+//# sourceMappingURL=mdi.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/lang/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/lang/index.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lang": () => (/* binding */ Lang)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var _util_console__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/console */ "./node_modules/vuetify/lib/util/console.js");
+// Extensions
+ // Utilities
+
+
+
+const LANG_PREFIX = '$vuetify.';
+const fallback = Symbol('Lang fallback');
+
+function getTranslation(locale, key, usingDefault = false, defaultLocale) {
+  const shortKey = key.replace(LANG_PREFIX, '');
+  let translation = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_0__.getObjectValueByPath)(locale, shortKey, fallback);
+
+  if (translation === fallback) {
+    if (usingDefault) {
+      (0,_util_console__WEBPACK_IMPORTED_MODULE_1__.consoleError)(`Translation key "${shortKey}" not found in fallback`);
+      translation = key;
+    } else {
+      (0,_util_console__WEBPACK_IMPORTED_MODULE_1__.consoleWarn)(`Translation key "${shortKey}" not found, falling back to default`);
+      translation = getTranslation(defaultLocale, key, true, defaultLocale);
+    }
+  }
+
+  return translation;
+}
+
+class Lang extends _service__WEBPACK_IMPORTED_MODULE_2__.Service {
+  constructor(preset) {
+    super();
+    this.defaultLocale = 'en';
+    const {
+      current,
+      locales,
+      t
+    } = preset[Lang.property];
+    this.current = current;
+    this.locales = locales;
+    this.translator = t || this.defaultTranslator;
+  }
+
+  currentLocale(key) {
+    const translation = this.locales[this.current];
+    const defaultLocale = this.locales[this.defaultLocale];
+    return getTranslation(translation, key, false, defaultLocale);
+  }
+
+  t(key, ...params) {
+    if (!key.startsWith(LANG_PREFIX)) return this.replace(key, params);
+    return this.translator(key, ...params);
+  }
+
+  defaultTranslator(key, ...params) {
+    return this.replace(this.currentLocale(key), params);
+  }
+
+  replace(str, params) {
+    return str.replace(/\{(\d+)\}/g, (match, index) => {
+      /* istanbul ignore next */
+      return String(params[+index]);
+    });
+  }
+
+}
+Lang.property = 'lang';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/presets/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/presets/index.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Presets": () => (/* binding */ Presets)
+/* harmony export */ });
+/* harmony import */ var _presets_default__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../presets/default */ "./node_modules/vuetify/lib/presets/default/index.js");
+/* harmony import */ var _util_console__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/console */ "./node_modules/vuetify/lib/util/console.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+// Preset
+ // Utilities
+
+
+
+
+class Presets extends _service__WEBPACK_IMPORTED_MODULE_0__.Service {
+  constructor(parentPreset, parent) {
+    super(); // The default preset
+
+    const defaultPreset = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.mergeDeep)({}, _presets_default__WEBPACK_IMPORTED_MODULE_2__.preset); // The user provided preset
+
+    const {
+      userPreset
+    } = parent; // The user provided global preset
+
+    const {
+      preset: globalPreset = {},
+      ...preset
+    } = userPreset;
+
+    if (globalPreset.preset != null) {
+      (0,_util_console__WEBPACK_IMPORTED_MODULE_3__.consoleWarn)('Global presets do not support the **preset** option, it can be safely omitted');
+    }
+
+    parent.preset = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.mergeDeep)((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.mergeDeep)(defaultPreset, globalPreset), preset);
+  }
+
+}
+Presets.property = 'presets';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/service/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/service/index.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Service": () => (/* binding */ Service)
+/* harmony export */ });
+class Service {
+  constructor() {
+    this.framework = {};
+  }
+
+  init(root, ssrContext) {}
+
+}
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/theme/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/theme/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Theme": () => (/* binding */ Theme)
+/* harmony export */ });
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../service */ "./node_modules/vuetify/lib/services/service/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils */ "./node_modules/vuetify/lib/services/theme/utils.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* eslint-disable no-multi-spaces */
+// Extensions
+ // Utilities
+
+
+ // Types
+
+
+class Theme extends _service__WEBPACK_IMPORTED_MODULE_0__.Service {
+  constructor(preset) {
+    super();
+    this.disabled = false;
+    this.isDark = null;
+    this.unwatch = null;
+    this.vueMeta = null;
+    const {
+      dark,
+      disable,
+      options,
+      themes
+    } = preset[Theme.property];
+    this.dark = Boolean(dark);
+    this.defaults = this.themes = themes;
+    this.options = options;
+
+    if (disable) {
+      this.disabled = true;
+      return;
+    }
+
+    this.themes = {
+      dark: this.fillVariant(themes.dark, true),
+      light: this.fillVariant(themes.light, false)
+    };
+  } // When setting css, check for element and apply new values
+
+  /* eslint-disable-next-line accessor-pairs */
+
+
+  set css(val) {
+    if (this.vueMeta) {
+      if (this.isVueMeta23) {
+        this.applyVueMeta23();
+      }
+
+      return;
+    }
+
+    this.checkOrCreateStyleElement() && (this.styleEl.innerHTML = val);
+  }
+
+  set dark(val) {
+    const oldDark = this.isDark;
+    this.isDark = val; // Only apply theme after dark
+    // has already been set before
+
+    oldDark != null && this.applyTheme();
+  }
+
+  get dark() {
+    return Boolean(this.isDark);
+  } // Apply current theme default
+  // only called on client side
+
+
+  applyTheme() {
+    if (this.disabled) return this.clearCss();
+    this.css = this.generatedStyles;
+  }
+
+  clearCss() {
+    this.css = '';
+  } // Initialize theme for SSR and SPA
+  // Attach to ssrContext head or
+  // apply new theme to document
+
+
+  init(root, ssrContext) {
+    if (this.disabled) return;
+    /* istanbul ignore else */
+
+    if (root.$meta) {
+      this.initVueMeta(root);
+    } else if (ssrContext) {
+      this.initSSR(ssrContext);
+    }
+
+    this.initTheme(root);
+  } // Allows for you to set target theme
+
+
+  setTheme(theme, value) {
+    this.themes[theme] = Object.assign(this.themes[theme], value);
+    this.applyTheme();
+  } // Reset theme defaults
+
+
+  resetThemes() {
+    this.themes.light = Object.assign({}, this.defaults.light);
+    this.themes.dark = Object.assign({}, this.defaults.dark);
+    this.applyTheme();
+  } // Check for existence of style element
+
+
+  checkOrCreateStyleElement() {
+    this.styleEl = document.getElementById('vuetify-theme-stylesheet');
+    /* istanbul ignore next */
+
+    if (this.styleEl) return true;
+    this.genStyleElement(); // If doesn't have it, create it
+
+    return Boolean(this.styleEl);
+  }
+
+  fillVariant(theme = {}, dark) {
+    const defaultTheme = this.themes[dark ? 'dark' : 'light'];
+    return Object.assign({}, defaultTheme, theme);
+  } // Generate the style element
+  // if applicable
+
+
+  genStyleElement() {
+    /* istanbul ignore if */
+    if (typeof document === 'undefined') return;
+    /* istanbul ignore next */
+
+    this.styleEl = document.createElement('style');
+    this.styleEl.type = 'text/css';
+    this.styleEl.id = 'vuetify-theme-stylesheet';
+
+    if (this.options.cspNonce) {
+      this.styleEl.setAttribute('nonce', this.options.cspNonce);
+    }
+
+    document.head.appendChild(this.styleEl);
+  }
+
+  initVueMeta(root) {
+    this.vueMeta = root.$meta();
+
+    if (this.isVueMeta23) {
+      // vue-meta needs to apply after mounted()
+      root.$nextTick(() => {
+        this.applyVueMeta23();
+      });
+      return;
+    }
+
+    const metaKeyName = typeof this.vueMeta.getOptions === 'function' ? this.vueMeta.getOptions().keyName : 'metaInfo';
+    const metaInfo = root.$options[metaKeyName] || {};
+
+    root.$options[metaKeyName] = () => {
+      metaInfo.style = metaInfo.style || [];
+      const vuetifyStylesheet = metaInfo.style.find(s => s.id === 'vuetify-theme-stylesheet');
+
+      if (!vuetifyStylesheet) {
+        metaInfo.style.push({
+          cssText: this.generatedStyles,
+          type: 'text/css',
+          id: 'vuetify-theme-stylesheet',
+          nonce: (this.options || {}).cspNonce
+        });
+      } else {
+        vuetifyStylesheet.cssText = this.generatedStyles;
+      }
+
+      return metaInfo;
+    };
+  }
+
+  applyVueMeta23() {
+    const {
+      set
+    } = this.vueMeta.addApp('vuetify');
+    set({
+      style: [{
+        cssText: this.generatedStyles,
+        type: 'text/css',
+        id: 'vuetify-theme-stylesheet',
+        nonce: this.options.cspNonce
+      }]
+    });
+  }
+
+  initSSR(ssrContext) {
+    // SSR
+    const nonce = this.options.cspNonce ? ` nonce="${this.options.cspNonce}"` : '';
+    ssrContext.head = ssrContext.head || '';
+    ssrContext.head += `<style type="text/css" id="vuetify-theme-stylesheet"${nonce}>${this.generatedStyles}</style>`;
+  }
+
+  initTheme(root) {
+    // Only watch for reactivity on client side
+    if (typeof document === 'undefined') return; // If we get here somehow, ensure
+    // existing instance is removed
+
+    if (this.unwatch) {
+      this.unwatch();
+      this.unwatch = null;
+    } // TODO: Update to use RFC if merged
+    // https://github.com/vuejs/rfcs/blob/advanced-reactivity-api/active-rfcs/0000-advanced-reactivity-api.md
+
+
+    root.$once('hook:created', () => {
+      const obs = vue__WEBPACK_IMPORTED_MODULE_1__.default.observable({
+        themes: this.themes
+      });
+      this.unwatch = root.$watch(() => obs.themes, () => this.applyTheme(), {
+        deep: true
+      });
+    });
+    this.applyTheme();
+  }
+
+  get currentTheme() {
+    const target = this.dark ? 'dark' : 'light';
+    return this.themes[target];
+  }
+
+  get generatedStyles() {
+    const theme = this.parsedTheme;
+    /* istanbul ignore next */
+
+    const options = this.options || {};
+    let css;
+
+    if (options.themeCache != null) {
+      css = options.themeCache.get(theme);
+      /* istanbul ignore if */
+
+      if (css != null) return css;
+    }
+
+    css = _utils__WEBPACK_IMPORTED_MODULE_2__.genStyles(theme, options.customProperties);
+
+    if (options.minifyTheme != null) {
+      css = options.minifyTheme(css);
+    }
+
+    if (options.themeCache != null) {
+      options.themeCache.set(theme, css);
+    }
+
+    return css;
+  }
+
+  get parsedTheme() {
+    return _utils__WEBPACK_IMPORTED_MODULE_2__.parse(this.currentTheme || {}, undefined, (0,_util_helpers__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(this.options, ['variations'], true));
+  } // Is using v2.3 of vue-meta
+  // https://github.com/nuxt/vue-meta/releases/tag/v2.3.0
+
+
+  get isVueMeta23() {
+    return typeof this.vueMeta.addApp === 'function';
+  }
+
+}
+Theme.property = 'theme';
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/services/theme/utils.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuetify/lib/services/theme/utils.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "parse": () => (/* binding */ parse),
+/* harmony export */   "genStyles": () => (/* binding */ genStyles),
+/* harmony export */   "genVariations": () => (/* binding */ genVariations),
+/* harmony export */   "lighten": () => (/* binding */ lighten),
+/* harmony export */   "darken": () => (/* binding */ darken)
+/* harmony export */ });
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var _util_colorUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/colorUtils */ "./node_modules/vuetify/lib/util/colorUtils.js");
+/* harmony import */ var _util_color_transformSRGB__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/color/transformSRGB */ "./node_modules/vuetify/lib/util/color/transformSRGB.js");
+/* harmony import */ var _util_color_transformCIELAB__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/color/transformCIELAB */ "./node_modules/vuetify/lib/util/color/transformCIELAB.js");
+
+
+
+
+function parse(theme, isItem = false, variations = true) {
+  const {
+    anchor,
+    ...variant
+  } = theme;
+  const colors = Object.keys(variant);
+  const parsedTheme = {};
+
+  for (let i = 0; i < colors.length; ++i) {
+    const name = colors[i];
+    const value = theme[name];
+    if (value == null) continue;
+
+    if (!variations) {
+      parsedTheme[name] = {
+        base: (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.intToHex)((0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.colorToInt)(value))
+      };
+    } else if (isItem) {
+      /* istanbul ignore else */
+      if (name === 'base' || name.startsWith('lighten') || name.startsWith('darken')) {
+        parsedTheme[name] = (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.colorToHex)(value);
+      }
+    } else if (typeof value === 'object') {
+      parsedTheme[name] = parse(value, true, variations);
+    } else {
+      parsedTheme[name] = genVariations(name, (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.colorToInt)(value));
+    }
+  }
+
+  if (!isItem) {
+    parsedTheme.anchor = anchor || parsedTheme.base || parsedTheme.primary.base;
+  }
+
+  return parsedTheme;
+}
+/**
+ * Generate the CSS for a base color (.primary)
+ */
+
+const genBaseColor = (name, value) => {
+  return `
+.v-application .${name} {
+  background-color: ${value} !important;
+  border-color: ${value} !important;
+}
+.v-application .${name}--text {
+  color: ${value} !important;
+  caret-color: ${value} !important;
+}`;
+};
+/**
+ * Generate the CSS for a variant color (.primary.darken-2)
+ */
+
+
+const genVariantColor = (name, variant, value) => {
+  const [type, n] = variant.split(/(\d)/, 2);
+  return `
+.v-application .${name}.${type}-${n} {
+  background-color: ${value} !important;
+  border-color: ${value} !important;
+}
+.v-application .${name}--text.text--${type}-${n} {
+  color: ${value} !important;
+  caret-color: ${value} !important;
+}`;
+};
+
+const genColorVariableName = (name, variant = 'base') => `--v-${name}-${variant}`;
+
+const genColorVariable = (name, variant = 'base') => `var(${genColorVariableName(name, variant)})`;
+
+function genStyles(theme, cssVar = false) {
+  const {
+    anchor,
+    ...variant
+  } = theme;
+  const colors = Object.keys(variant);
+  if (!colors.length) return '';
+  let variablesCss = '';
+  let css = '';
+  const aColor = cssVar ? genColorVariable('anchor') : anchor;
+  css += `.v-application a { color: ${aColor}; }`;
+  cssVar && (variablesCss += `  ${genColorVariableName('anchor')}: ${anchor};\n`);
+
+  for (let i = 0; i < colors.length; ++i) {
+    const name = colors[i];
+    const value = theme[name];
+    css += genBaseColor(name, cssVar ? genColorVariable(name) : value.base);
+    cssVar && (variablesCss += `  ${genColorVariableName(name)}: ${value.base};\n`);
+    const variants = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.keys)(value);
+
+    for (let i = 0; i < variants.length; ++i) {
+      const variant = variants[i];
+      const variantValue = value[variant];
+      if (variant === 'base') continue;
+      css += genVariantColor(name, variant, cssVar ? genColorVariable(name, variant) : variantValue);
+      cssVar && (variablesCss += `  ${genColorVariableName(name, variant)}: ${variantValue};\n`);
+    }
+  }
+
+  if (cssVar) {
+    variablesCss = `:root {\n${variablesCss}}\n\n`;
+  }
+
+  return variablesCss + css;
+}
+function genVariations(name, value) {
+  const values = {
+    base: (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.intToHex)(value)
+  };
+
+  for (let i = 5; i > 0; --i) {
+    values[`lighten${i}`] = (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.intToHex)(lighten(value, i));
+  }
+
+  for (let i = 1; i <= 4; ++i) {
+    values[`darken${i}`] = (0,_util_colorUtils__WEBPACK_IMPORTED_MODULE_0__.intToHex)(darken(value, i));
+  }
+
+  return values;
+}
+function lighten(value, amount) {
+  const lab = _util_color_transformCIELAB__WEBPACK_IMPORTED_MODULE_2__.fromXYZ(_util_color_transformSRGB__WEBPACK_IMPORTED_MODULE_3__.toXYZ(value));
+  lab[0] = lab[0] + amount * 10;
+  return _util_color_transformSRGB__WEBPACK_IMPORTED_MODULE_3__.fromXYZ(_util_color_transformCIELAB__WEBPACK_IMPORTED_MODULE_2__.toXYZ(lab));
+}
+function darken(value, amount) {
+  const lab = _util_color_transformCIELAB__WEBPACK_IMPORTED_MODULE_2__.fromXYZ(_util_color_transformSRGB__WEBPACK_IMPORTED_MODULE_3__.toXYZ(value));
+  lab[0] = lab[0] - amount * 10;
+  return _util_color_transformSRGB__WEBPACK_IMPORTED_MODULE_3__.fromXYZ(_util_color_transformCIELAB__WEBPACK_IMPORTED_MODULE_2__.toXYZ(lab));
+}
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/colorUtils.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/colorUtils.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isCssColor": () => (/* binding */ isCssColor),
+/* harmony export */   "colorToInt": () => (/* binding */ colorToInt),
+/* harmony export */   "classToHex": () => (/* binding */ classToHex),
+/* harmony export */   "intToHex": () => (/* binding */ intToHex),
+/* harmony export */   "colorToHex": () => (/* binding */ colorToHex),
+/* harmony export */   "HSVAtoRGBA": () => (/* binding */ HSVAtoRGBA),
+/* harmony export */   "RGBAtoHSVA": () => (/* binding */ RGBAtoHSVA),
+/* harmony export */   "HSVAtoHSLA": () => (/* binding */ HSVAtoHSLA),
+/* harmony export */   "HSLAtoHSVA": () => (/* binding */ HSLAtoHSVA),
+/* harmony export */   "RGBAtoCSS": () => (/* binding */ RGBAtoCSS),
+/* harmony export */   "RGBtoCSS": () => (/* binding */ RGBtoCSS),
+/* harmony export */   "RGBAtoHex": () => (/* binding */ RGBAtoHex),
+/* harmony export */   "HexToRGBA": () => (/* binding */ HexToRGBA),
+/* harmony export */   "HexToHSVA": () => (/* binding */ HexToHSVA),
+/* harmony export */   "HSVAtoHex": () => (/* binding */ HSVAtoHex),
+/* harmony export */   "parseHex": () => (/* binding */ parseHex),
+/* harmony export */   "parseGradient": () => (/* binding */ parseGradient),
+/* harmony export */   "RGBtoInt": () => (/* binding */ RGBtoInt),
+/* harmony export */   "contrastRatio": () => (/* binding */ contrastRatio)
+/* harmony export */ });
+/* harmony import */ var _console__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./console */ "./node_modules/vuetify/lib/util/console.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var _color_transformSRGB__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./color/transformSRGB */ "./node_modules/vuetify/lib/util/color/transformSRGB.js");
+// Utilities
+
+
+
+function isCssColor(color) {
+  return !!color && !!color.match(/^(#|var\(--|(rgb|hsl)a?\()/);
+}
+function colorToInt(color) {
+  let rgb;
+
+  if (typeof color === 'number') {
+    rgb = color;
+  } else if (typeof color === 'string') {
+    let c = color[0] === '#' ? color.substring(1) : color;
+
+    if (c.length === 3) {
+      c = c.split('').map(char => char + char).join('');
+    }
+
+    if (c.length !== 6) {
+      (0,_console__WEBPACK_IMPORTED_MODULE_0__.consoleWarn)(`'${color}' is not a valid rgb color`);
+    }
+
+    rgb = parseInt(c, 16);
+  } else {
+    throw new TypeError(`Colors can only be numbers or strings, recieved ${color == null ? color : color.constructor.name} instead`);
+  }
+
+  if (rgb < 0) {
+    (0,_console__WEBPACK_IMPORTED_MODULE_0__.consoleWarn)(`Colors cannot be negative: '${color}'`);
+    rgb = 0;
+  } else if (rgb > 0xffffff || isNaN(rgb)) {
+    (0,_console__WEBPACK_IMPORTED_MODULE_0__.consoleWarn)(`'${color}' is not a valid rgb color`);
+    rgb = 0xffffff;
+  }
+
+  return rgb;
+}
+function classToHex(color, colors, currentTheme) {
+  const [colorName, colorModifier] = color.toString().trim().replace('-', '').split(' ', 2);
+  let hexColor = '';
+
+  if (colorName && colorName in colors) {
+    if (colorModifier && colorModifier in colors[colorName]) {
+      hexColor = colors[colorName][colorModifier];
+    } else if ('base' in colors[colorName]) {
+      hexColor = colors[colorName].base;
+    }
+  } else if (colorName && colorName in currentTheme) {
+    hexColor = currentTheme[colorName];
+  }
+
+  return hexColor;
+}
+function intToHex(color) {
+  let hexColor = color.toString(16);
+  if (hexColor.length < 6) hexColor = '0'.repeat(6 - hexColor.length) + hexColor;
+  return '#' + hexColor;
+}
+function colorToHex(color) {
+  return intToHex(colorToInt(color));
+}
+/**
+ * Converts HSVA to RGBA. Based on formula from https://en.wikipedia.org/wiki/HSL_and_HSV
+ *
+ * @param color HSVA color as an array [0-360, 0-1, 0-1, 0-1]
+ */
+
+function HSVAtoRGBA(hsva) {
+  const {
+    h,
+    s,
+    v,
+    a
+  } = hsva;
+
+  const f = n => {
+    const k = (n + h / 60) % 6;
+    return v - v * s * Math.max(Math.min(k, 4 - k, 1), 0);
+  };
+
+  const rgb = [f(5), f(3), f(1)].map(v => Math.round(v * 255));
+  return {
+    r: rgb[0],
+    g: rgb[1],
+    b: rgb[2],
+    a
+  };
+}
+/**
+ * Converts RGBA to HSVA. Based on formula from https://en.wikipedia.org/wiki/HSL_and_HSV
+ *
+ * @param color RGBA color as an array [0-255, 0-255, 0-255, 0-1]
+ */
+
+function RGBAtoHSVA(rgba) {
+  if (!rgba) return {
+    h: 0,
+    s: 1,
+    v: 1,
+    a: 1
+  };
+  const r = rgba.r / 255;
+  const g = rgba.g / 255;
+  const b = rgba.b / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h = 0;
+
+  if (max !== min) {
+    if (max === r) {
+      h = 60 * (0 + (g - b) / (max - min));
+    } else if (max === g) {
+      h = 60 * (2 + (b - r) / (max - min));
+    } else if (max === b) {
+      h = 60 * (4 + (r - g) / (max - min));
+    }
+  }
+
+  if (h < 0) h = h + 360;
+  const s = max === 0 ? 0 : (max - min) / max;
+  const hsv = [h, s, max];
+  return {
+    h: hsv[0],
+    s: hsv[1],
+    v: hsv[2],
+    a: rgba.a
+  };
+}
+function HSVAtoHSLA(hsva) {
+  const {
+    h,
+    s,
+    v,
+    a
+  } = hsva;
+  const l = v - v * s / 2;
+  const sprime = l === 1 || l === 0 ? 0 : (v - l) / Math.min(l, 1 - l);
+  return {
+    h,
+    s: sprime,
+    l,
+    a
+  };
+}
+function HSLAtoHSVA(hsl) {
+  const {
+    h,
+    s,
+    l,
+    a
+  } = hsl;
+  const v = l + s * Math.min(l, 1 - l);
+  const sprime = v === 0 ? 0 : 2 - 2 * l / v;
+  return {
+    h,
+    s: sprime,
+    v,
+    a
+  };
+}
+function RGBAtoCSS(rgba) {
+  return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a})`;
+}
+function RGBtoCSS(rgba) {
+  return RGBAtoCSS({ ...rgba,
+    a: 1
+  });
+}
+function RGBAtoHex(rgba) {
+  const toHex = v => {
+    const h = Math.round(v).toString(16);
+    return ('00'.substr(0, 2 - h.length) + h).toUpperCase();
+  };
+
+  return `#${[toHex(rgba.r), toHex(rgba.g), toHex(rgba.b), toHex(Math.round(rgba.a * 255))].join('')}`;
+}
+function HexToRGBA(hex) {
+  const rgba = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.chunk)(hex.slice(1), 2).map(c => parseInt(c, 16));
+  return {
+    r: rgba[0],
+    g: rgba[1],
+    b: rgba[2],
+    a: Math.round(rgba[3] / 255 * 100) / 100
+  };
+}
+function HexToHSVA(hex) {
+  const rgb = HexToRGBA(hex);
+  return RGBAtoHSVA(rgb);
+}
+function HSVAtoHex(hsva) {
+  return RGBAtoHex(HSVAtoRGBA(hsva));
+}
+function parseHex(hex) {
+  if (hex.startsWith('#')) {
+    hex = hex.slice(1);
+  }
+
+  hex = hex.replace(/([^0-9a-f])/gi, 'F');
+
+  if (hex.length === 3 || hex.length === 4) {
+    hex = hex.split('').map(x => x + x).join('');
+  }
+
+  if (hex.length === 6) {
+    hex = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.padEnd)(hex, 8, 'F');
+  } else {
+    hex = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.padEnd)((0,_helpers__WEBPACK_IMPORTED_MODULE_1__.padEnd)(hex, 6), 8, 'F');
+  }
+
+  return `#${hex}`.toUpperCase().substr(0, 9);
+}
+function parseGradient(gradient, colors, currentTheme) {
+  return gradient.replace(/([a-z]+(\s[a-z]+-[1-5])?)(?=$|,)/gi, x => {
+    return classToHex(x, colors, currentTheme) || x;
+  }).replace(/(rgba\()#[0-9a-f]+(?=,)/gi, x => {
+    return 'rgba(' + Object.values(HexToRGBA(parseHex(x.replace(/rgba\(/, '')))).slice(0, 3).join(',');
+  });
+}
+function RGBtoInt(rgba) {
+  return (rgba.r << 16) + (rgba.g << 8) + rgba.b;
+}
+/**
+ * Returns the contrast ratio (1-21) between two colors.
+ *
+ * @param c1 First color
+ * @param c2 Second color
+ */
+
+function contrastRatio(c1, c2) {
+  const [, y1] = (0,_color_transformSRGB__WEBPACK_IMPORTED_MODULE_2__.toXYZ)(RGBtoInt(c1));
+  const [, y2] = (0,_color_transformSRGB__WEBPACK_IMPORTED_MODULE_2__.toXYZ)(RGBtoInt(c2));
+  return (Math.max(y1, y2) + 0.05) / (Math.min(y1, y2) + 0.05);
+}
+//# sourceMappingURL=colorUtils.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/color/transformCIELAB.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/color/transformCIELAB.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
+/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
+/* harmony export */ });
+const delta = 0.20689655172413793; // 6÷29
+
+const cielabForwardTransform = t => t > delta ** 3 ? Math.cbrt(t) : t / (3 * delta ** 2) + 4 / 29;
+
+const cielabReverseTransform = t => t > delta ? t ** 3 : 3 * delta ** 2 * (t - 4 / 29);
+
+function fromXYZ(xyz) {
+  const transform = cielabForwardTransform;
+  const transformedY = transform(xyz[1]);
+  return [116 * transformedY - 16, 500 * (transform(xyz[0] / 0.95047) - transformedY), 200 * (transformedY - transform(xyz[2] / 1.08883))];
+}
+function toXYZ(lab) {
+  const transform = cielabReverseTransform;
+  const Ln = (lab[0] + 16) / 116;
+  return [transform(Ln + lab[1] / 500) * 0.95047, transform(Ln), transform(Ln - lab[2] / 200) * 1.08883];
+}
+//# sourceMappingURL=transformCIELAB.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/color/transformSRGB.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/color/transformSRGB.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
+/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
+/* harmony export */ });
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+ // For converting XYZ to sRGB
+
+const srgbForwardMatrix = [[3.2406, -1.5372, -0.4986], [-0.9689, 1.8758, 0.0415], [0.0557, -0.2040, 1.0570]]; // Forward gamma adjust
+
+const srgbForwardTransform = C => C <= 0.0031308 ? C * 12.92 : 1.055 * C ** (1 / 2.4) - 0.055; // For converting sRGB to XYZ
+
+
+const srgbReverseMatrix = [[0.4124, 0.3576, 0.1805], [0.2126, 0.7152, 0.0722], [0.0193, 0.1192, 0.9505]]; // Reverse gamma adjust
+
+const srgbReverseTransform = C => C <= 0.04045 ? C / 12.92 : ((C + 0.055) / 1.055) ** 2.4;
+
+function fromXYZ(xyz) {
+  const rgb = Array(3);
+  const transform = srgbForwardTransform;
+  const matrix = srgbForwardMatrix; // Matrix transform, then gamma adjustment
+
+  for (let i = 0; i < 3; ++i) {
+    rgb[i] = Math.round((0,_util_helpers__WEBPACK_IMPORTED_MODULE_0__.clamp)(transform(matrix[i][0] * xyz[0] + matrix[i][1] * xyz[1] + matrix[i][2] * xyz[2])) * 255);
+  } // Rescale back to [0, 255]
+
+
+  return (rgb[0] << 16) + (rgb[1] << 8) + (rgb[2] << 0);
+}
+function toXYZ(rgb) {
+  const xyz = [0, 0, 0];
+  const transform = srgbReverseTransform;
+  const matrix = srgbReverseMatrix; // Rescale from [0, 255] to [0, 1] then adjust sRGB gamma to linear RGB
+
+  const r = transform((rgb >> 16 & 0xff) / 255);
+  const g = transform((rgb >> 8 & 0xff) / 255);
+  const b = transform((rgb >> 0 & 0xff) / 255); // Matrix color space transform
+
+  for (let i = 0; i < 3; ++i) {
+    xyz[i] = matrix[i][0] * r + matrix[i][1] * g + matrix[i][2] * b;
+  }
+
+  return xyz;
+}
+//# sourceMappingURL=transformSRGB.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/console.js":
+/*!**************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/console.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "consoleInfo": () => (/* binding */ consoleInfo),
+/* harmony export */   "consoleWarn": () => (/* binding */ consoleWarn),
+/* harmony export */   "consoleError": () => (/* binding */ consoleError),
+/* harmony export */   "deprecate": () => (/* binding */ deprecate),
+/* harmony export */   "breaking": () => (/* binding */ breaking),
+/* harmony export */   "removed": () => (/* binding */ removed)
+/* harmony export */ });
+/* harmony import */ var _framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../framework */ "./node_modules/vuetify/lib/framework.js");
+/* eslint-disable no-console */
+
+
+function createMessage(message, vm, parent) {
+  if (_framework__WEBPACK_IMPORTED_MODULE_0__.default.config.silent) return;
+
+  if (parent) {
+    vm = {
+      _isVue: true,
+      $parent: parent,
+      $options: vm
+    };
+  }
+
+  if (vm) {
+    // Only show each message once per instance
+    vm.$_alreadyWarned = vm.$_alreadyWarned || [];
+    if (vm.$_alreadyWarned.includes(message)) return;
+    vm.$_alreadyWarned.push(message);
+  }
+
+  return `[Vuetify] ${message}` + (vm ? generateComponentTrace(vm) : '');
+}
+
+function consoleInfo(message, vm, parent) {
+  const newMessage = createMessage(message, vm, parent);
+  newMessage != null && console.info(newMessage);
+}
+function consoleWarn(message, vm, parent) {
+  const newMessage = createMessage(message, vm, parent);
+  newMessage != null && console.warn(newMessage);
+}
+function consoleError(message, vm, parent) {
+  const newMessage = createMessage(message, vm, parent);
+  newMessage != null && console.error(newMessage);
+}
+function deprecate(original, replacement, vm, parent) {
+  consoleWarn(`[UPGRADE] '${original}' is deprecated, use '${replacement}' instead.`, vm, parent);
+}
+function breaking(original, replacement, vm, parent) {
+  consoleError(`[BREAKING] '${original}' has been removed, use '${replacement}' instead. For more information, see the upgrade guide https://github.com/vuetifyjs/vuetify/releases/tag/v2.0.0#user-content-upgrade-guide`, vm, parent);
+}
+function removed(original, vm, parent) {
+  consoleWarn(`[REMOVED] '${original}' has been removed. You can safely omit it.`, vm, parent);
+}
+/**
+ * Shamelessly stolen from vuejs/vue/blob/dev/src/core/util/debug.js
+ */
+
+const classifyRE = /(?:^|[-_])(\w)/g;
+
+const classify = str => str.replace(classifyRE, c => c.toUpperCase()).replace(/[-_]/g, '');
+
+function formatComponentName(vm, includeFile) {
+  if (vm.$root === vm) {
+    return '<Root>';
+  }
+
+  const options = typeof vm === 'function' && vm.cid != null ? vm.options : vm._isVue ? vm.$options || vm.constructor.options : vm || {};
+  let name = options.name || options._componentTag;
+  const file = options.__file;
+
+  if (!name && file) {
+    const match = file.match(/([^/\\]+)\.vue$/);
+    name = match && match[1];
+  }
+
+  return (name ? `<${classify(name)}>` : `<Anonymous>`) + (file && includeFile !== false ? ` at ${file}` : '');
+}
+
+function generateComponentTrace(vm) {
+  if (vm._isVue && vm.$parent) {
+    const tree = [];
+    let currentRecursiveSequence = 0;
+
+    while (vm) {
+      if (tree.length > 0) {
+        const last = tree[tree.length - 1];
+
+        if (last.constructor === vm.constructor) {
+          currentRecursiveSequence++;
+          vm = vm.$parent;
+          continue;
+        } else if (currentRecursiveSequence > 0) {
+          tree[tree.length - 1] = [last, currentRecursiveSequence];
+          currentRecursiveSequence = 0;
+        }
+      }
+
+      tree.push(vm);
+      vm = vm.$parent;
+    }
+
+    return '\n\nfound in\n\n' + tree.map((vm, i) => `${i === 0 ? '---> ' : ' '.repeat(5 + i * 2)}${Array.isArray(vm) ? `${formatComponentName(vm[0])}... (${vm[1]} recursive calls)` : formatComponentName(vm)}`).join('\n');
+  } else {
+    return `\n\n(found in ${formatComponentName(vm)})`;
+  }
+}
+//# sourceMappingURL=console.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/helpers.js":
+/*!**************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/helpers.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createSimpleFunctional": () => (/* binding */ createSimpleFunctional),
+/* harmony export */   "directiveConfig": () => (/* binding */ directiveConfig),
+/* harmony export */   "addOnceEventListener": () => (/* binding */ addOnceEventListener),
+/* harmony export */   "passiveSupported": () => (/* binding */ passiveSupported),
+/* harmony export */   "addPassiveEventListener": () => (/* binding */ addPassiveEventListener),
+/* harmony export */   "getNestedValue": () => (/* binding */ getNestedValue),
+/* harmony export */   "deepEqual": () => (/* binding */ deepEqual),
+/* harmony export */   "getObjectValueByPath": () => (/* binding */ getObjectValueByPath),
+/* harmony export */   "getPropertyFromItem": () => (/* binding */ getPropertyFromItem),
+/* harmony export */   "createRange": () => (/* binding */ createRange),
+/* harmony export */   "getZIndex": () => (/* binding */ getZIndex),
+/* harmony export */   "escapeHTML": () => (/* binding */ escapeHTML),
+/* harmony export */   "filterObjectOnKeys": () => (/* binding */ filterObjectOnKeys),
+/* harmony export */   "convertToUnit": () => (/* binding */ convertToUnit),
+/* harmony export */   "kebabCase": () => (/* binding */ kebabCase),
+/* harmony export */   "isObject": () => (/* binding */ isObject),
+/* harmony export */   "keyCodes": () => (/* binding */ keyCodes),
+/* harmony export */   "remapInternalIcon": () => (/* binding */ remapInternalIcon),
+/* harmony export */   "keys": () => (/* binding */ keys),
+/* harmony export */   "camelize": () => (/* binding */ camelize),
+/* harmony export */   "arrayDiff": () => (/* binding */ arrayDiff),
+/* harmony export */   "upperFirst": () => (/* binding */ upperFirst),
+/* harmony export */   "groupItems": () => (/* binding */ groupItems),
+/* harmony export */   "wrapInArray": () => (/* binding */ wrapInArray),
+/* harmony export */   "sortItems": () => (/* binding */ sortItems),
+/* harmony export */   "defaultFilter": () => (/* binding */ defaultFilter),
+/* harmony export */   "searchItems": () => (/* binding */ searchItems),
+/* harmony export */   "getSlotType": () => (/* binding */ getSlotType),
+/* harmony export */   "debounce": () => (/* binding */ debounce),
+/* harmony export */   "throttle": () => (/* binding */ throttle),
+/* harmony export */   "getPrefixedScopedSlots": () => (/* binding */ getPrefixedScopedSlots),
+/* harmony export */   "getSlot": () => (/* binding */ getSlot),
+/* harmony export */   "clamp": () => (/* binding */ clamp),
+/* harmony export */   "padEnd": () => (/* binding */ padEnd),
+/* harmony export */   "chunk": () => (/* binding */ chunk),
+/* harmony export */   "humanReadableFileSize": () => (/* binding */ humanReadableFileSize),
+/* harmony export */   "camelizeObjectKeys": () => (/* binding */ camelizeObjectKeys),
+/* harmony export */   "mergeDeep": () => (/* binding */ mergeDeep),
+/* harmony export */   "fillArray": () => (/* binding */ fillArray)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+
+function createSimpleFunctional(c, el = 'div', name) {
+  return vue__WEBPACK_IMPORTED_MODULE_0__.default.extend({
+    name: name || c.replace(/__/g, '-'),
+    functional: true,
+
+    render(h, {
+      data,
+      children
+    }) {
+      data.staticClass = `${c} ${data.staticClass || ''}`.trim();
+      return h(el, data, children);
+    }
+
+  });
+}
+function directiveConfig(binding, defaults = {}) {
+  return { ...defaults,
+    ...binding.modifiers,
+    value: binding.arg,
+    ...(binding.value || {})
+  };
+}
+function addOnceEventListener(el, eventName, cb, options = false) {
+  var once = event => {
+    cb(event);
+    el.removeEventListener(eventName, once, options);
+  };
+
+  el.addEventListener(eventName, once, options);
+}
+let passiveSupported = false;
+
+try {
+  if (typeof window !== 'undefined') {
+    const testListenerOpts = Object.defineProperty({}, 'passive', {
+      get: () => {
+        passiveSupported = true;
+      }
+    });
+    window.addEventListener('testListener', testListenerOpts, testListenerOpts);
+    window.removeEventListener('testListener', testListenerOpts, testListenerOpts);
+  }
+} catch (e) {
+  console.warn(e);
+}
+/* eslint-disable-line no-console */
+
+
+
+function addPassiveEventListener(el, event, cb, options) {
+  el.addEventListener(event, cb, passiveSupported ? options : false);
+}
+function getNestedValue(obj, path, fallback) {
+  const last = path.length - 1;
+  if (last < 0) return obj === undefined ? fallback : obj;
+
+  for (let i = 0; i < last; i++) {
+    if (obj == null) {
+      return fallback;
+    }
+
+    obj = obj[path[i]];
+  }
+
+  if (obj == null) return fallback;
+  return obj[path[last]] === undefined ? fallback : obj[path[last]];
+}
+function deepEqual(a, b) {
+  if (a === b) return true;
+
+  if (a instanceof Date && b instanceof Date && a.getTime() !== b.getTime()) {
+    // If the values are Date, compare them as timestamps
+    return false;
+  }
+
+  if (a !== Object(a) || b !== Object(b)) {
+    // If the values aren't objects, they were already checked for equality
+    return false;
+  }
+
+  const props = Object.keys(a);
+
+  if (props.length !== Object.keys(b).length) {
+    // Different number of props, don't bother to check
+    return false;
+  }
+
+  return props.every(p => deepEqual(a[p], b[p]));
+}
+function getObjectValueByPath(obj, path, fallback) {
+  // credit: http://stackoverflow.com/questions/6491463/accessing-nested-javascript-objects-with-string-key#comment55278413_6491621
+  if (obj == null || !path || typeof path !== 'string') return fallback;
+  if (obj[path] !== undefined) return obj[path];
+  path = path.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+
+  path = path.replace(/^\./, ''); // strip a leading dot
+
+  return getNestedValue(obj, path.split('.'), fallback);
+}
+function getPropertyFromItem(item, property, fallback) {
+  if (property == null) return item === undefined ? fallback : item;
+  if (item !== Object(item)) return fallback === undefined ? item : fallback;
+  if (typeof property === 'string') return getObjectValueByPath(item, property, fallback);
+  if (Array.isArray(property)) return getNestedValue(item, property, fallback);
+  if (typeof property !== 'function') return fallback;
+  const value = property(item, fallback);
+  return typeof value === 'undefined' ? fallback : value;
+}
+function createRange(length) {
+  return Array.from({
+    length
+  }, (v, k) => k);
+}
+function getZIndex(el) {
+  if (!el || el.nodeType !== Node.ELEMENT_NODE) return 0;
+  const index = +window.getComputedStyle(el).getPropertyValue('z-index');
+  if (!index) return getZIndex(el.parentNode);
+  return index;
+}
+const tagsToReplace = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;'
+};
+function escapeHTML(str) {
+  return str.replace(/[&<>]/g, tag => tagsToReplace[tag] || tag);
+}
+function filterObjectOnKeys(obj, keys) {
+  const filtered = {};
+
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+
+    if (typeof obj[key] !== 'undefined') {
+      filtered[key] = obj[key];
+    }
+  }
+
+  return filtered;
+}
+function convertToUnit(str, unit = 'px') {
+  if (str == null || str === '') {
+    return undefined;
+  } else if (isNaN(+str)) {
+    return String(str);
+  } else {
+    return `${Number(str)}${unit}`;
+  }
+}
+function kebabCase(str) {
+  return (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+function isObject(obj) {
+  return obj !== null && typeof obj === 'object';
+} // KeyboardEvent.keyCode aliases
+
+const keyCodes = Object.freeze({
+  enter: 13,
+  tab: 9,
+  delete: 46,
+  esc: 27,
+  space: 32,
+  up: 38,
+  down: 40,
+  left: 37,
+  right: 39,
+  end: 35,
+  home: 36,
+  del: 46,
+  backspace: 8,
+  insert: 45,
+  pageup: 33,
+  pagedown: 34,
+  shift: 16
+});
+/**
+ * This remaps internal names like '$cancel' or '$vuetify.icons.cancel'
+ * to the current name or component for that icon.
+ */
+
+function remapInternalIcon(vm, iconName) {
+  // Look for custom component in the configuration
+  const component = vm.$vuetify.icons.component; // Look for overrides
+
+  if (iconName.startsWith('$')) {
+    // Get the target icon name
+    const iconPath = `$vuetify.icons.values.${iconName.split('$').pop().split('.').pop()}`; // Now look up icon indirection name,
+    // e.g. '$vuetify.icons.values.cancel'
+
+    const override = getObjectValueByPath(vm, iconPath, iconName);
+    if (typeof override === 'string') iconName = override;else return override;
+  }
+
+  if (component == null) {
+    return iconName;
+  }
+
+  return {
+    component,
+    props: {
+      icon: iconName
+    }
+  };
+}
+function keys(o) {
+  return Object.keys(o);
+}
+/**
+ * Camelize a hyphen-delimited string.
+ */
+
+const camelizeRE = /-(\w)/g;
+const camelize = str => {
+  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : '');
+};
+/**
+ * Returns the set difference of B and A, i.e. the set of elements in B but not in A
+ */
+
+function arrayDiff(a, b) {
+  const diff = [];
+
+  for (let i = 0; i < b.length; i++) {
+    if (a.indexOf(b[i]) < 0) diff.push(b[i]);
+  }
+
+  return diff;
+}
+/**
+ * Makes the first character of a string uppercase
+ */
+
+function upperFirst(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+function groupItems(items, groupBy, groupDesc) {
+  const key = groupBy[0];
+  const groups = [];
+  let current;
+
+  for (var i = 0; i < items.length; i++) {
+    const item = items[i];
+    const val = getObjectValueByPath(item, key, null);
+
+    if (current !== val) {
+      var _val;
+
+      current = val;
+      groups.push({
+        name: (_val = val) != null ? _val : '',
+        items: []
+      });
+    }
+
+    groups[groups.length - 1].items.push(item);
+  }
+
+  return groups;
+}
+function wrapInArray(v) {
+  return v != null ? Array.isArray(v) ? v : [v] : [];
+}
+function sortItems(items, sortBy, sortDesc, locale, customSorters) {
+  if (sortBy === null || !sortBy.length) return items;
+  const stringCollator = new Intl.Collator(locale, {
+    sensitivity: 'accent',
+    usage: 'sort'
+  });
+  return items.sort((a, b) => {
+    for (let i = 0; i < sortBy.length; i++) {
+      const sortKey = sortBy[i];
+      let sortA = getObjectValueByPath(a, sortKey);
+      let sortB = getObjectValueByPath(b, sortKey);
+
+      if (sortDesc[i]) {
+        [sortA, sortB] = [sortB, sortA];
+      }
+
+      if (customSorters && customSorters[sortKey]) {
+        const customResult = customSorters[sortKey](sortA, sortB);
+        if (!customResult) continue;
+        return customResult;
+      } // Check if both cannot be evaluated
+
+
+      if (sortA === null && sortB === null) {
+        continue;
+      }
+
+      [sortA, sortB] = [sortA, sortB].map(s => (s || '').toString().toLocaleLowerCase());
+
+      if (sortA !== sortB) {
+        if (!isNaN(sortA) && !isNaN(sortB)) return Number(sortA) - Number(sortB);
+        return stringCollator.compare(sortA, sortB);
+      }
+    }
+
+    return 0;
+  });
+}
+function defaultFilter(value, search, item) {
+  return value != null && search != null && typeof value !== 'boolean' && value.toString().toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) !== -1;
+}
+function searchItems(items, search) {
+  if (!search) return items;
+  search = search.toString().toLowerCase();
+  if (search.trim() === '') return items;
+  return items.filter(item => Object.keys(item).some(key => defaultFilter(getObjectValueByPath(item, key), search, item)));
+}
+/**
+ * Returns:
+ *  - 'normal' for old style slots - `<template slot="default">`
+ *  - 'scoped' for old style scoped slots (`<template slot="default" slot-scope="data">`) or bound v-slot (`#default="data"`)
+ *  - 'v-slot' for unbound v-slot (`#default`) - only if the third param is true, otherwise counts as scoped
+ */
+
+function getSlotType(vm, name, split) {
+  if (vm.$slots[name] && vm.$scopedSlots[name] && vm.$scopedSlots[name].name) {
+    return split ? 'v-slot' : 'scoped';
+  }
+
+  if (vm.$slots[name]) return 'normal';
+  if (vm.$scopedSlots[name]) return 'scoped';
+}
+function debounce(fn, delay) {
+  let timeoutId = 0;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+}
+function throttle(fn, limit) {
+  let throttling = false;
+  return (...args) => {
+    if (!throttling) {
+      throttling = true;
+      setTimeout(() => throttling = false, limit);
+      return fn(...args);
+    }
+  };
+}
+function getPrefixedScopedSlots(prefix, scopedSlots) {
+  return Object.keys(scopedSlots).filter(k => k.startsWith(prefix)).reduce((obj, k) => {
+    obj[k.replace(prefix, '')] = scopedSlots[k];
+    return obj;
+  }, {});
+}
+function getSlot(vm, name = 'default', data, optional = false) {
+  if (vm.$scopedSlots[name]) {
+    return vm.$scopedSlots[name](data instanceof Function ? data() : data);
+  } else if (vm.$slots[name] && (!data || optional)) {
+    return vm.$slots[name];
+  }
+
+  return undefined;
+}
+function clamp(value, min = 0, max = 1) {
+  return Math.max(min, Math.min(max, value));
+}
+function padEnd(str, length, char = '0') {
+  return str + char.repeat(Math.max(0, length - str.length));
+}
+function chunk(str, size = 1) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < str.length) {
+    chunked.push(str.substr(index, size));
+    index += size;
+  }
+
+  return chunked;
+}
+function humanReadableFileSize(bytes, binary = false) {
+  const base = binary ? 1024 : 1000;
+
+  if (bytes < base) {
+    return `${bytes} B`;
+  }
+
+  const prefix = binary ? ['Ki', 'Mi', 'Gi'] : ['k', 'M', 'G'];
+  let unit = -1;
+
+  while (Math.abs(bytes) >= base && unit < prefix.length - 1) {
+    bytes /= base;
+    ++unit;
+  }
+
+  return `${bytes.toFixed(1)} ${prefix[unit]}B`;
+}
+function camelizeObjectKeys(obj) {
+  if (!obj) return {};
+  return Object.keys(obj).reduce((o, key) => {
+    o[camelize(key)] = obj[key];
+    return o;
+  }, {});
+}
+function mergeDeep(source = {}, target = {}) {
+  for (const key in target) {
+    const sourceProperty = source[key];
+    const targetProperty = target[key]; // Only continue deep merging if
+    // both properties are objects
+
+    if (isObject(sourceProperty) && isObject(targetProperty)) {
+      source[key] = mergeDeep(sourceProperty, targetProperty);
+      continue;
+    }
+
+    source[key] = targetProperty;
+  }
+
+  return source;
+}
+function fillArray(length, obj) {
+  return Array(length).fill(obj);
+}
+//# sourceMappingURL=helpers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuex/dist/vuex.esm.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "Store": () => (/* binding */ Store),
+/* harmony export */   "createLogger": () => (/* binding */ createLogger),
+/* harmony export */   "createNamespacedHelpers": () => (/* binding */ createNamespacedHelpers),
+/* harmony export */   "install": () => (/* binding */ install),
+/* harmony export */   "mapActions": () => (/* binding */ mapActions),
+/* harmony export */   "mapGetters": () => (/* binding */ mapGetters),
+/* harmony export */   "mapMutations": () => (/* binding */ mapMutations),
+/* harmony export */   "mapState": () => (/* binding */ mapState)
+/* harmony export */ });
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+function applyMixin (Vue) {
+  var version = Number(Vue.version.split('.')[0]);
+
+  if (version >= 2) {
+    Vue.mixin({ beforeCreate: vuexInit });
+  } else {
+    // override init and inject vuex init procedure
+    // for 1.x backwards compatibility.
+    var _init = Vue.prototype._init;
+    Vue.prototype._init = function (options) {
+      if ( options === void 0 ) options = {};
+
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit;
+      _init.call(this, options);
+    };
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+  function vuexInit () {
+    var options = this.$options;
+    // store injection
+    if (options.store) {
+      this.$store = typeof options.store === 'function'
+        ? options.store()
+        : options.store;
+    } else if (options.parent && options.parent.$store) {
+      this.$store = options.parent.$store;
+    }
+  }
+}
+
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof __webpack_require__.g !== 'undefined'
+    ? __webpack_require__.g
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+function devtoolPlugin (store) {
+  if (!devtoolHook) { return }
+
+  store._devtoolHook = devtoolHook;
+
+  devtoolHook.emit('vuex:init', store);
+
+  devtoolHook.on('vuex:travel-to-state', function (targetState) {
+    store.replaceState(targetState);
+  });
+
+  store.subscribe(function (mutation, state) {
+    devtoolHook.emit('vuex:mutation', mutation, state);
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
+}
+
+/**
+ * Get the first item that pass the test
+ * by second argument function
+ *
+ * @param {Array} list
+ * @param {Function} f
+ * @return {*}
+ */
+function find (list, f) {
+  return list.filter(f)[0]
+}
+
+/**
+ * Deep copy the given object considering circular structure.
+ * This function caches all nested objects and its copies.
+ * If it detects circular structure, use cached copy to avoid infinite loop.
+ *
+ * @param {*} obj
+ * @param {Array<Object>} cache
+ * @return {*}
+ */
+function deepCopy (obj, cache) {
+  if ( cache === void 0 ) cache = [];
+
+  // just return if obj is immutable value
+  if (obj === null || typeof obj !== 'object') {
+    return obj
+  }
+
+  // if obj is hit, it is in circular structure
+  var hit = find(cache, function (c) { return c.original === obj; });
+  if (hit) {
+    return hit.copy
+  }
+
+  var copy = Array.isArray(obj) ? [] : {};
+  // put the copy into cache at first
+  // because we want to refer it in recursive deepCopy
+  cache.push({
+    original: obj,
+    copy: copy
+  });
+
+  Object.keys(obj).forEach(function (key) {
+    copy[key] = deepCopy(obj[key], cache);
+  });
+
+  return copy
+}
+
+/**
+ * forEach for object
+ */
+function forEachValue (obj, fn) {
+  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isPromise (val) {
+  return val && typeof val.then === 'function'
+}
+
+function assert (condition, msg) {
+  if (!condition) { throw new Error(("[vuex] " + msg)) }
+}
+
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
+var Module = function Module (rawModule, runtime) {
+  this.runtime = runtime;
+  // Store some children item
+  this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
+  this._rawModule = rawModule;
+  var rawState = rawModule.state;
+
+  // Store the origin module's state
+  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
+};
+
+var prototypeAccessors = { namespaced: { configurable: true } };
+
+prototypeAccessors.namespaced.get = function () {
+  return !!this._rawModule.namespaced
+};
+
+Module.prototype.addChild = function addChild (key, module) {
+  this._children[key] = module;
+};
+
+Module.prototype.removeChild = function removeChild (key) {
+  delete this._children[key];
+};
+
+Module.prototype.getChild = function getChild (key) {
+  return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
+};
+
+Module.prototype.update = function update (rawModule) {
+  this._rawModule.namespaced = rawModule.namespaced;
+  if (rawModule.actions) {
+    this._rawModule.actions = rawModule.actions;
+  }
+  if (rawModule.mutations) {
+    this._rawModule.mutations = rawModule.mutations;
+  }
+  if (rawModule.getters) {
+    this._rawModule.getters = rawModule.getters;
+  }
+};
+
+Module.prototype.forEachChild = function forEachChild (fn) {
+  forEachValue(this._children, fn);
+};
+
+Module.prototype.forEachGetter = function forEachGetter (fn) {
+  if (this._rawModule.getters) {
+    forEachValue(this._rawModule.getters, fn);
+  }
+};
+
+Module.prototype.forEachAction = function forEachAction (fn) {
+  if (this._rawModule.actions) {
+    forEachValue(this._rawModule.actions, fn);
+  }
+};
+
+Module.prototype.forEachMutation = function forEachMutation (fn) {
+  if (this._rawModule.mutations) {
+    forEachValue(this._rawModule.mutations, fn);
+  }
+};
+
+Object.defineProperties( Module.prototype, prototypeAccessors );
+
+var ModuleCollection = function ModuleCollection (rawRootModule) {
+  // register root module (Vuex.Store options)
+  this.register([], rawRootModule, false);
+};
+
+ModuleCollection.prototype.get = function get (path) {
+  return path.reduce(function (module, key) {
+    return module.getChild(key)
+  }, this.root)
+};
+
+ModuleCollection.prototype.getNamespace = function getNamespace (path) {
+  var module = this.root;
+  return path.reduce(function (namespace, key) {
+    module = module.getChild(key);
+    return namespace + (module.namespaced ? key + '/' : '')
+  }, '')
+};
+
+ModuleCollection.prototype.update = function update$1 (rawRootModule) {
+  update([], this.root, rawRootModule);
+};
+
+ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
+    var this$1 = this;
+    if ( runtime === void 0 ) runtime = true;
+
+  if ((true)) {
+    assertRawModule(path, rawModule);
+  }
+
+  var newModule = new Module(rawModule, runtime);
+  if (path.length === 0) {
+    this.root = newModule;
+  } else {
+    var parent = this.get(path.slice(0, -1));
+    parent.addChild(path[path.length - 1], newModule);
+  }
+
+  // register nested modules
+  if (rawModule.modules) {
+    forEachValue(rawModule.modules, function (rawChildModule, key) {
+      this$1.register(path.concat(key), rawChildModule, runtime);
+    });
+  }
+};
+
+ModuleCollection.prototype.unregister = function unregister (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+  var child = parent.getChild(key);
+
+  if (!child) {
+    if ((true)) {
+      console.warn(
+        "[vuex] trying to unregister module '" + key + "', which is " +
+        "not registered"
+      );
+    }
+    return
+  }
+
+  if (!child.runtime) {
+    return
+  }
+
+  parent.removeChild(key);
+};
+
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  if (parent) {
+    return parent.hasChild(key)
+  }
+
+  return false
+};
+
+function update (path, targetModule, newModule) {
+  if ((true)) {
+    assertRawModule(path, newModule);
+  }
+
+  // update target module
+  targetModule.update(newModule);
+
+  // update nested modules
+  if (newModule.modules) {
+    for (var key in newModule.modules) {
+      if (!targetModule.getChild(key)) {
+        if ((true)) {
+          console.warn(
+            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
+            'manual reload is needed'
+          );
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      );
+    }
+  }
+}
+
+var functionAssert = {
+  assert: function (value) { return typeof value === 'function'; },
+  expected: 'function'
+};
+
+var objectAssert = {
+  assert: function (value) { return typeof value === 'function' ||
+    (typeof value === 'object' && typeof value.handler === 'function'); },
+  expected: 'function or object with "handler" function'
+};
+
+var assertTypes = {
+  getters: functionAssert,
+  mutations: functionAssert,
+  actions: objectAssert
+};
+
+function assertRawModule (path, rawModule) {
+  Object.keys(assertTypes).forEach(function (key) {
+    if (!rawModule[key]) { return }
+
+    var assertOptions = assertTypes[key];
+
+    forEachValue(rawModule[key], function (value, type) {
+      assert(
+        assertOptions.assert(value),
+        makeAssertionMessage(path, key, type, value, assertOptions.expected)
+      );
+    });
+  });
+}
+
+function makeAssertionMessage (path, key, type, value, expected) {
+  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  if (path.length > 0) {
+    buf += " in module \"" + (path.join('.')) + "\"";
+  }
+  buf += " is " + (JSON.stringify(value)) + ".";
+  return buf
+}
+
+var Vue; // bind on install
+
+var Store = function Store (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #731
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  if ((true)) {
+    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
+    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
+    assert(this instanceof Store, "store must be called with the new operator.");
+  }
+
+  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  var strict = options.strict; if ( strict === void 0 ) strict = false;
+
+  // store internal state
+  this._committing = false;
+  this._actions = Object.create(null);
+  this._actionSubscribers = [];
+  this._mutations = Object.create(null);
+  this._wrappedGetters = Object.create(null);
+  this._modules = new ModuleCollection(options);
+  this._modulesNamespaceMap = Object.create(null);
+  this._subscribers = [];
+  this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
+
+  // bind commit and dispatch to self
+  var store = this;
+  var ref = this;
+  var dispatch = ref.dispatch;
+  var commit = ref.commit;
+  this.dispatch = function boundDispatch (type, payload) {
+    return dispatch.call(store, type, payload)
+  };
+  this.commit = function boundCommit (type, payload, options) {
+    return commit.call(store, type, payload, options)
+  };
+
+  // strict mode
+  this.strict = strict;
+
+  var state = this._modules.root.state;
+
+  // init root module.
+  // this also recursively registers all sub-modules
+  // and collects all module getters inside this._wrappedGetters
+  installModule(this, state, [], this._modules.root);
+
+  // initialize the store vm, which is responsible for the reactivity
+  // (also registers _wrappedGetters as computed properties)
+  resetStoreVM(this, state);
+
+  // apply plugins
+  plugins.forEach(function (plugin) { return plugin(this$1); });
+
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
+    devtoolPlugin(this);
+  }
+};
+
+var prototypeAccessors$1 = { state: { configurable: true } };
+
+prototypeAccessors$1.state.get = function () {
+  return this._vm._data.$$state
+};
+
+prototypeAccessors$1.state.set = function (v) {
+  if ((true)) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
+  }
+};
+
+Store.prototype.commit = function commit (_type, _payload, _options) {
+    var this$1 = this;
+
+  // check object-style commit
+  var ref = unifyObjectStyle(_type, _payload, _options);
+    var type = ref.type;
+    var payload = ref.payload;
+    var options = ref.options;
+
+  var mutation = { type: type, payload: payload };
+  var entry = this._mutations[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown mutation type: " + type));
+    }
+    return
+  }
+  this._withCommit(function () {
+    entry.forEach(function commitIterator (handler) {
+      handler(payload);
+    });
+  });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  if (
+    ( true) &&
+    options && options.silent
+  ) {
+    console.warn(
+      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
+      'Use the filter functionality in the vue-devtools'
+    );
+  }
+};
+
+Store.prototype.dispatch = function dispatch (_type, _payload) {
+    var this$1 = this;
+
+  // check object-style dispatch
+  var ref = unifyObjectStyle(_type, _payload);
+    var type = ref.type;
+    var payload = ref.payload;
+
+  var action = { type: type, payload: payload };
+  var entry = this._actions[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown action type: " + type));
+    }
+    return
+  }
+
+  try {
+    this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if ((true)) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
+
+  var result = entry.length > 1
+    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
+    : entry[0](payload);
+
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
+      }
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
+  })
+};
+
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
+};
+
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers, options)
+};
+
+Store.prototype.watch = function watch (getter, cb, options) {
+    var this$1 = this;
+
+  if ((true)) {
+    assert(typeof getter === 'function', "store.watch only accepts a function.");
+  }
+  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
+};
+
+Store.prototype.replaceState = function replaceState (state) {
+    var this$1 = this;
+
+  this._withCommit(function () {
+    this$1._vm._data.$$state = state;
+  });
+};
+
+Store.prototype.registerModule = function registerModule (path, rawModule, options) {
+    if ( options === void 0 ) options = {};
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+    assert(path.length > 0, 'cannot register the root module by using registerModule.');
+  }
+
+  this._modules.register(path, rawModule);
+  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
+  // reset store to update getters...
+  resetStoreVM(this, this.state);
+};
+
+Store.prototype.unregisterModule = function unregisterModule (path) {
+    var this$1 = this;
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  this._modules.unregister(path);
+  this._withCommit(function () {
+    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    Vue.delete(parentState, path[path.length - 1]);
+  });
+  resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
+};
+
+Store.prototype.hotUpdate = function hotUpdate (newOptions) {
+  this._modules.update(newOptions);
+  resetStore(this, true);
+};
+
+Store.prototype._withCommit = function _withCommit (fn) {
+  var committing = this._committing;
+  this._committing = true;
+  fn();
+  this._committing = committing;
+};
+
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
+
+function genericSubscribe (fn, subs, options) {
+  if (subs.indexOf(fn) < 0) {
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
+  }
+  return function () {
+    var i = subs.indexOf(fn);
+    if (i > -1) {
+      subs.splice(i, 1);
+    }
+  }
+}
+
+function resetStore (store, hot) {
+  store._actions = Object.create(null);
+  store._mutations = Object.create(null);
+  store._wrappedGetters = Object.create(null);
+  store._modulesNamespaceMap = Object.create(null);
+  var state = store.state;
+  // init all modules
+  installModule(store, state, [], store._modules.root, true);
+  // reset vm
+  resetStoreVM(store, state, hot);
+}
+
+function resetStoreVM (store, state, hot) {
+  var oldVm = store._vm;
+
+  // bind store public getters
+  store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
+  var wrappedGetters = store._wrappedGetters;
+  var computed = {};
+  forEachValue(wrappedGetters, function (fn, key) {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
+    Object.defineProperty(store.getters, key, {
+      get: function () { return store._vm[key]; },
+      enumerable: true // for local getters
+    });
+  });
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed: computed
+  });
+  Vue.config.silent = silent;
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store);
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(function () {
+        oldVm._data.$$state = null;
+      });
+    }
+    Vue.nextTick(function () { return oldVm.$destroy(); });
+  }
+}
+
+function installModule (store, rootState, path, module, hot) {
+  var isRoot = !path.length;
+  var namespace = store._modules.getNamespace(path);
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+  // set state
+  if (!isRoot && !hot) {
+    var parentState = getNestedState(rootState, path.slice(0, -1));
+    var moduleName = path[path.length - 1];
+    store._withCommit(function () {
+      if ((true)) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
+      Vue.set(parentState, moduleName, module.state);
+    });
+  }
+
+  var local = module.context = makeLocalContext(store, namespace, path);
+
+  module.forEachMutation(function (mutation, key) {
+    var namespacedType = namespace + key;
+    registerMutation(store, namespacedType, mutation, local);
+  });
+
+  module.forEachAction(function (action, key) {
+    var type = action.root ? key : namespace + key;
+    var handler = action.handler || action;
+    registerAction(store, type, handler, local);
+  });
+
+  module.forEachGetter(function (getter, key) {
+    var namespacedType = namespace + key;
+    registerGetter(store, namespacedType, getter, local);
+  });
+
+  module.forEachChild(function (child, key) {
+    installModule(store, rootState, path.concat(key), child, hot);
+  });
+}
+
+/**
+ * make localized dispatch, commit, getters and state
+ * if there is no namespace, just use root ones
+ */
+function makeLocalContext (store, namespace, path) {
+  var noNamespace = namespace === '';
+
+  var local = {
+    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._actions[type]) {
+          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._mutations[type]) {
+          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      store.commit(type, payload, options);
+    }
+  };
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? function () { return store.getters; }
+        : function () { return makeLocalGetters(store, namespace); }
+    },
+    state: {
+      get: function () { return getNestedState(store.state, path); }
+    }
+  });
+
+  return local
+}
+
+function makeLocalGetters (store, namespace) {
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
+
+      // extract local getter type
+      var localType = type.slice(splitPos);
+
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
+    });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
+
+  return store._makeLocalGettersCache[namespace]
+}
+
+function registerMutation (store, type, handler, local) {
+  var entry = store._mutations[type] || (store._mutations[type] = []);
+  entry.push(function wrappedMutationHandler (payload) {
+    handler.call(store, local.state, payload);
+  });
+}
+
+function registerAction (store, type, handler, local) {
+  var entry = store._actions[type] || (store._actions[type] = []);
+  entry.push(function wrappedActionHandler (payload) {
+    var res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload);
+    if (!isPromise(res)) {
+      res = Promise.resolve(res);
+    }
+    if (store._devtoolHook) {
+      return res.catch(function (err) {
+        store._devtoolHook.emit('vuex:error', err);
+        throw err
+      })
+    } else {
+      return res
+    }
+  });
+}
+
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if ((true)) {
+      console.error(("[vuex] duplicate getter key: " + type));
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  };
+}
+
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, function () {
+    if ((true)) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
+    }
+  }, { deep: true, sync: true });
+}
+
+function getNestedState (state, path) {
+  return path.reduce(function (state, key) { return state[key]; }, state)
+}
+
+function unifyObjectStyle (type, payload, options) {
+  if (isObject(type) && type.type) {
+    options = payload;
+    payload = type;
+    type = type.type;
+  }
+
+  if ((true)) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
+  }
+
+  return { type: type, payload: payload, options: options }
+}
+
+function install (_Vue) {
+  if (Vue && _Vue === Vue) {
+    if ((true)) {
+      console.error(
+        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
+      );
+    }
+    return
+  }
+  Vue = _Vue;
+  applyMixin(Vue);
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+var mapState = normalizeNamespace(function (namespace, states) {
+  var res = {};
+  if (( true) && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(states).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedState () {
+      var state = this.$store.state;
+      var getters = this.$store.getters;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        if (!module) {
+          return
+        }
+        state = module.context.state;
+        getters = module.context.getters;
+      }
+      return typeof val === 'function'
+        ? val.call(this, state, getters)
+        : state[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept another params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapMutations = normalizeNamespace(function (namespace, mutations) {
+  var res = {};
+  if (( true) && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(mutations).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedMutation () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // Get the commit method from store
+      var commit = this.$store.commit;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        if (!module) {
+          return
+        }
+        commit = module.context.commit;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+var mapGetters = normalizeNamespace(function (namespace, getters) {
+  var res = {};
+  if (( true) && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(getters).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val;
+    res[key] = function mappedGetter () {
+      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
+        return
+      }
+      if (( true) && !(val in this.$store.getters)) {
+        console.error(("[vuex] unknown getter: " + val));
+        return
+      }
+      return this.$store.getters[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapActions = normalizeNamespace(function (namespace, actions) {
+  var res = {};
+  if (( true) && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(actions).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedAction () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // get dispatch function from store
+      var dispatch = this.$store.dispatch;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
+var createNamespacedHelpers = function (namespace) { return ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+}); };
+
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}
+
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn) {
+  return function (namespace, map) {
+    if (typeof namespace !== 'string') {
+      map = namespace;
+      namespace = '';
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/';
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store, helper, namespace) {
+  var module = store._modulesNamespaceMap[namespace];
+  if (( true) && !module) {
+    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
+  }
+  return module
+}
+
+// Credits: borrowed code from fcomb/redux-logger
+
+function createLogger (ref) {
+  if ( ref === void 0 ) ref = {};
+  var collapsed = ref.collapsed; if ( collapsed === void 0 ) collapsed = true;
+  var filter = ref.filter; if ( filter === void 0 ) filter = function (mutation, stateBefore, stateAfter) { return true; };
+  var transformer = ref.transformer; if ( transformer === void 0 ) transformer = function (state) { return state; };
+  var mutationTransformer = ref.mutationTransformer; if ( mutationTransformer === void 0 ) mutationTransformer = function (mut) { return mut; };
+  var actionFilter = ref.actionFilter; if ( actionFilter === void 0 ) actionFilter = function (action, state) { return true; };
+  var actionTransformer = ref.actionTransformer; if ( actionTransformer === void 0 ) actionTransformer = function (act) { return act; };
+  var logMutations = ref.logMutations; if ( logMutations === void 0 ) logMutations = true;
+  var logActions = ref.logActions; if ( logActions === void 0 ) logActions = true;
+  var logger = ref.logger; if ( logger === void 0 ) logger = console;
+
+  return function (store) {
+    var prevState = deepCopy(store.state);
+
+    if (typeof logger === 'undefined') {
+      return
+    }
+
+    if (logMutations) {
+      store.subscribe(function (mutation, state) {
+        var nextState = deepCopy(state);
+
+        if (filter(mutation, prevState, nextState)) {
+          var formattedTime = getFormattedTime();
+          var formattedMutation = mutationTransformer(mutation);
+          var message = "mutation " + (mutation.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c prev state', 'color: #9E9E9E; font-weight: bold', transformer(prevState));
+          logger.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
+          logger.log('%c next state', 'color: #4CAF50; font-weight: bold', transformer(nextState));
+          endMessage(logger);
+        }
+
+        prevState = nextState;
+      });
+    }
+
+    if (logActions) {
+      store.subscribeAction(function (action, state) {
+        if (actionFilter(action, state)) {
+          var formattedTime = getFormattedTime();
+          var formattedAction = actionTransformer(action);
+          var message = "action " + (action.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c action', 'color: #03A9F4; font-weight: bold', formattedAction);
+          endMessage(logger);
+        }
+      });
+    }
+  }
+}
+
+function startMessage (logger, message, collapsed) {
+  var startMessage = collapsed
+    ? logger.groupCollapsed
+    : logger.group;
+
+  // render
+  try {
+    startMessage.call(logger, message);
+  } catch (e) {
+    logger.log(message);
+  }
+}
+
+function endMessage (logger) {
+  try {
+    logger.groupEnd();
+  } catch (e) {
+    logger.log('—— log end ——');
+  }
+}
+
+function getFormattedTime () {
+  var time = new Date();
+  return (" @ " + (pad(time.getHours(), 2)) + ":" + (pad(time.getMinutes(), 2)) + ":" + (pad(time.getSeconds(), 2)) + "." + (pad(time.getMilliseconds(), 3)))
+}
+
+function repeat (str, times) {
+  return (new Array(times + 1)).join(str)
+}
+
+function pad (num, maxLength) {
+  return repeat('0', maxLength - num.toString().length) + num
+}
+
+var index = {
+  Store: Store,
+  install: install,
+  version: '3.6.2',
+  mapState: mapState,
+  mapMutations: mapMutations,
+  mapGetters: mapGetters,
+  mapActions: mapActions,
+  createNamespacedHelpers: createNamespacedHelpers,
+  createLogger: createLogger
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
+
+
 /***/ })
 
 /******/ 	});
@@ -33550,6 +46374,18 @@ Vue.compile = compileToFunctions;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -33601,19 +46437,56 @@ Vue.compile = compileToFunctions;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!*********************************!*\
   !*** ./resources/js/app-vue.js ***!
   \*********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
+/* harmony import */ var _plugins_vuetify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./plugins/vuetify */ "./resources/js/plugins/vuetify.js");
+/* harmony import */ var _proxies_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./proxies/_config */ "./resources/js/proxies/_config.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
-Vue.component('vue-example', __webpack_require__(/*! ./components/VueExample.vue */ "./resources/js/components/VueExample.vue").default);
+
+
+
+
+
+/* Default title tag */
+
+var defaultDocumentTitle = 'Cátalogo D´Lirio';
+/* Collapse mobile aside menu on route change & set title */
+
+_router__WEBPACK_IMPORTED_MODULE_1__.default.afterEach(function (to) {
+  if (to.meta && to.meta.title) {
+    document.title = "".concat(to.meta.title, " \u2014 ").concat(defaultDocumentTitle);
+  } else {
+    document.title = defaultDocumentTitle;
+  }
+});
+Vue.config.productionTip = false;
+Vue.use({
+  install: function install(Vue) {
+    Object.defineProperty(Vue.prototype, '$proxies', {
+      value: _proxies_config__WEBPACK_IMPORTED_MODULE_4__.default
+    });
+  }
+});
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    App: _App_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  router: _router__WEBPACK_IMPORTED_MODULE_1__.default,
+  store: _store__WEBPACK_IMPORTED_MODULE_2__.default,
+  vuetify: _plugins_vuetify__WEBPACK_IMPORTED_MODULE_3__.default
 });
 })();
 
