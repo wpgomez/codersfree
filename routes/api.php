@@ -20,10 +20,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('catalogs', [CatalogController::class, 'index']);
+Route::group(['middleware' => ['cors']], function () {
+    Route::get('catalogs', [CatalogController::class, 'index']);
 
-Route::get('catalogs/{catalog}', [CatalogController::class, 'show']);
+    Route::get('catalogs/{catalog}', [CatalogController::class, 'show']);
 
-Route::get('catalogs/{catalog}/pages', [CatalogController::class, 'pages']);
+    Route::get('catalogs/{catalog}/pages', [CatalogController::class, 'pages']);
 
-Route::get('catalogpages/{catalogpage}', [CatalogpageController::class, 'show']);
+    Route::get('catalogpages/{catalogpage}', [CatalogpageController::class, 'show']);
+});

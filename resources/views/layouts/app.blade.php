@@ -33,10 +33,6 @@
         {{-- FlexSlid --}}
         <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
 
-        {{-- turn.js --}}
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="{{ asset('vendor/turnjs4/turn.min.js') }}"></script>
-
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
