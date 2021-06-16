@@ -17,10 +17,10 @@ class CatalogpageResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'catalogo_id' => $this->catalogo_id,
+            'catalogo_id' => $this->catalog_id,
             'nro_pagina' => $this->number_page,
-            'imagen' => Storage::url($this->imagen_normal),
-            'imagen_small' => Storage::url($this->imagen_small),
+            'imagen' => Storage::url($this->image_normal),
+            'imagen_small' => Storage::url($this->image_small),
             'nro_refs' => 0,
             'refs' => [],
             'created_at' => $this->created_at,

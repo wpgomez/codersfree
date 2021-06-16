@@ -18,7 +18,7 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        $catalogs = Catalog::all();
+        $catalogs = Catalog::orderBy('id', 'DESC')->get();
         $data = CatalogResource::collection($catalogs);
 
         return [
@@ -31,7 +31,9 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::find($id);
         if ($catalog) {
-            $catalogpages = Catalogpage::where('catalog_id', $catalog->id)->get();
+            $catalogpages = Catalogpage::where('catalog_id', $catalog->id)
+                                    ->orderBy('number_page', 'ASC')
+                                    ->get();
             $data = CatalogpageResource::collection($catalogpages);
         } else {
             $data = [];

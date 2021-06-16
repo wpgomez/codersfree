@@ -5,13 +5,15 @@
       <p class="text-lg font-bold text-center text-trueGray-500 mb-3">Sub-Categorías</p>
 
       <ul>
-          @foreach ($category->subcategories as $subcategory)
-              <li>
-                  <a href="" class="text-trueGray-500 inline-block font-semibold py-1 px-4 hover:bg-orange-500 hover:text-white">
-                      {{$subcategory->name}}
-                  </a>
-              </li>
-          @endforeach
+          @if (count($category->subcategories)>0)
+            @foreach ($category->subcategories as $subcategory)
+                <li>
+                    <a href="" class="text-trueGray-500 inline-block font-semibold py-1 px-4 hover:bg-orange-500 hover:text-white">
+                        {{$subcategory->name}}
+                    </a>
+                </li>
+            @endforeach
+          @endif
       </ul>
   </div>
 

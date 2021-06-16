@@ -22,8 +22,10 @@ class CatalogpageFactory extends Factory
     public function definition()
     {
         return [
-            'image_normal' => 'catalogpages/' . $this->faker->image('public/storage/catalogpages', 1270, 1625, null, false),
-            'image_small' => 'catalogpages/' . $this->faker->image('public/storage/catalogpages', 635, 813, null, false)
+            'image_normal' => 'catalogpages/' . $this->catalog_id . '/normal/' . 
+                            $this->faker->image('public/storage/catalogpages/' . $this->catalog_id . '/normal', 1270, 1625, null, false),
+            'image_small' => 'catalogpages/' . $this->catalog_id . '/small/' . 
+                            $this->faker->image('public/storage/catalogpages/' . $this->catalog_id . '/small', 635, 813, null, false)
         ];
     }
 }
