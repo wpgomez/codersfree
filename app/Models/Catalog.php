@@ -18,6 +18,17 @@ class Catalog extends Model
         'pdf'
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
+    //Relacion uno a muchos
+    public function catalogpage()
+    {
+        return $this->hasMany(Catalogpage::class);
+    }
+
     //Url amigables
     public function getRouteKeyTitle()
     {

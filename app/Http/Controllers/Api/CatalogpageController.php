@@ -4,12 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CatalogpageResource;
-use App\Http\Resources\CatalogResource;
-use App\Models\Catalog;
 use App\Models\Catalogpage;
 use Illuminate\Http\Request;
 
-class CatalogController extends Controller
+class CatalogpageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,36 +16,7 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        $catalogs = Catalog::all();
-        $data = CatalogResource::collection($catalogs);
-
-        return [
-            'items' => $data,
-            'mensaje' => ''
-        ];
-    }
-
-    public function pages($id)
-    {
-        $catalog = Catalog::find($id);
-        if ($catalog) {
-            $catalogpages = Catalogpage::where('catalog_id', $catalog->id)->get();
-            $data = CatalogpageResource::collection($catalogpages);
-        } else {
-            $data = [];
-            $catalog = new Catalog();
-            $catalog->id = $id;
-            $catalog->title = '';
-            $catalog->pdf = '';
-        }
-        
-        return [
-            'items' => $data,
-            'mensaje' => '',
-            'catalogoId' => $catalog->id,
-            'catalogoTitulo' => $catalog->title,
-            'catalogoPdf' => $catalog->pdf
-        ];
+        //
     }
 
     /**
@@ -69,8 +38,8 @@ class CatalogController extends Controller
      */
     public function show($id)
     {
-        $catalog = Catalog::where('id', $id)->get();
-        $data = CatalogResource::collection($catalog);
+        $catalogpages = Catalogpage::where('id', $id)->get();
+        $data = CatalogpageResource::collection($catalogpages);
 
         return [
             'items' => $data,

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Catalog;
+use App\Models\Catalogpage;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -47,7 +48,12 @@ class CatalogSeeder extends Seeder
         ];
 
         foreach ($catalogs as $catalog) {
-            Catalog::factory(1)->create($catalog)->first();
+            $catalog = Catalog::factory(1)->create($catalog)->first();
+
+            Catalogpage::factory(10)->create([
+                'catalog_id' => $catalog->id,
+                'number_page' => 1
+            ]);
         }
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CatalogController;
+use App\Http\Controllers\Api\CatalogpageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('catalogs', [CatalogController::class, 'index']);
+
+Route::get('catalogs/{catalog}', [CatalogController::class, 'show']);
+
+Route::get('catalogs/{catalog}/pages', [CatalogController::class, 'pages']);
+
+Route::get('catalogpages/{catalogpage}', [CatalogpageController::class, 'show']);
