@@ -20,6 +20,7 @@ class CreateCatalogpagesTable extends Migration
             $table->integer('number_page');
             $table->string('image_normal');
             $table->string('image_small');
+            $table->integer('number_modelos');
 
             $table->foreign('catalog_id')->references('id')->on('catalogs');
             

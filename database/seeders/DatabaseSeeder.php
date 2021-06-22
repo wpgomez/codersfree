@@ -38,5 +38,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DepartmentSeeder::class);
 
         $this->call(CatalogSeeder::class);
+
+        $this->call(ModeloSeeder::class);
     }
 }

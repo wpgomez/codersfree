@@ -26,4 +26,10 @@ class Catalogpage extends Model
     {
         return $this->belongsTo(Catalog::class);
     }
+
+    //Relacion muchos a muchos
+    public function modelos()
+    {
+        return $this->belongsToMany(Modelo::class);
+    }
 }

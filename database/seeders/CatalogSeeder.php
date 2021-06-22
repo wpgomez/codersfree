@@ -62,7 +62,8 @@ class CatalogSeeder extends Seeder
                 'subtitle' => $catalog['subtitle'],
                 'description' => $catalog['description'],
                 'pdf' => $catalog['pdf'],
-                'image' => $catalog['image']
+                'image' => $catalog['image'],
+                'number_pages' => $catalog['number_pages']
             ]);
 
             $pages = $catalog['number_pages'];
@@ -74,7 +75,8 @@ class CatalogSeeder extends Seeder
                     'catalog_id' => $id,
                     'number_page' => $page,
                     'image_normal' => "catalogpages/{$id}/normal/{$page}.jpg",
-                    'image_small' => "catalogpages/{$id}/small/{$page}.jpg"
+                    'image_small' => "catalogpages/{$id}/small/{$page}.jpg",
+                    'number_modelos' => 0
                 ]);
             }
         }

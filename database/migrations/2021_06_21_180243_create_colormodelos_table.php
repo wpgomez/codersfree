@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCatalogsTable extends Migration
+class CreateColormodelosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateCatalogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('catalogs', function (Blueprint $table) {
+        Schema::create('colormodelos', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title');
-            $table->string('slug');
-            $table->string('subtitle');
-            $table->text('description');
-            $table->string('image');
-            $table->string('pdf');
-            $table->integer('number_pages');
+            $table->unsignedBigInteger('modelo_id');
+            $table->unsignedBigInteger('color_id');
+            
+            $table->foreign('modelo_id')->references('id')->on('modelos');
+            $table->foreign('color_id')->references('id')->on('colors');
             
             $table->timestamps();
         });
@@ -35,6 +33,6 @@ class CreateCatalogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catalogs');
+        Schema::dropIfExists('colormodelos');
     }
 }
