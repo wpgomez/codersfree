@@ -8,6 +8,7 @@ use App\Http\Resources\CatalogResource;
 use App\Models\Catalog;
 use App\Models\Catalogpage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CatalogController extends Controller
 {
@@ -18,7 +19,9 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        $catalogs = Catalog::orderBy('id', 'DESC')->get();
+        $catalogs = Catalog::where('status', '=', Catalog::PUBLICADO)
+                        ->orderBy('id', 'DESC')->get();
+                        
         $data = CatalogResource::collection($catalogs);
 
         return [
@@ -35,6 +38,8 @@ class CatalogController extends Controller
                                     ->orderBy('number_page', 'ASC')
                                     ->get();
             $data = CatalogpageResource::collection($catalogpages);
+
+            $catalog->pdf = Storage::url($catalog->pdf);
         } else {
             $data = [];
             $catalog = new Catalog();

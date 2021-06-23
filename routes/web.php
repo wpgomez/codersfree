@@ -11,7 +11,8 @@ use App\Http\Livewire\CreateOrder;
 use App\Http\Livewire\PaymentOrder;
 use App\Http\Livewire\ShoppingCart;
 
-Route::get('/', WelcomeController::class);
+/* Route::get('/', WelcomeController::class); */
+Route::get('/', [WelcomeController::class, 'home']);
 
 Route::get('search', SearchController::class)->name('search');
 

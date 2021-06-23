@@ -13,19 +13,16 @@
         {{-- Fontawesome --}}
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 
-        <!-- Glider -->
-        <link rel="stylesheet" href="{{ asset('vendor/Glider/css/glider.css') }}">
-
         {{-- FlexSlid --}}
         <link rel="stylesheet" href="{{ asset('vendor/FlexSlider/flexslider.css') }}">
 
+        <!-- Glider -->
+        <link rel="stylesheet" href="{{ asset('vendor/Glider/css/glider.css') }}">
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+        
         @livewireStyles
-
-        <!-- Glider -->
-        <script src="{{ asset('vendor/Glider/js/glider.min.js') }}"></script>
 
         {{-- jquery --}}
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -33,13 +30,16 @@
         {{-- FlexSlid --}}
         <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
 
+        <!-- Glider -->
+        <script src="{{ asset('vendor/Glider/js/glider.min.js') }}"></script>
+
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-50">
             @livewire('navigation')
 
             <!-- Page Content -->

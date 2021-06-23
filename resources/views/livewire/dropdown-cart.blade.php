@@ -15,7 +15,7 @@
             <ul>
                 @forelse (Cart::content() as $item)
                     <li class="flex p-2 border-b border-gray-200">
-                        <img class="h15 w-20 object-cover mr-4" src="{{$item->options->image}}" alt="">
+                        <img class="h-15 w-20 object-cover mr-4" src="{{$item->options->image}}" alt="">
 
                         <article class="flex-1">
                             <h1 class="font-bold">{{$item->name}}</h1>

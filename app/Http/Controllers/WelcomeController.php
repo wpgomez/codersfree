@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalog;
 use App\Models\Category;
+use App\Models\Modelo;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -24,5 +26,14 @@ class WelcomeController extends Controller
         $categories = Category::all();
 
         return view('welcome', compact('categories'));
+    }
+
+    public function home()
+    {
+        $modelos = Modelo::where('status', Modelo::PUBLICADO)->take(8)->get();
+
+        $catalogs = Catalog::all();
+
+        return view('home', compact('modelos', 'catalogs'));
     }
 }

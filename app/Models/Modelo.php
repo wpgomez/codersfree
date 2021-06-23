@@ -9,7 +9,10 @@ class Modelo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'description', 'code'];
+    const BORRADOR = 1;
+    const PUBLICADO = 2;
+
+    protected $fillable = ['name', 'slug', 'description', 'code', 'status'];
 
     //Relacion muchos a muchos
     public function catalogpages()

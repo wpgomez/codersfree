@@ -63,7 +63,8 @@ class CatalogSeeder extends Seeder
                 'description' => $catalog['description'],
                 'pdf' => $catalog['pdf'],
                 'image' => $catalog['image'],
-                'number_pages' => $catalog['number_pages']
+                'number_pages' => $catalog['number_pages'],
+                'status' => Catalog::PUBLICADO
             ]);
 
             $pages = $catalog['number_pages'];

@@ -9,13 +9,17 @@ class Catalog extends Model
 {
     use HasFactory;
 
+    const BORRADOR = 1;
+    const PUBLICADO = 2;
+
     protected $fillable = [
         'title', 
         'slug', 
         'subtitle', 
         'description', 
         'image', 
-        'pdf'
+        'pdf',
+        'status'
     ];
 
     protected $hidden = [

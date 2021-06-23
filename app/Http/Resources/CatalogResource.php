@@ -24,7 +24,7 @@ class CatalogResource extends JsonResource
             'subtitulo' => $this->subtitle,
             'contenido' => $this->description,
             'imagen' => Storage::url($this->image),
-            'pdf' => $this->pdf,
+            'pdf' => Storage::url($this->pdf),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at
         ];

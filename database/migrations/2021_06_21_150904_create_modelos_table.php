@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Modelo;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,9 @@ class CreateModelosTable extends Migration
             $table->string('slug');
             $table->text('description');
             $table->string('code');
+            $table->float('price');
+            $table->float('pricelist');
+            $table->enum('status', [Modelo::BORRADOR, Modelo::PUBLICADO])->default(Modelo::BORRADOR);
 
             $table->timestamps();
         });
