@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
@@ -20,11 +21,11 @@ Route::get('categories/{category}', [CategoryController::class, 'show'])->name('
 
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 
-Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
+Route::get('modelos', [ModeloController::class, 'index'])->name('modelos.index');
 
-Route::get('catalogs', function () {
-    return view('catalogs.index');
-})->name('catalogs.index');
+Route::get('modelos/{modelo}', [ModeloController::class, 'show'])->name('modelos.show');
+
+Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
 
 Route::middleware(['auth'])->group(function(){
 

@@ -20,7 +20,19 @@
             @livewire('carousel.carousel-catalog')
         </section>
         
-
+        <section class="mb-4">
+            <div class="flex items-center">
+                <h1 class="text-lg font-semibold text-gray-700">
+                Lista de Modelos
+                </h1>
+                <a href="{{route('modelos.index')}}" 
+                    class="text-red-600 hover:text-red-500 hover:underline ml-2 font-semibold">
+                    Ver más
+                </a>
+            </div>
+            
+            @livewire('carousel.carousel-modelo')
+        </section>
 
     </div>
 

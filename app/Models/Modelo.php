@@ -20,6 +20,12 @@ class Modelo extends Model
         return $this->belongsToMany(Catalogpage::class);
     }
 
+    //Relacion uno a muchos polimorfica
+    public function images()
+    {
+        return $this->morphMany(Image::class, "imageable");
+    }
+
     //Url amigables
     public function getRouteKeyName()
     {
