@@ -12,15 +12,15 @@
                 </figure>
   
                 <div class="py-2 px-3">
-                  <h1 class="text-sm font-semibold hover:text-red-500">
-                    <a href="{{ route('modelos.show', $modelo) }}">
+                  <a href="{{ route('modelos.show', $modelo) }}">
+                    <h1 class="text-sm font-semibold text-center">
                       {{Str::limit($modelo->name, 25)}}
-                    </a>
-                  </h1>
+                    </h1>
+                  </a>
                 </div>
-                <div class="px-3 mb-2">
-                    <p class="font-bold text-trueGray-700">
-                        S/ {{$modelo->price}}
+                <div class="px-3 mb-3">
+                    <p class="font-bold text-trueGray-700 text-center">
+                        S/ {{number_format($modelo->price, 2, '.', ',')}}
                     </p>
                 </div>
               </article>

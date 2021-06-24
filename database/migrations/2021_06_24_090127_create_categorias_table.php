@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Categoria;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColormodelosTable extends Migration
+class CreateCategoriasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +14,14 @@ class CreateColormodelosTable extends Migration
      */
     public function up()
     {
-        Schema::create('colormodelos', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('modelo_id');
-            $table->unsignedBigInteger('color_id');
-            
-            $table->foreign('modelo_id')->references('id')->on('modelos');
-            $table->foreign('color_id')->references('id')->on('colors');
+            $table->string('name');
+            $table->string('slug');
+            $table->string('icon');
+            $table->string('image');
+            $table->enum('status', [Categoria::BORRADOR, Categoria::PUBLICADO])->default(Categoria::BORRADOR);
             
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ class CreateColormodelosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('colormodelos');
+        Schema::dropIfExists('categorias');
     }
 }

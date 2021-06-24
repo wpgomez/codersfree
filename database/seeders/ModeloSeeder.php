@@ -4,9 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\Catalogpage;
 use App\Models\Color;
-use App\Models\Colormodelo;
+use App\Models\Modelocolor;
 use App\Models\Image;
 use App\Models\Modelo;
+use App\Models\Modelotalla;
+use App\Models\Talla;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -22,9 +24,9 @@ class ModeloSeeder extends Seeder
         $modelos = [
             [
                 'name' => '171',
-                'slug' => Str::slug('171'),
+                'name2' => '171BX',
                 'description' => 'Mini bóxer con pretina y suave elástico en cintura que no marcan, ideal para sentirse cómoda en cualquier momento.<br>*Refuerzo de algodón interno',
-                'code' => '171BX',
+                'code' => '486',
                 'images' => [
                     ['url' => 'modelos/171/171-azul-4.jpg'],
                     ['url' => 'modelos/171/171-beige-3.jpg'],
@@ -92,18 +94,24 @@ class ModeloSeeder extends Seeder
                         ]
                     ],
                 ],
+                'tallas' => [
+                    ['code' => 'S'],
+                    ['code' => 'M'],
+                    ['code' => 'L'],
+                    ['code' => 'XL'],
+                ],
                 'price' => 17,
                 'pricelist' => 17,
             ],
             [
                 'name' => '1343',
-                'slug' => Str::slug('1343'),
+                'name2' => '1343BRA',
                 'description' => 'Bustier de copa profunda, sisa ancha, espalda con doble tela y mayor cubrimiento, varillas laterales de mejor soporte, ideal para un busto grande con una modelación natural.<br>' . 
                 '*Copa sin push-up<br>' .
                 '*Laterales más anchos.<br>' .
                 '*5 broches con 2 niveles de ajuste.<br>' .
                 '*Refuerzo de algodón interno',
-                'code' => '1343BRA',
+                'code' => '467',
                 'images' => [
                     ['url' => 'modelos/1343/1343-azul-4.jpg'],
                     ['url' => 'modelos/1343/1343-beige-2.jpg'],
@@ -156,6 +164,12 @@ class ModeloSeeder extends Seeder
                         ]
                     ],
                 ],
+                'tallas' => [
+                    ['code' => '32'],
+                    ['code' => '34'],
+                    ['code' => '36'],
+                    ['code' => '38'],
+                ],
                 'price' => 58,
                 'pricelist' => 58,
             ],
@@ -164,7 +178,8 @@ class ModeloSeeder extends Seeder
         foreach ($modelos as $modelo) {
             $modelo_new = Modelo::create([
                 'name' => $modelo['name'],
-                'slug' => $modelo['slug'],
+                'name2' => $modelo['name2'],
+                'slug' => Str::slug($modelo['name']),
                 'description' => $modelo['description'],
                 'code' => $modelo['code'],
                 'price' => $modelo['price'],
@@ -197,7 +212,7 @@ class ModeloSeeder extends Seeder
                 $color_find = Color::where('code', '=', $color['code'])->first();
 
                 if ($color_find) {
-                    $colormodelo_new = Colormodelo::create([
+                    $modelocolor_new = Modelocolor::create([
                                             'modelo_id' => $modelo_new->id,
                                             'color_id' => $color_find->id
                                         ]);
@@ -205,10 +220,21 @@ class ModeloSeeder extends Seeder
                     foreach ($color['images'] as $image) {
                         Image::create([
                             'url' => $image['url'],
-                            'imageable_id' => $colormodelo_new->id,
-                            'imageable_type' => Colormodelo::class
+                            'imageable_id' => $modelocolor_new->id,
+                            'imageable_type' => Modelocolor::class
                         ]);
                     }
+                }
+            }
+
+            foreach ($modelo['tallas'] as $talla) {
+                $talla_find = Talla::where('code', '=', $talla['code'])->first();
+
+                if ($talla_find) {
+                    Modelotalla::create([
+                                'modelo_id' => $modelo_new->id,
+                                'talla_id' => $talla_find->id
+                            ]);
                 }
             }
         }

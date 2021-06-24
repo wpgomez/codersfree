@@ -112,7 +112,9 @@
                 </ul>
 
                 <div class="col-span-3 bg-gray-100">
-                    <x-navigation-subcategories :category="$categories->first()" />
+                    @if ($categories->first())
+                        <x-navigation-subcategories :category="$categories->first()" />    
+                    @endif
                 </div>
             </div>
         </div>

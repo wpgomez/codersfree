@@ -15,30 +15,32 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::deleteDirectory('categories');
+        /* Storage::deleteDirectory('categories');
         Storage::deleteDirectory('subcategories');
         Storage::deleteDirectory('products');
         
         Storage::makeDirectory('categories');
         Storage::makeDirectory('subcategories');
-        Storage::makeDirectory('products');
+        Storage::makeDirectory('products'); */
                 
         $this->call(UserSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(SubcategorySeeder::class);
+        /* $this->call(CategorySeeder::class); */
+        /* $this->call(SubcategorySeeder::class); */
 
-        $this->call(ProductSeeder::class);
+        /* $this->call(ProductSeeder::class); */
 
+        $this->call(TallaSeeder::class);
         $this->call(ColorSeeder::class);
-        $this->call(ColorProductSeeder::class);
-        $this->call(SizeSeeder::class);
+        /* $this->call(ColorProductSeeder::class); */
+        /* $this->call(SizeSeeder::class); */
 
-        $this->call(ColorSizeSeeder::class);
+        /* $this->call(ColorSizeSeeder::class); */
 
         $this->call(DepartmentSeeder::class);
 
         $this->call(CatalogSeeder::class);
-
         $this->call(ModeloSeeder::class);
+        $this->call(CategoriaSeeder::class);
+        $this->call(ProductoSeeder::class);
     }
 }

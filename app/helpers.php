@@ -1,32 +1,27 @@
 <?php
 
 use App\Models\Product;
+use App\Models\Producto;
 use App\Models\Size;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-function quantity($product_id, $color_id = null, $size_id = null)
+function quantity($producto_id)
 {
-    $product = Product::find($product_id);
+    $producto = Producto::find($producto_id);
 
-    if ($size_id) {
-        $size = Size::find($size_id);
-        $quantity = $size->colors->find($color_id)->pivot->quantity;
-    } elseif ($color_id) {
-        $quantity = $product->colors->find($color_id)->pivot->quantity;
-    } else {
-        $quantity = $product->quantity;
+    $quantity = 0;
+    if ($producto) {
+        $quantity = $producto->stock;
     }
 
     return $quantity;
 }
 
-function qty_added($product_id, $color_id = null, $size_id = null)
+function qty_added($producto_id)
 {
     $cart = Cart::content();
 
-    $item = $cart->where('id', $product_id)
-                ->where('options.color_id', $color_id)
-                ->where('options.size_id', $size_id)
+    $item = $cart->where('id', $producto_id)
                 ->first();
 
     if ($item) {
@@ -36,57 +31,29 @@ function qty_added($product_id, $color_id = null, $size_id = null)
     }
 }
 
-function qty_available($product_id, $color_id = null, $size_id = null)
+function qty_available($producto_id)
 {
-    return quantity($product_id, $color_id, $size_id) - qty_added($product_id, $color_id, $size_id);
+    return quantity($producto_id) - qty_added($producto_id);
 }
 
 function discount($item)
 {
-    $product = Product::find($item->id);
-    $qty_available = qty_available($item->id, $item->options->color_id, $item->options->size_id);
+    $producto = Producto::find($item->id);
+    if ($producto) {
+        $qty_available = $producto->stock - qty_added($item->id);
 
-    if ($item->options->size_id) {
-        $size = Size::find($item->options->size_id);
-
-        $size->colors()->detach($item->options->color_id);
-
-        $size->colors()->attach([
-            $item->options->color_id => ['quantity' => $qty_available]
-        ]);
-    } elseif ($item->options->color_id) {
-        $product->colors()->detach($item->options->color_id);
-
-        $product->colors()->attach([
-            $item->options->color_id => ['quantity' => $qty_available]
-        ]);
-    } else {
-        $product->quantity = $qty_available;
-        $product->save();
+        $producto->stock = $qty_available;
+        $producto->save();
     }
 }
 
 function increase($item)
 {
-    $product = Product::find($item->id);
-    $quantity = quantity($item->id, $item->options->color_id, $item->options->size_id) + $item->qty;
+    $producto = Producto::find($item->id);
+    if ($producto) {
+        $quantity = $producto->stock + $item->qty;
 
-    if ($item->options->size_id) {
-        $size = Size::find($item->options->size_id);
-
-        $size->colors()->detach($item->options->color_id);
-
-        $size->colors()->attach([
-            $item->options->color_id => ['quantity' => $quantity]
-        ]);
-    } elseif ($item->options->color_id) {
-        $product->colors()->detach($item->options->color_id);
-
-        $product->colors()->attach([
-            $item->options->color_id => ['quantity' => $quantity]
-        ]);
-    } else {
-        $product->quantity = $quantity;
-        $product->save();
+        $producto->stock = $quantity;
+        $producto->save();
     }
 }

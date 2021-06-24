@@ -18,6 +18,7 @@ class CreateModelosTable extends Migration
             $table->id();
 
             $table->string('name');
+            $table->string('name2');
             $table->string('slug');
             $table->text('description');
             $table->string('code');

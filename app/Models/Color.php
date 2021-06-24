@@ -9,10 +9,10 @@ class Color extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'code'];
 
     //Relacion muchos a muchos
-    public function products()
+    /* public function products()
     {
         return $this->belongsToMany(Product::class);
     }
@@ -20,5 +20,5 @@ class Color extends Model
     public function sizes()
     {
         return $this->belongsToMany(Size::class);
-    }
+    } */
 }

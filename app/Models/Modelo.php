@@ -12,12 +12,38 @@ class Modelo extends Model
     const BORRADOR = 1;
     const PUBLICADO = 2;
 
-    protected $fillable = ['name', 'slug', 'description', 'code', 'status'];
+    protected $fillable = ['name', 'name2', 'slug', 'description', 'code', 'status'];
+
+    //Relacion uno a muchos
+    public function modelotallas()
+    {
+        return $this->hasMany(Modelotalla::class);
+    }
+
+    public function modelocolors()
+    {
+        return $this->hasMany(Modelocolor::class);
+    }
 
     //Relacion muchos a muchos
     public function catalogpages()
     {
         return $this->belongsToMany(Catalogpage::class);
+    }
+
+    public function categorias()
+    {
+        return $this->belongsToMany(Categoria::class);
+    }
+
+    public function tallas()
+    {
+        return $this->belongsToMany(Talla::class, 'modelotallas');
+    }
+
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class, 'modelocolors');
     }
 
     //Relacion uno a muchos polimorfica

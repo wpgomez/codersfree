@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catalog;
+use App\Models\Categoria;
 use App\Models\Category;
 use App\Models\Modelo;
 use App\Models\Order;
@@ -30,10 +31,17 @@ class WelcomeController extends Controller
 
     public function home()
     {
-        $modelos = Modelo::where('status', Modelo::PUBLICADO)->take(8)->get();
+        /* $modelos = Modelo::where('status', Modelo::PUBLICADO)
+                        ->take(8)->get();
 
-        $catalogs = Catalog::all();
+        $catalogs = Catalog::where('status', Catalog::PUBLICADO)
+                        ->orderBy('id', 'ASC')
+                        ->take(8)->get();
 
-        return view('home', compact('modelos', 'catalogs'));
+        $categorias = Categoria::where('status', Categoria::PUBLICADO)
+                        ->take(8)->get(); */
+
+        /* return view('home', compact('modelos', 'catalogs', 'categorias')); */
+        return view('home');
     }
 }

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Talla extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'grupo', 'orden', 'code'];
 }

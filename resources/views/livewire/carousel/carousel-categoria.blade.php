@@ -1,27 +1,27 @@
-<div wire:init="loadCatalogs">
-    @if (count($catalogs))
+<div wire:init="loadCategorias">
+    @if (count($categorias))
       <div class="glider-contain">
-        <ul class="glider-catalog">
-          @foreach ($catalogs as $catalog)
+        <ul class="glider-categoria">
+          @foreach ($categorias as $categoria)
             <li class="bg-white {{ $loop->last ? '' : 'mr-2' }}">
               <article>
                 <figure>
-                  @if ($catalog->image)
-                    <img class="h-full w-full object-cover object-center" src="{{ Storage::url($catalog->image) }}" alt="">
+                  @if ($categoria->image)
+                    <img class="h-full w-full object-cover object-center" src="{{ Storage::url($categoria->image) }}" alt="">
                   @endif
                 </figure>
   
                 <div class="py-2 px-3">
-                  <a href="{{ 'http://192.168.1.106:8080/#/catalogo/' . $catalog->id }}">
+                  <a href="{{ route('categorias.show', $categoria) }}">
                     <h1 class="text-sm font-semibold text-center">
-                      {{Str::limit($catalog->title, 25)}}
+                      {{Str::limit($categoria->name, 25)}}
                     </h1>
                   </a>
                 </div>
 
                 <div class="px-3 mb-3">
-                    <x-button-enlace href="{{ 'http://192.168.1.106:8080/#/catalogo/' . $catalog->id }}" color="red" class="w-full">
-                        Ver Catálogo
+                    <x-button-enlace href="{{ route('categorias.show', $categoria) }}" color="red" class="w-full">
+                        Ver Categoría
                     </x-button-enlace>
                 </div>
               </article>

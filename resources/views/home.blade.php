@@ -1,12 +1,12 @@
 <x-store-layout>
-    <div class="mb-2">
+    {{-- <div class="mb-2">
         <figure>
             <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/fila-1.jpg')}}" alt="">
         </figure>
-    </div>
+    </div> --}}
 
-    <div class="container">
-        <section class="mb-4">
+    <div class="container mt-2">
+        <section class="mb-2">
             <div class="flex items-center">
                 <h1 class="text-lg font-semibold text-gray-700">
                 Lista de Catálogos
@@ -20,7 +20,7 @@
             @livewire('carousel.carousel-catalog')
         </section>
         
-        <section class="mb-4">
+        <section class="mb-2">
             <div class="flex items-center">
                 <h1 class="text-lg font-semibold text-gray-700">
                 Lista de Modelos
@@ -34,13 +34,26 @@
             @livewire('carousel.carousel-modelo')
         </section>
 
+        <section class="mb-2">
+            <div class="flex items-center">
+                <h1 class="text-lg font-semibold text-gray-700">
+                Lista de Categorías
+                </h1>
+                <a href="{{route('categorias.index')}}" 
+                    class="text-red-600 hover:text-red-500 hover:underline ml-2 font-semibold">
+                    Ver más
+                </a>
+            </div>
+            
+            @livewire('carousel.carousel-categoria')
+        </section>
     </div>
 
-    <div class="mb-2">
+    {{-- <div class="mb-2">
         <figure>
             <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/fila-5.jpg')}}" alt="">
         </figure>
-    </div>
+    </div> --}}
 
     @push('script')
         <script>
