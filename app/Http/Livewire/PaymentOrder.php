@@ -34,6 +34,6 @@ class PaymentOrder extends Component
 
         $items = json_decode($this->order->content);
 
-        return view('livewire.payment-order', compact('items'));
+        return view('livewire.payment-order', compact('items'))->layout('layouts.store');
     }
 }

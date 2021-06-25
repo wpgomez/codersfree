@@ -1,26 +1,26 @@
-<header class="bg-red-600 sticky top-0" style="z-index: 900" x-data="dropdown()">
+<header class="bg-gray-100 sticky top-0" style="z-index: 900" x-data="dropdown()">
     <div class="container flex items-center h-16 justify-between md:justify-start">
-        <a :class="{'bg-opacity-100 text-orange-500': open}" x-on:click="show()"
-            class="flex flex-col items-center justify-center order-first px-6 md:px-4 bg-white bg-opacity-25 text-white cursor-pointer font-semibold h-full">
+        {{-- <a :class="{'bg-opacity-100 text-gray-500': open}" x-on:click="show()"
+            class="flex flex-col items-center justify-center order-first px-6 md:px-4 bg-gray-100 bg-opacity-25 text-black cursor-pointer font-semibold h-full">
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4 6h16M4 12h16M4 18h16" />
             </svg>
 
             <span class="text-sm hidden md:block">Categorías</span>
-        </a>
-
+        </a> --}}
+        
         <a href="/" class="mx-6">
-            <x-jet-application-mark class="block h-9 w-auto" />
+            <img class="h-auto w-20" src="{{asset('img/logo-dlirio.png')}}" alt="">
         </a>
 
         <div class="flex-1">
-            <div class="md:hidden">
+            {{-- <div class="md:hidden">
 
-            </div>
-            <div class="hidden md:block">
+            </div> --}}
+            {{-- <div class="hidden md:block">
                 @livewire('search')
-            </div>
+            </div> --}}
         </div>
 
         <div class="mx-6 relative block">
@@ -28,7 +28,7 @@
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
-                            class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                            class="flex text-sm border-2 border-transparent rounded-full focus:outline-none border-gray-300 transition">
                             <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
                                 alt="{{ Auth::user()->name }}" />
                         </button>
@@ -48,9 +48,9 @@
                             Mis Ordenes
                         </x-jet-dropdown-link>
 
-                        <x-jet-dropdown-link href="{{ route('admin.index') }}">
+                        {{-- <x-jet-dropdown-link href="{{ route('admin.index') }}">
                             Administrador
-                        </x-jet-dropdown-link>
+                        </x-jet-dropdown-link> --}}
 
                         <div class="border-t border-gray-100"></div>
 
@@ -68,7 +68,7 @@
             @else
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <i class="fas fa-user-circle text-white text-3xl cursor-pointer"></i>
+                        <i class="fas fa-user-circle text-black text-3xl cursor-pointer"></i>
                     </x-slot>
                     <x-slot name="content">
                         <x-jet-dropdown-link href="{{ route('login') }}">
@@ -125,13 +125,13 @@
             </div>
 
             <ul>
-                @foreach ($categories as $category)
-                    <li class="text-trueGray-500 hover:bg-orange-500 hover:text-white">
-                        <a href="{{route('categories.show', $category)}}" class="py-2 px-4 text-sm flex items-center">
+                @foreach ($categorias as $categoria)
+                    <li class="text-gray-600 hover:bg-red-600 hover:text-white">
+                        <a href="{{route('categories.show', $categoria)}}" class="py-2 px-4 text-sm flex items-center">
                             <span class="flex justify-center w-9">
-                                {!! $category->icon !!}
+                                {!! $categoria->icon !!}
                             </span>
-                            {{ $category->name }}
+                            {{ $categoria->name }}
                         </a>
                     </li>
                 @endforeach

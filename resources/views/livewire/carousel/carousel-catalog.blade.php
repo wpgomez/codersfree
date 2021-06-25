@@ -11,7 +11,7 @@
                   @endif
                 </figure>
   
-                <div class="py-2 px-3">
+                <div class="py-1 px-3">
                   <a href="{{ 'http://192.168.1.106:8080/#/catalogo/' . $catalog->id }}">
                     <h1 class="text-sm font-semibold text-center">
                       {{Str::limit($catalog->title, 25)}}

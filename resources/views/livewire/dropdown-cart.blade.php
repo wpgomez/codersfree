@@ -2,12 +2,12 @@
     <x-jet-dropdown width='96'>
         <x-slot name="trigger">
             <span class="relative inline-block cursor-pointer">
-                <x-cart size="30" color="white" />
+                <x-cart size="30" color="gray" />
 
                 @if (Cart::count())
-                    <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">{{ Cart::count()}}</span>
+                    <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">{{ Cart::count()}}</span>
                 @else
-                    <span class="absolute top-0 right-0 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></span>
+                    <span class="absolute top-0 right-0 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full"></span>
                 @endif
             </span>
         </x-slot>
@@ -18,21 +18,21 @@
                         <img class="h-15 w-20 object-cover mr-4" src="{{$item->options->image}}" alt="">
 
                         <article class="flex-1">
-                            <h1 class="font-bold">{{$item->name}}</h1>
-
                             <div class="flex">
-                                <p>Cant: {{$item->qty}}</p>
+                                <h1 class="font-bold">{{$item->name}}</h1>
                                 @isset($item->options['color'])
-                                    <p class="mx-2">- Color: {{ __($item->options['color']) }}</p>
+                                    <p class="ml-2">- {{$item->options['color']}}</p>
                                 @endisset
 
-                                @isset($item->options['size'])
-                                    <p>{{$item->options['size']}}</p>
+                                @isset($item->options['talla'])
+                                    <p>, {{$item->options['talla']}}</p>
                                 @endisset
-
                             </div>
-                            
-                            <p>USD {{$item->price}}</p>
+                            <div class="flex">
+                                <p>{{$item->qty}}</p>
+                                <p class="mx-2">x</p>
+                                <p class="font-bold">S/ {{number_format($item->price, 2, '.', ',')}}</p>    
+                            </div>
                         </article>
                     </li>
                 @empty
@@ -46,10 +46,10 @@
 
             @if (Cart::count())
                 <div class="py-2 px-3">
-                    <p class="text-lg text-gray-700 mt-2 mb-3"><span class="font-bold">Total: USD {{ Cart::subtotal() }}</span></p>
+                    <p class="text-lg text-gray-700 mt-2 mb-3"><span class="font-bold">Total: S/ {{ Cart::subtotal() }}</span></p>
 
-                    <x-button-enlace href="{{ route('shopping-cart') }}" color="orange" class="w-full">
-                        Ir al carrito de compras
+                    <x-button-enlace href="{{ route('shopping-cart') }}" color="red" class="w-full">
+                        Ir al carrito
                     </x-button-enlace>
                 </div>
             @endif

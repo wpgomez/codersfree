@@ -1,7 +1,6 @@
 <div>
-
-    <div class="grid grid-cols-5 gap-6 container py-8">
-        <div class="col-span-3">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 container py-6">
+        <div class="md:col-span-3">
             <div class="bg-white rounded-lg shadow-lg px-6 py-4 mb-6">
                 <p class="text-gray-700 uppercase"><span>Número de orden:</span> Orden-{{$order->id}}</p>
             </div>
@@ -32,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg p-6 text-gray-700 mb-6">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-gray-700">
                 <p class="text-xl font-semibold mb-4">Resumen</p>
 
                 <table class="table-auto w-full">
@@ -56,11 +55,11 @@
                                             <h1 class="font-bold">{{$item->name}}</h1>
                                             <div class="flex text-xs">
                                                 @isset ($item->options->color)
-                                                    Color: {{__($item->options->color)}}
+                                                    {{$item->options->color}}
                                                 @endisset
 
-                                                @isset ($item->options->size)
-                                                    - {{$item->options->size}}
+                                                @isset ($item->options->talla)
+                                                    , {{$item->options->talla}}
                                                 @endisset
                                             </div>
                                         </article>
@@ -68,15 +67,15 @@
                                 </td>
 
                                 <td class="text-center">
-                                    {{$item->price}} USD
+                                    <span class="text-sm">S/ {{number_format($item->price,2,'.',',')}}</span>
                                 </td>
 
                                 <td class="text-center">
-                                    {{$item->qty}}
+                                    <span class="text-sm">{{$item->qty}}</span>
                                 </td>
 
                                 <td class="text-center">
-                                    {{$item->qty * $item->price}} USD
+                                    <span class="text-sm">S/ {{number_format($item->qty * $item->price,2,'.',',')}}</span>
                                 </td>
                             </tr>
                         @endforeach
@@ -86,58 +85,36 @@
             
         </div>
 
-        <div class="col-span-2">
-            <div class="bg-white rounded-lg shadow-lg px-6 pt-6">
-                <div class="flex justify-between items-center mb-4">
-                    <img class="h-8" src="{{ asset('img/cartao1.jpg') }}" alt="">
+        <div class="md:col-span-2">
+            <div class="bg-white rounded-lg shadow-lg px-6 py-6">
+                <div class="mb-4">
                     <div class="text-gray-700">
-                        <p class="text-sm font-semibold">
-                            Subtotal: {{$order->total - $order->shipping_cost}} USD
+                        <p class="flex justify-between items-center font-semibold">
+                            Subtotal
+                            <span>S/ {{number_format($order->total - $order->shipping_cost,2,'.',',')}}</span>
                         </p>
-                        <p class="text-sm font-semibold">
-                            Envío: {{$order->shipping_cost}} USD
+                        <p class="flex justify-between items-center font-semibold">
+                            Envío
+                            <span>S/ {{number_format($order->shipping_cost,2,'.',',')}}</span>
                         </p>
-                        <p class="text-lg font-semibold">
-                            Total: {{$order->total}} USD
+                        <p class="flex justify-between items-center font-semibold text-lg">
+                            Total
+                            <span>S/ {{number_format($order->total,2,'.',',')}}</span>
                         </p>
-
-                        <div class="cho-container">
-
-                        </div>
                     </div>
                 </div>
 
-                <div id="paypal-button-container">
+                <div>
+                    <x-button 
+                        color="red" 
+                        class="w-full"
+                        wire:click="payOrder" 
+                        wire:loading.attr="disabled" 
+                        wire:target="payOrder">
+                        Enviar Pedido
+                    </x-button>
                 </div>
             </div>
         </div>
     </div>
-
-    
 </div>
-
-@push('script')
-    <script src="https://www.paypal.com/sdk/js?client-id={{ config('services.paypal.client_id') }}">
-    </script>
-
-    <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '{{ $order->total }}'
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-
-                    Livewire.emit('payOrder');
-                    /* alert('Transaction completed by ' + details.payer.name.given_name); */
-                });
-            }
-        }).render('#paypal-button-container'); // Display payment options on your web page
-    </script>
-@endpush

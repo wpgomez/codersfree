@@ -1,6 +1,6 @@
 <div class="container py-8 grid grid-cols-1 md:grid-cols-5 gap-6">
     <div class="md:col-span-3">
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-white rounded-lg shadow p-4">
             <div class="mb-4">
                 <x-jet-label value="Nombre de contácto" />
                 <x-jet-input type="text" 
@@ -23,7 +23,7 @@
         <div x-data="{ envio_type: @entangle('envio_type') }">
             <p class="mt-6 mb-3 text-lg text-gray-700 font-semibold">Envíos</p>
 
-            <label class="bg-white rounded-lg shadow px-6 py-4 flex items-center mb-4">
+            <label class="bg-white rounded-lg shadow px-4 py-4 flex items-center mb-4">
                 <input x-model="envio_type" type="radio" value="1" name="envio_type" class="text-gray-600">
                 <span class="ml-2 text-gray-700">
                     Recojo en tienda (Calle Falsa 123)
@@ -34,14 +34,14 @@
             </label>
 
             <div class="bg-white rounded-lg shadow">
-                <label class="px-6 py-4 flex items-center">
+                <label class="px-4 py-4 flex items-center">
                     <input x-model="envio_type" type="radio" value="2" name="envio_type" class="text-gray-600">
                     <span class="ml-2 text-gray-700">
                         Envío a domicilio
                     </span>
                 </label>
 
-                <div class="px-6 pb-6 grid grid-cols-2 gap-6 hidden" :class="{ 'hidden': envio_type != 2 }">
+                <div class="px-4 pb-4 grid grid-cols-2 gap-6 hidden" :class="{ 'hidden': envio_type != 2 }">
                     {{-- Departamentos --}}
                     <div>
                         <x-jet-label value="Departamento" />
@@ -103,22 +103,23 @@
         </div>
 
         <div>
-            <x-jet-button 
-                wire.loading.attr="disabled"
-                wire.target="create_order"
+            <x-button 
+                color="red" 
                 class="mt-6 mb-4" 
-                wire:click="create_order">
-                Continuar con la compra
-            </x-jet-button>
+                wire:click="create_order" 
+                wire:loading.attr="disabled" 
+                wire:target="create_order">
+                Generar Pedido
+            </x-button>
 
-            <hr>
+            {{-- <hr>
 
-            <p class="text-sm text-gray-700 mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur asperiores porro, corrupti dicta laudantium cupiditate officiis tempora deserunt quisquam voluptatem eos neque aspernatur magni? Rerum rem aperiam quibusdam nulla at? <a href="" class="font-semibold text-orange-500">Políticas y privacidad</a></p>
+            <p class="text-sm text-gray-700 mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur asperiores porro, corrupti dicta laudantium cupiditate officiis tempora deserunt quisquam voluptatem eos neque aspernatur magni? Rerum rem aperiam quibusdam nulla at? <a href="" class="font-semibold text-orange-500">Políticas y privacidad</a></p> --}}
         </div>
     </div>
 
     <div class="md:col-span-2">
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-white rounded-lg shadow p-4">
             <ul>
                 @forelse (Cart::content() as $item)
                     <li class="flex p-2 border-b border-gray-200">
@@ -128,18 +129,22 @@
                             <h1 class="font-bold">{{$item->name}}</h1>
 
                             <div class="flex">
-                                <p>Cant: {{$item->qty}}</p>
                                 @isset($item->options['color'])
-                                    <p class="mx-2">- Color: {{ __($item->options['color']) }}</p>
+                                    <p class="text-sm">{{$item->options['color']}}</p>
                                 @endisset
 
-                                @isset($item->options['size'])
-                                    <p>{{$item->options['size']}}</p>
+                                @isset($item->options['talla'])
+                                    <p class="text-sm">,</p>
+                                    <p class="text-sm ml-2">{{$item->options['talla']}}</p>
                                 @endisset
 
                             </div>
                             
-                            <p>USD {{$item->price}}</p>
+                            <div class="flex">
+                                <p>{{$item->qty}}</p>
+                                <p class="mx-2">x</p>
+                                <p>S/ {{number_format($item->price,2,'.',',')}}</p>
+                            </div>
                         </article>
                     </li>
                 @empty
@@ -156,7 +161,7 @@
             <div class="text-gray-700">
                 <p class="flex justify-between items-center">
                     Subtotal
-                    <span class="font-semibold">{{Cart::subtotal()}} USD</span>
+                    <span class="font-semibold">S/ {{Cart::subtotal()}}</span>
                 </p>
                 <p class="flex justify-between items-center">
                     Envío
@@ -164,7 +169,7 @@
                         @if ($envio_type == 1 || $shipping_cost == 0)
                             Gratis
                         @else
-                            {{$shipping_cost}} USD
+                            S/ {{number_format($shipping_cost,2,'.',',')}}
                         @endif
                     </span>
                 </p>
@@ -174,9 +179,9 @@
                 <p class="flex justify-between items-center font-semibold">
                     <span class="text-lg">Total</span>
                     @if ($envio_type == 1)
-                        {{Cart::subtotal()}} USD    
+                        S/ {{Cart::subtotal()}}
                     @else
-                    {{Cart::subtotal() + $shipping_cost}} USD
+                        S/ {{Cart::subtotal() + $shipping_cost}}
                     @endif
                 </p>
             </div>

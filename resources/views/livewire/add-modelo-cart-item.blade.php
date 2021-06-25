@@ -51,7 +51,7 @@
         <div class="flex-1">
             <x-button 
                 x-bind:disabled="!$wire.quantity" 
-                color="orange" 
+                color="red" 
                 class="w-full"
                 wire:click="addItem" 
                 wire:loading.attr="disabled" 

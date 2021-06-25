@@ -1,6 +1,6 @@
-<x-app-layout>
+<x-store-layout>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
         <div class="bg-white rounded-lg shadow-lg px-12 py-8 mb-6 flex items-center">
             <div class="relative">
@@ -39,18 +39,17 @@
 
         </div>
 
-
-        <div class="bg-white rounded-lg shadow-lg px-6 py-4 mb-6 flex items-center">
-            <p class="text-gray-700 uppercase"><span>Número de orden:</span> Orden-{{$order->id}}</p>
+        <div class="bg-white rounded-lg shadow-lg px-4 py-4 mb-6 flex items-center">
+            <p class="text-gray-700 uppercase"><span>Nro. Orden:</span> PED-{{$order->id}}</p>
 
             @if ($order->status == 1)
                 <x-button-enlace class="ml-auto" href="{{route('orders.payment', $order)}}">
-                    Ir a pagar
+                    Ir a Enviar
                 </x-button-enlace>
             @endif
         </div>
 
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-6">
             <div class="grid grid-cols-2 gap-6 text-gray-700">
                 <div>
                     <p class="text-lg font-semibold uppercase">Envío</p>
@@ -76,7 +75,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow-lg p-6 text-gray-700 mb-6">
+        <div class="bg-white rounded-lg shadow-lg p-4 text-gray-700 mb-6">
             <p class="text-xl font-semibold mb-4">Resumen</p>
 
             <table class="table-auto w-full">
@@ -98,13 +97,13 @@
                                         src="{{$item->options->image}}" alt="">
                                     <article>
                                         <h1 class="font-bold">{{$item->name}}</h1>
-                                        <div class="flex text-xs">
+                                        <div class="flex">
                                             @isset ($item->options->color)
-                                                Color: {{__($item->options->color)}}
+                                                <p class="text-sm">{{$item->options->color}}</p>
                                             @endisset
 
-                                            @isset ($item->options->size)
-                                                - {{$item->options->size}}
+                                            @isset ($item->options->talla)
+                                                <p class="text-sm">, {{$item->options->talla}}</p>
                                             @endisset
                                         </div>
                                     </article>
@@ -112,15 +111,15 @@
                             </td>
 
                             <td class="text-center">
-                                {{$item->price}} USD
+                                <p class="text-sm">S/ {{number_format($item->price,2,'.',',')}}</p>
                             </td>
 
                             <td class="text-center">
-                                {{$item->qty}}
+                                <p class="text-sm">{{$item->qty}}</p>
                             </td>
 
                             <td class="text-center">
-                                {{$item->qty * $item->price}} USD
+                                <p class="text-sm">S/ {{number_format($item->qty * $item->price,2,'.',',')}}</p>
                             </td>
                         </tr>
                     @endforeach
@@ -129,4 +128,4 @@
         </div>
         
     </div>
-</x-app-layout>
+</x-store-layout>

@@ -1,8 +1,8 @@
-<x-app-layout>
+<x-store-layout>
 
-    <div class="container py-12">
+    <div class="container py-6">
 
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-white">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-white">
             <a href="{{route('orders.index') . "?status=1"}}" class="bg-red-500 bg-opacity-80 rounded-lg px-12 pt-8 pb-4 text-center">
                 <p class="text-2xl">
                     {{$pendiente}}
@@ -54,7 +54,7 @@
             </a>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg px-4 md:px-12 py-8 mt-12 text-gray-700">
+        <div class="bg-white shadow-lg rounded-lg px-4 md:px-12 py-8 mt-6 text-gray-700">
             <h1 class="text-2xl mb-4">Pedidos recientes</h1>
 
             <ul>
@@ -115,7 +115,7 @@
                                 <br>
 
                                 <span class="text-sm">
-                                    {{$order->total}} USD
+                                    S/ {{number_format($order->total,2,'.',',')}}
                                 </span>
                             </div>
 
@@ -131,4 +131,4 @@
 
     </div>
 
-</x-app-layout>
+</x-store-layout>

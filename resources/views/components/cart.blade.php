@@ -2,6 +2,9 @@
 
 @php
     switch ($color) {
+      case 'red':
+        $col = "#DC2626";
+        break;
       case 'gray':
         $col = "#374151";
         break;

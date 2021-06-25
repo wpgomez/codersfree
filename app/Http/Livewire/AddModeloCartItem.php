@@ -15,7 +15,7 @@ class AddModeloCartItem extends Component
 {
     public $modelo;
     public $producto;
-    
+        
     public $qty = 1;
     public $quantity = 0;
 

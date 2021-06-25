@@ -11,9 +11,9 @@
                   @endif
                 </figure>
   
-                <div class="py-2 px-3">
+                <div class="py-1 px-3">
                   <a href="{{ route('modelos.show', $modelo) }}">
-                    <h1 class="text-sm font-semibold text-center">
+                    <h1 class="font-semibold text-center">
                       {{Str::limit($modelo->name, 25)}}
                     </h1>
                   </a>
