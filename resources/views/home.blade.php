@@ -1,9 +1,12 @@
 <x-store-layout>
-    {{-- <div class="mb-2">
+    <div class="mb-2">
+        {{-- <figure>
+            <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/bg_admin.jpg')}}" alt="">
+        </figure> --}}
         <figure>
-            <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/fila-1.jpg')}}" alt="">
+            <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/PORTADA-WEB-2021-1.jpg')}}" alt="">
         </figure>
-    </div> --}}
+    </div>
 
     <div class="container mt-2">
         <section class="mb-2">
@@ -11,13 +14,15 @@
                 <h1 class="text-lg font-semibold text-gray-700">
                 Lista de Catálogos
                 </h1>
-                <a href="http://192.168.1.106:8080" 
+                <a href="{{ env('CATALOGO_URL', '') }}" 
                     class="text-red-600 hover:text-red-500 hover:underline ml-2 font-semibold">
                     Ver más
                 </a>
             </div>
             
-            @livewire('carousel.carousel-catalog')
+            @livewire('carousel.carousel-catalog', [ 
+                    'catalogoUrl' => env('CATALOGO_URL', '') 
+                ])
         </section>
         
         <section class="mb-2">
@@ -49,11 +54,11 @@
         </section>
     </div>
 
-    {{-- <div class="mb-2">
+    <div class="mb-2">
         <figure>
-            <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/fila-5.jpg')}}" alt="">
+            <img class="w-full h-auto object-cover object-center" src="{{Storage::url('home/PORTADA-WEB-2021.jpg')}}" alt="">
         </figure>
-    </div> --}}
+    </div>
 
     @push('script')
         <script>

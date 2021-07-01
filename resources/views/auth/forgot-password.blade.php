@@ -25,9 +25,9 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-jet-button>
+                <x-button color="red">
                     {{ __('Email Password Reset Link') }}
-                </x-jet-button>
+                </x-button>
             </div>
         </form>
     </x-jet-authentication-card>

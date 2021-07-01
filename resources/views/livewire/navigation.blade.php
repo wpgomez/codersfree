@@ -40,9 +40,9 @@
                             {{ __('Manage Account') }}
                         </div>
 
-                        <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                        {{-- <x-jet-dropdown-link href="{{ route('profile.show') }}">
                             {{ __('Profile') }}
-                        </x-jet-dropdown-link>
+                        </x-jet-dropdown-link> --}}
 
                         <x-jet-dropdown-link href="{{ route('orders.index') }}">
                             Mis Ordenes

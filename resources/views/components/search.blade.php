@@ -8,6 +8,9 @@
       case 'white':
         $col = "#ffffff";
         break;
+      case 'red':
+        $col = "#DC2626";
+        break;
       default:
         $col = "#374151";
         break;

@@ -12,7 +12,7 @@
                 </figure>
   
                 <div class="py-1 px-3">
-                  <a href="{{ 'http://192.168.1.106:8080/#/catalogo/' . $catalog->id }}">
+                  <a href="{{ $catalogoUrl . '/#/catalogo/' . $catalog->id }}">
                     <h1 class="text-sm font-semibold text-center">
                       {{Str::limit($catalog->title, 25)}}
                     </h1>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="px-3 mb-3">
-                    <x-button-enlace href="{{ 'http://192.168.1.106:8080/#/catalogo/' . $catalog->id }}" color="red" class="w-full">
+                    <x-button-enlace href="{{ $catalogoUrl . '/#/catalogo/' . $catalog->id }}" color="red" class="w-full">
                         Ver Catálogo
                     </x-button-enlace>
                 </div>

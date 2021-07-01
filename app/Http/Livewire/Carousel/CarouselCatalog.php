@@ -9,6 +9,8 @@ class CarouselCatalog extends Component
 {
     public $catalogs = [];
 
+    public $catalogoUrl;
+
     public function loadCatalogs()
     {
         $this->catalogs = Catalog::where('status', '=', Catalog::PUBLICADO)
