@@ -28,10 +28,10 @@
                     <a href="#" class="text-base font-medium text-white hover:text-gray-500">
                         Únete a Nosotros
                     </a>
-                    <a href="#" class="text-base font-medium text-white hover:text-gray-500">
+                    {{-- <a href="#" class="text-base font-medium text-white hover:text-gray-500">
                         Venta por Catálogo
-                    </a>
-                    <a href="#" class="text-base font-medium text-white hover:text-gray-500">
+                    </a> --}}
+                    <a href="{{route('contactanos.index')}}" class="{{request()->routeIs('contactanos.index') ? 'active' : ''}} text-base font-medium text-white hover:text-gray-500">
                         Contáctenos
                     </a>
                 </div>
@@ -73,13 +73,13 @@
                         Únete a Nosotros
                     </a>
                 </li>
-                <li class="text-gray-600 hover:bg-red-600 hover:text-white">
+                {{-- <li class="text-gray-600 hover:bg-red-600 hover:text-white">
                     <a href="#" class="py-2 px-4 text-sm flex items-center">
                         Venta por Catálogo
                     </a>
-                </li>
+                </li> --}}
                 <li class="text-gray-600 hover:bg-red-600 hover:text-white">
-                    <a href="#" class="py-2 px-4 text-sm flex items-center">
+                    <a href="{{route('contactanos.index')}}" class="{{request()->routeIs('contactanos.index') ? 'active' : ''}} py-2 px-4 text-sm flex items-center">
                         Contáctenos
                     </a>
                 </li>
@@ -97,4 +97,3 @@
         </div>
     </div>
 </nav>
-

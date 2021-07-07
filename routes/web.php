@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
@@ -31,6 +32,10 @@ Route::get('categorias', [CategoriaController::class, 'index'])->name('categoria
 Route::get('categorias/{categoria}', [CategoriaController::class, 'show'])->name('categorias.show');
 
 Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
+
+Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
+
+Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
 
 Route::middleware(['auth'])->group(function(){
 

@@ -31,17 +31,6 @@ class WelcomeController extends Controller
 
     public function home()
     {
-        /* $modelos = Modelo::where('status', Modelo::PUBLICADO)
-                        ->take(8)->get();
-
-        $catalogs = Catalog::where('status', Catalog::PUBLICADO)
-                        ->orderBy('id', 'ASC')
-                        ->take(8)->get();
-
-        $categorias = Categoria::where('status', Categoria::PUBLICADO)
-                        ->take(8)->get(); */
-
-        /* return view('home', compact('modelos', 'catalogs', 'categorias')); */
         return view('home');
     }
 }
