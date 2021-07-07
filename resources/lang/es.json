@@ -41,5 +41,9 @@
     "Manage Account": "Administrar cuenta",
     "Already registered?": "¿Ya registrado?",
     "Email Password Reset Link": "Email Enlace de restablecimiento de contraseña",
-    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "¿Olvidaste tu contraseña? No hay problema. Simplemente díganos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva."
+    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "¿Olvidaste tu contraseña? No hay problema. Simplemente díganos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.",
+    "Showing": "Los Resultados",
+    "to": "a",
+    "of": "de",
+    "results": "Resultados"
 }

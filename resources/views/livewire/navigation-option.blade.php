@@ -16,7 +16,7 @@
                         </x-slot>
                         <x-slot name="content">
                             @foreach ($categorias as $categoria)
-                                <x-jet-dropdown-link href="{{route('categories.show', $categoria)}}">
+                                <x-jet-dropdown-link href="{{route('categorias.show', $categoria)}}">
                                     {{ $categoria->name }}
                                 </x-jet-dropdown-link>
                             @endforeach
@@ -85,7 +85,7 @@
                 </li>
                 {{-- @foreach ($categorias as $categoria)
                     <li class="text-gray-600 hover:bg-red-600 hover:text-white">
-                        <a href="{{route('categories.show', $categoria)}}" class="py-2 px-4 text-sm flex items-center">
+                        <a href="{{route('categorias.show', $categoria)}}" class="py-2 px-4 text-sm flex items-center">
                             <span class="flex justify-center w-9">
                                 {!! $categoria->icon !!}
                             </span>

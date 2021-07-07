@@ -6,7 +6,7 @@
             <li class="bg-white {{ $loop->last ? '' : 'mr-2' }}">
               <article>
                 <figure>
-                  @if (count($modelo->images))
+                  @if (count($modelo->images)>0)
                     <img class="h-full w-full object-cover object-center" src="{{ Storage::url($modelo->images->first()->url) }}" alt="">
                   @endif
                 </figure>

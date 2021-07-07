@@ -9,7 +9,10 @@ class CategoriaController extends Controller
 {
     public function index()
     {
-        return view('categorias.index');
+        $categorias = Categoria::where('status', Categoria::PUBLICADO)
+                            ->paginate(8);
+
+        return view('categorias.index', compact('categorias'));
     }
 
     public function show(Categoria $categoria)

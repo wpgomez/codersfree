@@ -6,9 +6,9 @@
             <li class="bg-white {{ $loop->last ? '' : 'mr-2' }}">
               <article>
                 <figure>
-                  @if ($categoria->image)
+                  @isset ($categoria->image)
                     <img class="h-full w-full object-cover object-center" src="{{ Storage::url($categoria->image) }}" alt="">
-                  @endif
+                  @endisset
                 </figure>
   
                 <div class="py-1 px-3">
