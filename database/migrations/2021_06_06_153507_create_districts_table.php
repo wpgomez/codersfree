@@ -17,9 +17,13 @@ class CreateDistrictsTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('province_id');
+            $table->string('code_pais');
+            $table->string('code_departamento');
+            $table->string('code_provincia');
+            $table->string('code_distrito');
 
-            $table->foreign('city_id')->references('id')->on('cities');
+            $table->foreign('province_id')->references('id')->on('provinces');
 
             $table->timestamps();
         });

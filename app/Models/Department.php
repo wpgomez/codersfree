@@ -9,16 +9,16 @@ class Department extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'country_id', 'code_pais', 'code_departamento'];
 
     //Relacion de uno a muchos
-    public function cities()
+    public function provinces()
     {
-        return $this->hasMany(City::class);
+        return $this->hasMany(Province::class);
     }
 
-    public function orders()
+    /* public function orders()
     {
         return $this->hasMany(Order::class);
-    }
+    } */
 }

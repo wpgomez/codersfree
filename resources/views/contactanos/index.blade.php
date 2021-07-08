@@ -15,6 +15,31 @@
                         </div>
                     </div>
                 @endif
+                @if (session('error'))
+                    <div class="mb-2">
+                        <div class="px-4 py-3 leading-normal text-red-500 bg-red-100 rounded-lg" role="alert">
+                            <p class="font-bold">{{session('error')}}</p>
+                        </div>
+                    </div>
+                @endif
+
+                <div class="grid grid-cols-2 gap-4 mb-2">
+                    <div class="text-center">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <div class="right-info">
+                            <b>Línea</b>
+                            <p>(01) 372-9994</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <div class="right-info">
+                            <b>Movil</b>
+                            <p>(51) 949 801 537</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <form action="{{route('contactanos.store')}}" method="post">
                     @csrf

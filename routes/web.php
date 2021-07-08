@@ -7,6 +7,7 @@ use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UneteController;
 use App\Http\Controllers\WebhooksController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
@@ -36,6 +37,10 @@ Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
 Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
 
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
+
+Route::get('unete', [UneteController::class, 'index'])->name('unete.index');
+
+Route::post('unete', [UneteController::class, 'store'])->name('unete.store');
 
 Route::middleware(['auth'])->group(function(){
 

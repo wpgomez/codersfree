@@ -12,14 +12,15 @@ class ContactanosController extends Controller
     {
         return view('contactanos.index');
     }
-
-    public function show()
-    {
-        return view('contactanos.show');
-    }
-
+    
     public function store(Request $request)
     {
+        $email = env('CATALOGO_EMAIL', '');
+        if (!$email) {
+            return redirect()->route("contactanos.index")
+                            ->with('error', 'Se produjo error al enviar.');
+        }
+
         $request->validate([
             'nombres' => 'required',
             'apellidos' => 'required',
@@ -29,8 +30,9 @@ class ContactanosController extends Controller
         ]);
 
         $correo = new ContactanosMailable($request->all());
-        Mail::to('wpgomezcueva@gmail.com')->send($correo);
+        Mail::to($email)->send($correo);
 
-        return redirect()->route("contactanos.index")->with('info', 'Mensaje enviado');
+        return redirect()->route("contactanos.index")
+                        ->with('info', 'Mensaje enviado');
     }
 }

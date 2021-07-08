@@ -36,11 +36,16 @@ class DatabaseSeeder extends Seeder
 
         /* $this->call(ColorSizeSeeder::class); */
 
+        $this->call(CountrySeeder::class);
         $this->call(DepartmentSeeder::class);
+        $this->call(ProvinceSeeder::class);
+        $this->call(DistrictSeeder::class);
 
         $this->call(CatalogSeeder::class);
         $this->call(ModeloSeeder::class);
         $this->call(CategoriaSeeder::class);
         $this->call(ProductoSeeder::class);
+
+        $this->call(MomentcontactSeeder::class);
     }
 }
