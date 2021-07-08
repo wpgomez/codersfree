@@ -13,10 +13,17 @@ class ContactanosController extends Controller
         return view('contactanos.index');
     }
 
+    public function show()
+    {
+        return view('contactanos.show');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'telefono' => 'required',
             'correo' => 'required|email',
             'mensaje' => 'required',
         ]);

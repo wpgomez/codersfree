@@ -10,7 +10,9 @@
     <h1>Correo Electrónico</h1>
     <p>Este es el primer correo que mandaré por Laravel</p>
 
-    <p><strong>Nombre:</strong> {{$contacto['name']}}</p>
+    <p><strong>Nombres:</strong> {{$contacto['nombres']}}</p>
+    <p><strong>Apellidos:</strong> {{$contacto['apellidos']}}</p>
+    <p><strong>Teléfono:</strong> {{$contacto['telefono']}}</p>
     <p><strong>Correo:</strong> {{$contacto['correo']}}</p>
     <p><strong>Mensaje:</strong> {{$contacto['mensaje']}}</p>
 </body>
