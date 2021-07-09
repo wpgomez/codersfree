@@ -75,8 +75,8 @@
                             {{ __('Login') }}
                         </x-jet-dropdown-link>
 
-                        <x-jet-dropdown-link href="{{ route('register') }}">
-                            {{ __('Register') }}
+                        <x-jet-dropdown-link href="{{ route('unete.index') }}">
+                            Únete a Nosotros
                         </x-jet-dropdown-link>
                     </x-slot>
                 </x-jet-dropdown>

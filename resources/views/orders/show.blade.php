@@ -126,5 +126,34 @@
             </table>
         </div>
         
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
+                <div class="text-gray-700">
+                    <p class="flex justify-between items-center font-semibold">
+                        Subtotal
+                        <span class="text-lg">
+                            S/ {{number_format($order->total-$order->shipping_cost,2,'.',',')}}
+                        </span>
+                    </p>
+                </div>
+                <div class="text-gray-700">
+                    <p class="flex justify-between items-center font-semibold">
+                        Envío
+                        <span class="text-lg">
+                            S/ {{number_format($order->shipping_cost,2,'.',',')}}
+                        </span>
+                    </p>
+                </div>
+                <div class="text-gray-700">
+                    <hr class="mb-3 md:hidden">
+                    <p class="flex justify-between items-center font-semibold">
+                        Total
+                        <span class="text-lg">
+                            S/ {{number_format($order->total,2,'.',',')}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </x-store-layout>

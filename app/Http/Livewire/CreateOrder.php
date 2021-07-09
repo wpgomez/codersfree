@@ -25,9 +25,12 @@ class CreateOrder extends Component
         'envio_type' => 'required'
     ];
 
+    public $total = 0;
+
     public function mount()
     {
         $this->countries = Country::all();
+        $this->calculateTotal();
     }
 
     public function updatedEnvioType($value)
@@ -37,6 +40,8 @@ class CreateOrder extends Component
                 'country_id', 'department_id', 'province_id', 
                 'district_id', 'address', 'references'
             ]);
+            $this->shipping_cost = 0;
+            $this->calculateTotal();
         }
     }
 
@@ -59,10 +64,16 @@ class CreateOrder extends Component
         $province = Province::find($value);
 
         $this->shipping_cost = $province->cost;
+        $this->calculateTotal();
 
         $this->districts = District::where('province_id', $value)->get();
 
         $this->reset('district_id');
+    }
+
+    public function calculateTotal()
+    {
+        $this->total = Cart::subtotal(2,'.','') + $this->shipping_cost;
     }
 
     public function create_order()
@@ -87,7 +98,7 @@ class CreateOrder extends Component
         $order->phone = $this->phone;
         $order->envio_type = $this->envio_type;
         $order->shipping_cost = 0;
-        $order->total = $this->shipping_cost + Cart::subtotal();
+        $order->total = $this->shipping_cost + Cart::subtotal(2,'.','');
         $order->content = Cart::content();
 
         if ($this->envio_type == 2) {

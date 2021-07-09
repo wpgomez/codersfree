@@ -196,7 +196,7 @@
                     @if ($envio_type == 1)
                         S/ {{Cart::subtotal()}}
                     @else
-                        S/ {{Cart::subtotal() + $shipping_cost}}
+                        S/ {{number_format($total,2,'.',',')}}
                     @endif
                 </p>
             </div>
