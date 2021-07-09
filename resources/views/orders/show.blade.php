@@ -56,12 +56,11 @@
 
                     @if ($order->envio_type == 1)
                         <p class="text-sm">Los productos deben ser recogidos en tienda.</p>
-                        <p class="text-sm">Calle falsa 123</p>
                     @else
                         <p class="text-sm">Los productos serán enviados a:</p>
                         <p class="text-sm">{{$order->address}}</p>
                         @isset($order->department->name)
-                            <p>{{$order->department->name}} - {{$order->city->name}} - {{$order->district->name}}</p>
+                            <p>{{$order->department->name}} - {{$order->province->name}} - {{$order->district->name}}</p>
                         @endif
                     @endif
                 </div>

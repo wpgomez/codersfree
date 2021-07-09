@@ -17,6 +17,7 @@ class CreateProvincesTable extends Migration
             $table->id();
 
             $table->string('name');
+            $table->float('cost');
             $table->unsignedBigInteger('department_id');
             $table->string('code_pais');
             $table->string('code_departamento');

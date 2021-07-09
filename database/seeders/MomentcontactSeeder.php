@@ -15,9 +15,9 @@ class MomentcontactSeeder extends Seeder
     public function run()
     {
         $momentcontacts = [
-            ['name' => 'Mañana'],
-            ['name' => 'Medio Día'],
-            ['name' => 'Tarde'],
+            ['name' => 'En la Mañana'],
+            ['name' => 'Al Medio Día'],
+            ['name' => 'En la Tarde'],
         ];
 
         foreach ($momentcontacts as $momentcontact) {

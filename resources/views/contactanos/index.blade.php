@@ -48,7 +48,7 @@
                             Nombres <strong class="text-red-600">*</strong>
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="nombres" 
+                            <input type="text" name="nombres" value="{{old('nombres')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" 
                                 placeholder="Ingresa tu nombres">
                         </div>
@@ -63,7 +63,7 @@
                             Apellidos <strong class="text-red-600">*</strong>
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="apellidos" 
+                            <input type="text" name="apellidos" value="{{old('apellidos')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" 
                                 placeholder="Ingresa tus apellidos">
                         </div>
@@ -78,7 +78,7 @@
                             Teléfono <strong class="text-red-600">*</strong>
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="telefono" 
+                            <input type="text" name="telefono" value="{{old('telefono')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" 
                                 placeholder="Movil o Fijo">
                         </div>
@@ -93,7 +93,7 @@
                             E-mail <strong class="text-red-600">*</strong>
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="correo" 
+                            <input type="text" name="correo" value="{{old('correo')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" 
                                 placeholder="Tu correo electrónico">
                         </div>
@@ -110,7 +110,7 @@
                         <div class="mt-1">
                             <textarea name="mensaje" rows="4" 
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" 
-                                placeholder="Envíanos tus comentarios o dudas..."></textarea>
+                                placeholder="Envíanos tus comentarios o dudas...">{{old('mensaje')}}</textarea>
                         </div>
                         @error('mensaje')
                             <p class="mt-2 text-sm text-red-600">

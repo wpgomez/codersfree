@@ -217,9 +217,16 @@ class ProvinceSeeder extends Seeder
             $department = Department::where('code_pais', '=', $province['code_pais'])
                         ->where('code_departamento', '=', $province['code_departamento'])
                         ->first();
+
+            $cost = 15;
+            if ($province['code_departamento']=='015') {
+                $cost = 0;
+            }
+
             if ($department) {
                 Province::create([
                     'name' => $province['name'],
+                    'cost' => $cost,
                     'department_id' => $department->id,
                     'code_pais' => $province['code_pais'],
                     'code_departamento' => $province['code_departamento'],

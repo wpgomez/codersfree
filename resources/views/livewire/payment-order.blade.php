@@ -17,7 +17,7 @@
                             <p class="text-sm">Los productos serán enviados a:</p>
                             <p class="text-sm">{{$order->address}}</p>
                             @isset($order->department->name)
-                                <p>{{$order->department->name}} - {{$order->city->name}} - {{$order->district->name}}</p>
+                                <p>{{$order->department->name}} - {{$order->province->name}} - {{$order->district->name}}</p>
                             @endif
                         @endif
                     </div>

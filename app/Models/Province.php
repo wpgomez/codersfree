@@ -11,6 +11,7 @@ class Province extends Model
 
     protected $fillable = [
         'name', 
+        'cost',
         'department_id', 
         'code_pais', 
         'code_departamento', 

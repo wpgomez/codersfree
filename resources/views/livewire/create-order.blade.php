@@ -26,7 +26,7 @@
             <label class="bg-white rounded-lg shadow px-4 py-4 flex items-center mb-4">
                 <input x-model="envio_type" type="radio" value="1" name="envio_type" class="text-gray-600">
                 <span class="ml-2 text-gray-700">
-                    Recojo en tienda (Calle Falsa 123)
+                    Recojo en tienda
                 </span>
                 <span class="font-semibold text-gray-700 ml-auto">
                     Gratis
@@ -41,7 +41,22 @@
                     </span>
                 </label>
 
-                <div class="px-4 pb-4 grid grid-cols-2 gap-6 hidden" :class="{ 'hidden': envio_type != 2 }">
+                <div class="px-4 pb-4 grid grid-cols-2 gap-4 hidden" :class="{ 'hidden': envio_type != 2 }">
+                     {{-- Paises --}}
+                     <div>
+                        <x-jet-label value="País" />
+
+                        <select class="form-control w-full" wire:model="country_id">
+                            <option value="" disabled selected>Seleccione un País</option>
+
+                            @foreach ($countries as $country)
+                                <option value="{{$country->id}}">{{$country->name}}</option>
+                            @endforeach
+                        </select>
+
+                        <x-jet-input-error for="country_id" />
+                    </div>
+
                     {{-- Departamentos --}}
                     <div>
                         <x-jet-label value="Departamento" />
@@ -57,19 +72,19 @@
                         <x-jet-input-error for="department_id" />
                     </div>
 
-                    {{-- Ciudades --}}
+                    {{-- Provincias --}}
                     <div>
-                        <x-jet-label value="Ciudad" />
+                        <x-jet-label value="Provincia" />
 
-                        <select class="form-control w-full" wire:model="city_id">
-                            <option value="" disabled selected>Seleccione un Ciudad</option>
+                        <select class="form-control w-full" wire:model="province_id">
+                            <option value="" disabled selected>Seleccione un Provincia</option>
 
-                            @foreach ($cities as $city)
-                                <option value="{{$city->id}}">{{$city->name}}</option>
+                            @foreach ($provinces as $province)
+                                <option value="{{$province->id}}">{{$province->name}}</option>
                             @endforeach
                         </select>
 
-                        <x-jet-input-error for="city_id" />
+                        <x-jet-input-error for="province_id" />
                     </div>
 
                     {{-- Distritos --}}
@@ -87,7 +102,7 @@
                         <x-jet-input-error for="district_id" />
                     </div>
 
-                    <div>
+                    <div class="col-span-2">
                         <x-jet-label value="Dirección" />
                         <x-jet-input class="w-full" wire:model="address" type="text" />
                         <x-jet-input-error for="address" />

@@ -18,14 +18,19 @@ class Order extends Model
     protected $guarded = ['id', 'created_at', 'updated_at', 'status'];
 
     //Relacion uno a muchos inversa
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
     public function department()
     {
         return $this->belongsTo(Department::class);
     }
 
-    public function city()
+    public function province()
     {
-        return $this->belongsTo(City::class);
+        return $this->belongsTo(Province::class);
     }
 
     public function district()
