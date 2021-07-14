@@ -12,6 +12,19 @@
             </span>
         </x-slot>
         <x-slot name="content">
+            @if (Cart::count())
+                <div class="py-2 px-3 border-b border-gray-200 flex justify-between items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mt-2 mb-2"><span class="font-bold">Total: S/ {{ Cart::subtotal() }}</span></p>
+                    </div>
+                    <div>
+                        <x-button-enlace href="{{ route('shopping-cart') }}" color="red" class="w-full">
+                            Ir al carrito
+                        </x-button-enlace>
+                    </div>
+                </div>
+            @endif
+
             <ul>
                 @forelse (Cart::content() as $item)
                     <li class="flex p-2 border-b border-gray-200">
@@ -45,15 +58,17 @@
             </ul>
 
             @if (Cart::count())
-                <div class="py-2 px-3">
-                    <p class="text-lg text-gray-700 mt-2 mb-3"><span class="font-bold">Total: S/ {{ Cart::subtotal() }}</span></p>
-
-                    <x-button-enlace href="{{ route('shopping-cart') }}" color="red" class="w-full">
-                        Ir al carrito
-                    </x-button-enlace>
+                <div class="py-2 px-3 flex justify-between items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mt-2 mb-2"><span class="font-bold">Total: S/ {{ Cart::subtotal() }}</span></p>
+                    </div>
+                    <div>
+                        <x-button-enlace href="{{ route('shopping-cart') }}" color="red" class="w-full">
+                            Ir al carrito
+                        </x-button-enlace>
+                    </div>
                 </div>
             @endif
-
         </x-slot>
     </x-jet-dropdown>
 </div>

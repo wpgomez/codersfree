@@ -15,6 +15,9 @@
                             </button>
                         </x-slot>
                         <x-slot name="content">
+                            <x-jet-dropdown-link href="{{route('modelos.index')}}">
+                                Todos
+                            </x-jet-dropdown-link>
                             @foreach ($categorias as $categoria)
                                 <x-jet-dropdown-link href="{{route('categorias.show', $categoria)}}">
                                     {{ $categoria->name }}

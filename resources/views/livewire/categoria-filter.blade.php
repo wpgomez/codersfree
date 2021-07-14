@@ -41,7 +41,9 @@
                             <article>
                                 <figure>
                                     @if (count($modelo->images)>0)
-                                        <img class="h-full w-full object-cover object-center" src="{{ Storage::url($modelo->images->first()->url) }}" alt="">
+                                        <a href="{{ route('modelos.show', $modelo) }}">
+                                            <img class="h-full w-full object-cover object-center" src="{{ Storage::url($modelo->images->first()->url) }}" alt="">
+                                        </a>
                                     @endif
                                 </figure>
 
