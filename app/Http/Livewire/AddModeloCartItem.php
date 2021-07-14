@@ -50,6 +50,7 @@ class AddModeloCartItem extends Component
                 $this->quantity = 0;
                 if ($this->producto) {
                     $this->quantity = $this->producto->stock - qty_added($this->producto->id);
+                    $this->options['producto_code'] = $this->producto->code;
                 }
             }
         }
@@ -82,6 +83,7 @@ class AddModeloCartItem extends Component
                 $this->quantity = 0;
                 if ($this->producto) {
                     $this->quantity = $this->producto->stock - qty_added($this->producto->id);
+                    $this->options['producto_code'] = $this->producto->code;
                 }
             }
         }
