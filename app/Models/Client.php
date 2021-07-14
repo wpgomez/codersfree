@@ -5,17 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Client extends Model
 {
     use HasFactory;
 
-    const PENDIENTE = 1;
-    const RECIBIDO = 2;
-    const ENVIADO = 3;
-    const ENTREGADO = 4;
-    const ANULADO = 5;
-
-    protected $guarded = ['id', 'created_at', 'updated_at', 'status'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     //Relacion uno a muchos inversa
     public function country()
@@ -41,10 +35,5 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function client()
-    {
-        return $this->belongsTo(Client::class);
     }
 }

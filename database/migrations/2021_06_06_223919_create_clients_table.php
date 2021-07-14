@@ -1,11 +1,10 @@
 <?php
 
-use App\Models\Order;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrdersTable extends Migration
+class CreateClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,37 +13,30 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('client_id')->nullable();
-            $table->string('contact');
+            $table->string('name_complete');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
+            $table->string('nro_doc_identidad');
             $table->string('phone');
-            $table->enum('status', [
-                    Order::PENDIENTE, 
-                    Order::RECIBIDO, 
-                    Order::ENVIADO, 
-                    Order::ENTREGADO, 
-                    Order::ANULADO])
-                    ->default(Order::PENDIENTE);
-            $table->enum('envio_type', [1, 2]);
-            $table->float('shipping_cost');
-            $table->float('total');
-            $table->json('content');
+            $table->string('phone2');
             $table->unsignedBigInteger('country_id')->nullable();
             $table->unsignedBigInteger('department_id')->nullable();
             $table->unsignedBigInteger('province_id')->nullable();
             $table->unsignedBigInteger('district_id')->nullable();
             $table->string('address')->nullable();
-            $table->string('references')->nullable();
+            $table->string('code');
+            $table->unsignedBigInteger('user_id')->nullable();
 
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('client_id')->references('id')->on('clients');
             $table->foreign('country_id')->references('id')->on('countries');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->foreign('province_id')->references('id')->on('provinces');
             $table->foreign('district_id')->references('id')->on('districts');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });
@@ -57,6 +49,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('clients');
     }
 }
