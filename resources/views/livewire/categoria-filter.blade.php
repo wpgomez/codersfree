@@ -20,7 +20,7 @@
             <ul class="divide-y divide-gray-200">
                 @foreach ($categorias as $categoriaAux)
                     <li class="py-2 text-sm {{ $categoriaId == $categoriaAux->id ? 'bg-red-600 text-white' : '' }}">
-                        <a class="px-2 capitalize flex items-center" 
+                        <a class="cursor-pointer px-2 capitalize flex items-center" 
                             wire:click="$set('categoriaId', '{{$categoriaAux->id}}')">
                                 {{$categoriaAux->name}}
                         </a>

@@ -25,7 +25,7 @@
                             @endforeach
                         </x-slot>
                     </x-jet-dropdown>
-                    <a href="{{ env('CATALOGO_URL', '') }}" class="text-base font-medium text-white hover:text-gray-500">
+                    <a href="{{route('catalogs.index')}}" class="text-base font-medium text-white hover:text-gray-500">
                         Catálogos
                     </a>
                     <a href="{{route('unete.index')}}" class="{{request()->routeIs('unete.index') ? 'active' : ''}} text-base font-medium text-white hover:text-gray-500">
