@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactanosController;
@@ -31,6 +32,8 @@ Route::get('modelos/{modelo}', [ModeloController::class, 'show'])->name('modelos
 Route::get('categorias', [CategoriaController::class, 'index'])->name('categorias.index');
 
 Route::get('categorias/{categoria}', [CategoriaController::class, 'show'])->name('categorias.show');
+
+Route::get('catalogs', [CatalogController::class, 'index'])->name('catalogs.index');
 
 Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
 

@@ -497,6 +497,56 @@ class ModeloSeeder extends Seeder
                 'price' => 0,
                 'pricelist' => 0,
             ],
+            [
+                'name' => '1342',
+                'name2' => '1342BRA',
+                'description' => 'Brasier con copa de escote profundo y broche delantero, logrando un efecto redondeando y con mayor volumen, espalda ancha elaborado de encaje y licra interna con buen cubrimiento y elongación.',
+                'code' => '465',
+                'images' => [
+                    ['url' => 'modelos/1342/1342-vino-2.jpg'],
+                    ['url' => 'modelos/1342/1342-negro-2.jpg'],
+                    ['url' => 'modelos/1342/1342-blanco-2.jpg'],
+                    ['url' => 'modelos/1342/1342-beige-2.jpg'],
+                ],
+                'catalogpages' => [
+                    ['catalog_id' => 4, 'number_page' => 13]
+                ],
+                'colors' => [
+                    [
+                        'code' => '001', 
+                        'images' => [
+                            ['url' => 'modelos/1342/1342-blanco-1.jpg'],
+                        ]
+                    ],
+                    [
+                        'code' => '002', 
+                        'images' => [
+                            ['url' => 'modelos/1342/1342-negro-1.jpg'],
+                        ]
+                    ],
+                    [
+                        'code' => '018', 
+                        'images' => [
+                            ['url' => 'modelos/1342/1342-vino-1.jpg'],
+                        ]
+                    ],
+                    [
+                        'code' => '248', 
+                        'images' => [
+                            ['url' => 'modelos/1342/1342-beige-1.jpg'],
+                        ]
+                    ],
+                ],
+                'tallas' => [
+                    ['code' => '32'],
+                    ['code' => '34'],
+                    ['code' => '36'],
+                    ['code' => '38'],
+                ],
+                'price' => 0,
+                'pricelist' => 0,
+            ],
+            
         ];
 
         foreach ($modelos as $modelo) {

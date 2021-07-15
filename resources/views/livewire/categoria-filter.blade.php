@@ -19,10 +19,10 @@
             <h2 class="font-semibold text-center mb-2">Categorías</h2>
             <ul class="divide-y divide-gray-200">
                 @foreach ($categorias as $categoriaAux)
-                    <li class="py-2 text-sm">
-                        <a class="cursor-pointer hover:text-orange-500 capitalize {{ $categoriaId == $categoriaAux->id ? 'text-orange-500 font-semibold' : '' }}" 
-                            wire:click="$set('categoriaId', '{{$categoriaAux->id}}')"
-                        >{{$categoriaAux->name}}
+                    <li class="py-2 text-sm {{ $categoriaId == $categoriaAux->id ? 'bg-red-600 text-white' : '' }}">
+                        <a class="px-2 capitalize flex items-center" 
+                            wire:click="$set('categoriaId', '{{$categoriaAux->id}}')">
+                                {{$categoriaAux->name}}
                         </a>
                     </li>
                 @endforeach

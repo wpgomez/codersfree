@@ -18,9 +18,9 @@
             {{-- <div class="md:hidden">
 
             </div> --}}
-            {{-- <div class="hidden md:block">
+            <div class="hidden md:block">
                 @livewire('search')
-            </div> --}}
+            </div>
         </div>
 
         <div class="mx-6 relative block">

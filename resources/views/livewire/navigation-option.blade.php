@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="text-gray-600 hover:bg-red-600 hover:text-white">
-                    <a href="{{ env('CATALOGO_URL', '') }}" class="py-2 px-4 text-sm flex items-center">
+                    <a href="{{route('catalogs.index')}}" class="py-2 px-4 text-sm flex items-center">
                         Catálogos
                     </a>
                 </li>

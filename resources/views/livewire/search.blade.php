@@ -12,12 +12,16 @@
     <div class="absolute w-full mt-1 hidden" :class="{'hidden': !$wire.open}" @click.away="$wire.open = false">
         <div class="bg-white rounded-lg shadow mt-1">
             <div class="px-4 py-3 space-y-1">
-                @forelse ($products as $product)
-                    <a href="{{ route('products.show', $product) }}" class="flex">
-                        <img class="w-16 h-12 object-cover" src="{{ Storage::url($product->images->first()->url) }}" alt="">
+                @forelse ($modelos as $modelo)
+                    <a href="{{ route('modelos.show', $modelo) }}" class="flex">
+                        @if ($modelo->images->first())
+                            <img class="w-16 h-12 object-cover" src="{{ Storage::url($modelo->images->first()->url) }}" alt="">    
+                        @endif
                         <div class="ml-4 text-gray-700">
-                            <p class="text-lg font-semibold leading-5">{{$product->name}}</p>
-                            <p>Categoría: {{$product->subcategory->category->name}}</p>
+                            <p class="text-lg font-semibold leading-5">{{$modelo->name}}</p>
+                            @if ($modelo->categorias->first())
+                                <p>Categoría: {{$modelo->categorias->first()->name}}</p>
+                            @endif
                         </div>
                     </a>
                 @empty

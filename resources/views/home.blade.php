@@ -14,7 +14,7 @@
                 <h1 class="text-lg font-semibold text-gray-700">
                 Lista de Catálogos
                 </h1>
-                <a href="{{ env('CATALOGO_URL', '') }}" 
+                <a href="{{route('catalogs.index')}}" 
                     class="text-red-600 hover:text-red-500 hover:underline ml-2 font-semibold">
                     Ver más
                 </a>

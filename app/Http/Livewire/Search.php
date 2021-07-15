@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Modelo;
 use App\Models\Product;
 use Livewire\Component;
 
@@ -22,14 +23,14 @@ class Search extends Component
     public function render()
     {
         if ($this->search) {
-            $products = Product::where('name', 'LIKE','%' . $this->search . '%')
-                                ->where('status', Product::PUBLICADO)
+            $modelos = Modelo::where('name', 'LIKE','%' . $this->search . '%')
+                                ->where('status', Modelo::PUBLICADO)
                                 ->take(8)
                                 ->get();
         } else {
-            $products = [];
+            $modelos = [];
         }
         
-        return view('livewire.search', compact('products'));
+        return view('livewire.search', compact('modelos'));
     }
 }
