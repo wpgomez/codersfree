@@ -15,7 +15,12 @@ class Order extends Model
     const ENTREGADO = 4;
     const ANULADO = 5;
 
-    protected $guarded = ['id', 'created_at', 'updated_at', 'status'];
+    protected $guarded = [
+        'id', 
+        'created_at', 
+        'updated_at', 
+        'status'
+    ];
 
     //Relacion uno a muchos inversa
     public function country()
@@ -46,5 +51,11 @@ class Order extends Model
     public function client()
     {
         return $this->belongsTo(Client::class);
+    }
+
+    //Relacion uno a muchos
+    public function orderdetails()
+    {
+        return $this->hasMany(OrderDetail::class);
     }
 }

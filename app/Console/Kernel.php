@@ -35,7 +35,7 @@ class Kernel extends ConsoleKernel
 
             foreach ($orders as $order) {
 
-                $items = json_decode($order->content);
+                $items = $order->orderdetails;
 
                 foreach ($items as $item) {
                     increase($item);

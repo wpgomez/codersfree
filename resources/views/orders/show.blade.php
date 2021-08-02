@@ -93,16 +93,16 @@
                             <td>
                                 <div class="flex">
                                     <img class="h-15 w-20 object-cover mr-4" 
-                                        src="{{$item->options->image}}" alt="">
+                                        src="{{$item->image}}" alt="">
                                     <article>
                                         <h1 class="font-bold">{{$item->name}}</h1>
                                         <div class="flex">
-                                            @isset ($item->options->color)
-                                                <p class="text-sm">{{$item->options->color}}</p>
+                                            @isset ($item->color)
+                                                <p class="text-sm">{{$item->color}}</p>
                                             @endisset
 
-                                            @isset ($item->options->talla)
-                                                <p class="text-sm">, {{$item->options->talla}}</p>
+                                            @isset ($item->talla)
+                                                <p class="text-sm">, {{$item->talla}}</p>
                                             @endisset
                                         </div>
                                     </article>

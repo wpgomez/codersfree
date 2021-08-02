@@ -6,9 +6,11 @@ use App\Models\Country;
 use App\Models\Department;
 use App\Models\District;
 use App\Models\Order;
+use App\Models\OrderDetail;
 use App\Models\Province;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
 
 class CreateOrder extends Component
 {
@@ -91,40 +93,74 @@ class CreateOrder extends Component
 
         $this->validate($rules);
 
-        $order = new Order();
+        $is_not_error_save = false;
+        try {
+            DB::beginTransaction();
+
+            $order = new Order();
         
-        $order->user_id = auth()->user()->id;
+            $order->user_id = auth()->user()->id;
 
-        if (count(auth()->user()->clients)>0) {
-            $order->client_id = auth()->user()->clients->first()->id;
+            if (count(auth()->user()->clients)>0) {
+                $order->client_id = auth()->user()->clients->first()->id;
+            }
+            
+            $order->contact = $this->contact;
+            $order->phone = $this->phone;
+            $order->envio_type = $this->envio_type;
+            $order->shipping_cost = 0;
+            $order->total = $this->shipping_cost + Cart::subtotal(2,'.','');
+            $order->content = Cart::content();
+
+            if ($this->envio_type == 2) {
+                $order->shipping_cost = $this->shipping_cost;
+                $order->country_id = $this->country_id;
+                $order->department_id = $this->department_id;
+                $order->province_id = $this->province_id;
+                $order->district_id = $this->district_id;
+                $order->address = $this->address;
+                $order->references = $this->references;
+            }
+
+            $order->save();
+
+            foreach (Cart::content() as $item) {
+                $orderdetail = new OrderDetail();
+                $orderdetail->order_id = $order->id;
+                $orderdetail->rowId = $item->rowId;
+                $orderdetail->producto_id = $item->id;
+                $orderdetail->name = $item->name;
+                $orderdetail->qty = $item->qty;
+                $orderdetail->price = $item->price;
+                $orderdetail->weight = $item->weight;
+                $orderdetail->modelo = $item->options->modelo;
+                $orderdetail->modelo_id = $item->options->modelo_id;
+                $orderdetail->color = $item->options->color;
+                $orderdetail->color_id = $item->options->color_id;
+                $orderdetail->image = $item->options->image;
+                $orderdetail->talla = $item->options->talla;
+                $orderdetail->talla_id = $item->options->talla_id;
+                $orderdetail->producto_code = $item->options->producto_code;
+                $orderdetail->discount = $item->discount;
+                $orderdetail->tax = $item->tax;
+                $orderdetail->subtotal = $item->subtotal;
+
+                $orderdetail->save();
+
+                discount($item);
+            }
+
+            DB::commit();
+            $is_not_error_save = true;
+        } catch (\Exception $e) {
+            DB::rollBack();
         }
-        
-        $order->contact = $this->contact;
-        $order->phone = $this->phone;
-        $order->envio_type = $this->envio_type;
-        $order->shipping_cost = 0;
-        $order->total = $this->shipping_cost + Cart::subtotal(2,'.','');
-        $order->content = Cart::content();
 
-        if ($this->envio_type == 2) {
-            $order->shipping_cost = $this->shipping_cost;
-            $order->country_id = $this->country_id;
-            $order->department_id = $this->department_id;
-            $order->province_id = $this->province_id;
-            $order->district_id = $this->district_id;
-            $order->address = $this->address;
-            $order->references = $this->references;
+        if ($is_not_error_save) {
+            Cart::destroy();
+
+            return redirect()->route('orders.payment', $order);
         }
-
-        $order->save();
-
-        foreach (Cart::content() as $item) {
-            discount($item);
-        }
-
-        Cart::destroy();
-
-        return redirect()->route('orders.payment', $order);
     }
 
     public function render()

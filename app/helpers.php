@@ -1,8 +1,6 @@
 <?php
 
-use App\Models\Product;
 use App\Models\Producto;
-use App\Models\Size;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 function quantity($producto_id)
@@ -49,7 +47,7 @@ function discount($item)
 
 function increase($item)
 {
-    $producto = Producto::find($item->id);
+    $producto = Producto::find($item->producto_id);
     if ($producto) {
         $quantity = $producto->stock + $item->qty;
 
