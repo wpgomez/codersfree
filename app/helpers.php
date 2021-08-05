@@ -17,6 +17,7 @@ function quantity($producto_id)
 
 function qty_added($producto_id)
 {
+    Cart::instance('shopping');
     $cart = Cart::content();
 
     $item = $cart->where('id', $producto_id)

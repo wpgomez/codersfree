@@ -13,6 +13,7 @@ class UpdateCartItemColor extends Component
     
     public function mount()
     {
+        Cart::instance('shopping');
         $item = Cart::get($this->rowId);
         $this->qty = $item->qty;
 
@@ -21,6 +22,7 @@ class UpdateCartItemColor extends Component
 
     public function decrement()
     {
+        Cart::instance('shopping');
         $this->qty = $this->qty - 1;
 
         Cart::update($this->rowId, $this->qty);
@@ -30,6 +32,7 @@ class UpdateCartItemColor extends Component
 
     public function increment()
     {
+        Cart::instance('shopping');
         $this->qty = $this->qty + 1;
 
         Cart::update($this->rowId, $this->qty);

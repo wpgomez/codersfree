@@ -9,7 +9,6 @@ use App\Models\Talla;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
-use Symfony\Component\Console\Output\ConsoleOutput;
 
 class AddModeloCartItem extends Component
 {
@@ -101,6 +100,7 @@ class AddModeloCartItem extends Component
    
     public function addItem()
     {
+        Cart::instance('shopping');
         if ($this->producto) {
             Cart::add([
                     'id' => $this->producto->id, 

@@ -27,6 +27,7 @@ class MergeTheCartLogout
      */
     public function handle(Logout $event)
     {
+        Cart::instance('shopping');
         //eliminar registro
         Cart::erase(auth()->user()->id);
 

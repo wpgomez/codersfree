@@ -136,7 +136,7 @@
     <div class="md:col-span-2">
         <div class="bg-white rounded-lg shadow p-4">
             <ul>
-                @forelse (Cart::content() as $item)
+                @forelse ($items as $item)
                     <li class="flex p-2 border-b border-gray-200">
                         <img class="h15 w-20 object-cover mr-4" src="{{$item->options->image}}" alt="">
 
@@ -176,7 +176,7 @@
             <div class="text-gray-700">
                 <p class="flex justify-between items-center">
                     Subtotal
-                    <span class="font-semibold">S/ {{Cart::subtotal()}}</span>
+                    <span class="font-semibold">S/ {{number_format($subtotal,2,'.',',')}}</span>
                 </p>
                 <p class="flex justify-between items-center">
                     Envío
@@ -194,7 +194,7 @@
                 <p class="flex justify-between items-center font-semibold">
                     <span class="text-lg">Total</span>
                     @if ($envio_type == 1)
-                        S/ {{Cart::subtotal()}}
+                        S/ {{number_format($subtotal,2,'.',',')}}
                     @else
                         S/ {{number_format($total,2,'.',',')}}
                     @endif

@@ -27,6 +27,7 @@ class MergeTheCart
      */
     public function handle(Login $event)
     {
+        Cart::instance('shopping');
         Cart::merge(auth()->user()->id);
     }
 }

@@ -9,11 +9,12 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UneteController;
-use App\Http\Controllers\WebhooksController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Livewire\CreateOrder;
 use App\Http\Livewire\PaymentOrder;
+use App\Http\Livewire\Pedido\CreatePedido;
+use App\Http\Livewire\Pedido\IndexPedido;
 use App\Http\Livewire\ShoppingCart;
 
 /* Route::get('/', WelcomeController::class); */
@@ -57,5 +58,9 @@ Route::middleware(['auth'])->group(function(){
     
     Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
     
-    Route::post('webhooks', WebhooksController::class);
+    Route::get('pedidos', IndexPedido::class)->name('pedidos.index');
+
+    Route::get('pedidos/create', CreatePedido::class)->name('pedidos.create');
+
+    Route::get('pedidos/edit/{order}', CreatePedido::class)->name('pedidos.edit');
 });

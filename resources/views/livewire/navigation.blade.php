@@ -44,8 +44,12 @@
                             {{ __('Profile') }}
                         </x-jet-dropdown-link> --}}
 
-                        <x-jet-dropdown-link href="{{ route('orders.index') }}">
-                            Mis Ordenes
+                        <x-jet-dropdown-link href="{{ route('pedidos.create') }}">
+                            Nuevo Pedido
+                        </x-jet-dropdown-link>
+
+                        <x-jet-dropdown-link href="{{ route('pedidos.index') }}">
+                            Mis Pedidos
                         </x-jet-dropdown-link>
 
                         {{-- <x-jet-dropdown-link href="{{ route('admin.index') }}">

@@ -61,6 +61,7 @@ class AddCartItemSize extends Component
    
     public function addItem()
     {
+        Cart::instance('shopping');
         Cart::add([
                 'id' => $this->product->id, 
                 'name' => $this->product->name, 

@@ -11,6 +11,7 @@ class ShoppingCart extends Component
 
     public function destroy()
     {
+        Cart::instance('shopping');
         Cart::destroy();
 
         $this->emitTo('dropdown-cart', 'render');
@@ -18,6 +19,7 @@ class ShoppingCart extends Component
 
     public function delete($rowId)
     {
+        Cart::instance('shopping');
         Cart::remove($rowId);
 
         $this->emitTo('dropdown-cart', 'render');
@@ -25,6 +27,9 @@ class ShoppingCart extends Component
 
     public function render()
     {
-        return view('livewire.shopping-cart')->layout('layouts.store');
+        Cart::instance('shopping');
+        $items = Cart::content();
+        return view('livewire.shopping-cart', compact('items'))
+                    ->layout('layouts.store');
     }
 }

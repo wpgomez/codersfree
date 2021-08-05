@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Pedido;
 
 use App\Models\Country;
 use App\Models\Department;
@@ -12,8 +12,9 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
-class CreateOrder extends Component
+class CreatePedido extends Component
 {
+    public $order;
     public $envio_type = 1;
     public $contact, $phone, $address, $references, $shipping_cost = 0;
 
@@ -27,11 +28,12 @@ class CreateOrder extends Component
         'envio_type' => 'required'
     ];
 
-    public $subtotal = 0;
     public $total = 0;
+    public $subtotal = 0;
 
     public function mount()
     {
+        Cart::instance('pedido');
         $this->countries = Country::all();
         $this->calculateTotal();
     }
@@ -76,7 +78,7 @@ class CreateOrder extends Component
 
     public function calculateTotal()
     {
-        Cart::instance('shopping');
+        Cart::instance('pedido');
         $this->subtotal = Cart::subtotal(2,'.','');
         $this->total = Cart::subtotal(2,'.','') + $this->shipping_cost;
     }
@@ -96,7 +98,7 @@ class CreateOrder extends Component
 
         $this->validate($rules);
 
-        Cart::instance('shopping');
+        Cart::instance('pedido');
         $is_not_error_save = false;
         try {
             DB::beginTransaction();
@@ -163,15 +165,20 @@ class CreateOrder extends Component
         if ($is_not_error_save) {
             Cart::destroy();
 
-            return redirect()->route('orders.payment', $order);
+            return redirect()->route('pedidos.create');
         }
+    }
+
+    public function cancel_order()
+    {
+        return redirect()->route('pedidos.index');
     }
 
     public function render()
     {
-        Cart::instance('shopping');
+        Cart::instance('pedido');
         $items = Cart::content();
-        return view('livewire.create-order', compact('items'))
+        return view('livewire.pedido.create-pedido', compact('items'))
                 ->layout('layouts.store');
     }
 }

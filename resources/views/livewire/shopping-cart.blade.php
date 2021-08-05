@@ -14,7 +14,7 @@
                 </thead>
 
                 <tbody>
-                    @foreach (Cart::content() as $item)
+                    @foreach ($items as $item)
                         <tr>
                             <td>
                                 <div class="flex">

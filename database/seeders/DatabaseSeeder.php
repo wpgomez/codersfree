@@ -47,5 +47,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductoSeeder::class);
 
         $this->call(MomentcontactSeeder::class);
+        $this->call(MesSeeder::class);
+        $this->call(EjercicioSeeder::class);
     }
 }
