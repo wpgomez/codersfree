@@ -41,7 +41,7 @@
 
         <div class="min-h-screen bg-gray-50">
             @livewire('navigation')
-            @livewire('navigation-option')
+            {{-- @livewire('navigation-option') --}}
                         
             <!-- Page Content -->
             <main>

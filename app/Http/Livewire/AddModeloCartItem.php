@@ -100,8 +100,8 @@ class AddModeloCartItem extends Component
    
     public function addItem()
     {
-        Cart::instance('shopping');
         if ($this->producto) {
+            Cart::instance('shopping');
             Cart::add([
                     'id' => $this->producto->id, 
                     'name' => $this->modelo->name, 

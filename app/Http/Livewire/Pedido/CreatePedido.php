@@ -5,6 +5,8 @@ namespace App\Http\Livewire\Pedido;
 use App\Models\Country;
 use App\Models\Department;
 use App\Models\District;
+use App\Models\Modelo;
+use App\Models\Modelocolor;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Province;
@@ -31,8 +33,15 @@ class CreatePedido extends Component
     public $total = 0;
     public $subtotal = 0;
 
+    public $comment = '';
+    public $confirmingSearchModelo = false;
+    public $searchItems;
+    public $search_modelo = '';
+    public $selectedSearchModelo = [];
+
     public function mount()
     {
+        $this->searchItems = [];
         Cart::instance('pedido');
         $this->countries = Country::all();
         $this->calculateTotal();
@@ -171,7 +180,109 @@ class CreatePedido extends Component
 
     public function cancel_order()
     {
+        Cart::instance('pedido');
+        Cart::destroy();
+
         return redirect()->route('pedidos.index');
+    }
+
+    public function confirmSearchModelo()
+    {
+        $this->searchItems = [];
+        $this->selectedSearchModelo = [];
+        $this->search_modelo = '';
+        $this->confirmingSearchModelo = true;
+        $this->searchModelo();
+    }
+
+    public function aceptarSearchModelo()
+    {
+        if ($this->confirmingSearchModelo) {
+            if (count($this->selectedSearchModelo)) {
+                foreach ($this->selectedSearchModelo as $item) {
+                    if (!$this->existeModeloEnLista($item)) {
+                        $modelocolor = Modelocolor::find($item);
+                        if ($modelocolor) {
+                            $price = 0;
+                            $name = '';
+                            if ($modelocolor->modelo) {
+                                $price = $modelocolor->modelo->price;
+                                $name = $modelocolor->modelo->name;
+                            }
+                            if ($modelocolor->color) {
+                                $name .= ' - ' . $modelocolor->color->name;
+                            }
+                            $options = [];
+
+                            Cart::instance('pedido');
+                            Cart::add([
+                                    'id' => $item, 
+                                    'name' => $name, 
+                                    'qty' => 1, 
+                                    'price' => $price, 
+                                    'weight' => 0,
+                                    'options' => $options
+                                ]);
+                        }
+                    }
+                }
+                $this->render();
+            }
+        }
+
+        $this->confirmingSearchModelo = false;
+        $this->searchItems = [];
+        $this->selectedSearchModelo = [];
+        $this->search_modelo = '';
+    }
+
+    public function cancelSearchModelo()
+    {
+        $this->confirmingSearchModelo = false;
+        $this->searchItems = [];
+        $this->selectedSearchModelo = [];
+        $this->search_modelo = '';
+    }
+
+    public function delete_item($rowId)
+    {
+        Cart::instance('pedido');
+        Cart::remove($rowId);
+
+        $this->render();
+    }
+
+    public function searchModelo()
+    {
+        if ($this->confirmingSearchModelo) {
+            $this->searchItems = DB::table('modelocolors')
+                                ->join('modelos', function ($join) {
+                                    $join->on('modelos.id', '=', 'modelocolors.modelo_id')
+                                        ->where('modelos.status', '=', Modelo::PUBLICADO);
+                                })
+                                ->join('colors', 'colors.id', '=', 'modelocolors.color_id')
+                                ->select('modelocolors.*', 'modelos.name as modelo_name', 'colors.name as color_name', 'modelos.price')
+                                ->where('modelos.name', 'like', '%' . $this->search_modelo . '%')
+                                ->take(20)->get();
+        }
+    }
+
+    public function updatedSearchModelo()
+    {
+        $this->searchModelo();
+    }
+
+    public function existeModeloEnLista($id)
+    {
+        Cart::instance('pedido');
+        $items = Cart::content();
+        foreach ($items as $item) {
+            if ($item->id == $id) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function render()

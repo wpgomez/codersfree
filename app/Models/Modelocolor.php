@@ -15,6 +15,12 @@ class Modelocolor extends Model
     ];
 
     //Relacion uno a muchos inversa
+    public function modelo()
+    {
+        return $this->belongsTo(Modelo::class);
+    }
+
+    //Relacion uno a muchos inversa
     public function color()
     {
         return $this->belongsTo(Color::class);

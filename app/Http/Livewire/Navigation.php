@@ -10,11 +10,10 @@ class Navigation extends Component
 {
     public function render()
     {
-        $categories = Category::all();
         $categorias = Categoria::where('status', '=', Categoria::PUBLICADO)
                             ->orderBy('name', 'ASC')
                             ->get();
 
-        return view('livewire.navigation', compact('categories', 'categorias'));
+        return view('livewire.navigation', compact('categorias'));
     }
 }

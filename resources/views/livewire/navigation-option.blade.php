@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-red-600">
+<header x-data="{ open: false }" class="bg-red-600 sticky top-0">
     <!-- Primary Navigation Menu -->
     <div class="container px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-12">
@@ -99,4 +99,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</header>
