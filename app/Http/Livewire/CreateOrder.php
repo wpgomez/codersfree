@@ -103,6 +103,7 @@ class CreateOrder extends Component
 
             $order = new Order();
         
+            $order->type = '1';
             $order->user_id = auth()->user()->id;
 
             if (count(auth()->user()->clients)>0) {

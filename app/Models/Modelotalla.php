@@ -15,6 +15,11 @@ class Modelotalla extends Model
     ];
 
     //Relacion uno a muchos inversa
+    public function modelo()
+    {
+        return $this->belongsTo(Modelo::class);
+    }
+
     public function talla()
     {
         return $this->belongsTo(Talla::class);

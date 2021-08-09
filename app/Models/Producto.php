@@ -16,4 +16,20 @@ class Producto extends Model
         'stock', 
         'code'
     ];
+
+    //Relacion uno a muchos inversa
+    public function modelo()
+    {
+        return $this->belongsTo(Modelo::class);
+    }
+    
+    public function color()
+    {
+        return $this->belongsTo(Color::class);
+    }
+
+    public function talla()
+    {
+        return $this->belongsTo(Talla::class);
+    }
 }

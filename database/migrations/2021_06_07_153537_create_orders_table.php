@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
 
+            $table->string('type');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('client_id')->nullable();
             $table->string('contact');
@@ -38,6 +39,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('district_id')->nullable();
             $table->string('address')->nullable();
             $table->string('references')->nullable();
+            $table->text('comment')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('client_id')->references('id')->on('clients');

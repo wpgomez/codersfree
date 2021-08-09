@@ -1,4 +1,4 @@
-<header class="bg-gray-100 sticky top-0" x-data="dropdown()">
+<header class="bg-gray-100 sticky top-0" style="z-index: 3" x-data="dropdown()">
     <div class="container flex items-center h-16 justify-between md:justify-start">
         <a href="/" class="mx-6">
             <img class="h-auto w-20" src="{{asset('img/logo-dlirio.png')}}" alt="">
