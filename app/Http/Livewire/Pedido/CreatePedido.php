@@ -40,10 +40,10 @@ class CreatePedido extends Component
     public $subtotal = 0;
 
     public $comment = '';
-    public $confirmingSearchModelo = false;
-    public $searchItems;
-    public $search_modelo = '';
-    public $selectedSearchModelo = [];
+    public $confirmingSearchModelo = false, $confirmingSearchModeloConStock = false;
+    public $searchItems, $searchItemsConStock;
+    public $search_modelo = '', $search_modeloConStock = '', $search_colorConStock = '';
+    public $selectedSearchModelo = [], $selectedSearchModeloConStock = [];
 
     public $nombre_tallas = ['04','06','08','10','12','14','16','28','30','32','34','36','38','40','42','44','U','XS','S','M','L','XL','XXL'];
 
@@ -76,6 +76,7 @@ class CreatePedido extends Component
     public function mount()
     {
         $this->searchItems = [];
+        $this->searchItemsConStock = [];
         Cart::instance('pedido');
         $this->countries = Country::all();
         $this->calculateTotal();
@@ -308,8 +309,29 @@ class CreatePedido extends Component
         $this->searchItems = [];
         $this->selectedSearchModelo = [];
         $this->search_modelo = '';
+
+        $this->searchItemsConStock = [];
+        $this->selectedSearchModeloConStock = [];
+        $this->search_modeloConStock = '';
+        $this->search_colorConStock = '';
+
         $this->confirmingSearchModelo = true;
         $this->searchModelo();
+    }
+
+    public function confirmSearchModeloConStock()
+    {
+        $this->searchItems = [];
+        $this->selectedSearchModelo = [];
+        $this->search_modelo = '';
+
+        $this->searchItemsConStock = [];
+        $this->selectedSearchModeloConStock = [];
+        $this->search_modeloConStock = '';
+        $this->search_colorConStock = '';
+
+        $this->confirmingSearchModeloConStock = true;
+        $this->searchModeloConStock();
     }
 
     public function aceptarSearchModelo()
@@ -357,10 +379,10 @@ class CreatePedido extends Component
                             
                             $modelotallas = Modelotalla::where('modelo_id', '=', $modelocolor->modelo_id)->get();
                             foreach ($modelotallas as $modelotalla) {
-                                foreach ($this->nombre_tallas as $item) {
-                                    if ($modelotalla->talla->code == $item) {
-                                        $columnas['talla' . $item] = true;
-                                        $this->columnas['talla' . $item] = true;
+                                foreach ($this->nombre_tallas as $item2) {
+                                    if ($modelotalla->talla->code == $item2) {
+                                        $columnas['talla' . $item2] = true;
+                                        $this->columnas['talla' . $item2] = true;
                                     }
                                 }
                             }
@@ -446,6 +468,455 @@ class CreatePedido extends Component
         $this->search_modelo = '';
     }
 
+    public function aceptarSearchModeloConStock()
+    {
+        if ($this->confirmingSearchModeloConStock) {
+            if (count($this->selectedSearchModeloConStock)) {
+                foreach ($this->selectedSearchModeloConStock as $item) {
+                    $producto = Producto::find($item);
+                    if ($producto) {
+                        if (!$this->existeProductoEnLista($producto)) {
+                            if (!$this->existeModeloColorEnLista($producto->modelo_id, $producto->color_id)) {
+                                $modelocolor = Modelocolor::where('modelo_id', '=', $producto->modelo_id)
+                                                        ->where('color_id', '=', $producto->color_id)
+                                                        ->first();
+                                if ($modelocolor) {
+                                    $price = 0;
+                                    $name = '';
+                                    if ($modelocolor->modelo) {
+                                        $price = $modelocolor->modelo->price;
+                                        $name = $modelocolor->modelo->name;
+                                    }
+                                    if ($modelocolor->color) {
+                                        $name .= ' - ' . $modelocolor->color->name;
+                                    }
+                                    $columnas = [
+                                        'talla04' => false,
+                                        'talla06' => false,
+                                        'talla08' => false,
+                                        'talla10' => false,
+                                        'talla12' => false,
+                                        'talla14' => false,
+                                        'talla16' => false,
+                                        'talla28' => false,
+                                        'talla30' => false,
+                                        'talla32' => false,
+                                        'talla34' => false,
+                                        'talla36' => false,
+                                        'talla38' => false,
+                                        'talla40' => false,
+                                        'talla42' => false,
+                                        'talla44' => false,
+                                        'tallaU' => false,
+                                        'tallaXS' => false,
+                                        'tallaS' => false,
+                                        'tallaM' => false,
+                                        'tallaL' => false,
+                                        'tallaXL' => false,
+                                        'tallaXXL' => false,
+                                    ];
+                                    
+                                    $modelotallas = Modelotalla::where('modelo_id', '=', $modelocolor->modelo_id)->get();
+                                    foreach ($modelotallas as $modelotalla) {
+                                        foreach ($this->nombre_tallas as $item2) {
+                                            if ($modelotalla->talla->code == $item2) {
+                                                $columnas['talla' . $item2] = true;
+                                                $this->columnas['talla' . $item2] = true;
+                                            }
+                                        }
+                                    }
+
+                                    $talla_code = $producto->talla->code;
+                                    $qtyTotal = 0;
+                                    $qty04 = 0;
+                                    if ($talla_code == '04') {
+                                        $qty04 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty06 = 0;
+                                    if ($talla_code == '06') {
+                                        $qty06 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty08 = 0;
+                                    if ($talla_code == '08') {
+                                        $qty08 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty10 = 0;
+                                    if ($talla_code == '10') {
+                                        $qty10 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty12 = 0;
+                                    if ($talla_code == '12') {
+                                        $qty12 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty14 = 0;
+                                    if ($talla_code == '14') {
+                                        $qty14 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty16 = 0;
+                                    if ($talla_code == '16') {
+                                        $qty16 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty28 = 0;
+                                    if ($talla_code == '28') {
+                                        $qty28 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty30 = 0;
+                                    if ($talla_code == '30') {
+                                        $qty30 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty32 = 0;
+                                    if ($talla_code == '32') {
+                                        $qty32 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty34 = 0;
+                                    if ($talla_code == '34') {
+                                        $qty34 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty36 = 0;
+                                    if ($talla_code == '36') {
+                                        $qty36 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty38 = 0;
+                                    if ($talla_code == '38') {
+                                        $qty38 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty40 = 0;
+                                    if ($talla_code == '40') {
+                                        $qty40 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty42 = 0;
+                                    if ($talla_code == '42') {
+                                        $qty42 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qty44 = 0;
+                                    if ($talla_code == '44') {
+                                        $qty44 = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyU = 0;
+                                    if ($talla_code == 'U') {
+                                        $qtyU = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyXS = 0;
+                                    if ($talla_code == 'XS') {
+                                        $qtyXS = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyS = 0;
+                                    if ($talla_code == 'S') {
+                                        $qtyS = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyM = 0;
+                                    if ($talla_code == 'M') {
+                                        $qtyM = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyL = 0;
+                                    if ($talla_code == 'L') {
+                                        $qtyL = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyXL = 0;
+                                    if ($talla_code == 'XL') {
+                                        $qtyXL = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+                                    $qtyXXL = 0;
+                                    if ($talla_code == 'XXL') {
+                                        $qtyXXL = 1;
+                                        $qtyTotal = $qtyTotal + 1;
+                                    }
+
+                                    $options = [
+                                        'modelo_id' => $modelocolor->modelo_id,
+                                        'color_id' => $modelocolor->color_id,
+                                        'talla04' => $columnas['talla04'],
+                                        'talla06' => $columnas['talla06'],
+                                        'talla08' => $columnas['talla08'],
+                                        'talla10' => $columnas['talla10'],
+                                        'talla12' => $columnas['talla12'],
+                                        'talla14' => $columnas['talla14'],
+                                        'talla16' => $columnas['talla16'],
+                                        'talla28' => $columnas['talla28'],
+                                        'talla30' => $columnas['talla30'],
+                                        'talla32' => $columnas['talla32'],
+                                        'talla34' => $columnas['talla34'],
+                                        'talla36' => $columnas['talla36'],
+                                        'talla38' => $columnas['talla38'],
+                                        'talla40' => $columnas['talla40'],
+                                        'talla42' => $columnas['talla42'],
+                                        'talla44' => $columnas['talla44'],
+                                        'tallaU' => $columnas['tallaU'],
+                                        'tallaXS' => $columnas['tallaXS'],
+                                        'tallaS' => $columnas['tallaS'],
+                                        'tallaM' => $columnas['tallaM'],
+                                        'tallaL' => $columnas['tallaL'],
+                                        'tallaXL' => $columnas['tallaXL'],
+                                        'tallaXXL' => $columnas['tallaXXL'],
+                                        'qty04' => $qty04,
+                                        'qty06' => $qty06,
+                                        'qty08' => $qty08,
+                                        'qty10' => $qty10,
+                                        'qty12' => $qty12,
+                                        'qty14' => $qty14,
+                                        'qty16' => $qty16,
+                                        'qty28' => $qty28,
+                                        'qty30' => $qty30,
+                                        'qty32' => $qty32,
+                                        'qty34' => $qty34,
+                                        'qty36' => $qty36,
+                                        'qty38' => $qty38,
+                                        'qty40' => $qty40,
+                                        'qty42' => $qty42,
+                                        'qty44' => $qty44,
+                                        'qtyU' => $qtyU,
+                                        'qtyXS' => $qtyXS,
+                                        'qtyS' => $qtyS,
+                                        'qtyM' => $qtyM,
+                                        'qtyL' => $qtyL,
+                                        'qtyXL' => $qtyXL,
+                                        'qtyXXL' => $qtyXXL,
+                                        'qtyTotal' => $qtyTotal,
+                                    ];
+                                    
+                                    Cart::instance('pedido');
+                                    Cart::add([
+                                            'id' => $modelocolor->id, 
+                                            'name' => $name, 
+                                            'qty' => 1, 
+                                            'price' => $price, 
+                                            'weight' => 0,
+                                            'options' => $options
+                                        ]);
+                                }
+                            } else {
+                                $modelocolor = Modelocolor::where('modelo_id', '=', $producto->modelo_id)
+                                                ->where('color_id', '=', $producto->color_id)
+                                                ->first();
+                                if ($modelocolor) {
+                                    $rowId = $this->rowIdInCart($modelocolor->id);
+                                    if ($rowId) {
+                                        $cart = Cart::get($rowId);
+                                        if ($cart) {
+                                            $talla_code = $producto->talla->code;
+                                            $qtyTotal = $cart->options->qtyTotal;
+                                            $qty04 = $cart->options->qty04;
+                                            if ($talla_code == '04') {
+                                                $qty04 = $qty04 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty06 = $cart->options->qty06;
+                                            if ($talla_code == '06') {
+                                                $qty06 = $qty06 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty08 = $cart->options->qty08;
+                                            if ($talla_code == '08') {
+                                                $qty08 = $qty08 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty10 = $cart->options->qty10;
+                                            if ($talla_code == '10') {
+                                                $qty10 = $qty10 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty12 = $cart->options->qty12;
+                                            if ($talla_code == '12') {
+                                                $qty12 = $qty12 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty14 = $cart->options->qty14;
+                                            if ($talla_code == '14') {
+                                                $qty14 = $qty14 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty16 = $cart->options->qty16;
+                                            if ($talla_code == '16') {
+                                                $qty16 = $qty16 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty28 = $cart->options->qty28;
+                                            if ($talla_code == '28') {
+                                                $qty28 = $qty28 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty30 = $cart->options->qty30;
+                                            if ($talla_code == '30') {
+                                                $qty30 = $qty30 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty32 = $cart->options->qty32;
+                                            if ($talla_code == '32') {
+                                                $qty32 = $qty32 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty34 = $cart->options->qty34;
+                                            if ($talla_code == '34') {
+                                                $qty34 = $qty34 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty36 = $cart->options->qty36;
+                                            if ($talla_code == '36') {
+                                                $qty36 = $qty36 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty38 = $cart->options->qty38;
+                                            if ($talla_code == '38') {
+                                                $qty38 = $qty38 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty40 = $cart->options->qty40;
+                                            if ($talla_code == '40') {
+                                                $qty40 = $qty40 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty42 = $cart->options->qty42;
+                                            if ($talla_code == '42') {
+                                                $qty42 = $qty42 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qty44 = $cart->options->qty44;
+                                            if ($talla_code == '44') {
+                                                $qty44 = $qty44 + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyU = $cart->options->qtyU;
+                                            if ($talla_code == 'U') {
+                                                $qtyU = $qtyU + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyXS = $cart->options->qtyXS;
+                                            if ($talla_code == 'XS') {
+                                                $qtyXS = $qtyXS + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyS = $cart->options->qtyS;
+                                            if ($talla_code == 'S') {
+                                                $qtyS = $qtyS + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyM = $cart->options->qtyM;
+                                            if ($talla_code == 'M') {
+                                                $qtyM = $qtyM + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyL = $cart->options->qtyL;
+                                            if ($talla_code == 'L') {
+                                                $qtyL = $qtyL + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyXL = $cart->options->qtyXL;
+                                            if ($talla_code == 'XL') {
+                                                $qtyXL = $qtyXL + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+                                            $qtyXXL = $cart->options->qtyXXL;
+                                            if ($talla_code == 'XXL') {
+                                                $qtyXXL = $qtyXXL + 1;
+                                                $qtyTotal = $qtyTotal + 1;
+                                            }
+
+                                            $options = [
+                                                'modelo_id' => $modelocolor->modelo_id,
+                                                'color_id' => $modelocolor->color_id,
+                                                'talla04' => $cart->options->talla04,
+                                                'talla06' => $cart->options->talla06,
+                                                'talla08' => $cart->options->talla08,
+                                                'talla10' => $cart->options->talla10,
+                                                'talla12' => $cart->options->talla12,
+                                                'talla14' => $cart->options->talla14,
+                                                'talla16' => $cart->options->talla16,
+                                                'talla28' => $cart->options->talla28,
+                                                'talla30' => $cart->options->talla30,
+                                                'talla32' => $cart->options->talla32,
+                                                'talla34' => $cart->options->talla34,
+                                                'talla36' => $cart->options->talla36,
+                                                'talla38' => $cart->options->talla38,
+                                                'talla40' => $cart->options->talla40,
+                                                'talla42' => $cart->options->talla42,
+                                                'talla44' => $cart->options->talla44,
+                                                'tallaU' => $cart->options->tallaU,
+                                                'tallaXS' => $cart->options->tallaXS,
+                                                'tallaS' => $cart->options->tallaS,
+                                                'tallaM' => $cart->options->tallaM,
+                                                'tallaL' => $cart->options->tallaL,
+                                                'tallaXL' => $cart->options->tallaXL,
+                                                'tallaXXL' => $cart->options->tallaXXL,
+                                                'qty04' => $qty04,
+                                                'qty06' => $qty06,
+                                                'qty08' => $qty08,
+                                                'qty10' => $qty10,
+                                                'qty12' => $qty12,
+                                                'qty14' => $qty14,
+                                                'qty16' => $qty16,
+                                                'qty28' => $qty28,
+                                                'qty30' => $qty30,
+                                                'qty32' => $qty32,
+                                                'qty34' => $qty34,
+                                                'qty36' => $qty36,
+                                                'qty38' => $qty38,
+                                                'qty40' => $qty40,
+                                                'qty42' => $qty42,
+                                                'qty44' => $qty44,
+                                                'qtyU' => $qtyU,
+                                                'qtyXS' => $qtyXS,
+                                                'qtyS' => $qtyS,
+                                                'qtyM' => $qtyM,
+                                                'qtyL' => $qtyL,
+                                                'qtyXL' => $qtyXL,
+                                                'qtyXXL' => $qtyXXL,
+                                                'qtyTotal' => $qtyTotal,
+                                            ];
+                
+                                            Cart::instance('pedido');
+                                            Cart::update($cart->rowId, 
+                                                [
+                                                    'options' => $options
+                                                ]);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                $this->render();
+            }
+        }
+
+        $this->confirmingSearchModeloConStock = false;
+        $this->searchItemsConStock = [];
+        $this->selectedSearchModeloConStock = [];
+        $this->search_modeloConStock = '';
+        $this->search_colorConStock = '';
+    }
+
+    public function cancelSearchModeloConStock()
+    {
+        $this->confirmingSearchModeloConStock = false;
+        $this->searchItemsConStock = [];
+        $this->selectedSearchModeloConStock = [];
+        $this->search_modeloConStock = '';
+        $this->search_colorConStock = '';
+    }
+
     public function delete_item($rowId)
     {
         Cart::instance('pedido');
@@ -465,6 +936,33 @@ class CreatePedido extends Component
                                 ->join('colors', 'colors.id', '=', 'modelocolors.color_id')
                                 ->select('modelocolors.*', 'modelos.name as modelo_name', 'colors.name as color_name', 'modelos.price')
                                 ->where('modelos.name', 'like', '%' . $this->search_modelo . '%')
+                                ->orderBy('modelos.name')
+                                ->orderBy('colors.name')
+                                ->take(20)->get();
+        }
+    }
+
+    public function searchModeloConStock()
+    {
+        if ($this->confirmingSearchModeloConStock) {
+            $this->searchItemsConStock = DB::table('productos')
+                                ->join('modelocolors', function ($join) {
+                                    $join->on('modelocolors.modelo_id', '=', 'productos.modelo_id')
+                                        ->on('modelocolors.color_id', '=', 'productos.color_id');
+                                })
+                                ->join('modelos', function ($join) {
+                                    $join->on('modelos.id', '=', 'productos.modelo_id')
+                                        ->where('modelos.status', '=', Modelo::PUBLICADO);
+                                })
+                                ->join('colors', 'colors.id', '=', 'productos.color_id')
+                                ->join('tallas', 'tallas.id', '=', 'productos.talla_id')
+                                ->select('productos.*', 'modelos.name as modelo_name', 'colors.name as color_name', 'tallas.name as talla_name','modelos.price')
+                                ->where('modelos.name', 'like', '%' . $this->search_modeloConStock . '%')
+                                ->where('colors.name', 'like', '%' . $this->search_colorConStock . '%')
+                                ->where('productos.stock', '>', 0)
+                                ->orderBy('modelos.name')
+                                ->orderBy('colors.name')
+                                ->orderBy('tallas.orden')
                                 ->take(20)->get();
         }
     }
@@ -474,6 +972,16 @@ class CreatePedido extends Component
         $this->searchModelo();
     }
 
+    public function updatedSearchModeloConStock()
+    {
+        $this->searchModeloConStock();
+    }
+
+    public function updatedSearchColorConStock()
+    {
+        $this->searchModeloConStock();
+    }
+
     public function existeModeloEnLista($id)
     {
         Cart::instance('pedido');
@@ -481,6 +989,100 @@ class CreatePedido extends Component
         foreach ($items as $item) {
             if ($item->id == $id) {
                 return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function existeModeloColorEnLista($modelo_id, $color_id)
+    {
+        Cart::instance('pedido');
+        $items = Cart::content();
+        foreach ($items as $item) {
+            if ($item->options->modelo_id == $modelo_id && $item->options->color_id == $color_id) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function existeProductoEnLista($producto)
+    {
+        Cart::instance('pedido');
+        $items = Cart::content();
+        foreach ($items as $item) {
+            if ($item->options->modelo_id == $producto->modelo_id && $item->options->color_id == $producto->color_id) {
+                if ($producto->talla->code == '04' && $item->options->qty04 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '06' && $item->options->qty06 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '08' && $item->options->qty08 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '10' && $item->options->qty10 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '12' && $item->options->qty12 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '14' && $item->options->qty14 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '16' && $item->options->qty16 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '28' && $item->options->qty28 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '30' && $item->options->qty30 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '32' && $item->options->qty32 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '34' && $item->options->qty34 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '36' && $item->options->qty36 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '38' && $item->options->qty38 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '40' && $item->options->qty40 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '42' && $item->options->qty42 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == '44' && $item->options->qty44 > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'U' && $item->options->qtyU > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'XS' && $item->options->qtyXS > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'S' && $item->options->qtyS > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'M' && $item->options->qtyM > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'L' && $item->options->qtyL > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'XL' && $item->options->qtyXL > 0) {
+                    return true;
+                }
+                if ($producto->talla->code == 'XXL' && $item->options->qtyXXL > 0) {
+                    return true;
+                }
             }
         }
 
@@ -948,6 +1550,19 @@ class CreatePedido extends Component
                 $this->columnas['tallaXXL'] = true;
             }
         }
+    }
+
+    public function rowIdInCart($id)
+    {
+        Cart::instance('pedido');
+        $items = Cart::content();
+        foreach ($items as $item) {
+            if ($item->id == $id) {
+                return $item->rowId;
+            }
+        }
+
+        return '';
     }
 
     public function render()

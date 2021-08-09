@@ -80,7 +80,6 @@
         <div class="block">
             @livewire('dropdown-cart')
         </div>
-
     </div>
    
     <div x-data="{ open: false }" class="bg-red-600 sticky top-0">

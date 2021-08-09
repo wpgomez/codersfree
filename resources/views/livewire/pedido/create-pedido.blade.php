@@ -1,7 +1,7 @@
 <div class="container py-6">
     <div class="shadow sm:rounded-md sm:overflow-hidden">
-        <div class="px-4 py-3 border-b bg-gray-100 sm:px-6">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">Pedido</h3>
+        <div class="px-4 py-3 border-b bg-red-600 sm:px-6">
+            <h3 class="text-lg font-medium leading-6 text-white">Pedido</h3>
         </div>
         <div class="px-4 py-3 border-b bg-gray-50 sm:px-6">
             <x-button 
@@ -149,6 +149,14 @@
                         wire:target="confirmSearchModelo">
                         +
                     </x-button>
+                    <x-button 
+                        color="red" 
+                        class="py-2 px-4" 
+                        wire:click="confirmSearchModeloConStock" 
+                        wire:loading.attr="disabled" 
+                        wire:target="confirmSearchModeloConStock">
+                        + Stock
+                    </x-button>
                 </div>
                 <div class="text-right">
 
@@ -158,91 +166,25 @@
                 <x-table-responsive-x>
                     @if (count($items))
                         <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
+                            <thead class="bg-red-600">
                                 <tr>
-                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-white uppercase tracking-wider">
                                         Modelo - Color
                                     </th>
                                     @foreach ($nombre_tallas as $item)
                                         @if ($columnas['talla' . $item])
-                                            <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="p-4 text-center text-xs font-medium text-white uppercase tracking-wider">
                                                 {{$item}}
                                             </th>
                                         @endif
                                     @endforeach
-                                   {{--  <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        06
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        08
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        10
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        12
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        14
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        16
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        28
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        30
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        32
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        34
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        36
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        38
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        40
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        42
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        44
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        U
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        XS
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        S
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        M
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        L
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        XL
-                                    </th>
-                                    <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        XXL
-                                    </th> --}}
-                                    <th scope="col" class="p-4 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="p-4 text-right text-xs font-medium text-white uppercase tracking-wider">
                                         Total
                                     </th>
-                                    <th scope="col" class="px-6 py-4 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-4 text-right text-xs font-medium text-white uppercase tracking-wider">
                                         Precio
                                     </th>
-                                    <th scope="col" class="p-4 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="p-4 text-right text-xs font-medium text-white uppercase tracking-wider">
                                         Importe
                                     </th>
                                 </tr>
@@ -878,16 +820,16 @@
                     <x-table-responsive>
                         @if (count($searchItems))
                             <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                                <thead class="bg-red-600">
                                     <tr>
                                         <th></th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                             Modelo
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                             Color
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                             Precio
                                         </th>
                                     </tr>
@@ -935,6 +877,119 @@
                 wire:click="cancelSearchModelo" 
                 wire:loading.attr="disabled"
                 wire:target="cancelSearchModelo">
+                Cancelar
+            </x-jet-secondary-button>
+        </x-slot>
+    </x-jet-dialog-modal>
+
+    <x-jet-dialog-modal wire:model="confirmingSearchModeloConStock">
+        <x-slot name="title">
+            <div class="grid grid-cols-4">
+                <div class="flex items-center col-span-3">
+                    <h3 class="text-lg font-medium leading-6 text-gray-900">Listado de Productos</h3>
+                </div>
+                <div class="text-right col-span-1">
+                    <x-button 
+                        color="red" 
+                        wire:click="searchModeloConStock" 
+                        wire:loading.attr="disabled" 
+                        wire:target="searchModeloConStock">
+                        <i class="fas fa-sync-alt" aria-hidden="true"></i>
+                    </x-button>
+                </div>
+            </div>
+        </x-slot>
+        <x-slot name="content">
+            <div class="border">
+                <div class="p-4 border-b">
+                    <div class="flex items-center mb-2">
+                        <x-jet-label class="mr-4" value="Modelo" />
+                        <x-jet-input type="text"
+                            wire:model="search_modeloConStock"
+                            class="w-full"
+                            placeholder="Ingrese el nombre del Modelo que quiere buscar" />
+                    </div>
+                    <div class="flex items-center">
+                        <x-jet-label class="mr-4" value="Color" />
+                        <x-jet-input type="text"
+                            wire:model="search_colorConStock"
+                            class="w-full"
+                            placeholder="Ingrese el nombre del Color que quiere buscar" />
+                    </div>
+                </div>
+                <div>
+                    <x-table-responsive>
+                        @if (count($searchItemsConStock))
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-red-600">
+                                    <tr>
+                                        <th></th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                            Modelo
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                            Color
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                            Talla
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                            Precio
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                            Stock
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    @foreach ($searchItemsConStock as $item)
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm">
+                                                <input type="checkbox" value="{{$item->id}}" wire:model.defer="selectedSearchModeloConStock"
+                                                    class="focus:ring-red-500 h-4 w-4 text-red-600 border-gray-300 rounded">
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                {{$item->modelo_name}}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                {{$item->color_name}}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                {{$item->talla_name}}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm">
+                                                S/ {{number_format($item->price,2,'.',',')}}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm">
+                                                {{number_format($item->stock,0,'.',',')}}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <div class="px-6 py-4">
+                                No hay ningún registro coincidente
+                            </div>
+                        @endif
+                    </x-table-responsive>
+                </div>
+            </div>
+        </x-slot>
+        <x-slot name="footer">
+            <x-button 
+                color="red" 
+                class="py-2 px-4" 
+                wire:click="aceptarSearchModeloConStock" 
+                wire:loading.attr="disabled" 
+                wire:target="aceptarSearchModeloConStock">
+                Aceptar
+            </x-button>
+            <x-jet-secondary-button 
+                class="py-2 px-4"
+                wire:click="cancelSearchModeloConStock" 
+                wire:loading.attr="disabled"
+                wire:target="cancelSearchModeloConStock">
                 Cancelar
             </x-jet-secondary-button>
         </x-slot>

@@ -1,9 +1,9 @@
 <div class="container py-6" x-data="">
 
     <div class="shadow sm:rounded-md sm:overflow-hidden">
-        <div class="px-4 py-5 border-b bg-gray-100 grid grid-cols-4">
+        <div class="px-4 py-5 border-b bg-red-600 grid grid-cols-4">
             <div class="flex items-center col-span-3">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">Listado de Pedidos</h3>
+                <h3 class="text-lg font-medium leading-6 text-white">Listado de Pedidos</h3>
             </div>
             <div class="text-right col-span-1">
                 <x-button 
